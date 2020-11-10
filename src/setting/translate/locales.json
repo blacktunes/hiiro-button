@@ -1,0 +1,42 @@
+{
+  "zh-CN": {
+    "info": {
+      "toGithub": "请在Github参与翻译、增补音频或提出建议",
+      "notOfficial": "本站为爱好者作品，和官方没有关联"
+    },
+    "action": {
+      "randomplay": "帮我选一个",
+      "stopvoice": "停止",
+      "overlap": "允许声音重叠",
+      "overlapTip": "重叠播放开启中~",
+      "autoRandom": "播放不要停下来",
+      "autoRandomTip": "随机连播开启中~",
+      "loop": "洗脑循环",
+      "loopTip": "洗脑循环开启中~",
+      "noplay": "当前没有播放哦~"
+    },
+    "vtbbtn": "VTuber按钮集合",
+    "voiceTotalTip": "当前语音量",
+    "lang": "Change to English"
+  },
+  "ja-JP": {
+    "info": {
+      "toGithub": "Please participate in the translation, audio supplement or suggestions in GitHub",
+      "notOfficial": "This site is no official connection"
+    },
+    "action": {
+      "randomplay": "Random Play",
+      "stopvoice": "Stop",
+      "overlap": "Overlap",
+      "overlapTip": "Allow sound overlap",
+      "autoRandom": "Auto Random",
+      "autoRandomTip": "Auto Random",
+      "loop": "Loop",
+      "loopTip": "Loop",
+      "noplay": "No Play"
+    },
+    "vtbbtn": "Vtuber button collection",
+    "voiceTotalTip": "Current voice quantity",
+    "lang": "切换至简体中文"
+  }
+}

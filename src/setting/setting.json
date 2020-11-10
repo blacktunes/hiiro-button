@@ -1,0 +1,40 @@
+{
+  "name": {
+    "CN": {
+      "title": "猫猫按钮",
+      "fullName": "Hiiro"
+    },
+    "JP": {
+      "title": "Hiiro Button",
+      "fullName": "Hiiro"
+    }
+  },
+  "header": {
+    "icon": "🍣",
+    "youtube": "",
+    "twitter": "",
+    "bilibili": "https://live.bilibili.com/21919321"
+  },
+  "footer": {
+    "author": [
+      {
+        "name": "blacktunes",
+        "url": "https://github.com/blacktunes"
+      }
+    ],
+    "info": [
+      "Hiiro~Hiiro~Hiiro~"
+    ],
+    "githubUrl": "https://github.com/blacktunes/hiiro-button"
+  },
+  "console": {
+    "text": "",
+    "size": "",
+    "color": "",
+    "img": "",
+    "imgWidth": "",
+    "imgHeight": ""
+  },
+  "mediaSession": "",
+  "GA_ID": "G-XKZSL7J3N4"
+}

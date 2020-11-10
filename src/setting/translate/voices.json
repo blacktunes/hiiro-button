@@ -1,0 +1,147 @@
+{
+  "category": [
+    {
+      "name": "名言",
+      "translate": {
+        "zh-CN": "名言~",
+        "ja-JP": "witticism~"
+      }
+    },
+    {
+      "name": "日常用语",
+      "translate": {
+        "zh-CN": "日常用语~",
+        "ja-JP": "daily~"
+      }
+    },
+    {
+      "name": "可爱",
+      "translate": {
+        "zh-CN": "可爱~",
+        "ja-JP": "lovely~ "
+      }
+    }
+  ],
+  "voices": [
+    {
+      "name": "baba",
+      "path": "baba.mp3",
+      "date": "2020-11-11",
+      "translate": {
+        "zh-CN": "米娜我是你爸爸",
+        "ja-JP": "I'm your Baba"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro】读评论 学中文 DD们的评论都是什么东西啊？",
+        "time": "0:01~0:03",
+        "url": "https://www.bilibili.com/video/BV1ET4y177A8"
+      }
+    },
+    {
+      "name": "这是啥啊",
+      "path": "这是啥啊.mp3",
+      "date": "2020-11-11",
+      "translate": {
+        "zh-CN": "这是啥啊",
+        "ja-JP": "what is this"
+      },
+      "category": "日常用语",
+      "mark": {
+        "title": "【Hiiro】读评论 学中文 DD们的评论都是什么东西啊？",
+        "time": "0:04~0:06",
+        "url": "https://www.bilibili.com/video/BV1ET4y177A8"
+      }
+    },
+    {
+      "name": "wtf",
+      "path": "wtf.mp3",
+      "date": "2020-11-11",
+      "translate": {
+        "zh-CN": "王德发",
+        "ja-JP": "WTF"
+      },
+      "category": "日常用语",
+      "mark": {
+        "title": "【Hiiro】读评论 学中文 DD们的评论都是什么东西啊？",
+        "time": "1:20~1:21",
+        "url": "https://www.bilibili.com/video/BV1ET4y177A8"
+      }
+    },
+    {
+      "name": "哭",
+      "path": "哭.mp3",
+      "date": "2020-11-11",
+      "translate": {
+        "zh-CN": "哭声",
+        "ja-JP": "cry"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "【Hiiro】读评论 学中文 DD们的评论都是什么东西啊？",
+        "time": "1:28~1:31",
+        "url": "https://www.bilibili.com/video/BV1ET4y177A8"
+      }
+    },
+    {
+      "name": "施氏食狮史",
+      "path": "施氏食狮史.mp3",
+      "date": "2020-11-11",
+      "translate": {
+        "zh-CN": "施氏食狮史",
+        "ja-JP": "shi×901"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "【Hiiro】读评论 学中文 DD们的评论都是什么东西啊？",
+        "time": "1:36~1:44",
+        "url": "https://www.bilibili.com/video/BV1ET4y177A8"
+      }
+    },
+    {
+      "name": "这什么鬼东西",
+      "path": "这什么鬼东西.mp3",
+      "date": "2020-11-11",
+      "translate": {
+        "zh-CN": "这什么鬼东西",
+        "ja-JP": "what the hell is this"
+      },
+      "category": "日常用语",
+      "mark": {
+        "title": "【Hiiro】读评论 学中文 DD们的评论都是什么东西啊？",
+        "time": "2:21~2:23",
+        "url": "https://www.bilibili.com/video/BV1ET4y177A8"
+      }
+    },
+    {
+      "name": "季姬击鸡记",
+      "path": "季姬击鸡记.mp3",
+      "date": "2020-11-11",
+      "translate": {
+        "zh-CN": "季姬击鸡记",
+        "ja-JP": "ji×901"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "【Hiiro】读评论 学中文 DD们的评论都是什么东西啊？",
+        "time": "3:44~4:01",
+        "url": "https://www.bilibili.com/video/BV1ET4y177A8"
+      }
+    },
+    {
+      "name": "gg",
+      "path": "gg.mp3",
+      "date": "2020-11-11",
+      "translate": {
+        "zh-CN": "GG",
+        "ja-JP": "GG"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro】读评论 学中文 DD们的评论都是什么东西啊？",
+        "time": "4:26~4:30",
+        "url": "https://www.bilibili.com/video/BV1ET4y177A8"
+      }
+    }
+  ]
+}
