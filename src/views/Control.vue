@@ -295,8 +295,8 @@ a
     box-shadow 0px 0px 10px 0px $sub-color
 
   &:active
-    background $title-color
+    background $hover-color
 
 .icon-active
-  background $sub-color
+  background $active-color
 </style>

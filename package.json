@@ -2,7 +2,7 @@
   "name": "hiiro-button",
   "version": "1.0.0",
   "private": true,
-  "author": "",
+  "author": "blacktunes",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
