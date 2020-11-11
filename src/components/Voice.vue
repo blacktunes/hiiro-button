@@ -262,8 +262,8 @@ export default {
      * 随机播放
      */
     const randomPlay = () => {
-      const randomList = voices[_getrRandomInt(voices.length - 1)]
-      const randomVoice = randomList.voiceList[_getrRandomInt(randomList.voiceList.length - 1)]
+      const randomList = voices[_getrRandomInt(voices.length)]
+      const randomVoice = randomList.voiceList[_getrRandomInt(randomList.voiceList.length)]
       if (needToShow(randomList.translate) && needToShow(randomVoice.translate)) {
         errTimes = 0
         play(randomVoice)
