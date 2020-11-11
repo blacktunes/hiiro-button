@@ -46,7 +46,13 @@ export default {
   setup() {
     const { t } = useI18n()
 
-    const list = []
+    const list = [
+      {
+        name: '七奈按钮',
+        url: 'http://kaguranana.moe/',
+        background: '#c4afd0'
+      }
+    ]
 
     return {
       t,
