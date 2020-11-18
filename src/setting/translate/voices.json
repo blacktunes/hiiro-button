@@ -41,6 +41,20 @@
         "zh-CN": "清楚猫猫~",
         "ja-JP": "pure~ "
       }
+    },
+    {
+      "name": "混沌",
+      "translate": {
+        "zh-CN": "混沌猫猫~",
+        "ja-JP": "chaos~ "
+      }
+    },
+    {
+      "name": "唱歌",
+      "translate": {
+        "zh-CN": "唱歌猫猫~",
+        "ja-JP": "sing~ "
+      }
     }
   ],
   "voices": [
@@ -777,6 +791,10 @@
         "title": "【Hiiro熟肉】vtb被逼婚？App鲨疯啦！",
         "time": "3:28~3:29",
         "url": "https://www.bilibili.com/video/BV1Lv411r7vu"
+      },
+      "usePicture": {
+        "zh-CN": "peach.jpg",
+        "ja-JP": "peach.jpg"
       }
     },
     {
@@ -927,6 +945,216 @@
         "title": "【Hiiro】机智应对舰长羞耻要求的Hiiro",
         "time": "2:43~2:45",
         "url": "https://www.bilibili.com/video/BV1p5411L7ku"
+      }
+    },
+    {
+      "name": "I can do it",
+      "path": "I can do it.mp3",
+      "date": "2020-11-19",
+      "translate": {
+        "zh-CN": "I can do it",
+        "ja-JP": "I can do it"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro】4分钟带你看完8个月直播",
+        "time": "0:00~0:04",
+        "url": "https://www.bilibili.com/video/BV1i54y1z7jn"
+      }
+    },
+    {
+      "name": "啊啊啊哈哈哈哈哈",
+      "path": "啊啊啊哈哈哈哈哈.mp3",
+      "date": "2020-11-19",
+      "translate": {
+        "zh-CN": "啊啊啊哈哈哈哈哈(慎点)",
+        "ja-JP": "ahahahhahahahaha(warning)"
+      },
+      "category": "烧开水",
+      "mark": {
+        "title": "【Hiiro】4分钟带你看完8个月直播",
+        "time": "0:14~0:23",
+        "url": "https://www.bilibili.com/video/BV1i54y1z7jn"
+      }
+    },
+    {
+      "name": "笑？",
+      "path": "笑？.mp3",
+      "date": "2020-11-19",
+      "translate": {
+        "zh-CN": "笑(?)",
+        "ja-JP": "laugh(?)"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro】4分钟带你看完8个月直播",
+        "time": "0:38~0:46",
+        "url": "https://www.bilibili.com/video/BV1i54y1z7jn"
+      }
+    },
+    {
+      "name": "o ni i sa ma",
+      "path": "o ni i sa ma.mp3",
+      "date": "2020-11-19",
+      "translate": {
+        "zh-CN": "o ni i sa ma",
+        "ja-JP": "o ni i sa ma"
+      },
+      "category": "清楚",
+      "mark": {
+        "title": "【Hiiro】4分钟带你看完8个月直播",
+        "time": "0:47~0:49",
+        "url": "https://www.bilibili.com/video/BV1i54y1z7jn"
+      }
+    },
+    {
+      "name": "hiiro可爱吗",
+      "path": "hiiro可爱吗.mp3",
+      "date": "2020-11-19",
+      "translate": {
+        "zh-CN": "hiiro可爱吗",
+        "ja-JP": "Is hiiro cute"
+      },
+      "category": "清楚",
+      "mark": {
+        "title": "【Hiiro】4分钟带你看完8个月直播",
+        "time": "0:50~0:53",
+        "url": "https://www.bilibili.com/video/BV1i54y1z7jn"
+      }
+    },
+    {
+      "name": "烧开水2",
+      "path": "烧开水2.mp3",
+      "date": "2020-11-19",
+      "translate": {
+        "zh-CN": "烧开水2",
+        "ja-JP": "Boil water 2"
+      },
+      "category": "烧开水",
+      "mark": {
+        "title": "【Hiiro】4分钟带你看完8个月直播",
+        "time": "2:19~2:24",
+        "url": "https://www.bilibili.com/video/BV1i54y1z7jn"
+      }
+    },
+    {
+      "name": "烧开水3",
+      "path": "烧开水3.mp3",
+      "date": "2020-11-19",
+      "translate": {
+        "zh-CN": "烧开水3",
+        "ja-JP": "Boil water 3"
+      },
+      "category": "烧开水",
+      "mark": {
+        "title": "【Hiiro】4分钟带你看完8个月直播",
+        "time": "2:24~2:33",
+        "url": "https://www.bilibili.com/video/BV1i54y1z7jn"
+      }
+    },
+    {
+      "name": "unravel",
+      "path": "unravel.mp3",
+      "date": "2020-11-19",
+      "translate": {
+        "zh-CN": "Unravel",
+        "ja-JP": "Unravel"
+      },
+      "category": "唱歌",
+      "mark": {
+        "title": "【Hiiro】4分钟带你看完8个月直播",
+        "time": "2:51~2:58",
+        "url": "https://www.bilibili.com/video/BV1i54y1z7jn"
+      }
+    },
+    {
+      "name": "啊啊啊啊啊啊啊啊啊啊啊啊",
+      "path": "啊啊啊啊啊啊啊啊啊啊啊啊.mp3",
+      "date": "2020-11-19",
+      "translate": {
+        "zh-CN": "啊啊啊啊啊啊啊啊啊啊啊啊",
+        "ja-JP": "aaaaaaaaaaaaaaaaaah"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro】4分钟带你看完8个月直播",
+        "time": "2:59~3:07",
+        "url": "https://www.bilibili.com/video/BV1i54y1z7jn"
+      }
+    },
+    {
+      "name": "我要哭啦",
+      "path": "我要哭啦.mp3",
+      "date": "2020-11-19",
+      "translate": {
+        "zh-CN": "我要哭啦",
+        "ja-JP": "I'm going to cry"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro】4分钟带你看完8个月直播",
+        "time": "3:23~3:24",
+        "url": "https://www.bilibili.com/video/BV1i54y1z7jn"
+      }
+    },
+    {
+      "name": "哭3",
+      "path": "哭3.mp3",
+      "date": "2020-11-19",
+      "translate": {
+        "zh-CN": "哭声3",
+        "ja-JP": "cry3"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "【Hiiro】4分钟带你看完8个月直播",
+        "time": "3:36~3:44",
+        "url": "https://www.bilibili.com/video/BV1i54y1z7jn"
+      }
+    },
+    {
+      "name": "mua",
+      "path": "mua.mp3",
+      "date": "2020-11-19",
+      "translate": {
+        "zh-CN": "mua",
+        "ja-JP": "mua"
+      },
+      "category": "清楚",
+      "mark": {
+        "title": "【Hiiro】4分钟带你看完8个月直播",
+        "time": "3:55~3:55",
+        "url": "https://www.bilibili.com/video/BV1i54y1z7jn"
+      }
+    },
+    {
+      "name": "mua2",
+      "path": "mua2.mp3",
+      "date": "2020-11-19",
+      "translate": {
+        "zh-CN": "mua2",
+        "ja-JP": "mua2"
+      },
+      "category": "清楚",
+      "mark": {
+        "title": "【Hiiro】4分钟带你看完8个月直播",
+        "time": "3:58~3:59",
+        "url": "https://www.bilibili.com/video/BV1i54y1z7jn"
+      }
+    },
+    {
+      "name": "晚安(日语)",
+      "path": "晚安(日语).mp3",
+      "date": "2020-11-19",
+      "translate": {
+        "zh-CN": "晚安(日语)",
+        "ja-JP": "Good night (Japanese)"
+      },
+      "category": "清楚",
+      "mark": {
+        "title": "【Hiiro】4分钟带你看完8个月直播",
+        "time": "3:56~3:57",
+        "url": "https://www.bilibili.com/video/BV1i54y1z7jn"
       }
     }
   ]
