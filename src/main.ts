@@ -18,15 +18,15 @@ if (process.env.NODE_ENV === 'production' && (Setting as any).GA_ID) {
 }
 
 const CN: any = { ...Locales['zh-CN'], voice: {}, voicecategory: {} }
-const JP: any = { ...Locales['ja-JP'], voice: {}, voicecategory: {} }
+const EN: any = { ...Locales['en-US'], voice: {}, voicecategory: {} }
 
 CN.info = {
   ...CN.info,
   ...Setting.name.CN
 }
 
-JP.info = {
-  ...JP.info,
+EN.info = {
+  ...EN.info,
   ...Setting.name.JP
 }
 
@@ -35,8 +35,8 @@ for (const category of VoiceList.category) {
     if (category.translate['zh-CN'] !== undefined) {
       CN.voicecategory[category.name] = category.translate['zh-CN']
     }
-    if (category.translate['ja-JP'] !== undefined) {
-      JP.voicecategory[category.name] = category.translate['ja-JP']
+    if (category.translate['en-US'] !== undefined) {
+      EN.voicecategory[category.name] = category.translate['en-US']
     }
   }
 }
@@ -46,20 +46,20 @@ for (const voice of VoiceList.voices) {
     if (voice.translate['zh-CN'] !== undefined) {
       CN.voice[voice.name] = voice.translate['zh-CN']
     }
-    if (voice.translate['ja-JP'] !== undefined) {
-      JP.voice[voice.name] = voice.translate['ja-JP']
+    if (voice.translate['en-US'] !== undefined) {
+      EN.voice[voice.name] = voice.translate['en-US']
     }
   }
 }
 
 CN.voiceTotal = Object.keys(CN.voice).length.toString()
-JP.voiceTotal = Object.keys(JP.voice).length.toString()
+EN.voiceTotal = Object.keys(EN.voice).length.toString()
 
 const i18n = createI18n({
-  locale: /ja/i.test(navigator.language) ? 'ja-JP' : 'zh-CN',
+  locale: /ja/i.test(navigator.language) ? 'en-US' : 'zh-CN',
   messages: {
     'zh-CN': CN,
-    'ja-JP': JP
+    'en-US': EN
   }
 })
 

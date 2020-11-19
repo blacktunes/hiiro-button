@@ -121,13 +121,13 @@ export default {
     const changeLang = () => {
       searchData.value = ''
       searchData.list.length = 0
-      if (locale.value === 'ja-JP') {
+      if (locale.value === 'en-US') {
         locale.value = 'zh-CN'
         localStorage.setItem('lang', 'zh-CN')
         document.title = t(INFO_I18N.title)
       } else {
-        locale.value = 'ja-JP'
-        localStorage.setItem('lang', 'ja-JP')
+        locale.value = 'en-US'
+        localStorage.setItem('lang', 'en-US')
         document.title = t(INFO_I18N.title)
       }
     }

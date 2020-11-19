@@ -4,56 +4,56 @@
       "name": "名言",
       "translate": {
         "zh-CN": "猫猫名言~",
-        "ja-JP": "witticism~"
+        "en-US": "witticism~"
       }
     },
     {
       "name": "烧开水",
       "translate": {
         "zh-CN": "猫猫烧开水~",
-        "ja-JP": "boil water~"
+        "en-US": "boil water~"
       }
     },
     {
       "name": "日常",
       "translate": {
         "zh-CN": "猫猫日常~",
-        "ja-JP": "daily~"
+        "en-US": "daily~"
       }
     },
     {
       "name": "可爱",
       "translate": {
         "zh-CN": "可爱猫猫~",
-        "ja-JP": "lovely~ "
+        "en-US": "lovely~ "
       }
     },
     {
       "name": "说教",
       "translate": {
         "zh-CN": "说教猫猫~",
-        "ja-JP": "experience~ "
+        "en-US": "experience~ "
       }
     },
     {
       "name": "清楚",
       "translate": {
         "zh-CN": "清楚猫猫~",
-        "ja-JP": "pure~ "
+        "en-US": "pure~ "
       }
     },
     {
       "name": "混沌",
       "translate": {
         "zh-CN": "混沌猫猫~",
-        "ja-JP": "chaos~ "
+        "en-US": "chaos~ "
       }
     },
     {
       "name": "唱歌",
       "translate": {
         "zh-CN": "唱歌猫猫~",
-        "ja-JP": "sing~ "
+        "en-US": "sing~ "
       }
     }
   ],
@@ -64,7 +64,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "米娜我是你爸爸",
-        "ja-JP": "I'm your Baba"
+        "en-US": "I'm your Baba"
       },
       "category": "名言",
       "mark": {
@@ -79,7 +79,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "这是啥啊",
-        "ja-JP": "what is this"
+        "en-US": "what is this"
       },
       "category": "日常",
       "mark": {
@@ -94,7 +94,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "王德发",
-        "ja-JP": "WTF"
+        "en-US": "WTF"
       },
       "category": "日常",
       "mark": {
@@ -109,7 +109,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "哭声",
-        "ja-JP": "cry"
+        "en-US": "cry"
       },
       "category": "可爱",
       "mark": {
@@ -124,7 +124,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "哭声2",
-        "ja-JP": "cry2"
+        "en-US": "cry2"
       },
       "category": "可爱",
       "mark": {
@@ -139,7 +139,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "施氏食狮史",
-        "ja-JP": "shi×901"
+        "en-US": "shi×901"
       },
       "category": "可爱",
       "mark": {
@@ -154,7 +154,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "这什么鬼东西",
-        "ja-JP": "what the hell is this"
+        "en-US": "what the hell is this"
       },
       "category": "日常",
       "mark": {
@@ -169,7 +169,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "季姬击鸡记",
-        "ja-JP": "ji×901"
+        "en-US": "ji×901"
       },
       "category": "可爱",
       "mark": {
@@ -184,7 +184,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "GG",
-        "ja-JP": "GG"
+        "en-US": "GG"
       },
       "category": "名言",
       "mark": {
@@ -199,7 +199,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "无路赛",
-        "ja-JP": "Urusai"
+        "en-US": "Urusai"
       },
       "category": "日常",
       "mark": {
@@ -214,7 +214,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "卡哇伊",
-        "ja-JP": "cute"
+        "en-US": "cute"
       },
       "category": "日常",
       "mark": {
@@ -229,7 +229,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "为什么你们要用剪刀",
-        "ja-JP": "Why do you use scissors"
+        "en-US": "Why do you use scissors"
       },
       "category": "名言",
       "mark": {
@@ -244,7 +244,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "问号×901",
-        "ja-JP": "Why×901"
+        "en-US": "Why×901"
       },
       "category": "日常",
       "mark": {
@@ -259,7 +259,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "不要用剪刀",
-        "ja-JP": "Don't use scissors"
+        "en-US": "Don't use scissors"
       },
       "category": "名言",
       "mark": {
@@ -274,7 +274,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "你们不是好孩子",
-        "ja-JP": "You're not good kids"
+        "en-US": "You're not good kids"
       },
       "category": "说教",
       "mark": {
@@ -289,7 +289,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "kimo",
-        "ja-JP": "kimo"
+        "en-US": "kimo"
       },
       "category": "说教",
       "mark": {
@@ -304,7 +304,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "DD",
-        "ja-JP": "DD"
+        "en-US": "DD"
       },
       "category": "说教",
       "mark": {
@@ -319,7 +319,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "你是狗",
-        "ja-JP": "You are a dog"
+        "en-US": "You are a dog"
       },
       "category": "名言",
       "mark": {
@@ -334,7 +334,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "我们不是人",
-        "ja-JP": "We are not people"
+        "en-US": "We are not people"
       },
       "category": "名言",
       "mark": {
@@ -349,7 +349,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "你没有女朋友",
-        "ja-JP": "You don't have a girlfriend"
+        "en-US": "You don't have a girlfriend"
       },
       "category": "名言",
       "mark": {
@@ -364,7 +364,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "胖次？",
-        "ja-JP": "Pantsu?"
+        "en-US": "Pantsu?"
       },
       "category": "清楚",
       "mark": {
@@ -379,7 +379,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "我的狗在哪",
-        "ja-JP": "Where is my dog"
+        "en-US": "Where is my dog"
       },
       "category": "名言",
       "mark": {
@@ -394,7 +394,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "我不清楚",
-        "ja-JP": "I don't know(bushi)"
+        "en-US": "I don't know(bushi)"
       },
       "category": "清楚",
       "mark": {
@@ -409,7 +409,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "LSP",
-        "ja-JP": "LSP"
+        "en-US": "LSP"
       },
       "category": "名言",
       "mark": {
@@ -424,7 +424,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "明白了",
-        "ja-JP": "I see"
+        "en-US": "I see"
       },
       "category": "日常",
       "mark": {
@@ -439,7 +439,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "hiiro开心",
-        "ja-JP": "Hiiro happy"
+        "en-US": "Hiiro happy"
       },
       "category": "日常",
       "mark": {
@@ -454,7 +454,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "这个不对啊",
-        "ja-JP": "This is not right"
+        "en-US": "This is not right"
       },
       "category": "日常",
       "mark": {
@@ -469,7 +469,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "你可以做我的狗吗",
-        "ja-JP": "Can you be my dog"
+        "en-US": "Can you be my dog"
       },
       "category": "名言",
       "mark": {
@@ -484,7 +484,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "呀~咩~嗲~",
-        "ja-JP": "ya~mie~die~"
+        "en-US": "ya~mie~die~"
       },
       "category": "日常",
       "mark": {
@@ -499,7 +499,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "这个人不对",
-        "ja-JP": "This man is not right"
+        "en-US": "This man is not right"
       },
       "category": "日常",
       "mark": {
@@ -514,7 +514,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "舔狗",
-        "ja-JP": "dog"
+        "en-US": "dog"
       },
       "category": "说教",
       "mark": {
@@ -529,7 +529,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "舔狗是真的牛逼",
-        "ja-JP": "good dog"
+        "en-US": "good dog"
       },
       "category": "名言",
       "mark": {
@@ -544,7 +544,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "你可以做我的舔狗吗",
-        "ja-JP": "Can you be my good dog"
+        "en-US": "Can you be my good dog"
       },
       "category": "名言",
       "mark": {
@@ -559,7 +559,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "no",
-        "ja-JP": "no"
+        "en-US": "no"
       },
       "category": "日常",
       "mark": {
@@ -574,7 +574,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "是开玩笑的哦",
-        "ja-JP": "It's a joke"
+        "en-US": "It's a joke"
       },
       "category": "日常",
       "mark": {
@@ -589,7 +589,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "我是你的爸爸",
-        "ja-JP": "I'm your Baba"
+        "en-US": "I'm your Baba"
       },
       "category": "名言",
       "mark": {
@@ -604,7 +604,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "不可以啊好孩子",
-        "ja-JP": "No, good boy"
+        "en-US": "No, good boy"
       },
       "category": "说教",
       "mark": {
@@ -619,7 +619,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "kimo连击",
-        "ja-JP": "kimo×901"
+        "en-US": "kimo×901"
       },
       "category": "说教",
       "mark": {
@@ -634,7 +634,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "烧开水",
-        "ja-JP": "Boil water"
+        "en-US": "Boil water"
       },
       "category": "烧开水",
       "mark": {
@@ -649,7 +649,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "努力学习天天向上",
-        "ja-JP": "good good study, day day up"
+        "en-US": "good good study, day day up"
       },
       "category": "名言",
       "mark": {
@@ -664,7 +664,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "别说了别说了别说了",
-        "ja-JP": "Stop talking"
+        "en-US": "Stop talking"
       },
       "category": "日常",
       "mark": {
@@ -679,7 +679,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "我愿意",
-        "ja-JP": "I do"
+        "en-US": "I do"
       },
       "category": "清楚",
       "mark": {
@@ -694,7 +694,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "吶~",
-        "ja-JP": "nie~"
+        "en-US": "nie~"
       },
       "category": "可爱",
       "mark": {
@@ -709,7 +709,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "水开了",
-        "ja-JP": "water is boiling"
+        "en-US": "water is boiling"
       },
       "category": "烧开水",
       "mark": {
@@ -724,7 +724,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "no!",
-        "ja-JP": "no!"
+        "en-US": "no!"
       },
       "category": "日常",
       "mark": {
@@ -739,7 +739,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "啊",
-        "ja-JP": "Ah"
+        "en-US": "Ah"
       },
       "category": "日常",
       "mark": {
@@ -754,7 +754,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "哈↑哈↑哈↑哈↑哈↑",
-        "ja-JP": "Ha↑Ha↑Ha↑Ha↑Ha↑"
+        "en-US": "Ha↑Ha↑Ha↑Ha↑Ha↑"
       },
       "category": "日常",
       "mark": {
@@ -769,7 +769,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "哈×21",
-        "ja-JP": "Ha×21"
+        "en-US": "Ha×21"
       },
       "category": "烧开水",
       "mark": {
@@ -784,7 +784,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "吃桃！",
-        "ja-JP": "Eat peach!"
+        "en-US": "Eat peach!"
       },
       "category": "说教",
       "mark": {
@@ -794,7 +794,7 @@
       },
       "usePicture": {
         "zh-CN": "peach.jpg",
-        "ja-JP": "peach.jpg"
+        "en-US": "peach.jpg"
       }
     },
     {
@@ -803,7 +803,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "我不喜欢你了",
-        "ja-JP": "I don't like you anymore"
+        "en-US": "I don't like you anymore"
       },
       "category": "日常",
       "mark": {
@@ -818,7 +818,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "我打你啊",
-        "ja-JP": "I hit you"
+        "en-US": "I hit you"
       },
       "category": "名言",
       "mark": {
@@ -833,7 +833,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "猫式呼吸",
-        "ja-JP": "Cat breathing"
+        "en-US": "Cat breathing"
       },
       "category": "可爱",
       "mark": {
@@ -848,7 +848,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "阿里噶多",
-        "ja-JP": "arigato"
+        "en-US": "arigato"
       },
       "category": "清楚",
       "mark": {
@@ -863,7 +863,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "别骂了别骂了",
-        "ja-JP": "Don't scold"
+        "en-US": "Don't scold"
       },
       "category": "日常",
       "mark": {
@@ -878,7 +878,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "所以我要在你怀里",
-        "ja-JP": "So I'll be in your arms"
+        "en-US": "So I'll be in your arms"
       },
       "category": "清楚",
       "mark": {
@@ -893,7 +893,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "我懂了我懂了",
-        "ja-JP": "I see, I see"
+        "en-US": "I see, I see"
       },
       "category": "日常",
       "mark": {
@@ -908,7 +908,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "老公抱抱",
-        "ja-JP": "Embrace"
+        "en-US": "Embrace"
       },
       "category": "清楚",
       "mark": {
@@ -923,7 +923,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "喜欢",
-        "ja-JP": "su ki"
+        "en-US": "su ki"
       },
       "category": "日常",
       "mark": {
@@ -938,7 +938,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "爸爸要哭了",
-        "ja-JP": "Dad's going to cry"
+        "en-US": "Dad's going to cry"
       },
       "category": "日常",
       "mark": {
@@ -953,7 +953,7 @@
       "date": "2020-11-19",
       "translate": {
         "zh-CN": "I can do it",
-        "ja-JP": "I can do it"
+        "en-US": "I can do it"
       },
       "category": "日常",
       "mark": {
@@ -968,7 +968,7 @@
       "date": "2020-11-19",
       "translate": {
         "zh-CN": "啊啊啊哈哈哈哈哈(慎点)",
-        "ja-JP": "ahahahhahahahaha(warning)"
+        "en-US": "ahahahhahahahaha(warning)"
       },
       "category": "烧开水",
       "mark": {
@@ -983,7 +983,7 @@
       "date": "2020-11-19",
       "translate": {
         "zh-CN": "笑(?)",
-        "ja-JP": "laugh(?)"
+        "en-US": "laugh(?)"
       },
       "category": "混沌",
       "mark": {
@@ -998,7 +998,7 @@
       "date": "2020-11-19",
       "translate": {
         "zh-CN": "o ni i sa ma",
-        "ja-JP": "o ni i sa ma"
+        "en-US": "o ni i sa ma"
       },
       "category": "清楚",
       "mark": {
@@ -1013,7 +1013,7 @@
       "date": "2020-11-19",
       "translate": {
         "zh-CN": "hiiro可爱吗",
-        "ja-JP": "Is hiiro cute"
+        "en-US": "Is hiiro cute"
       },
       "category": "清楚",
       "mark": {
@@ -1028,7 +1028,7 @@
       "date": "2020-11-19",
       "translate": {
         "zh-CN": "烧开水2",
-        "ja-JP": "Boil water 2"
+        "en-US": "Boil water 2"
       },
       "category": "烧开水",
       "mark": {
@@ -1043,7 +1043,7 @@
       "date": "2020-11-19",
       "translate": {
         "zh-CN": "烧开水3",
-        "ja-JP": "Boil water 3"
+        "en-US": "Boil water 3"
       },
       "category": "烧开水",
       "mark": {
@@ -1058,7 +1058,7 @@
       "date": "2020-11-19",
       "translate": {
         "zh-CN": "Unravel",
-        "ja-JP": "Unravel"
+        "en-US": "Unravel"
       },
       "category": "唱歌",
       "mark": {
@@ -1073,7 +1073,7 @@
       "date": "2020-11-19",
       "translate": {
         "zh-CN": "啊啊啊啊啊啊啊啊啊啊啊啊",
-        "ja-JP": "aaaaaaaaaaaaaaaaaah"
+        "en-US": "aaaaaaaaaaaaaaaaaah"
       },
       "category": "混沌",
       "mark": {
@@ -1088,7 +1088,7 @@
       "date": "2020-11-19",
       "translate": {
         "zh-CN": "我要哭啦",
-        "ja-JP": "I'm going to cry"
+        "en-US": "I'm going to cry"
       },
       "category": "日常",
       "mark": {
@@ -1103,7 +1103,7 @@
       "date": "2020-11-19",
       "translate": {
         "zh-CN": "哭声3",
-        "ja-JP": "cry3"
+        "en-US": "cry3"
       },
       "category": "可爱",
       "mark": {
@@ -1118,7 +1118,7 @@
       "date": "2020-11-19",
       "translate": {
         "zh-CN": "mua",
-        "ja-JP": "mua"
+        "en-US": "mua"
       },
       "category": "清楚",
       "mark": {
@@ -1133,7 +1133,7 @@
       "date": "2020-11-19",
       "translate": {
         "zh-CN": "mua2",
-        "ja-JP": "mua2"
+        "en-US": "mua2"
       },
       "category": "清楚",
       "mark": {
@@ -1148,7 +1148,7 @@
       "date": "2020-11-19",
       "translate": {
         "zh-CN": "晚安(日语)",
-        "ja-JP": "Good night (Japanese)"
+        "en-US": "Good night (Japanese)"
       },
       "category": "清楚",
       "mark": {

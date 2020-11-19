@@ -157,7 +157,7 @@ export interface VoicesItem {
 
 export interface Translate {
   'zh-CN'?: string;
-  'ja-JP'?: string;
+  'en-US'?: string;
 }
 
 /**
