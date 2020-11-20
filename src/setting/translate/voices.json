@@ -2213,6 +2213,36 @@
         "time": "59:29~59:31",
         "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
       }
+    },
+    {
+      "name": "起床啊你这个debu",
+      "path": "起床hiiro.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "起床啊你这个debu",
+        "en-US": "Get up, debu!"
+      },
+      "category": "名言"
+    },
+    {
+      "name": "GMnya",
+      "path": "GMnya.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "GMnya",
+        "en-US": "GMnya"
+      },
+      "category": "清楚"
+    },
+    {
+      "name": "Hiiro的动听歌声",
+      "path": "Hiiro的动听歌声.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "Hiiro的动听歌声",
+        "en-US": "Hiiro's beautiful voice"
+      },
+      "category": "唱歌"
     }
   ]
 }
