@@ -10,7 +10,7 @@
     {
       "name": "烧开水",
       "translate": {
-        "zh-CN": "猫猫烧开水~",
+        "zh-CN": "猫猫开水~",
         "en-US": "boil water~"
       }
     },
@@ -54,6 +54,13 @@
       "translate": {
         "zh-CN": "唱歌猫猫~",
         "en-US": "sing~ "
+      }
+    },
+    {
+      "name": "软猫",
+      "translate": {
+        "zh-CN": "软软猫猫~",
+        "en-US": "soft~ "
       }
     }
   ],
@@ -848,7 +855,7 @@
       "date": "2020-11-11",
       "translate": {
         "zh-CN": "阿里噶多",
-        "en-US": "arigato"
+        "en-US": "a ri ga to"
       },
       "category": "清楚",
       "mark": {
@@ -1155,6 +1162,1056 @@
         "title": "【Hiiro】4分钟带你看完8个月直播",
         "time": "3:56~3:57",
         "url": "https://www.bilibili.com/video/BV1i54y1z7jn"
+      }
+    },
+    {
+      "name": "对不起我刚刚起床",
+      "path": "对不起我刚刚起床.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "对不起我刚刚起床",
+        "en-US": "Sorry, I just woke up."
+      },
+      "category": "软猫",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "4:53~4:57",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "晚上好",
+      "path": "晚上好.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "晚上好",
+        "en-US": "Good evening"
+      },
+      "category": "软猫",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "5:09~5:13",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "没关系",
+      "path": "没关系.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "没关系",
+        "en-US": "It's ok"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "5:42~5:45",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "我刚刚起床",
+      "path": "我刚刚起床.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "我刚刚起床",
+        "en-US": "I just woke up"
+      },
+      "category": "软猫",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "6:47~6:49",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "我不是debu",
+      "path": "我不是debu.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "我不是debu",
+        "en-US": "I'm not debu."
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "8:21~8:22",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "are you bulibuli",
+      "path": "are you bulibuli.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "are you bulibuli",
+        "en-US": "are you bulibuli"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "8:25~8:28",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "soft猫猫",
+      "path": "soft猫猫.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "soft猫猫",
+        "en-US": "soft cat"
+      },
+      "category": "软猫",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "10:16~10:17",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "你不对啊这个人",
+      "path": "你不对啊这个人.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "你不对啊这个人",
+        "en-US": "You are not right"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "10:21~10:22",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "多喝热水",
+      "path": "多喝热水.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "多喝热水",
+        "en-US": "Drink more hot water"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "10:09~10:10",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "阿里噶多2",
+      "path": "阿里噶多2.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "阿里噶多2",
+        "en-US": "a ri ga to"
+      },
+      "category": "清楚",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "11:03~11:04",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "我喜欢你",
+      "path": "我喜欢你.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "我喜欢你",
+        "en-US": "I like you"
+      },
+      "category": "清楚",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "13:52~13:53",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "哈？",
+      "path": "哈？.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "哈？",
+        "en-US": "ha?"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "14:31~14:32",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "你是谁",
+      "path": "你是谁.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "你是谁",
+        "en-US": "Who are you"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "14:32~14:33",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "你不是我的老公",
+      "path": "你不是我的老公.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "你不是我的老公",
+        "en-US": "You are not my husband"
+      },
+      "category": "说教",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "14:44~14:45",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "别的老婆也好看",
+      "path": "别的老婆也好看.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "别的老婆也好看",
+        "en-US": "Other wife is good looking too"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "15:24~15:25",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "猫猫",
+      "path": "猫猫.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "猫猫",
+        "en-US": "kitty~"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "16:34~16:35",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "先等一下",
+      "path": "先等一下.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "先等一下",
+        "en-US": "Wait a minute"
+      },
+      "category": "软猫",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "16:38~16:39",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "天天LSP",
+      "path": "天天LSP.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "天天LSP",
+        "en-US": "LSP every day"
+      },
+      "category": "说教",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "17:05~17:06",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "谢谢你啊",
+      "path": "谢谢你啊.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "谢谢你啊",
+        "en-US": "Thank you"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "18:03~18:04",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "没问题吧",
+      "path": "没问题吧.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "没问题吧",
+        "en-US": "Is it okay?"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "18:31~18:32",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "甜菜猫",
+      "path": "甜菜猫.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "甜菜猫",
+        "en-US": "Genius Cat"
+      },
+      "category": "软猫",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "18:48~18:49",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "对不起",
+      "path": "对不起.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "对不起",
+        "en-US": "Sorry"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "20:21~20:22",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "nya~nya~nya~",
+      "path": "nya~nya~nya~.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "nya~nya~nya~",
+        "en-US": "nya~nya~nya~"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "20:48~20:49",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "啊这",
+      "path": "啊这.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "啊这",
+        "en-US": "ah"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "21:00~21:01",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "okokok",
+      "path": "okokok.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "okokok",
+        "en-US": "okokok"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "21:13~21:16",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "啊啊啊啊啊啊",
+      "path": "啊啊啊啊啊啊.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "啊啊啊啊啊啊",
+        "en-US": "ahahahahahah"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "21:18~21:20",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "可以可以可以",
+      "path": "可以可以可以.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "可以可以可以",
+        "en-US": "Yes, yes, yes"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "21:29~21:30",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "我开始咯",
+      "path": "我开始咯.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "我开始咯",
+        "en-US": "I started"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "21:38~21:39",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "全部老M",
+      "path": "全部老M.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "全部老M",
+        "en-US": "All of M"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "22:36~22:37",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "笑",
+      "path": "笑.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "笑",
+        "en-US": "Laugh"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "22:44~22:45",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "天天DD",
+      "path": "天天DD.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "天天DD",
+        "en-US": "DD every day"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "22:51~22:52",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "天天爬",
+      "path": "天天爬.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "天天爬",
+        "en-US": "Crawl every day"
+      },
+      "category": "说教",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "22:58~22:59",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "啊这个",
+      "path": "啊这个.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "啊这个",
+        "en-US": "Ah this one"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "24:02~24:04",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "呵↑呵↑呵↑呵↑呵↑",
+      "path": "呵↑呵↑呵↑呵↑呵↑.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "呵↑呵↑呵↑呵↑呵↑",
+        "en-US": "He↑He↑He↑He↑He↑"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "25:28~25:29",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "无路赛无路赛无路赛",
+      "path": "无路赛无路赛无路赛.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "无路赛无路赛无路赛",
+        "en-US": "Urusai Urusai Urusai"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "28:03~28:06",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "八嘎",
+      "path": "八嘎.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "八嘎",
+        "en-US": "baka"
+      },
+      "category": "清楚",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "28:06~28:06",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "我不知道啊",
+      "path": "我不知道啊.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "我不知道啊",
+        "en-US": "I don't know"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "31:52~31:53",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "笑2",
+      "path": "笑2.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "笑2",
+        "en-US": "laugh2"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "33:26~33:27",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "狗狗",
+      "path": "狗狗.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "狗狗~",
+        "en-US": "puppy~"
+      },
+      "category": "软猫",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "33:31~33:32",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "很好我好喜欢",
+      "path": "很好我好喜欢.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "很好我好喜欢",
+        "en-US": "Good. I love it"
+      },
+      "category": "软猫",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "34:28~34:30",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "嗷呜",
+      "path": "嗷呜.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "嗷呜",
+        "en-US": "ow"
+      },
+      "category": "软猫",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "35:12~35:12",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "笑3",
+      "path": "笑3.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "笑3",
+        "en-US": "laugh3"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "36:25~36:28",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "老公？",
+      "path": "老公？.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "老公(?)",
+        "en-US": "husband(?)"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "36:39~36:40",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "啊老公",
+      "path": "啊老公.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "啊老公",
+        "en-US": "ah~husband"
+      },
+      "category": "清楚",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "36:41~36:42",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "才八点",
+      "path": "才八点.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "才八点",
+        "en-US": "It's only eight o'clock"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "37:16~37:17",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "笑4",
+      "path": "笑4.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "笑4",
+        "en-US": "laugh4"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "37:30~37:33",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "NTR",
+      "path": "NTR.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "NTR",
+        "en-US": "NTR"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "38:01~38:01",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "爸爸",
+      "path": "爸爸.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "爸爸",
+        "en-US": "baba"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "40:21~40:21",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "我是甜菜",
+      "path": "我是甜菜.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "我是甜菜",
+        "en-US": "I'm a genius"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "40:36~40:37",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "可爱的声音",
+      "path": "可爱的声音.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "可爱的声音",
+        "en-US": "Lovely sound"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "41:29~41:30",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "Single Dog",
+      "path": "Single Dog.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "Single Dog Days",
+        "en-US": "Single Dog Days"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "43:09~43:11",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "我的天啊",
+      "path": "我的天啊.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "我的天啊",
+        "en-US": "Oh my God"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "44:14~44:15",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "耳朵没有了",
+      "path": "耳朵没有了.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "耳朵没有了",
+        "en-US": "The ears are gone"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "44:15~44:17",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "嘻嘻嘻嘻嘻嘻",
+      "path": "嘻嘻嘻嘻嘻嘻.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "嘻嘻嘻嘻嘻嘻",
+        "en-US": "Hee hee hee hee hee!"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "44:40~44:42",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "给我红包",
+      "path": "给我红包.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "给我红包",
+        "en-US": "Give me a red packet"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "45:32~45:33",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "我想睡觉了",
+      "path": "我想睡觉了.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "我想睡觉了",
+        "en-US": "I want to go to sleep"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "46:18~46:20",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "关门了我关门了",
+      "path": "关门了我关门了.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "关门了我关门了",
+        "en-US": "It's closed. I'm closed"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "46:23~46:25",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "拜拜",
+      "path": "拜拜.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "拜拜",
+        "en-US": "bye bye"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "46:32~46:32",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "开玩笑开玩笑开玩笑开玩笑",
+      "path": "开玩笑开玩笑开玩笑开玩笑.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "开玩笑开玩笑开玩笑开玩笑",
+        "en-US": "Joke Joke Joke Joke"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "46:38~46:41",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "王小姐",
+      "path": "王小姐.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "王小姐",
+        "en-US": "Ms. Wang"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "47:59~48:01",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "我是甜菜哒哟",
+      "path": "我是甜菜哒哟.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "我是甜菜哒哟",
+        "en-US": "I'm a genius dayo"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "50:46~50:47",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "我就是王牛奶",
+      "path": "我就是王牛奶.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "我就是王牛奶",
+        "en-US": "I am Wang Milk"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "51:06~51:08",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "nya",
+      "path": "nya.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "nya",
+        "en-US": "nya"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "51:23~51:24",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "菜B",
+      "path": "菜B.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "菜B",
+        "en-US": "Weak"
+      },
+      "category": "说教",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "52:16~52:17",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "哈↑哈↑哈↑哈↑",
+      "path": "哈↑哈↑哈↑哈↑.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "哈↑哈↑哈↑哈↑",
+        "en-US": "ha↑ha↑ha↑ha↑"
+      },
+      "category": "烧开水",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "52:42~52:47",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "多喝热水2",
+      "path": "多喝热水2.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "多喝热水",
+        "en-US": "Drink more hot water"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "52:50~52:51",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "我笑死了",
+      "path": "我笑死了.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "我笑死了",
+        "en-US": "Hilarious"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "53:06~53:07",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "她是我的老婆",
+      "path": "她是我的老婆.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "她是我的老婆",
+        "en-US": "She's my wife"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "53:19~53:21",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "没问题",
+      "path": "没问题.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "没问题",
+        "en-US": "No problem"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "53:33~53:34",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
+      }
+    },
+    {
+      "name": "为什么为什么",
+      "path": "为什么为什么.mp3",
+      "date": "2020-11-20",
+      "translate": {
+        "zh-CN": "为什么为什么",
+        "en-US": "why why"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "59:29~59:31",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
       }
     }
   ]
