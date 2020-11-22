@@ -62,6 +62,12 @@
         "zh-CN": "软软猫猫~",
         "en-US": "soft~ "
       }
+    },
+    {
+      "name": "糟糕",
+      "translate": {
+        "zh-CN": "糟糕猫猫~"
+      }
     }
   ],
   "voices": [
@@ -338,7 +344,7 @@
     {
       "name": "我们不是人",
       "path": "我们不是人.mp3",
-      "date": "2020-11-11",
+      "date": "2020-11-23",
       "translate": {
         "zh-CN": "我们不是人",
         "en-US": "We are not people"
@@ -346,7 +352,7 @@
       "category": "名言",
       "mark": {
         "title": "【Hiiro】猫猫的中文是怎么变好的？",
-        "time": "0:04~0:06",
+        "time": "0:01~0:06",
         "url": "https://www.bilibili.com/video/BV1HZ4y1u7gz/"
       }
     },
@@ -2243,6 +2249,36 @@
         "en-US": "Hiiro's beautiful voice"
       },
       "category": "唱歌"
+    },
+    {
+      "name": "darling",
+      "path": "darling.mp3",
+      "date": "2020-11-23",
+      "translate": {
+        "zh-CN": "darling",
+        "en-US": "darling"
+      },
+      "category": "清楚"
+    },
+    {
+      "name": "猫猫伸懒腰",
+      "path": "猫猫伸懒腰.mp3",
+      "date": "2020-11-23",
+      "translate": {
+        "zh-CN": "伸懒腰",
+        "en-US": "Stretching"
+      },
+      "category": "糟糕"
+    },
+    {
+      "name": "打哈欠",
+      "path": "打哈欠.mp3",
+      "date": "2020-11-23",
+      "translate": {
+        "zh-CN": "打哈欠",
+        "en-US": "yaw"
+      },
+      "category": "糟糕"
     }
   ]
 }
