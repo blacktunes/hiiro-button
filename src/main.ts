@@ -43,10 +43,15 @@ for (const category of VoiceList.category) {
 
 for (const voice of VoiceList.voices) {
   if (voice.translate !== undefined) {
-    if (voice.translate['zh-CN'] !== undefined) {
+    const category = VoiceList.category.find(item => {
+      if (item.name === voice.category) {
+        return item
+      }
+    })!
+    if (voice.translate['zh-CN'] !== undefined && category.translate['zh-CN'] !== undefined) {
       CN.voice[voice.name] = voice.translate['zh-CN']
     }
-    if (voice.translate['en-US'] !== undefined) {
+    if (voice.translate['en-US'] !== undefined && category.translate['en-US'] !== undefined) {
       EN.voice[voice.name] = voice.translate['en-US']
     }
   }
