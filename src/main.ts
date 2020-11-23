@@ -27,7 +27,7 @@ CN.info = {
 
 EN.info = {
   ...EN.info,
-  ...Setting.name.JP
+  ...Setting.name.EN
 }
 
 for (const category of VoiceList.category) {
