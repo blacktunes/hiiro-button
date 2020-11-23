@@ -100,19 +100,83 @@
             class="icon"
             :title="t(ACTION_I18N.loop)"
             @click="loopChange"
-            :class="{ 'icon-active': playSetting.loop }"
+            :class="{ 'icon-active': playSetting.loop !== 0 }"
           >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              height="24"
               width="24"
-              role="img"
-              aria-hidden="true"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              v-if="playSetting.loop === 0"
             >
               <path
-                d="M17,17H7V14L3,18L7,22V19H19V13H17M7,7H17V10L21,6L17,2V5H5V11H7V7Z"
+                d="m17,17l-10,0l0,-3l-4,4l4,4l0,-3l12,0l0,-6l-2,0m-10,-6l10,0l0,3l4,-4l-4,-4l0,3l-12,0l0,6l2,0l0,-4z"
               />
+            </svg>
+            <svg
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              v-if="playSetting.loop === 1"
+            >
+              <path
+                d="m17,17l-10,0l0,-3l-4,4l4,4l0,-3l12,0l0,-6l-2,0m-10,-6l10,0l0,3l4,-4l-4,-4l0,3l-12,0l0,6l2,0l0,-4z"
+              />
+              <text
+                font-weight="bold"
+                transform="matrix(0.37833114108120997,0,0,0.4339360947245867,9.614645136687502,5.776567408197169) "
+                xml:space="preserve"
+                text-anchor="start"
+                font-family="'Trebuchet MS', Gadget, sans-serif"
+                font-size="24"
+                y="21.67922"
+                x="-1.13436"
+              >
+                1
+              </text>
+            </svg>
+            <svg
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              v-if="playSetting.loop === 2"
+            >
+              <path
+                d="m17,17l-10,0l0,-3l-4,4l4,4l0,-3l12,0l0,-6l-2,0m-10,-6l10,0l0,3l4,-4l-4,-4l0,3l-12,0l0,6l2,0l0,-4z"
+              />
+              <text
+                font-weight="bold"
+                transform="matrix(0.37833114108120997,0,0,0.4339360947245867,9.614645136687502,5.776567408197169) "
+                xml:space="preserve"
+                text-anchor="start"
+                font-family="'Trebuchet MS', Gadget, sans-serif"
+                font-size="24"
+                y="21.67922"
+                x="-1.13436"
+              >
+                C
+              </text>
+            </svg>
+            <svg
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              v-if="playSetting.loop === 3"
+            >
+              <path
+                d="m17,17l-10,0l0,-3l-4,4l4,4l0,-3l12,0l0,-6l-2,0m-10,-6l10,0l0,3l4,-4l-4,-4l0,3l-12,0l0,6l2,0l0,-4z"
+              />
+              <text
+                font-weight="bold"
+                transform="matrix(0.37833114108120997,0,0,0.4339360947245867,9.614645136687502,5.776567408197169) "
+                xml:space="preserve"
+                text-anchor="start"
+                font-family="'Trebuchet MS', Gadget, sans-serif"
+                font-size="24"
+                y="21.67922"
+                x="-1.13436"
+              >
+                A
+              </text>
             </svg>
           </div>
         </div>
@@ -190,13 +254,17 @@ export default {
 
     const autoRandomChange = () => {
       playSetting.overlap = false
-      playSetting.loop = false
+      playSetting.loop = 0
       playSetting.autoRandom = !playSetting.autoRandom
     }
 
     const loopChange = () => {
       playSetting.autoRandom = false
-      playSetting.loop = !playSetting.loop
+      if (playSetting.loop < 3) {
+        playSetting.loop += 1
+      } else {
+        playSetting.loop = 0
+      }
     }
 
     const infoDate = inject('infoDate') as any
@@ -286,6 +354,7 @@ a
   cursor pointer
 
   svg
+    user-select none
     height 80%
     width 80%
     padding 10%

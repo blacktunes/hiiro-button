@@ -19,13 +19,11 @@
                       !searchData.list.includes(voice.name)) ||
                     (playSetting.showInfo && !voice.mark),
                   highlight: highlight === voice.name,
-                  disable: playSetting.showInfo && !voice.mark
+                  disable: playSetting.showInfo && !voice.mark,
                 }"
                 :name="voice.name"
                 @click="
-                  playSetting.showInfo
-                    ? showInfo(voice.mark)
-                    : play(voice)
+                  playSetting.showInfo ? showInfo(voice.mark) : play(voice)
                 "
                 :ref="
                   (el) => {
@@ -122,6 +120,13 @@ export default {
       voices.push(temp)
     })
     provide('voices', voices)
+
+    const playList: VoicesItem[] = []
+    voices.forEach(category => {
+      category.voiceList.forEach(voice => {
+        playList.push(voice)
+      })
+    })
 
     if ('mediaSession' in navigator) {
       navigator.mediaSession.setActionHandler('nexttrack', () => {
@@ -232,8 +237,8 @@ export default {
               playerList.get(key)!.audio.onended = () => {
                 voices[i].voiceList[j].progress = 0
                 playerList.delete(key)
-                if (playSetting.loop) {
-                  play(voice)
+                if (playSetting.loop > 0) {
+                  listLoop(voice)
                 } else {
                   reset()
                 }
@@ -256,8 +261,7 @@ export default {
     /**
      * 随机播放失败次数
      */
-    let errTimes = 0
-
+    let randomErrTimes = 0
     /**
      * 随机播放
      */
@@ -265,13 +269,61 @@ export default {
       const randomList = voices[_getrRandomInt(voices.length)]
       const randomVoice = randomList.voiceList[_getrRandomInt(randomList.voiceList.length)]
       if (needToShow(randomList.translate) && needToShow(randomVoice.translate)) {
-        errTimes = 0
+        randomErrTimes = 0
         play(randomVoice)
-      } else if (errTimes <= 5) {
-        ++errTimes
+      } else if (randomErrTimes <= 5) {
+        ++randomErrTimes
         randomPlay()
         // 连续五次不存在停止随机
       }
+    }
+
+    /**
+     * 随机播放
+     */
+    const listLoop = (voice: VoicesItem) => {
+      if (playSetting.loop === 1) {
+        play(voice)
+      } else if (playSetting.loop === 2) {
+        const list = voices.find(voicesCategory => {
+          if (voicesCategory.name === voice.category) {
+            return voicesCategory.voiceList
+          }
+        })!.voiceList
+        const nextVoice = list[getLoopIndex(voice, list)]
+        if (nextVoice) {
+          play(nextVoice)
+        }
+      } else if (playSetting.loop === 3) {
+        const nextVoice = playList[getLoopIndex(voice, playList)]
+        if (nextVoice) {
+          play(nextVoice)
+        }
+      }
+    }
+
+    const getLoopIndex = (voice: VoicesItem, list: VoicesItem[]): number => {
+      let index = -1
+      for (const i in list) {
+        if (Number(i) === list.length - 1) {
+          index = 0
+          break
+        }
+        if (list[i].name === voice.name) {
+          index = Number(i) + 1
+          if (!isCanPlay(list[index])) {
+            index = getLoopIndex(list[index], list)
+          }
+          break
+        }
+      }
+      return index
+    }
+
+    const isCanPlay = (voice: VoicesItem) => {
+      return (VoiceList.category.some(item => {
+        return item.name === voice.category && item.translate[locale.value]
+      })) && voice.translate[locale.value]
     }
 
     const infoDate = inject('infoDate') as any

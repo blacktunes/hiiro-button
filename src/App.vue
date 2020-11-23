@@ -29,7 +29,7 @@ export default {
       nowPlay: null,
       overlap: false,
       autoRandom: false,
-      loop: false,
+      loop: 0,
       showInfo: false
     })
     provide('playSetting', playSetting)
