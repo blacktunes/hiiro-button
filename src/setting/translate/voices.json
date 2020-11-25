@@ -64,6 +64,12 @@
       }
     },
     {
+      "name": "幼猫",
+      "translate": {
+        "zh-CN": "幼年猫猫~"
+      }
+    },
+    {
       "name": "糟糕",
       "translate": {
         "zh-CN": "糟糕猫猫~"
@@ -1801,21 +1807,6 @@
       }
     },
     {
-      "name": "老公？",
-      "path": "老公？.mp3",
-      "date": "2020-11-20",
-      "translate": {
-        "zh-CN": "老公(?)",
-        "en-US": "husband(?)"
-      },
-      "category": "混沌",
-      "mark": {
-        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
-        "time": "36:39~36:40",
-        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=1"
-      }
-    },
-    {
       "name": "啊老公",
       "path": "啊老公.mp3",
       "date": "2020-11-20",
@@ -1913,7 +1904,7 @@
         "zh-CN": "可爱的声音",
         "en-US": "Lovely sound"
       },
-      "category": "可爱",
+      "category": "糟糕",
       "mark": {
         "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
         "time": "41:29~41:30",
@@ -2279,6 +2270,861 @@
         "en-US": "yaw"
       },
       "category": "糟糕"
+    },
+    {
+      "name": "我的王牛奶",
+      "path": "我的王牛奶.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "我的王牛奶？",
+        "en-US": "My Wang Milk?"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "22:42~22:43",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=2"
+      }
+    },
+    {
+      "name": "王先生",
+      "path": "王先生.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "王先生",
+        "en-US": "Husband Wang"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "23:17~23:18",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=2"
+      }
+    },
+    {
+      "name": "王小姐是我的老婆",
+      "path": "王小姐是我的老婆.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "王小姐是我的老婆",
+        "en-US": "Miss Wang is my wife"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "25:18~25:20",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=2"
+      }
+    },
+    {
+      "name": "这个重要吗",
+      "path": "这个重要吗.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "这个重要吗",
+        "en-US": "Is this important"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "28:12~28:14",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=2"
+      }
+    },
+    {
+      "name": "突然秃头了",
+      "path": "突然秃头了.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "突然秃头了",
+        "en-US": "Suddenly bald"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "29:49~29:51",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=2"
+      }
+    },
+    {
+      "name": "莫多莫多",
+      "path": "莫多莫多.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "莫多莫多",
+        "en-US": "mo tto mo tto"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.17Tue.学中文&试试HSK！",
+        "time": "54:15~54:16",
+        "url": "https://www.bilibili.com/video/BV1Jy4y167NP?p=2"
+      }
+    },
+    {
+      "name": "来了来了",
+      "path": "来了来了.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "来了来了",
+        "en-US": "Coming, coming"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "5:52~5:54",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "八嘎2",
+      "path": "八嘎2.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "八嘎",
+        "en-US": "baka"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "5:59~6:00",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "我是debu你是八嘎",
+      "path": "我是debu你是八嘎.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "我是debu你是八嘎",
+        "en-US": "I'm Debu and you're Baka"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "6:01~6:04",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "什么时候debu可以站起来",
+      "path": "什么时候debu可以站起来.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "什么时候debu可以站起来",
+        "en-US": "When can debu stand up"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "6:08~6:10",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "呐呐呐呐呐",
+      "path": "呐呐呐呐呐.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "呐呐呐呐呐",
+        "en-US": "nienienienienie"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "7:51~7:52",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "你不是好人",
+      "path": "你不是好人.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "你不是好人",
+        "en-US": "You are not a good man"
+      },
+      "category": "说教",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "8:11~8:12",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "我们可以吃桃",
+      "path": "我们可以吃桃.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "我们可以吃桃",
+        "en-US": "We can eat peaches"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "9:11~9:13",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "我们一起吃桃",
+      "path": "我们一起吃桃.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "我们一起吃桃",
+        "en-US": "Let's eat peaches together"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "9:14~9:15",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "我的王牛奶结婚我了",
+      "path": "我的王牛奶结婚我了.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "我的王牛奶结婚我了",
+        "en-US": "My Wang Milk married me"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "9:54~9:56",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "你的XP好奇怪",
+      "path": "你的XP好奇怪.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "你的XP好奇怪",
+        "en-US": "Your XP is weird"
+      },
+      "category": "说教",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "13:27~13:28",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "害怕",
+      "path": "害怕.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "害怕",
+        "en-US": "Fear"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "13:36~13:37",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "为什么你不会有女朋友",
+      "path": "为什么你不会有女朋友.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "为什么你不会有女朋友",
+        "en-US": "Why you won't have a girlfriend"
+      },
+      "category": "说教",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "20:31~20:36",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "debu猫",
+      "path": "debu猫.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "debu猫",
+        "en-US": "Debu cat"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "20:49~20:53",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "去睡觉",
+      "path": "去睡觉.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "去睡觉",
+        "en-US": "Go to Sleep"
+      },
+      "category": "说教",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "21:00~21:01",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "这个人没问题吧",
+      "path": "这个人没问题吧.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "这个人没问题吧",
+        "en-US": "Is this man okay"
+      },
+      "category": "说教",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "25:05~25:07",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "吃桃2",
+      "path": "吃桃2.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "吃桃",
+        "en-US": "Eat peach"
+      },
+      "category": "说教",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "25:34~25:35",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "大姐姐我没有女朋友啊",
+      "path": "大姐姐我没有女朋友啊.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "大姐姐我没有女朋友啊",
+        "en-US": ""
+      },
+      "category": "幼猫",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "27:55~27:58",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "老公~",
+      "path": "老公~.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "老公~",
+        "en-US": "Husband~"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "28:54~28:55",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "老婆~",
+      "path": "老婆~.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "老婆~",
+        "en-US": "Wife~"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "28:55~28:56",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "你是单身狗没关系的",
+      "path": "你是单身狗没关系的.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "你是单身狗没关系的",
+        "en-US": "It's okay that you're a single dog"
+      },
+      "category": "说教",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "31:00~31:02",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "啊啊老公老公",
+      "path": "啊啊老公老公.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "啊啊老公老公",
+        "en-US": ""
+      },
+      "category": "糟糕",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "31:12~31:15",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "那个那个那个那个那个",
+      "path": "那个那个那个那个那个.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "那个那个那个那个那个",
+        "en-US": "That that that that"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "31:15~31:17",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "nyanyanyanya",
+      "path": "nyanyanyanya.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "nyanyanyanya",
+        "en-US": "nyanyanyanya"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "31:37~31:38",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "噢呜~",
+      "path": "噢呜~.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "噢呜~",
+        "en-US": "ohwu~"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "31:40~31:41",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "我呢我呢我呢",
+      "path": "我呢我呢我呢.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "我呢我呢我呢",
+        "en-US": "What about me"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "34:39~34:40",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "我可以给你一个好人卡",
+      "path": "我可以给你一个好人卡.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "我可以给你一个好人卡",
+        "en-US": "I can give you a good people card"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "36:44~36:46",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "听不懂",
+      "path": "听不懂.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "听不懂",
+        "en-US": "Unintelligible"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "39:32~39:35",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "我是大姐姐了",
+      "path": "我是大姐姐了.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "我是大姐姐了",
+        "en-US": "I'm a sister now"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "41:31~41:32",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "给你好人卡",
+      "path": "给你好人卡.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "给你好人卡",
+        "en-US": "Good People Card"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "41:57~41:58",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "DD发言",
+      "path": "DD发言.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "DD发言",
+        "en-US": "DD's speech"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "43:54~44:04",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "这就是DD呢",
+      "path": "这就是DD呢.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "这就是DD呢",
+        "en-US": "This is DD"
+      },
+      "category": "说教",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "44:36~44:37",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "sososososososo",
+      "path": "sososososososo.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "sososososososo",
+        "en-US": "sososososososo"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "45:10~45:12",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "老板大气",
+      "path": "老板大气.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "老板大气",
+        "en-US": "Lao Ban Da Qi"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "46:27~46:28",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "初见可爱单推",
+      "path": "初见可爱单推.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "初见可爱单推",
+        "en-US": "Dan Tui"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "47:15~47:17",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "老婆~老婆~",
+      "path": "老婆~老婆~.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "老婆~老婆~",
+        "en-US": "Wife~Wife~"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "48:51~48:54",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "你的朋友是你吧",
+      "path": "你的朋友是你吧.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "你的朋友是你吧",
+        "en-US": "Your friend is you, right?"
+      },
+      "category": "说教",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "49:54~49:55",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "我有一个朋友",
+      "path": "我有一个朋友.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "我有一个朋友",
+        "en-US": "I have a friend"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "50:00~50:03",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "我有一个朋友(剧情版)",
+      "path": "我有一个朋友(剧情版).mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "我有一个朋友(剧情版)",
+        "en-US": "I Have a Friend(Story)"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "50:29~51:12",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "我永远单推debiiro",
+      "path": "我永远单推debiiro.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "我永远单推debiiro",
+        "en-US": "Dan Tui debiiro"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "52:48~52:54",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "D都能D",
+      "path": "D都能D.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "D都能D",
+        "en-US": "All can D"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "54:50~54:51",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "纳尼纳尼纳尼",
+      "path": "纳尼纳尼纳尼.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "纳尼纳尼纳尼",
+        "en-US": "what"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "54:53~54:54",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "好耶",
+      "path": "好耶.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "好耶",
+        "en-US": "Haoye"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "59:33~59:34",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "给你个好人卡",
+      "path": "给你个好人卡.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "给你个好人卡",
+        "en-US": "I'll give you a good people card"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "59:39~59:41",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "呵↑呵↑呵↑呵↑呵↑2",
+      "path": "呵↑呵↑呵↑呵↑呵↑2.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "呵↑呵↑呵↑呵↑呵↑2",
+        "en-US": "he↑he↑he↑he↑he↑2"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "59:41~59:42",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "大姐姐的声音",
+      "path": "大姐姐的声音.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "大姐姐的声音",
+        "en-US": "Sister's Voice"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:00:16~1:00:18",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "我好了",
+      "path": "我好了.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "我好了",
+        "en-US": "I am good"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:01:01~1:01:02",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "prprpr",
+      "path": "prprpr.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "prprpr",
+        "en-US": "prprpr"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:01:11~1:01:12",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "阿巴阿巴阿巴",
+      "path": "阿巴阿巴阿巴.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "阿巴阿巴阿巴",
+        "en-US": "abaabaaba"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:01:15~1:01:17",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "チカっとチカ千花っ",
+      "path": "チカっとチカ千花っ.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "チカっとチカ千花っ",
+        "en-US": "チカっとチカ千花っ"
+      },
+      "category": "唱歌",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:26:58~1:27:57",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "ばかみたい",
+      "path": "ばかみたい.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "ばかみたい(damedane)",
+        "en-US": "ばかみたい(damedane)"
+      },
+      "category": "唱歌",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:31:27~1:32:34",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "开心吗",
+      "path": "开心吗.mp3",
+      "date": "2020-11-25",
+      "translate": {
+        "zh-CN": "开心吗",
+        "en-US": "Having fun?"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:32:37~1:32:38",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
     }
   ]
 }
