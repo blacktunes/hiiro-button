@@ -1019,7 +1019,7 @@
         "zh-CN": "o ni i sa ma",
         "en-US": "o ni i sa ma"
       },
-      "category": "清楚",
+      "category": "幼猫",
       "mark": {
         "title": "【Hiiro】4分钟带你看完8个月直播",
         "time": "0:47~0:49",
@@ -1034,7 +1034,7 @@
         "zh-CN": "hiiro可爱吗",
         "en-US": "Is hiiro cute"
       },
-      "category": "清楚",
+      "category": "幼猫",
       "mark": {
         "title": "【Hiiro】4分钟带你看完8个月直播",
         "time": "0:50~0:53",
@@ -2082,7 +2082,7 @@
       "date": "2020-11-20",
       "translate": {
         "zh-CN": "我就是王牛奶",
-        "en-US": "I am Wang Milk"
+        "en-US": "I'm Wang Milk"
       },
       "category": "名言",
       "mark": {
@@ -3042,7 +3042,7 @@
       "date": "2020-11-25",
       "translate": {
         "zh-CN": "我好了",
-        "en-US": "I am good"
+        "en-US": "I'm good"
       },
       "category": "名言",
       "mark": {
@@ -3124,6 +3124,531 @@
         "title": "【Hiiro Record】11.24 Tue.读棉花糖",
         "time": "1:32:37~1:32:38",
         "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "卡哇伊2",
+      "path": "卡哇伊2.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "卡哇伊2",
+        "en-US": "cute2"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:01:34~1:01:35",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "nonononono",
+      "path": "nonononono.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "nonononono",
+        "en-US": "nonononono"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:04:45~1:04:47",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "啊啊啊啊啊",
+      "path": "啊啊啊啊啊.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "啊啊啊啊啊",
+        "en-US": "aaaaa"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:05:44~1:05:45",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "我绿了",
+      "path": "我绿了.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "我绿了",
+        "en-US": "I'm green"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:05:46~1:05:47",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "我Lemon了",
+      "path": "我Lemon了.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "我Lemon了",
+        "en-US": "I'm lemon了"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:05:51~1:05:52",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "为什么你可以知道我是不是debu",
+      "path": "为什么你可以知道我是不是debu.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "为什么你可以知道我是不是debu",
+        "en-US": "How do you know that I' m not debu"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:10:28~1:10:31",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "我 不 是 debu",
+      "path": "我 不 是 debu.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "我 不 是 debu",
+        "en-US": "I'm not debu"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:13:13~1:13:15",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "我是一个卡哇伊漂亮的哦捏桑",
+      "path": "我是一个卡哇伊漂亮的哦捏桑.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "我是一个卡哇伊漂亮的哦捏桑",
+        "en-US": "I'm a kawaii beautiful sister"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:13:17~1:13:21",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "不对呢不对呢不对呢",
+      "path": "不对呢不对呢不对呢.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "不对呢不对呢不对呢",
+        "en-US": "No, no, no"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:13:37~1:13:39",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "喵",
+      "path": "喵.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "喵",
+        "en-US": "nya"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:16:47~1:16:47",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "桥豆麻袋",
+      "path": "桥豆麻袋.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "桥豆麻袋",
+        "en-US": "Wait a minute"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:17:10~1:17:12",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "可恶",
+      "path": "可恶.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "可恶",
+        "en-US": "Kusa"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro Record】11.24 Tue.读棉花糖",
+        "time": "1:17:46~1:17:47",
+        "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      }
+    },
+    {
+      "name": "麻烦你原地去世",
+      "path": "麻烦你原地去世.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "麻烦你原地去世",
+        "en-US": ""
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "0:04~0:06",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "大家好我是hiiro",
+      "path": "大家好我是hiiro.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "大家好我是hiiro",
+        "en-US": "Hi, I'm hiro"
+      },
+      "category": "软猫",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "0:15~0:18",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "自我介绍",
+      "path": "自我介绍.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "自我介绍",
+        "en-US": "Self Description"
+      },
+      "category": "幼猫",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "0:21~0:46",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "米娜爱我吗",
+      "path": "米娜爱我吗.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "米娜爱我吗",
+        "en-US": "Do people love me"
+      },
+      "category": "幼猫",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "0:36~0:38",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "耶~",
+      "path": "耶~.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "耶~",
+        "en-US": "yeah~"
+      },
+      "category": "幼猫",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "0:45~0:46",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "米娜LSP",
+      "path": "米娜LSP.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "米娜LSP",
+        "en-US": "All LSP"
+      },
+      "category": "说教",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "1:26~1:27",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "什么样的V什么样的D",
+      "path": "什么样的V什么样的D.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "什么样的V什么样的D",
+        "en-US": "What kind of V what kind of D"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "1:53~1:56",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "我是LSP",
+      "path": "我是LSP.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "我是LSP",
+        "en-US": "I'm LSP"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "1:56~1:58",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "笑5",
+      "path": "笑5.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "笑",
+        "en-US": "laugh"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "1:59~2:01",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "猫SP",
+      "path": "猫SP.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "猫SP",
+        "en-US": "CatSP"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "2:02~2:03",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "大姐姐的声音2",
+      "path": "大姐姐的声音2.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "大姐姐的声音",
+        "en-US": "Sister's Voice"
+      },
+      "category": "说教",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "2:07~2:08",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "o ni i sa ma2",
+      "path": "o ni i sa ma2.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "o ni i sa ma2",
+        "en-US": "o ni i sa ma2"
+      },
+      "category": "幼猫",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "2:16~2:17",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "我不是LSP",
+      "path": "我不是LSP.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "我不是LSP",
+        "en-US": "I'm not LSP"
+      },
+      "category": "幼猫",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "2:18~2:21",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "谁是LSP",
+      "path": "谁是LSP.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "谁是LSP",
+        "en-US": "Who is LSP"
+      },
+      "category": "幼猫",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "2:21~2:22",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "我不要骂你",
+      "path": "我不要骂你.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "我不要骂你",
+        "en-US": "I don't want to scold you"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "2:32~2:34",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "我是好人",
+      "path": "我是好人.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "我是好人",
+        "en-US": "I'm a good person"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "2:38~2:39",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "我是只好猫",
+      "path": "我是只好猫.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "我是只好猫",
+        "en-US": "I'm a good cat"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "2:39~2:41",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "你好kimo啊",
+      "path": "你好kimo啊.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "你好kimo啊",
+        "en-US": "you're kimo"
+      },
+      "category": "说教",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "2:49~2:53",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "大姐姐谁不喜欢呢",
+      "path": "大姐姐谁不喜欢呢.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "大姐姐谁不喜欢呢",
+        "en-US": "Who doesn't like sister"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "1:32~1:34",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "我也喜欢大姐姐",
+      "path": "我也喜欢大姐姐.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "我也喜欢大姐姐",
+        "en-US": "I also like sisters"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "【Hiiro】大姐姐求你再骂我一遍！",
+        "time": "1:39~1:40",
+        "url": "https://www.bilibili.com/video/av927798733"
+      }
+    },
+    {
+      "name": "我不是啊",
+      "path": "我不是啊.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "我不是啊",
+        "en-US": "I'm not"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "9:23~9:25",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
+      }
+    },
+    {
+      "name": "可爱的声音2",
+      "path": "可爱的声音2.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "可爱的声音2",
+        "en-US": "Lovely sound"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "3:52:37~3:52:55",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
+      }
+    },
+    {
+      "name": "阿巴阿巴阿巴阿巴",
+      "path": "阿巴阿巴阿巴阿巴.mp3",
+      "date": "2020-11-26",
+      "translate": {
+        "zh-CN": "阿巴阿巴阿巴阿巴",
+        "en-US": "abaabaabaaba"
+      },
+      "category": "混沌",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "3:24:57~3:24:59",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
       }
     }
   ]
