@@ -14,18 +14,18 @@
 
 ### 添加或修改音频/完善翻译
 
-音频文件推荐使用**mp3**格式，推荐先音量标准化，音频文件请放到`public/voices/`目录
+音频文件推荐使用**mp3**格式，请先音量标准化，然后放入`public/voices/`目录
 
 所有的音频信息都存储在`src/setting/translate/voices.json`中，**添加或修改音频信息**、**完善翻译**，你同样需要修改这个文件中对应的内容
 
-- 添加`usePicture`字段可以添加鼠标悬浮时显示的表情包
+- 添加`usePicture`字段可以添加鼠标悬浮时显示的图片(请放到`public/voices/img`目录)
 
 - 添加`mark`字段可以添加音频出处信息
 
 - `voices.json`可以使用[button-tool](https://github.com/blacktunes/button-tool)(https://button-tool.vercel.app)进行编辑(功能尚未完善)
 
 `voices.json`结构示例如下：
-```json
+```
 {
   // 语音分类列表
   "category": [
@@ -81,4 +81,11 @@
 
 ### 使用模板
 
-若想使用网站模板开发新的语言按钮，可使用[voices-button-cli](https://github.com/blacktunes/voices-button-cli)命令行工具(开发中)
+若想使用网站模板开发新的语音按钮，可以选择以下两种方式:
+- 修改`public`和`scr/setting`目录下的文件以及`package.json`
+- 使用[voices-button-cli](https://github.com/blacktunes/voices-button-cli)命令行工具(开发中)
+
+### 计划中功能
+- 表情包搜索
+- 直播通知
+- 动态展示
