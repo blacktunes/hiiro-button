@@ -200,15 +200,22 @@ export default {
      */
     const addPlayer = (voice: VoicesItem, key: any) => {
       reset()
+      const path = process.env.NODE_ENV === 'production' ? `https://cdn.jsdelivr.net/gh/blacktunes/hiiro-button@master/public/voices/${voice.path}` : `voices/${voice.path}`
       playerList.set(key, {
         name: voice.name,
-        audio: new Audio(`voices/${voice.path}`)
+        audio: new Audio(path)
       })
       if (!playSetting.overlap) playSetting.nowPlay = voice
       playerList.get(key)!.audio.play()
       playerList.get(key)!.audio.onerror = () => {
-        playSetting.loading = false
-        playSetting.error = true
+        if (playerList.get(key)!.audio.src.includes('jsdelivr')) {
+          playerList.get(key)!.audio.src = `voices/${voice.path}`
+          playerList.get(key)!.audio.play()
+        } else {
+          playSetting.loading = false
+          playSetting.error = true
+          navigator.mediaSession.playbackState = 'paused'
+        }
       }
       playerList.get(key)!.audio.oncanplay = () => {
         playSetting.loading = false
