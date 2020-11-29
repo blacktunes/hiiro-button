@@ -3650,6 +3650,294 @@
         "time": "3:24:57~3:24:59",
         "url": "https://www.bilibili.com/video/BV1sK411V7zw"
       }
+    },
+    {
+      "name": "goodbye~",
+      "path": "goodbye~.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "goodbye~",
+        "en-US": "goodbye~"
+      },
+      "category": "日常",
+      "mark": {
+        "title": "Hiiro11.27日泰坦陨落2直播"
+      }
+    },
+    {
+      "name": "啊~~啊！",
+      "path": "啊~~啊！.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "啊~~啊！",
+        "en-US": "a~~ah！"
+      },
+      "category": "糟糕",
+      "mark": {
+        "title": "Hiiro11.27日泰坦陨落2直播"
+      }
+    },
+    {
+      "name": "啊啊what the *",
+      "path": "啊啊what.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "啊啊what the *",
+        "en-US": "ah~what the *"
+      },
+      "category": "糟糕",
+      "mark": {
+        "title": "Hiiro11.27日泰坦陨落2直播"
+      }
+    },
+    {
+      "name": "啊呜",
+      "path": "啊呜.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "啊呜",
+        "en-US": "Awww"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "Hiiro11.27日泰坦陨落2直播"
+      }
+    },
+    {
+      "name": "啊呜2",
+      "path": "啊呜2.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "啊呜2",
+        "en-US": "Awww2"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "Hiiro11.27日泰坦陨落2直播"
+      }
+    },
+    {
+      "name": "喵呜~",
+      "path": "喵呜~.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "喵呜~",
+        "en-US": "Meow~"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "Hiiro11.27日泰坦陨落2直播"
+      }
+    },
+    {
+      "name": "summertime",
+      "path": "summertime.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "summertime",
+        "en-US": "summertime"
+      },
+      "category": "唱歌",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "3:04:18~3:08:19",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
+      }
+    },
+    {
+      "name": "かくしん的☆めたまるふぉ~ぜっ!",
+      "path": "かくしん的☆めたまるふぉ~ぜっ!.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "かくしん的☆めたまるふぉ~ぜっ!",
+        "en-US": "かくしん的☆めたまるふぉ~ぜっ!"
+      },
+      "category": "唱歌",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "3:10:05~3:11:34",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
+      }
+    },
+    {
+      "name": "チカっとチカ千花っ(full)",
+      "path": "チカっとチカ千花っ(full).mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "チカっとチカ千花っ(full)",
+        "en-US": "チカっとチカ千花っ(full)"
+      },
+      "category": "唱歌",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "3:13:32~3:14:59",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
+      }
+    },
+    {
+      "name": "勾指起誓",
+      "path": "勾指起誓.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "勾指起誓",
+        "en-US": "勾指起誓"
+      },
+      "category": "唱歌",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "3:19:10~3:21:50",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
+      }
+    },
+    {
+      "name": "不可思議のカルテ",
+      "path": "不可思議のカルテ.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "不可思議のカルテ",
+        "en-US": "不可思議のカルテ"
+      },
+      "category": "唱歌",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "3:26:13~3:30:06",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
+      }
+    },
+    {
+      "name": "king",
+      "path": "king.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "king",
+        "en-US": "king"
+      },
+      "category": "唱歌",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "3:34:29~3:36:30",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
+      }
+    },
+    {
+      "name": "Weight Of The World",
+      "path": "Weight Of The World.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "Weight Of The World",
+        "en-US": "Weight Of The World"
+      },
+      "category": "唱歌",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "3:41:26~3:46:43",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
+      }
+    },
+    {
+      "name": "稍等一下喵",
+      "path": "稍等一下喵.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "稍等一下喵",
+        "en-US": "Wait a minute meow"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "3:48:02~3:48:03",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
+      }
+    },
+    {
+      "name": "Butter-fly",
+      "path": "Butter-fly.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "Butter-fly",
+        "en-US": "Butter-fly"
+      },
+      "category": "唱歌",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "3:48:29~3:49:40",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
+      }
+    },
+    {
+      "name": "oh~my~",
+      "path": "oh~my~.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "oh~my~",
+        "en-US": "oh~my~"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "3:50:51~3:50:52",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
+      }
+    },
+    {
+      "name": "潮汐",
+      "path": "潮汐.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "潮汐",
+        "en-US": "潮汐"
+      },
+      "category": "唱歌",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "3:55:36~3:59:55",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
+      }
+    },
+    {
+      "name": "我好了~",
+      "path": "我好了~.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "我好了~",
+        "en-US": "I'm good~"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "4:00:00~4:00:01",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
+      }
+    },
+    {
+      "name": "我要去睡觉了",
+      "path": "我要去睡觉了.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "我要去睡觉了",
+        "en-US": "I'm going to bed"
+      },
+      "category": "名言",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "4:00:09~4:00:10",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
+      }
+    },
+    {
+      "name": "晚安晚安晚安晚安",
+      "path": "晚安晚安晚安晚安.mp3",
+      "date": "2020-11-30",
+      "translate": {
+        "zh-CN": "晚安晚安晚安晚安",
+        "en-US": "Good night. Good night. Good night"
+      },
+      "category": "可爱",
+      "mark": {
+        "title": "Hiiro2020/11/25直播录播",
+        "time": "4:02:16~4:02:19",
+        "url": "https://www.bilibili.com/video/BV1sK411V7zw"
+      }
     }
   ]
 }
