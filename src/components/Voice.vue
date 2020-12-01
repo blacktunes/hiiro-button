@@ -380,7 +380,7 @@ export default {
      * 判断是否需要显示
      */
     const needToShow = (translate: Translate): boolean => {
-      return locale.value in translate
+      return Boolean(translate[locale.value])
     }
 
     /**
