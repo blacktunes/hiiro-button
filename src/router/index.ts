@@ -8,6 +8,11 @@ const routes: Array<RouteRecordRaw> = [
     component: Index
   },
   {
+    path: '/memes',
+    name: 'Memes',
+    component: () => import('@/views/Memes.vue')
+  },
+  {
     path: '/:catchAll(.*)',
     redirect: '/'
   }

@@ -2,10 +2,12 @@
   "name": {
     "CN": {
       "title": "猫猫按钮",
+      "memes": "猫猫表情包",
       "fullName": "Hiiro"
     },
     "EN": {
       "title": "Hiiro Button",
+      "memes": "Hiiro Memes",
       "fullName": "Hiiro"
     }
   },

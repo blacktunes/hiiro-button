@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import lazyload from '@/assets/script/lazyload.js'
 
 import { createI18n } from 'vue-i18n'
 import VoiceList from '@/setting/translate/voices.json'
@@ -68,4 +69,4 @@ const i18n = createI18n({
   }
 })
 
-createApp(App).use(router).use(i18n).mount('#app')
+createApp(App).use(router).use(i18n).use(lazyload).mount('#app')
