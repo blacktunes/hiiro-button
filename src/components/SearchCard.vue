@@ -1,5 +1,5 @@
 <template>
-  <card class="search-wrapper" :class="{'show-search': isShowSearch}">
+  <card class="search-wrapper" :class="{ 'show-search': isShowSearch }">
     <search :type="type" class="search" />
   </card>
 </template>
@@ -32,8 +32,8 @@ export default {
 
 <style lang="stylus" scoped>
 .search-wrapper
-  // box-sizing border-box
   z-index 1
+  overflow hidden
   position sticky
   top 58px
   height 0

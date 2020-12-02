@@ -15,7 +15,6 @@
   border-radius 5px
   border 1px solid #EBEEF5
   background-color #FFF
-  overflow hidden
   color #303133
   transition box-shadow 0.25s
 

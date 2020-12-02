@@ -9,12 +9,19 @@
     />
     <div class="total">
       <transition name="slider-left">
-        <p
-          v-if="searchData.list.length > 0 && type === 'voice'"
-        >{{searchData.index > 0 ? `${searchData.index}/${searchData.list.length}` : `${searchData.list.length}`}}</p>
+        <p v-if="searchData.list.length > 0 && type === 'voice'">
+          {{
+            searchData.index > 0
+              ? `${searchData.index}/${searchData.list.length}`
+              : `${searchData.list.length}`
+          }}
+        </p>
       </transition>
     </div>
-    <div class="clear" :style="{'border-radius': searchData.value ? '' : '0 10px 10px 0'}">
+    <div
+      class="clear"
+      :style="{ 'border-radius': searchData.value ? '' : '0 10px 10px 0' }"
+    >
       <svg
         @click="clear"
         style="cursor: pointer"
@@ -76,9 +83,8 @@
 <script lang="ts">
 import { inject, Ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { EVENT, IsShowSearch, SearchData, SEARCH_TYPE } from '@/assets/script/option'
+import { EVENT, IsShowSearch, SearchData, SEARCH_TYPE, Voices, VoicesItem } from '@/assets/script/option'
 import mitt from '@/assets/script/mitt'
-import VoiceList from '@/setting/translate/voices.json'
 
 export default {
   props: {
@@ -93,7 +99,13 @@ export default {
     const isShowSearch: Ref<IsShowSearch> = inject('isShowSearch') as Ref<IsShowSearch>
 
     const searchData: SearchData = inject('searchData') as SearchData
-    const voiceList = VoiceList.voices
+    const voices = inject('voices', {} as Voices)
+    const voiceList: VoicesItem[] = []
+    voices.forEach(item => {
+      item.voiceList.forEach(voice => {
+        voiceList.push(voice)
+      })
+    })
 
     const clear = () => {
       if (searchData.value.length < 1) {

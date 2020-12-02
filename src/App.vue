@@ -10,11 +10,12 @@
 <script lang="ts">
 import { provide, reactive, ref, watch, Ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { IsShowSearch, PlaySetting, SearchData } from '@/assets/script/option'
+import { IsShowSearch, PlaySetting, SearchData, Voices, VoicesCategory } from '@/assets/script/option'
 import Setting from '@/setting/setting.json'
 import VHeader from '@/views/Header.vue'
 import Control from '@/views/Control.vue'
 import VFooter from '@/views/Footer.vue'
+import VoiceList from '@/setting/translate/voices.json'
 
 export default {
   components: {
@@ -23,6 +24,31 @@ export default {
     VFooter
   },
   setup() {
+    const showNew = ref('')
+    for (const i in VoiceList.voices) {
+      let lastDate = new Date('2000-01-01')
+      if (VoiceList.voices[i].date) {
+        const voiceDate = new Date(VoiceList.voices[i].date!)
+        if (voiceDate > lastDate) {
+          lastDate = voiceDate
+          showNew.value = VoiceList.voices[i].date!
+        }
+      }
+    }
+    provide('showNew', showNew)
+
+    const voices: Voices = reactive([])
+    VoiceList.category.forEach(category => {
+      const temp: VoicesCategory = { ...category, voiceList: [] }
+      VoiceList.voices.forEach(voice => {
+        if (voice.category === category.name) {
+          temp.voiceList.push(voice)
+        }
+      })
+      voices.push(temp)
+    })
+    provide('voices', voices)
+
     const playSetting: PlaySetting = reactive({
       loading: true,
       error: false,
