@@ -8,13 +8,6 @@
       }
     },
     {
-      "name": "烧开水",
-      "translate": {
-        "zh-CN": "猫猫开水~",
-        "en-US": "boil water~"
-      }
-    },
-    {
       "name": "日常",
       "translate": {
         "zh-CN": "猫猫日常~",
@@ -43,13 +36,6 @@
       }
     },
     {
-      "name": "混沌",
-      "translate": {
-        "zh-CN": "混沌猫猫~",
-        "en-US": "chaos~ "
-      }
-    },
-    {
       "name": "唱歌",
       "translate": {
         "zh-CN": "唱歌猫猫~",
@@ -73,6 +59,20 @@
       "name": "糟糕",
       "translate": {
         "zh-CN": "糟糕猫猫~"
+      }
+    },
+    {
+      "name": "烧开水",
+      "translate": {
+        "zh-CN": "猫猫开水~",
+        "en-US": "boil water~"
+      }
+    },
+    {
+      "name": "混沌",
+      "translate": {
+        "zh-CN": "混沌猫猫~",
+        "en-US": "chaos~ "
       }
     }
   ],
@@ -2983,6 +2983,10 @@
       "translate": {
         "zh-CN": "好耶",
         "en-US": "Haoye"
+      },
+      "usePicture": {
+        "zh-CN": "好耶.jpg",
+        "en-US": "好耶.jpg"
       },
       "category": "名言",
       "mark": {
