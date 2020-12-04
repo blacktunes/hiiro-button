@@ -13,7 +13,7 @@
             class="btn"
             :name="t(INFO_I18N.vtbbtn)"
             url="https://vtbbtn.org/"
-            color="rgb(100, 181, 246)"
+            background="rgb(100, 181, 246)"
           />
           <template v-for="item in list" :key="item.name">
             <Btn

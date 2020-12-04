@@ -1,6 +1,6 @@
 <template>
-  <div class="btn" :style="{ color: color, background: background }">
-    <a :href="url" target="_blank">{{ name }}</a>
+  <div class="btn" :style="{ background: background }">
+    <a :href="url" target="_blank" :style="{ color: color }">{{ name }}</a>
   </div>
 </template>
 
