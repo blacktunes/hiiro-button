@@ -61,7 +61,7 @@ CN.voiceTotal = Object.keys(CN.voice).length.toString()
 EN.voiceTotal = Object.keys(EN.voice).length.toString()
 
 const i18n = createI18n({
-  locale: /ja/i.test(navigator.language) ? 'en-US' : 'zh-CN',
+  locale: /en/i.test(navigator.language) ? 'en-US' : 'zh-CN',
   messages: {
     'zh-CN': CN,
     'en-US': EN
