@@ -336,7 +336,6 @@ a
     margin-bottom 10px
 
     .btn
-      overflow hidden
       display flex
       align-items center
       justify-content center
@@ -361,7 +360,7 @@ a
     fill #fff
 
   &:hover
-    box-shadow 0px 0px 10px 0px $sub-color
+    box-shadow 0px 0px 10px 0px $hover-color
 
   &:active
     background $hover-color
