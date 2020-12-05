@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/camelcase */
 const path = require('path')
 
 module.exports = {
@@ -10,7 +11,10 @@ module.exports = {
       }
     }
   },
-  configureWebpack: () => {
+  configureWebpack: (config) => {
+    if (process.env.NODE_ENV === 'production') {
+      config.optimization.minimizer[0].options.terserOptions.compress.pure_funcs = ['console.info']
+    }
     return {
       performance: {
         hints: false
