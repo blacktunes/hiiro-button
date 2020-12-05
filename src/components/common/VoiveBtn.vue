@@ -172,7 +172,6 @@ export default {
     box-shadow 0px 1px 5px 0px $main-color
     user-select none
     cursor pointer
-    transition box-shadow 0.25s
 
     .progress
       position absolute
