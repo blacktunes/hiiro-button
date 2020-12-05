@@ -29,13 +29,13 @@
     "githubUrl": "https://github.com/blacktunes/hiiro-button"
   },
   "console": {
-    "text": "",
-    "size": "",
-    "color": "",
-    "img": "",
-    "imgWidth": "",
-    "imgHeight": ""
+    "text": "HIIRO",
+    "size": "24px",
+    "color": "pink",
+    "img": "hiiro.png",
+    "imgWidth": "100%",
+    "imgHeight": "56%"
   },
-  "mediaSession": "",
+  "mediaSession": "albums.jpg",
   "GA_ID": "UA-176441751-2"
 }
