@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" :class="{ playing, lowlight, highlight }">
+  <div class="wrapper" :class="{ playing, lowlight, highlight, disable }">
     <NewIcon class="new-icon" v-if="newIcon" />
     <img class="pic" v-if="showPic" :src="showPic" />
     <div class="left" />
@@ -26,7 +26,8 @@ export default {
     newIcon: Boolean,
     showPic: String,
     lowlight: Boolean,
-    highlight: Boolean
+    highlight: Boolean,
+    disable: Boolean
   },
   setup(props) {
     const progress: Ref<HTMLElement> = ref() as Ref<HTMLElement>
@@ -68,6 +69,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.disable
+  pointer-events none
+
 .lowlight
   .left
     border-color transparent transparent #ccc transparent !important

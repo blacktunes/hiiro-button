@@ -9,7 +9,7 @@
     />
     <div class="total">
       <transition name="slider-left">
-        <p v-if="searchData.list.length > 0 && type === 'voice'">
+        <p v-if="searchData.list.length > 0">
           {{
             searchData.index > 0
               ? `${searchData.index}/${searchData.list.length}`
@@ -83,17 +83,11 @@
 <script lang="ts">
 import { inject, Ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { EVENT, IsShowSearch, SearchData, SEARCH_TYPE, Voices, VoicesItem } from '@/assets/script/option'
+import { EVENT, IsShowSearch, SearchData, Voices, VoicesItem } from '@/assets/script/option'
 import mitt from '@/assets/script/mitt'
 
 export default {
-  props: {
-    type: {
-      type: String,
-      default: SEARCH_TYPE.voice
-    }
-  },
-  setup(props) {
+  setup() {
     const { locale } = useI18n()
 
     const isShowSearch: Ref<IsShowSearch> = inject('isShowSearch') as Ref<IsShowSearch>
@@ -136,11 +130,7 @@ export default {
     })
 
     const btnClick = () => {
-      if (props.type === SEARCH_TYPE.voice) {
-        mitt.emit(EVENT.autoScroll)
-      } else {
-        mitt.emit(EVENT.memesSearch)
-      }
+      mitt.emit(EVENT.autoScroll)
     }
 
     return {

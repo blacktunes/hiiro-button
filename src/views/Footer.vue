@@ -17,7 +17,7 @@
       </div>
       <div class="text-right">
         <div class="git">
-          <i-btn class="btn" :url="githubUrl" :img="require('../assets/image/github-fill.png')" />
+          <IBtn class="btn" :url="githubUrl" :img="require('../assets/image/github-fill.png')" />
           <a :href="githubUrl" target="_blank">{{ t(INFO_I18N.toGithub) }}</a>
         </div>
         <div>{{ t(INFO_I18N.notOfficial) }}</div>

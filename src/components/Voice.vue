@@ -1,80 +1,71 @@
 <template>
-  <div>
-    <Search />
-    <template v-for="item in voices" :key="item.name">
-      <Card v-if="needToShow(item.translate)">
-        <template v-slot:header>
-          <div class="category">{{ t("voicecategory." + item.name) }}</div>
+  <template v-for="item in voices" :key="item.name">
+    <Card v-if="isShowCategory(item.name)">
+      <template #header>
+        <div class="category">{{ t(`voicecategory.${item.name}`) }}</div>
+      </template>
+      <div class="content">
+        <template v-for="voice in item.voiceList" :key="voice.name">
+          <VBtn
+            v-if="isShowVoice(voice.name)"
+            :text="t(`voice.${voice.name}`)"
+            :name="voice.name"
+            :newIcon="voice.date === lastDate"
+            :showPic="getPicUrl(voice.usePicture)"
+            :lowlight="isLowlight(voice)"
+            :highlight="highlight === voice.name"
+            :disable="playSetting.showInfo && !voice.mark"
+            :ref="(el) => setBtnList(voice.name, el)"
+            @click="playSetting.showInfo ? showInfo(voice.mark) : play(voice)"
+          />
         </template>
-        <div class="content">
-          <div v-for="voice in item.voiceList" :key="voice.name">
-            <VBtn
-              v-if="needToShow(voice.translate)"
-              :text="t('voice.' + voice.name)"
-              :name="voice.name"
-              :newIcon="voice.date === showNew"
-              :showPic="
-                needUsePicture(voice.usePicture) && !playSetting.showInfo
-                  ? usePicture(voice.usePicture)
-                  : null
-              "
-              :lowlight="
-                (searchData.value && !searchData.list.includes(voice.name)) ||
-                (playSetting.showInfo && !voice.mark)
-              "
-              :highlight="highlight === voice.name"
-              :class="{
-                disable: playSetting.showInfo && !voice.mark,
-              }"
-              @click="playSetting.showInfo ? showInfo(voice.mark) : play(voice)"
-              :ref="
-                (el) => {
-                  el ? (btnList[voice.name] = el) : null;
-                }
-              "
-            />
-          </div>
-        </div>
-      </Card>
-    </template>
-  </div>
+      </div>
+    </Card>
+  </template>
 </template>
 
 <script lang="ts">
-import { ref, inject, watch, Ref, ComponentPublicInstance } from 'vue'
+import { ref, inject, watch, Ref, ComponentPublicInstance, reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { gtag } from '@/assets/script/gtag'
-import { EVENT, INFO_I18N, Player, PlayerList, PlaySetting, SearchData, Translate, Voices, VoicesItem } from '@/assets/script/option'
+import { EVENT, INFO_I18N, Mark, Player, PlayerList, PlaySetting, SearchData, Translate, Voices, VoicesItem } from '@/assets/script/option'
 import mitt from '@/assets/script/mitt'
 import Setting from '@/setting/setting.json'
 import Card from './common/Card.vue'
 import VBtn from './common/VoiveBtn.vue'
-import Search from '@/components/SearchCard.vue'
 
 export default {
   components: {
     Card,
-    VBtn,
-    Search
+    VBtn
   },
   setup() {
-    const { t, locale } = useI18n()
+    const { t, te, locale } = useI18n()
 
     const playSetting: PlaySetting = inject('playSetting') as PlaySetting
 
     // 所有按钮的引用
-    const btnList: Ref<{ [x: string]: ComponentPublicInstance }> = ref({})
+    const btnList: { [name: string]: ComponentPublicInstance } = reactive({})
+    const setBtnList = (name: string, el: ComponentPublicInstance) => {
+      btnList[name] = el
+    }
 
     const searchData: SearchData = inject('searchData') as SearchData
     const highlight = ref('')
 
+    watch(() => {
+      return searchData.value
+    }, () => {
+      highlight.value = ''
+    })
+
     mitt.on(EVENT.autoScroll, () => {
       if (searchData.list && searchData.list.length > 0) {
-        for (const i in btnList.value) {
+        for (const i in btnList) {
           if (searchData.index + 1 > searchData.list.length) searchData.index = 0
           if (i === searchData.list[searchData.index]) {
             searchData.index++
-            const scrollPos = document.documentElement.scrollTop + btnList.value[i].$el.getBoundingClientRect().top - 200
+            const scrollPos = document.documentElement.scrollTop + btnList[i].$el.getBoundingClientRect().top - 200
             highlight.value = i
             window.scrollTo({ top: scrollPos, behavior: 'smooth' })
             break
@@ -83,14 +74,8 @@ export default {
       }
     })
 
-    watch(() => {
-      return searchData.value
-    }, () => {
-      highlight.value = ''
-    })
-
     const voices = inject('voices', {} as Voices)
-    const showNew = inject('showNew', '')
+    const lastDate = inject('lastDate', '')
 
     const playList: VoicesItem[] = []
     voices.forEach(category => {
@@ -237,27 +222,24 @@ export default {
     })
 
     /**
-     * 随机播放失败次数
-     */
-    let randomErrTimes = 0
-    /**
      * 随机播放
      */
     const randomPlay = () => {
-      const randomList = voices[_getrRandomInt(voices.length)]
-      const randomVoice = randomList.voiceList[_getrRandomInt(randomList.voiceList.length)]
-      if (needToShow(randomList.translate) && needToShow(randomVoice.translate)) {
-        randomErrTimes = 0
-        play(randomVoice)
-      } else if (randomErrTimes <= 5) {
-        ++randomErrTimes
-        randomPlay()
-        // 连续五次不存在停止随机
-      }
+      const list: VoicesItem[] = []
+      voices.forEach(item => {
+        if (isShowCategory(item.name)) {
+          item.voiceList.forEach(voice => {
+            if (isShowVoice(voice.name)) {
+              list.push(voice)
+            }
+          })
+        }
+      })
+      play(list[_getrRandomInt(list.length)])
     }
 
     /**
-     * 随机播放
+     * 循环播放
      */
     const listLoop = (voice: VoicesItem) => {
       if (playSetting.loop === 1) {
@@ -304,7 +286,7 @@ export default {
       })) && Boolean(voice.translate[locale.value])
     }
 
-    const infoDate = inject('infoDate') as any
+    const infoDate = inject('infoDate') as Ref<Mark>
     const showInfo = (showInfo) => {
       infoDate.value = showInfo
     }
@@ -327,31 +309,28 @@ export default {
     })
 
     /**
+     * 是否需要显示分类
+     */
+    const isShowCategory = (name: string) => {
+      return te(`voicecategory.${name}`) && Boolean(t(`voicecategory.${name}`))
+    }
+
+    /**
+     * 是否需要显示语音
+     */
+    const isShowVoice = (name: string) => {
+      return te(`voice.${name}`) && Boolean(t(`voice.${name}`))
+    }
+
+    /**
      * 返回需要显示的表情包url
      */
-    const usePicture = (name?: Translate): string | void => {
-      if (name) {
-        const lang = locale.value
-        return `/voices/img/${name[lang]}`
-      }
+    const getPicUrl = (usePicture?: Translate) => {
+      return !playSetting.showInfo && usePicture && Boolean(usePicture[locale.value]) ? `/voices/img/${usePicture[locale.value]}` : null
     }
 
-    /**
-     * 判断是否使用表情包
-     */
-    const needUsePicture = (usePicture?: Translate): boolean => {
-      if (usePicture) {
-        return locale.value in usePicture
-      } else {
-        return false
-      }
-    }
-
-    /**
-     * 判断是否需要显示
-     */
-    const needToShow = (translate: Translate): boolean => {
-      return Boolean(translate[locale.value])
+    const isLowlight = (voice: VoicesItem) => {
+      return (searchData.value && !searchData.list.includes(voice.name)) || (playSetting.showInfo && !voice.mark)
     }
 
     /**
@@ -364,25 +343,23 @@ export default {
     return {
       t,
       playSetting,
-      btnList,
+      setBtnList,
       searchData,
       highlight,
       voices,
-      showNew,
+      lastDate,
       play,
       showInfo,
-      usePicture,
-      needUsePicture,
-      needToShow
+      isShowCategory,
+      isShowVoice,
+      getPicUrl,
+      isLowlight
     }
   }
 }
 
 </script>
 <style lang="stylus" scoped>
-.disable
-  pointer-events none
-
 .category
   font-size 24px
   padding 14px 10px

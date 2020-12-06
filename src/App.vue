@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <v-header />
+    <VHeader />
     <router-view style="min-height: calc(100vh - 48px - 67px)" />
-    <control v-if="showControl" />
-    <v-footer />
+    <Control v-if="showControl" />
+    <VFooter />
   </div>
 </template>
 
@@ -24,18 +24,21 @@ export default {
     VFooter
   },
   setup() {
-    const showNew = ref('')
+    const lastDate = ref('')
+    let temp
     for (const i in VoiceList.voices) {
-      let lastDate = new Date('2000-01-01')
       if (VoiceList.voices[i].date) {
         const voiceDate = new Date(VoiceList.voices[i].date!)
-        if (voiceDate > lastDate) {
-          lastDate = voiceDate
-          showNew.value = VoiceList.voices[i].date!
+        if (!temp) {
+          temp = voiceDate
+        }
+        if (voiceDate > temp) {
+          temp = voiceDate
+          lastDate.value = VoiceList.voices[i].date!
         }
       }
     }
-    provide('showNew', showNew)
+    provide('lastDate', lastDate)
 
     const voices: Voices = reactive([])
     VoiceList.category.forEach(category => {

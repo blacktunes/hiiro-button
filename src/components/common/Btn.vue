@@ -7,18 +7,10 @@
 <script lang="ts">
 export default {
   props: {
-    name: {
-      type: String
-    },
-    url: {
-      type: String
-    },
-    color: {
-      type: String
-    },
-    background: {
-      type: String
-    }
+    name: String,
+    url: String,
+    color: String,
+    background: String
   }
 }
 </script>

@@ -7,12 +7,8 @@
 <script>
 export default {
   props: {
-    url: {
-      type: String
-    },
-    img: {
-      type: String
-    }
+    url: String,
+    img: String
   }
 }
 </script>

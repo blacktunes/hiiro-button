@@ -2,11 +2,11 @@
   <transition name="slider-down" appear>
     <div class="header">
       <transition name="logo" appear>
-        <div class="logo" ref="logo" @click="logoClick">{{icon}}</div>
+        <div class="logo" ref="logo" @click="logoClick">{{ icon }}</div>
       </transition>
-      <div class="title">{{ t('info.title') }}</div>
+      <div class="title">{{ t(INFO_I18N.title) }}</div>
       <template v-for="(btn, index) in btnList" :key="index">
-        <i-btn v-if="btn.url" :url="btn.url" :img="btn.img" />
+        <IBtn v-if="btn.url" :url="btn.url" :img="btn.img" />
       </template>
       <div class="search-btn" @click="showSearch" v-if="showSearchBtn">
         <svg
@@ -25,7 +25,7 @@
           />
         </svg>
       </div>
-      <search class="search" v-if="showSearchBtn" :type="searchType" />
+      <Search class="search" v-if="showSearchBtn" />
       <div class="btn" :title="t(INFO_I18N.lang)" @click="changeLang">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@
 import { ref, inject, onMounted, Ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
-import { INFO_I18N, IsShowSearch, SearchData, SEARCH_TYPE } from '@/assets/script/option'
+import { INFO_I18N, IsShowSearch, SearchData } from '@/assets/script/option'
 import IBtn from '@/components/common/IconBtn.vue'
 import Search from '@/components/Search.vue'
 import Setting from '@/setting/setting.json'
@@ -96,10 +96,6 @@ export default {
 
     const route = useRoute()
 
-    const titlePath = computed(() => {
-      return route.path === '/' ? '/search' : '/'
-    })
-
     const showSearch = () => {
       isShowSearch.value = !isShowSearch.value
       if (!isShowSearch.value) {
@@ -110,10 +106,6 @@ export default {
 
     const showSearchBtn = computed(() => {
       return route.path === '/' || route.path === '/search'
-    })
-
-    const searchType = computed(() => {
-      return route.path === '/' ? SEARCH_TYPE.voice : SEARCH_TYPE.memes
     })
 
     const { t, locale } = useI18n()
@@ -143,9 +135,7 @@ export default {
       btnList,
       logo,
       logoClick,
-      titlePath,
       showSearchBtn,
-      searchType,
       t,
       changeLang,
       showSearch,
@@ -207,7 +197,7 @@ export default {
     height 30px
     margin 0 10px 0 auto
     border-radius 50%
-    background rgba(245,193,187, 0.5)
+    background rgba(245, 193, 187, 0.5)
     cursor pointer
 
     svg
@@ -220,7 +210,7 @@ export default {
       box-shadow 0px 0px 5px 0px #fff
 
     &:active
-      background rgba(245,193,187, 0.6)
+      background rgba(245, 193, 187, 0.6)
 
 @media only screen and (min-width 550px)
   .search-btn

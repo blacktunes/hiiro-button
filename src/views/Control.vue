@@ -3,25 +3,24 @@
     <div class="control">
       <div class="playing" v-if="!playSetting.showInfo">
         <transition name="fade">
-          <loading
+          <Loading
             v-if="playSetting.nowPlay && playSetting.loading"
             class="tip"
           />
         </transition>
         <transition name="fade-delay">
-          <error v-if="playSetting.nowPlay && playSetting.error" class="tip" />
+          <Error v-if="playSetting.nowPlay && playSetting.error" class="tip" />
         </transition>
         <div :style="{ 'text-decoration': isError }">{{ title }}</div>
       </div>
       <div v-else class="info-wrapper">
         <div v-if="infoDate.title">
           <div>
-            {{ infoDate.title
-            }}{{ infoDate.time ? "(" + infoDate.time + ")" : "" }}
+            {{ infoDate.title }}{{ infoDate.time ? `(${infoDate.time})` : "" }}
           </div>
-          <a v-if="infoDate.url" :href="infoDate.url" target="_blank">{{
-            infoDate.url
-          }}</a>
+          <a v-if="infoDate.url" :href="infoDate.url" target="_blank">
+            {{ infoDate.url }}</a
+          >
         </div>
       </div>
       <div class="btn-wrapper">
@@ -339,6 +338,8 @@ a
       display flex
       align-items center
       justify-content center
+      overflow hidden
+      height 36px
       transition all 0.3s
 
       .icon

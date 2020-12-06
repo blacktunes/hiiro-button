@@ -1,6 +1,6 @@
 <template>
   <card class="search-wrapper" :class="{ 'show-search': isShowSearch }">
-    <search :type="type" class="search" />
+    <Search class="search" />
   </card>
 </template>
 
@@ -11,11 +11,6 @@ import Card from '@/components/common/Card.vue'
 import { IsShowSearch } from '@/assets/script/option'
 
 export default {
-  props: {
-    type: {
-      type: String
-    }
-  },
   components: {
     Search,
     Card

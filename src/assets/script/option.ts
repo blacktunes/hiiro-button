@@ -13,11 +13,7 @@ export enum EVENT {
   /**
    * 滚动到指定位置
    */
-  autoScroll = 'autoScroll',
-  /**
-   * 滚动到指定位置
-   */
-  memesSearch = 'memesSearch'
+  autoScroll = 'autoScroll'
 }
 
 /**
@@ -47,17 +43,6 @@ export enum ACTION_I18N {
   loop = 'action.loop',
   loopTip = 'action.loopTip',
   noplay = 'action.noplay'
-}
-
-export enum SEARCH_TYPE {
-  /**
-   * 语音搜索
-   */
-  voice = 'voice',
-  /**
-   * 表情包搜索
-   */
-  memes = 'memes',
 }
 
 /**
@@ -153,7 +138,27 @@ export interface VoicesItem {
    * 播放进度
    */
   progress?: number;
+  /**
+   * 添加日期
+   */
+  date?: string;
+  /**
+   * 来源信息
+   */
+  mark?: Mark;
 }
+
+export interface Mark {
+  /**
+   * 标题
+   */
+  title: string;
+  /**
+   * 时间段
+   */
+  time?: string;
+  url?: string;
+};
 
 export interface Translate {
   'zh-CN'?: string;
@@ -177,4 +182,11 @@ export interface Player {
 export interface MemeItem {
   name: string;
   path: string;
+}
+
+export interface FriendlyLink {
+  name: string;
+  url: string;
+  background?: string;
+  color?: string;
 }

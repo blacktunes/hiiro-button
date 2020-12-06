@@ -7973,15 +7973,15 @@ source-map-url@^0.4.0:
   resolved "https://registry.npmjs.org/source-map-url/-/source-map-url-0.4.0.tgz#3e935d7ddd73631b97659956d55128e87b5084a3"
   integrity sha1-PpNdfd1zYxuXZZlW1VEo6HtQhKM=
 
+source-map@0.6.1, source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
+  version "0.6.1"
+  resolved "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
+  integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
+
 source-map@^0.5.0, source-map@^0.5.6:
   version "0.5.7"
   resolved "https://registry.npmjs.org/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
   integrity sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=
-
-source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
-  version "0.6.1"
-  resolved "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
-  integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
 source-map@^0.7.3:
   version "0.7.3"
@@ -8906,12 +8906,12 @@ vue-hot-reload-api@^2.3.0:
   resolved "https://registry.npmjs.org/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
   integrity sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==
 
-vue-i18n@^9.0.0-beta.2:
-  version "9.0.0-beta.6"
-  resolved "https://registry.npmjs.org/vue-i18n/-/vue-i18n-9.0.0-beta.6.tgz#ea89cee5ade18f2a2d0f2ead0ac4a6bedccade6e"
-  integrity sha512-6WWNumUYOnoFi50szUxhxNjTntWlL3SSb6DCoDQW3aKIGK6xTKj9bLI1gnSPfFn54dTYlJtzxEHuY8C/kvm7kg==
+vue-i18n@^9.0.0-beta.10:
+  version "9.0.0-beta.10"
+  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-9.0.0-beta.10.tgz#6a0fff096cb63fd65b8b51b7c9bc608b94c63781"
+  integrity sha512-im8DN0ysULNMCMSn+11wFETKfqcg7f67Qxkx3J/DyPALHzt4ikYPF2I+BzYdmOAv2+Adlrj2NA/wz4jzTqtr6w==
   dependencies:
-    source-map "^0.6.1"
+    source-map "0.6.1"
 
 "vue-loader-v16@npm:vue-loader@^16.0.0-beta.7":
   version "16.0.0-rc.1"

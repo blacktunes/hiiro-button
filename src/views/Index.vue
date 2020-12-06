@@ -1,13 +1,15 @@
 <template>
   <transition name="fade" appear>
     <div class="index">
-      <voice />
-      <card>
+      <Search />
+      <Voice />
+      <Card>
         <div style="text-align: center">
-          {{ t(INFO_I18N.voiceTotalTip) }}: {{ t(INFO_I18N.voiceTotal) }}
+          {{ t(INFO_I18N.voiceTotalTip) }}: {{ t(INFO_I18N.voiceTotal)
+          }}{{ lastDate ? `(${lastDate})` : "" }}
         </div>
-      </card>
-      <card>
+      </Card>
+      <Card>
         <div class="content">
           <Btn
             class="btn"
@@ -15,7 +17,7 @@
             url="https://vtbbtn.org/"
             background="rgb(100, 181, 246)"
           />
-          <template v-for="item in list" :key="item.name">
+          <template v-for="item in friendlyLinkList" :key="item.name">
             <Btn
               class="btn"
               :name="item.name"
@@ -25,28 +27,32 @@
             />
           </template>
         </div>
-      </card>
+      </Card>
     </div>
   </transition>
 </template>
 
 <script lang="ts">
 import { useI18n } from 'vue-i18n'
-import { INFO_I18N } from '@/assets/script/option'
+import { FriendlyLink, INFO_I18N } from '@/assets/script/option'
+import Search from '@/components/SearchCard.vue'
 import Voice from '@/components/Voice.vue'
 import Card from '@/components/common/Card.vue'
 import Btn from '@/components/common/Btn.vue'
+import { inject } from 'vue'
 
 export default {
   components: {
+    Search,
     Voice,
     Card,
     Btn
   },
   setup() {
     const { t } = useI18n()
+    const lastDate = inject('lastDate', '')
 
-    const list = [
+    const friendlyLinkList: FriendlyLink[] = [
       {
         name: '七奈按钮',
         url: 'http://kaguranana.moe/',
@@ -56,7 +62,8 @@ export default {
 
     return {
       t,
-      list,
+      lastDate,
+      friendlyLinkList,
       INFO_I18N
     }
   }
