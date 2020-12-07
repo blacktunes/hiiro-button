@@ -112,10 +112,9 @@ export default {
     const search = () => {
       searchData.list.length = 0
       if (searchData.value.length < 1) return
-      const reg = new RegExp(searchData.value, 'i')
       for (const i in voiceList) {
-        const name = voiceList[i].translate[locale.value]
-        if (name && reg.test(name)) {
+        const name: string = voiceList[i].translate[locale.value]
+        if (name && name.includes(searchData.value)) {
           searchData.list.push(voiceList[i].name)
         }
       }
