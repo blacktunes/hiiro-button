@@ -39,6 +39,7 @@ export default {
       }
     }
     provide('lastDate', lastDate)
+    provide('newVoiceNum', VoiceList.voices.filter((item) => item.date && item.date === lastDate.value).length)
 
     const voices: Voices = reactive([])
     VoiceList.category.forEach(category => {
