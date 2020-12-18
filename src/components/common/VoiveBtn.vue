@@ -81,6 +81,7 @@ export default {
 
   .btn
     background #ccc !important
+    box-shadow none !important
 
     &:before
       width 0 !important
