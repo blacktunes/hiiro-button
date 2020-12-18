@@ -1,21 +1,28 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/camelcase */
 const path = require('path')
+const Check = require('./plugins/check')
 
+/**
+ *  @typedef { import("@vue/cli-service").ProjectOptions } Options
+ *  @type { Options }
+ */
 module.exports = {
   productionSourceMap: false,
   css: {
     loaderOptions: {
       stylus: {
-        import: [path.join(__dirname, './src/setting/color.styl')]
+        import: [path.join(__dirname, './setting/color.styl')]
       }
     }
   },
-  configureWebpack: (config) => {
+  configureWebpack: config => {
     if (process.env.NODE_ENV === 'production') {
       config.optimization.minimizer[0].options.terserOptions.compress.pure_funcs = ['console.info']
     }
     return {
+      plugins: [
+        new Check()
+      ],
       performance: {
         hints: false
       },

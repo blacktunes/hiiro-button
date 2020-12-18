@@ -874,6 +874,20 @@
     }
   },
   {
+    "name": "无路赛连击",
+    "path": "无路赛连击.mp3",
+    "date": "2020-11-11",
+    "translate": {
+      "zh-CN": "无路赛连击",
+      "en-US": "Urusai"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro】机智应对舰长羞耻要求的Hiiro",
+      "url": "https://www.bilibili.com/video/BV1p5411L7ku"
+    }
+  },
+  {
     "name": "爸爸要哭了",
     "path": "爸爸要哭了.mp3",
     "date": "2020-11-11",
