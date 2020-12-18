@@ -113,6 +113,11 @@ export interface VoicesCategory {
   voiceList: VoicesItem[];
 }
 
+export interface CategoryItem {
+  name: string;
+  translate: Translate;
+}
+
 /**
  * 语音对象
  */

@@ -30,7 +30,7 @@
 import { useI18n } from 'vue-i18n'
 import { INFO_I18N } from '@/assets/script/option'
 import IBtn from '@/components/common/IconBtn.vue'
-import Setting from '@/setting/setting.json'
+import Setting from '@/../setting/setting.json'
 
 export default {
   components: {

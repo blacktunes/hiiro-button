@@ -1,0 +1,77 @@
+[
+  {
+    "name": "名言",
+    "translate": {
+      "zh-CN": "猫猫名言~",
+      "en-US": "witticism~"
+    }
+  },
+  {
+    "name": "日常",
+    "translate": {
+      "zh-CN": "猫猫日常~",
+      "en-US": "daily~"
+    }
+  },
+  {
+    "name": "可爱",
+    "translate": {
+      "zh-CN": "可爱猫猫~",
+      "en-US": "lovely~ "
+    }
+  },
+  {
+    "name": "说教",
+    "translate": {
+      "zh-CN": "说教猫猫~",
+      "en-US": "experience~ "
+    }
+  },
+  {
+    "name": "清楚",
+    "translate": {
+      "zh-CN": "清楚猫猫~",
+      "en-US": "pure~ "
+    }
+  },
+  {
+    "name": "唱歌",
+    "translate": {
+      "zh-CN": "唱歌猫猫~",
+      "en-US": "sing~ "
+    }
+  },
+  {
+    "name": "软猫",
+    "translate": {
+      "zh-CN": "软软猫猫~",
+      "en-US": "soft~ "
+    }
+  },
+  {
+    "name": "幼猫",
+    "translate": {
+      "zh-CN": "幼年猫猫~"
+    }
+  },
+  {
+    "name": "糟糕",
+    "translate": {
+      "zh-CN": "糟糕猫猫~"
+    }
+  },
+  {
+    "name": "烧开水",
+    "translate": {
+      "zh-CN": "猫猫开水~",
+      "en-US": "boil water~"
+    }
+  },
+  {
+    "name": "混沌",
+    "translate": {
+      "zh-CN": "混沌猫猫~",
+      "en-US": "chaos~ "
+    }
+  }
+]

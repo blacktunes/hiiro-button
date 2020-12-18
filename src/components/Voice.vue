@@ -30,7 +30,7 @@ import { useI18n } from 'vue-i18n'
 import { gtag } from '@/assets/script/gtag'
 import { EVENT, INFO_I18N, Mark, Player, PlayerList, PlaySetting, SearchData, Translate, Voices, VoicesItem } from '@/assets/script/option'
 import mitt from '@/assets/script/mitt'
-import Setting from '@/setting/setting.json'
+import Setting from '@/../setting/setting.json'
 import Card from './common/Card.vue'
 import VBtn from './common/VoiveBtn.vue'
 

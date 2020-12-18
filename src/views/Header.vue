@@ -51,7 +51,7 @@ import { useRoute } from 'vue-router'
 import { INFO_I18N, IsShowSearch, SearchData } from '@/assets/script/option'
 import IBtn from '@/components/common/IconBtn.vue'
 import Search from '@/components/Search.vue'
-import Setting from '@/setting/setting.json'
+import Setting from '@/../setting/setting.json'
 
 export default {
   components: {

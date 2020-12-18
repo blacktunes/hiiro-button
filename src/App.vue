@@ -11,11 +11,11 @@
 import { provide, reactive, ref, watch, Ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { IsShowSearch, PlaySetting, SearchData, Voices, VoicesCategory } from '@/assets/script/option'
-import Setting from '@/setting/setting.json'
+import Setting from '@/../setting/setting.json'
 import VHeader from '@/views/Header.vue'
 import Control from '@/views/Control.vue'
 import VFooter from '@/views/Footer.vue'
-import VoiceList from '@/setting/translate/voices.json'
+import { CategoryList, VoicesList } from './assets/script/voices'
 
 export default {
   components: {
@@ -26,25 +26,25 @@ export default {
   setup() {
     const lastDate = ref('')
     let temp
-    for (const i in VoiceList.voices) {
-      if (VoiceList.voices[i].date) {
-        const voiceDate = new Date(VoiceList.voices[i].date!)
+    for (const i in VoicesList) {
+      if (VoicesList[i].date) {
+        const voiceDate = new Date(VoicesList[i].date!)
         if (!temp) {
           temp = voiceDate
         }
         if (voiceDate > temp) {
           temp = voiceDate
-          lastDate.value = VoiceList.voices[i].date!
+          lastDate.value = VoicesList[i].date!
         }
       }
     }
     provide('lastDate', lastDate)
-    provide('newVoiceNum', VoiceList.voices.filter((item) => item.date && item.date === lastDate.value).length)
+    provide('newVoiceNum', VoicesList.filter((item) => item.date && item.date === lastDate.value).length)
 
     const voices: Voices = reactive([])
-    VoiceList.category.forEach(category => {
+    CategoryList.forEach(category => {
       const temp: VoicesCategory = { ...category, voiceList: [] }
-      VoiceList.voices.forEach(voice => {
+      VoicesList.forEach(voice => {
         if (voice.category === category.name) {
           temp.voiceList.push(voice)
         }
