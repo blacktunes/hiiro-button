@@ -6,7 +6,7 @@ const jsonList = require.context('@/../setting/translate', false, /.json$/).keys
 
 let Locales
 let CategoryList: CategoryItem[]
-let VoicesList: VoicesItem[]
+let VoicesList: VoicesItem[] = []
 jsonList.forEach(name => {
   if (name === 'locales.json') {
     Locales = require(`@/../setting/translate/${name}`)
@@ -14,7 +14,7 @@ jsonList.forEach(name => {
     CategoryList = require(`@/../setting/translate/${name}`)
   } else {
     const voice = require(`@/../setting/translate/${name}`)
-    VoicesList = [...voice]
+    VoicesList = [...VoicesList, ...voice]
   }
 })
 

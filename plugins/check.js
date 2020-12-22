@@ -20,14 +20,14 @@ Check.prototype.apply = (compiler) => {
       const imgList = fs.readdirSync(path.join(__dirname, '../public/voices/img'))
         .filter(name => !((fs.statSync(path.join(__dirname, `../public/voices/img/${name}`))).isDirectory()))
       let CategoryList
-      let VoicesList
+      let VoicesList = []
       fs.readdirSync(path.join(__dirname, '../setting/translate')).forEach(dir => {
         if (dir.endsWith('.json') && dir !== 'locales.json') {
           if (dir === 'category.json') {
             CategoryList = fs.readJSONSync(path.join(__dirname, '../setting/translate/category.json'))
           } else {
             const voice = fs.readJSONSync(path.join(__dirname, `../setting/translate/${dir}`))
-            VoicesList = [...voice]
+            VoicesList = [...VoicesList, ...voice]
           }
         }
       })
