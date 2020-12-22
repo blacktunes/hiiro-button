@@ -22,18 +22,18 @@
   "en-US": {
     "info": {
       "toGithub": "Please participate in the translation, audio supplement or suggestions in GitHub",
-      "notOfficial": "This site is no official connection"
+      "notOfficial": "This site is NOT a official creation"
     },
     "action": {
-      "randomplay": "Random Play",
+      "randomplay": "Can you choose one for me nya?",
       "stopvoice": "Stop",
       "overlap": "Overlap",
-      "overlapTip": "Allow sound overlap",
-      "autoRandom": "Auto Random",
-      "autoRandomTip": "Auto Random",
+      "overlapTip": "Sound overlap enabled",
+      "autoRandom": "Shuffle",
+      "autoRandomTip": "Shuffle enabled",
       "loop": "Loop",
       "loopTip": "Loop",
-      "noplay": "No Play"
+      "noplay": "Not Playing"
     },
     "vtbbtn": "Vtuber button collection",
     "voiceTotalTip": "Current voice quantity",
