@@ -25,12 +25,13 @@ export default {
   },
   setup() {
     const lastDate = ref('')
-    let temp
+    let temp: null | Date = null
     for (const i in VoicesList) {
       if (VoicesList[i].date) {
         const voiceDate = new Date(VoicesList[i].date!)
         if (!temp) {
           temp = voiceDate
+          lastDate.value = VoicesList[i].date!
         }
         if (voiceDate > temp) {
           temp = voiceDate

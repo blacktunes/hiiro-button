@@ -156,6 +156,9 @@ export default {
      */
     const addPlayer = (voice: VoicesItem, key: any) => {
       reset()
+      if (key === 'once' && playerList.has(key)) {
+        playerList.get(key)!.audio.oncanplay = null
+      }
       const path = process.env.NODE_ENV === 'production' ? `https://cdn.jsdelivr.net/gh/blacktunes/hiiro-button@master/public/voices/${voice.path}` : `voices/${voice.path}`
       playerList.set(key, {
         name: voice.name,
