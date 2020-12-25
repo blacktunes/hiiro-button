@@ -114,7 +114,7 @@ export default {
       if (searchData.value.length < 1) return
       for (const i in voiceList) {
         const name: string = voiceList[i].translate[locale.value]
-        if (name.toUpperCase() && name.includes(searchData.value.toUpperCase())) {
+        if (name && name.toUpperCase().includes(searchData.value.toUpperCase())) {
           searchData.list.push(voiceList[i].name)
         }
       }
