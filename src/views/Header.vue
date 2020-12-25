@@ -8,7 +8,7 @@
       <template v-for="(btn, index) in btnList" :key="index">
         <IBtn v-if="btn.url" :url="btn.url" :img="btn.img" />
       </template>
-      <div class="search-btn" @click="showSearch" v-if="showSearchBtn">
+      <div class="search-btn" @click="showSearch">
         <svg
           t="1599130871274"
           class="icon"
@@ -25,7 +25,7 @@
           />
         </svg>
       </div>
-      <Search class="search" v-if="showSearchBtn" />
+      <Search class="search" />
       <div class="btn" :title="t(INFO_I18N.lang)" @click="changeLang">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -45,9 +45,8 @@
 </template>
 
 <script lang="ts">
-import { ref, inject, onMounted, Ref, computed } from 'vue'
+import { ref, inject, onMounted, Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useRoute } from 'vue-router'
 import { INFO_I18N, IsShowSearch, SearchData } from '@/assets/script/option'
 import IBtn from '@/components/common/IconBtn.vue'
 import Search from '@/components/Search.vue'
@@ -94,8 +93,6 @@ export default {
 
     const isShowSearch: Ref<IsShowSearch> = inject('isShowSearch') as Ref<IsShowSearch>
 
-    const route = useRoute()
-
     const showSearch = () => {
       isShowSearch.value = !isShowSearch.value
       if (!isShowSearch.value) {
@@ -103,10 +100,6 @@ export default {
         searchData.list.length = 0
       }
     }
-
-    const showSearchBtn = computed(() => {
-      return route.path === '/' || route.path === '/search'
-    })
 
     const { t, locale } = useI18n()
 
@@ -135,7 +128,6 @@ export default {
       btnList,
       logo,
       logoClick,
-      showSearchBtn,
       t,
       changeLang,
       showSearch,

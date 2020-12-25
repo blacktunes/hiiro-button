@@ -1,15 +1,14 @@
 <template>
   <div id="app">
     <VHeader />
-    <router-view style="min-height: calc(100vh - 48px - 67px)" />
-    <Control v-if="showControl" />
+    <router-view style="min-height: calc(100vh - 48px - 78px)" />
+    <Control />
     <VFooter />
   </div>
 </template>
 
 <script lang="ts">
-import { provide, reactive, ref, watch, Ref } from 'vue'
-import { useRoute } from 'vue-router'
+import { provide, reactive, ref, Ref } from 'vue'
 import { IsShowSearch, PlaySetting, SearchData, Voices, VoicesCategory } from '@/assets/script/option'
 import Setting from '@/../setting/setting.json'
 import VHeader from '@/views/Header.vue'
@@ -82,23 +81,15 @@ export default {
     const isShowSearch: Ref<IsShowSearch> = ref(false)
     provide('isShowSearch', isShowSearch)
 
-    // 是否显示控制栏
-    const route = useRoute()
-    const showControl = ref(false)
-    watch(route, () => {
-      // 路由改变后重置搜索
-      isShowSearch.value = false
-      if (!isShowSearch.value) {
-        searchData.value = ''
-        searchData.list.length = 0
-      }
-
-      if (route.path === '/') {
-        showControl.value = true
-      } else {
-        showControl.value = false
-      }
-    })
+    // const route = useRoute()
+    // watch(route, () => {
+    //   // 路由改变后重置搜索
+    //   isShowSearch.value = false
+    //   if (!isShowSearch.value) {
+    //     searchData.value = ''
+    //     searchData.list.length = 0
+    //   }
+    // })
 
     if ((Setting as any).console && ((Setting as any).console.text || (Setting as any).console.img)) {
       const text = (Setting as any).console.text || ''
@@ -110,10 +101,6 @@ export default {
       const img = (Setting as any).console.img ? `padding-right:${width};padding-top:${height};background:url('${location.origin}/img/${(Setting as any).console.img}') no-repeat;background-size:100% 100%` : ''
 
       console.log(`%c${text}%c `, `font-size:${size};color:${color}`, img)
-    }
-
-    return {
-      showControl
     }
   }
 }
