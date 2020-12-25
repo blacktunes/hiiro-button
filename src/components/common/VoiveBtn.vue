@@ -73,6 +73,22 @@ export default {
   pointer-events none
 
 .lowlight
+  &:active
+    .left
+      border-color transparent transparent $active-color transparent !important
+
+    .right
+      border-color transparent transparent $active-color transparent !important
+
+    .btn
+      background $active-color !important
+
+      &:before
+        transform scale(2, 1)
+        opacity 1
+        transition transform 0.6s, opacity 0.2s
+        transition-delay 0.2s
+
   .left
     border-color transparent transparent #ccc transparent !important
 
@@ -87,19 +103,19 @@ export default {
       width 0 !important
       height 0 !important
 
-.highlight
-  .left
-    border-color transparent transparent $active-color transparent !important
-
-  .right
-    border-color transparent transparent $active-color transparent !important
-
-  .btn
-    background $active-color !important
-
-    &:before
-      width 0 !important
-      height 0 !important
+.highlight:after
+  content ''
+  box-sizing border-box
+  position absolute
+  height calc(100% + 10px)
+  width calc(100% + 10px)
+  top -5px
+  left -5px
+  border 2px solid $main-color
+  border-radius 10px
+  animation highlight-fade 1s infinite
+  animation-direction alternate
+  pointer-events none
 
 .wrapper
   margin 5px
@@ -174,7 +190,7 @@ export default {
     border-radius 18px
     color $btn-text-color
     background $main-color
-    box-shadow 0px 1px 5px 0px $main-color
+    box-shadow 0px 1px 2px 0px $main-color
     user-select none
     cursor pointer
 
@@ -187,7 +203,7 @@ export default {
       height 100%
       background linear-gradient(to right, $sub-color 98%, transparent 100%)
 
-    span
+    .text
       position relative
       line-height 20px
       padding 5px 15px
@@ -240,6 +256,13 @@ export default {
 
   100%
     transform translateY(0px)
+
+@keyframes highlight-fade
+  from
+    opacity 0
+
+  to
+    opacity 1
 
 @keyframes color
   0%
