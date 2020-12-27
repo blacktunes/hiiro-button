@@ -37,5 +37,6 @@
     "imgHeight": "56%"
   },
   "mediaSession": "albums.jpg",
-  "GA_ID": "UA-176441751-2"
+  "GA_ID": "UA-176441751-2",
+  "CDN": "https://cdn.jsdelivr.net/gh/blacktunes/hiiro-button@master/public/voices"
 }

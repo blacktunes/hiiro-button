@@ -159,7 +159,7 @@ export default {
       if (key === 'once' && playerList.has(key)) {
         playerList.get(key)!.audio.oncanplay = null
       }
-      const path = process.env.NODE_ENV === 'production' ? `https://cdn.jsdelivr.net/gh/blacktunes/hiiro-button@master/public/voices/${voice.path}` : `voices/${voice.path}`
+      const path = process.env.NODE_ENV === 'production' && Setting.CDN ? `${Setting.CDN}/${voice.path}` : `voices/${voice.path}`
       playerList.set(key, {
         name: voice.name,
         audio: new Audio(path)
@@ -167,7 +167,7 @@ export default {
       if (!playSetting.overlap) playSetting.nowPlay = voice
       playerList.get(key)!.audio.play()
       playerList.get(key)!.audio.onerror = () => {
-        if (playerList.get(key)!.audio.src.includes('jsdelivr')) {
+        if (playerList.get(key)!.audio.src.startsWith(Setting.CDN)) {
           playerList.get(key)!.audio.src = `voices/${voice.path}`
           playerList.get(key)!.audio.play()
         } else {
