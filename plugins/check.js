@@ -89,12 +89,17 @@ Check.prototype.apply = (compiler) => {
       }
 
       const imgNotUse = []
-      mp3List.forEach(name => {
+      imgList.forEach(name => {
         const isUse = VoicesList.some(item => {
           if (item.usePicture) {
-            return item.usePicture.some(picName => {
-              return picName === name
-            })
+            let flag = false
+            for (const i in item.usePicture) {
+              if (item.usePicture[i] === name) {
+                flag = true
+                break
+              }
+            }
+            return flag
           } else {
             return true
           }
