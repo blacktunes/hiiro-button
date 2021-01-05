@@ -1,0 +1,182 @@
+[
+  {
+    "name": "呼气",
+    "path": "呼气.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "呼气",
+      "en-US": "blow air"
+    },
+    "category": "糟糕",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "13:04~13:06",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "nononopls",
+    "path": "nononopls.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "no no no please",
+      "en-US": "no no no please"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "14:11~14:14",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "我的天呐",
+    "path": "我的天呐.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "我的天呐",
+      "en-US": "Oh my God"
+    },
+    "category": "混沌",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "15:51~15:55",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "喵2",
+    "path": "喵2.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "喵2",
+      "en-US": "Meow 2"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "18:54~18:55",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "无路赛八嘎连击",
+    "path": "无路赛八嘎连击.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "无路赛八嘎连击",
+      "en-US": "Urusai baka"
+    },
+    "category": "软猫",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "19:29~19:34",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "八嘎八嘎八嘎",
+    "path": "八嘎八嘎八嘎.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "八嘎八嘎八嘎",
+      "en-US": "baka baka baka"
+    },
+    "category": "软猫",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "20:15~20:16",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "喵喵喵",
+    "path": "喵喵喵.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "喵喵喵",
+      "en-US": "meow meow meow"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "21:41~21:42",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "Astronomia",
+    "path": "Astronomia.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "Astronomia",
+      "en-US": "Astronomia"
+    },
+    "category": "唱歌",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "20:42~20:47",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "我是你的老婆",
+    "path": "我是你的老婆.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "我是你的老婆",
+      "en-US": "I am your wife"
+    },
+    "category": "软猫",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "24:10~24:12",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "kimo2",
+    "path": "kimo2.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "kimo",
+      "en-US": "kimo"
+    },
+    "category": "软猫",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "26:00~26:04",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "kimo不喜欢起飞",
+    "path": "kimo不喜欢起飞.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "kimo不喜欢起飞",
+      "en-US": "kimo"
+    },
+    "category": "说教",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "26:18~26:21",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "可以来抱抱我吗",
+    "path": "可以来抱抱我吗.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "可以来抱抱我吗",
+      "en-US": "Can you hug me"
+    },
+    "category": "软猫",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "27:14~27:22",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  }
+]
