@@ -3605,32 +3605,6 @@
     }
   },
   {
-    "name": "啊~~啊！",
-    "path": "啊~~啊！.mp3",
-    "date": "2020-11-30",
-    "translate": {
-      "zh-CN": "啊~~啊！",
-      "en-US": "a~~ah！"
-    },
-    "category": "糟糕",
-    "mark": {
-      "title": "Hiiro11.27日泰坦陨落2直播"
-    }
-  },
-  {
-    "name": "啊啊what the *",
-    "path": "啊啊what.mp3",
-    "date": "2020-11-30",
-    "translate": {
-      "zh-CN": "啊啊what the *",
-      "en-US": "ah~what the *"
-    },
-    "category": "糟糕",
-    "mark": {
-      "title": "Hiiro11.27日泰坦陨落2直播"
-    }
-  },
-  {
     "name": "啊呜",
     "path": "啊呜.mp3",
     "date": "2020-11-30",
