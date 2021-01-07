@@ -97,12 +97,16 @@ export interface SearchData {
   index: number;
 }
 
-/**
- * 窄屏状态下是否显示搜索栏
- */
-export type IsShowSearch = boolean
+export type Voices = VoicesCategory[] | VoicesOrigin[]
 
-export type Voices = VoicesCategory[]
+/**
+ * 来源分类
+ */
+export interface VoicesOrigin {
+  title: string;
+  url?: string;
+  voiceList: VoicesItem[];
+}
 
 /**
  * 语音分类
@@ -139,10 +143,6 @@ export interface VoicesItem {
    * 所属分类
    */
   category: string;
-  /**
-   * 播放进度
-   */
-  progress?: number;
   /**
    * 添加日期
    */
@@ -182,11 +182,6 @@ export interface Player {
   name: string;
   audio: HTMLAudioElement;
   voicesKey?: [string, string];
-}
-
-export interface MemeItem {
-  name: string;
-  path: string;
 }
 
 export interface FriendlyLink {

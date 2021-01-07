@@ -8,7 +8,6 @@
 import { inject, Ref } from 'vue'
 import Search from '@/components/Search.vue'
 import Card from '@/components/common/Card.vue'
-import { IsShowSearch } from '@/assets/script/option'
 
 export default {
   components: {
@@ -16,7 +15,7 @@ export default {
     Card
   },
   setup() {
-    const isShowSearch: Ref<IsShowSearch> = inject('isShowSearch') as Ref<IsShowSearch>
+    const isShowSearch = inject('isShowSearch') as Ref<boolean>
 
     return {
       isShowSearch

@@ -5,14 +5,22 @@ import { CategoryList, Locales, VoicesList } from './voices'
 const CN: any = { ...Locales['zh-CN'], voice: {}, voicecategory: {} }
 const EN: any = { ...Locales['en-US'], voice: {}, voicecategory: {} }
 
+const NAME = Setting['name'] || {}
+
 CN.info = {
   ...CN.info,
-  ...Setting.name.CN
+  ...NAME.CN || {
+    title: '语音按钮',
+    fullName: ''
+  }
 }
 
 EN.info = {
   ...EN.info,
-  ...Setting.name.EN
+  ...NAME.EN || {
+    title: 'Voices Button',
+    fullName: ''
+  }
 }
 
 for (const category of CategoryList) {

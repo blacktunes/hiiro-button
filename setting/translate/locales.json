@@ -17,7 +17,8 @@
     },
     "vtbbtn": "VTuber按钮集合",
     "voiceTotalTip": "当前语音量",
-    "lang": "Change to English"
+    "lang": "Change to English",
+    "unknown": "不太清楚出自哪"
   },
   "en-US": {
     "info": {
@@ -37,6 +38,7 @@
     },
     "vtbbtn": "Vtuber button collection",
     "voiceTotalTip": "Current voice quantity",
-    "lang": "切换至简体中文"
+    "lang": "切换至简体中文",
+    "unknown": "Unknown"
   }
 }

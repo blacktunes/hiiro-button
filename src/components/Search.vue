@@ -81,24 +81,25 @@
 </template>
 
 <script lang="ts">
-import { inject, Ref, watch } from 'vue'
+import { inject, Ref, watch, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { EVENT, IsShowSearch, SearchData, Voices, VoicesItem } from '@/assets/script/option'
+import { EVENT, SearchData, VoicesItem, PlaySetting } from '@/assets/script/option'
 import mitt from '@/assets/script/mitt'
 
 export default {
   setup() {
     const { locale } = useI18n()
 
-    const isShowSearch: Ref<IsShowSearch> = inject('isShowSearch') as Ref<IsShowSearch>
+    const isShowSearch = inject('isShowSearch') as Ref<boolean>
 
-    const searchData: SearchData = inject('searchData') as SearchData
-    const voices = inject('voices', {} as Voices)
-    const voiceList: VoicesItem[] = []
-    voices.forEach(item => {
-      item.voiceList.forEach(voice => {
-        voiceList.push(voice)
-      })
+    const playSetting = inject('playSetting') as PlaySetting
+    const searchData = inject('searchData') as SearchData
+    const voiceList = inject('voiceList', ref([]) as Ref<VoicesItem[]>)
+
+    watch(() => {
+      return playSetting.showInfo
+    }, () => {
+      clear()
     })
 
     const clear = () => {
@@ -112,21 +113,13 @@ export default {
     const search = () => {
       searchData.list.length = 0
       if (searchData.value.length < 1) return
-      for (const i in voiceList) {
-        const name: string = voiceList[i].translate[locale.value]
+      for (const i in voiceList.value) {
+        const name: string = voiceList.value[i].translate[locale.value]
         if (name && name.toUpperCase().includes(searchData.value.toUpperCase())) {
-          searchData.list.push(voiceList[i].name)
+          searchData.list.push(voiceList.value[i].name)
         }
       }
     }
-
-    watch(() => {
-      return searchData.value
-    }, (newVal, oldVal) => {
-      if (newVal !== oldVal) {
-        searchData.index = 0
-      }
-    })
 
     const btnClick = () => {
       mitt.emit(EVENT.autoScroll)

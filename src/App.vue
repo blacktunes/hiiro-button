@@ -8,13 +8,27 @@
 </template>
 
 <script lang="ts">
-import { provide, reactive, ref, Ref } from 'vue'
-import { IsShowSearch, PlaySetting, SearchData, Voices, VoicesCategory } from '@/assets/script/option'
+import { provide, reactive, ref, Ref, computed } from 'vue'
+import { PlaySetting, SearchData, VoicesOrigin, VoicesCategory, VoicesItem, Mark } from '@/assets/script/option'
 import Setting from '@/../setting/setting.json'
 import VHeader from '@/views/Header.vue'
 import Control from '@/views/Control.vue'
 import VFooter from '@/views/Footer.vue'
 import { CategoryList, VoicesList } from './assets/script/voices'
+
+const CONSOLE = Setting['console'] || {}
+
+if (CONSOLE && (CONSOLE.text || CONSOLE.img)) {
+  const text = CONSOLE.text || ''
+  const size = CONSOLE.size || '16px'
+  const color = CONSOLE.color || ''
+
+  const width = CONSOLE.imgWidth || '100%'
+  const height = CONSOLE.imgHeight || '100%'
+  const img = CONSOLE.img ? `padding-right:${width};padding-top:${height};background:url('${location.origin}/img/${CONSOLE.img}') no-repeat;background-size:100% 100%` : ''
+
+  console.log(`%c${text}%c `, `font-size:${size};color:${color}`, img)
+}
 
 export default {
   components: {
@@ -23,6 +37,19 @@ export default {
     VFooter
   },
   setup() {
+    // 播放设置
+    const playSetting: PlaySetting = reactive({
+      loading: true,
+      error: false,
+      nowPlay: null,
+      overlap: false,
+      autoRandom: false,
+      loop: 0,
+      showInfo: false
+    })
+    provide('playSetting', playSetting)
+
+    // 获取最后更新时间和更新数量
     const lastDate = ref('')
     let temp: null | Date = null
     for (const i in VoicesList) {
@@ -41,7 +68,8 @@ export default {
     provide('lastDate', lastDate)
     provide('newVoiceNum', VoicesList.filter((item) => item.date && item.date === lastDate.value).length)
 
-    const voices: Voices = reactive([])
+    // 获取分类排序列表
+    const categoryList: VoicesCategory[] = []
     CategoryList.forEach(category => {
       const temp: VoicesCategory = { ...category, voiceList: [] }
       VoicesList.forEach(voice => {
@@ -49,28 +77,70 @@ export default {
           temp.voiceList.push(voice)
         }
       })
-      voices.push(temp)
+      categoryList.push(temp)
     })
+
+    // 获取来源排序列表
+    const temp1: {
+      [name: string]: {
+        url?: string;
+        list: VoicesItem[];
+      };
+    } = {}
+    const temp2: {
+      title: string;
+      voiceList: VoicesItem[];
+    } = {
+      title: 'unknown',
+      voiceList: []
+    }
+    const originList: VoicesOrigin[] = []
+    VoicesList.forEach(voice => {
+      if (voice.mark && voice.mark.title) {
+        if (temp1[voice.mark.title]) {
+          temp1[voice.mark.title].list.push(voice)
+        } else {
+          temp1[voice.mark.title] = {
+            url: voice.mark.url,
+            list: [voice]
+          }
+        }
+      } else {
+        temp2.voiceList.push(voice)
+      }
+    })
+    for (const i in temp1) {
+      originList.push({
+        title: i,
+        url: temp1[i].url,
+        voiceList: temp1[i].list
+      })
+    }
+    originList.push(temp2)
+
+    const voices = computed(() => playSetting.showInfo ? originList : categoryList)
     provide('voices', voices)
 
-    const playSetting: PlaySetting = reactive({
-      loading: true,
-      error: false,
-      nowPlay: null,
-      overlap: false,
-      autoRandom: false,
-      loop: 0,
-      showInfo: false
+    const voiceList: Ref<VoicesItem[]> = computed(() => {
+      const temp: VoicesItem[] = []
+      voices.value.forEach((item: VoicesCategory | VoicesOrigin) => {
+        item.voiceList.forEach(voice => {
+          temp.push(voice)
+        })
+      })
+      return temp
     })
-    provide('playSetting', playSetting)
+    provide('voiceList', voiceList)
 
-    const infoDate = ref({
+    // 需要显示的来源信息
+    const infoDate: Ref<Mark | null> = ref({
       title: '',
       time: '',
       url: ''
     })
     provide('infoDate', infoDate)
 
+    // 搜索结果
     const searchData: SearchData = reactive({
       value: '',
       list: [],
@@ -78,7 +148,8 @@ export default {
     })
     provide('searchData', searchData)
 
-    const isShowSearch: Ref<IsShowSearch> = ref(false)
+    // 窄屏状态下是否显示搜索栏
+    const isShowSearch = ref(false)
     provide('isShowSearch', isShowSearch)
 
     // const route = useRoute()
@@ -90,18 +161,6 @@ export default {
     //     searchData.list.length = 0
     //   }
     // })
-
-    if ((Setting as any).console && ((Setting as any).console.text || (Setting as any).console.img)) {
-      const text = (Setting as any).console.text || ''
-      const size = (Setting as any).console.size || '16px'
-      const color = (Setting as any).console.color || ''
-
-      const width = (Setting as any).console.imgWidth || '100%'
-      const height = (Setting as any).console.imgHeight || '100%'
-      const img = (Setting as any).console.img ? `padding-right:${width};padding-top:${height};background:url('${location.origin}/img/${(Setting as any).console.img}') no-repeat;background-size:100% 100%` : ''
-
-      console.log(`%c${text}%c `, `font-size:${size};color:${color}`, img)
-    }
   }
 }
 </script>

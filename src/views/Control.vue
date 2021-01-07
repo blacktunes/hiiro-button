@@ -1,7 +1,7 @@
 <template>
   <transition name="slider-up" appear>
     <div class="control">
-      <div class="playing" v-if="!playSetting.showInfo">
+      <div class="playing">
         <transition name="fade">
           <Loading
             v-if="playSetting.nowPlay && playSetting.loading"
@@ -11,173 +11,162 @@
         <transition name="fade-delay">
           <Error v-if="playSetting.nowPlay && playSetting.error" class="tip" />
         </transition>
-        <div :style="{ 'text-decoration': isError }">{{ title }}</div>
-      </div>
-      <div v-else class="info-wrapper">
-        <div v-if="infoDate.title">
-          <div>
-            {{ infoDate.title }}{{ infoDate.time ? `(${infoDate.time})` : "" }}
-          </div>
-          <a v-if="infoDate.url" :href="infoDate.url" target="_blank">
-            {{ infoDate.url }}</a
-          >
+        <div :style="{ 'text-decoration': isError }">
+          {{ title
+          }}{{
+            playSetting.showInfo && infoDate && infoDate.time
+              ? `(${infoDate.time})`
+              : ""
+          }}
         </div>
       </div>
       <div class="btn-wrapper">
         <div
-          class="btn"
-          :style="{
-            width: playSetting.showInfo ? '0px' : '200px',
-            opacity: playSetting.showInfo ? '0' : '1',
-          }"
+          class="icon"
+          :title="t(ACTION_I18N.randomplay)"
+          @click="randomPlay"
         >
-          <div
-            class="icon"
-            :title="t(ACTION_I18N.randomplay)"
-            @click="randomPlay"
+          <svg
+            viewBox="0 0 1024 1024"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
           >
-            <svg
-              viewBox="0 0 1024 1024"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-            >
-              <path
-                d="M689.066667 170.666667c-40.533333 0-132.266667 19.2-177.066667 119.466666C467.2 189.866667 377.6 170.666667 334.933333 170.666667 211.2 170.666667 128 266.666667 128 373.333333 128 631.466667 512 853.333333 512 853.333333s384-221.866667 384-480c0-106.666667-83.2-202.666667-206.933333-202.666666z"
-              />
-            </svg>
-          </div>
-          <div class="icon" :title="t(ACTION_I18N.stopvoice)" @click="stopPlay">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              height="24"
-              width="24"
-              role="img"
-              aria-hidden="true"
-            >
-              <path d="M18,18H6V6H18V18Z" />
-            </svg>
-          </div>
-          <div
-            class="icon"
-            :title="t(ACTION_I18N.overlap)"
-            @click="overlapChange"
-            :class="{ 'icon-active': playSetting.overlap }"
+            <path
+              d="M689.066667 170.666667c-40.533333 0-132.266667 19.2-177.066667 119.466666C467.2 189.866667 377.6 170.666667 334.933333 170.666667 211.2 170.666667 128 266.666667 128 373.333333 128 631.466667 512 853.333333 512 853.333333s384-221.866667 384-480c0-106.666667-83.2-202.666667-206.933333-202.666666z"
+            />
+          </svg>
+        </div>
+        <div class="icon" :title="t(ACTION_I18N.stopvoice)" @click="stopPlay">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            height="24"
+            width="24"
+            role="img"
+            aria-hidden="true"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              height="24"
-              width="24"
-              role="img"
-              aria-hidden="true"
-            >
-              <path d="M19 3V21H15V3H19M14 3V21H10V3H14M9 3V21H5V3H9Z" />
-            </svg>
-          </div>
-          <div
-            class="icon"
-            :title="t(ACTION_I18N.autoRandom)"
-            @click="autoRandomChange"
-            :class="{ 'icon-active': playSetting.autoRandom }"
+            <path d="M18,18H6V6H18V18Z" />
+          </svg>
+        </div>
+        <div
+          class="icon"
+          :title="t(ACTION_I18N.overlap)"
+          @click="overlapChange"
+          :class="{ 'icon-active': playSetting.overlap }"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            height="24"
+            width="24"
+            role="img"
+            aria-hidden="true"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              height="24"
-              width="24"
-              role="img"
-              aria-hidden="true"
-            >
-              <path
-                d="M14.83,13.41L13.42,14.82L16.55,17.95L14.5,20H20V14.5L17.96,16.54L14.83,13.41M14.5,4L16.54,6.04L4,18.59L5.41,20L17.96,7.46L20,9.5V4M10.59,9.17L5.41,4L4,5.41L9.17,10.58L10.59,9.17Z"
-              />
-            </svg>
-          </div>
-          <div
-            class="icon"
-            :title="t(ACTION_I18N.loop)"
-            @click="loopChange"
-            :class="{ 'icon-active': playSetting.loop !== 0 }"
+            <path d="M19 3V21H15V3H19M14 3V21H10V3H14M9 3V21H5V3H9Z" />
+          </svg>
+        </div>
+        <div
+          class="icon"
+          :title="t(ACTION_I18N.autoRandom)"
+          @click="autoRandomChange"
+          :class="{ 'icon-active': playSetting.autoRandom }"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            height="24"
+            width="24"
+            role="img"
+            aria-hidden="true"
           >
-            <svg
-              width="24"
-              height="24"
-              xmlns="http://www.w3.org/2000/svg"
-              v-if="playSetting.loop === 0"
+            <path
+              d="M14.83,13.41L13.42,14.82L16.55,17.95L14.5,20H20V14.5L17.96,16.54L14.83,13.41M14.5,4L16.54,6.04L4,18.59L5.41,20L17.96,7.46L20,9.5V4M10.59,9.17L5.41,4L4,5.41L9.17,10.58L10.59,9.17Z"
+            />
+          </svg>
+        </div>
+        <div
+          class="icon"
+          :title="t(ACTION_I18N.loop)"
+          @click="loopChange"
+          :class="{ 'icon-active': playSetting.loop !== 0 }"
+        >
+          <svg
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            v-if="playSetting.loop === 0"
+          >
+            <path
+              d="m17,17l-10,0l0,-3l-4,4l4,4l0,-3l12,0l0,-6l-2,0m-10,-6l10,0l0,3l4,-4l-4,-4l0,3l-12,0l0,6l2,0l0,-4z"
+            />
+          </svg>
+          <svg
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            v-if="playSetting.loop === 1"
+          >
+            <path
+              d="m17,17l-10,0l0,-3l-4,4l4,4l0,-3l12,0l0,-6l-2,0m-10,-6l10,0l0,3l4,-4l-4,-4l0,3l-12,0l0,6l2,0l0,-4z"
+            />
+            <text
+              font-weight="bold"
+              transform="matrix(0.37833114108120997,0,0,0.4339360947245867,9.614645136687502,5.776567408197169) "
+              xml:space="preserve"
+              text-anchor="start"
+              font-family="'Trebuchet MS', Gadget, sans-serif"
+              font-size="24"
+              y="21.67922"
+              x="-1.13436"
             >
-              <path
-                d="m17,17l-10,0l0,-3l-4,4l4,4l0,-3l12,0l0,-6l-2,0m-10,-6l10,0l0,3l4,-4l-4,-4l0,3l-12,0l0,6l2,0l0,-4z"
-              />
-            </svg>
-            <svg
-              width="24"
-              height="24"
-              xmlns="http://www.w3.org/2000/svg"
-              v-if="playSetting.loop === 1"
+              1
+            </text>
+          </svg>
+          <svg
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            v-if="playSetting.loop === 2"
+          >
+            <path
+              d="m17,17l-10,0l0,-3l-4,4l4,4l0,-3l12,0l0,-6l-2,0m-10,-6l10,0l0,3l4,-4l-4,-4l0,3l-12,0l0,6l2,0l0,-4z"
+            />
+            <text
+              font-weight="bold"
+              transform="matrix(0.37833114108120997,0,0,0.4339360947245867,9.614645136687502,5.776567408197169) "
+              xml:space="preserve"
+              text-anchor="start"
+              font-family="'Trebuchet MS', Gadget, sans-serif"
+              font-size="24"
+              y="21.67922"
+              x="-1.13436"
             >
-              <path
-                d="m17,17l-10,0l0,-3l-4,4l4,4l0,-3l12,0l0,-6l-2,0m-10,-6l10,0l0,3l4,-4l-4,-4l0,3l-12,0l0,6l2,0l0,-4z"
-              />
-              <text
-                font-weight="bold"
-                transform="matrix(0.37833114108120997,0,0,0.4339360947245867,9.614645136687502,5.776567408197169) "
-                xml:space="preserve"
-                text-anchor="start"
-                font-family="'Trebuchet MS', Gadget, sans-serif"
-                font-size="24"
-                y="21.67922"
-                x="-1.13436"
-              >
-                1
-              </text>
-            </svg>
-            <svg
-              width="24"
-              height="24"
-              xmlns="http://www.w3.org/2000/svg"
-              v-if="playSetting.loop === 2"
+              C
+            </text>
+          </svg>
+          <svg
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            v-if="playSetting.loop === 3"
+          >
+            <path
+              d="m17,17l-10,0l0,-3l-4,4l4,4l0,-3l12,0l0,-6l-2,0m-10,-6l10,0l0,3l4,-4l-4,-4l0,3l-12,0l0,6l2,0l0,-4z"
+            />
+            <text
+              font-weight="bold"
+              transform="matrix(0.37833114108120997,0,0,0.4339360947245867,9.614645136687502,5.776567408197169) "
+              xml:space="preserve"
+              text-anchor="start"
+              font-family="'Trebuchet MS', Gadget, sans-serif"
+              font-size="24"
+              y="21.67922"
+              x="-1.13436"
             >
-              <path
-                d="m17,17l-10,0l0,-3l-4,4l4,4l0,-3l12,0l0,-6l-2,0m-10,-6l10,0l0,3l4,-4l-4,-4l0,3l-12,0l0,6l2,0l0,-4z"
-              />
-              <text
-                font-weight="bold"
-                transform="matrix(0.37833114108120997,0,0,0.4339360947245867,9.614645136687502,5.776567408197169) "
-                xml:space="preserve"
-                text-anchor="start"
-                font-family="'Trebuchet MS', Gadget, sans-serif"
-                font-size="24"
-                y="21.67922"
-                x="-1.13436"
-              >
-                C
-              </text>
-            </svg>
-            <svg
-              width="24"
-              height="24"
-              xmlns="http://www.w3.org/2000/svg"
-              v-if="playSetting.loop === 3"
-            >
-              <path
-                d="m17,17l-10,0l0,-3l-4,4l4,4l0,-3l12,0l0,-6l-2,0m-10,-6l10,0l0,3l4,-4l-4,-4l0,3l-12,0l0,6l2,0l0,-4z"
-              />
-              <text
-                font-weight="bold"
-                transform="matrix(0.37833114108120997,0,0,0.4339360947245867,9.614645136687502,5.776567408197169) "
-                xml:space="preserve"
-                text-anchor="start"
-                font-family="'Trebuchet MS', Gadget, sans-serif"
-                font-size="24"
-                y="21.67922"
-                x="-1.13436"
-              >
-                A
-              </text>
-            </svg>
-          </div>
+              A
+            </text>
+          </svg>
         </div>
         <div
           class="icon"
@@ -203,9 +192,9 @@
 </template>
 
 <script lang="ts">
-import { inject, computed } from 'vue'
+import { inject, computed, Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { ACTION_I18N, EVENT, PlaySetting } from '@/assets/script/option'
+import { ACTION_I18N, EVENT, PlaySetting, Mark } from '@/assets/script/option'
 import mitt from '@/assets/script/mitt'
 import Loading from '@/components/common/Loading.vue'
 import Error from '@/components/common/Error.vue'
@@ -266,10 +255,10 @@ export default {
       }
     }
 
-    const infoDate = inject('infoDate') as any
+    const infoDate = inject('infoDate') as Ref<Mark | null>
     const changeShowInfo = () => {
       playSetting.showInfo = !playSetting.showInfo
-      infoDate.value = {}
+      infoDate.value = null
     }
 
     return {
@@ -320,30 +309,11 @@ a
       top 0
       height 100%
 
-  .info-wrapper
-    margin 10px 0
-    max-width 90%
-    line-height 21px
-    text-align center
-    color $title-color
-    word-wrap break-word
-
   .btn-wrapper
     display flex
     align-items center
     justify-content center
     margin-bottom 10px
-
-    .btn
-      display flex
-      align-items center
-      justify-content center
-      overflow hidden
-      height 36px
-      transition all 0.3s
-
-      .icon
-        flex-shrink 0
 
 .icon
   width 30px
@@ -367,5 +337,5 @@ a
     background $hover-color
 
 .icon-active
-  background $active-color
+  background #93a3b3
 </style>
