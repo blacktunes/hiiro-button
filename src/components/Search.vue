@@ -83,47 +83,57 @@
 <script lang="ts">
 import { inject, Ref, watch, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { EVENT, SearchData, VoicesItem, PlaySetting } from '@/assets/script/option'
+import { EVENT, SearchData, VoicesItem, PlaySetting } from '@/assets/script/type'
 import mitt from '@/assets/script/mitt'
+
+const initSearch = () => {
+  const { locale } = useI18n()
+
+  const isShowSearch = inject('isShowSearch') as Ref<boolean>
+
+  const playSetting = inject('playSetting') as PlaySetting
+  const searchData = inject('searchData') as SearchData
+  const voiceList = inject('voiceList', ref([]) as Ref<VoicesItem[]>)
+
+  watch(() => {
+    return playSetting.showInfo
+  }, () => {
+    clear()
+  })
+
+  const clear = () => {
+    if (searchData.value.length < 1) {
+      isShowSearch.value = false
+    }
+    searchData.value = ''
+    searchData.list.length = 0
+  }
+
+  const search = () => {
+    searchData.list.length = 0
+    if (searchData.value.length < 1) return
+    for (const i in voiceList.value) {
+      const name: string = voiceList.value[i].translate[locale.value]
+      if (name && name.toUpperCase().includes(searchData.value.toUpperCase())) {
+        searchData.list.push(voiceList.value[i].name)
+      }
+    }
+  }
+
+  return {
+    searchData,
+    clear,
+    search
+  }
+}
+
+const btnClick = () => {
+  mitt.emit(EVENT.autoScroll)
+}
 
 export default {
   setup() {
-    const { locale } = useI18n()
-
-    const isShowSearch = inject('isShowSearch') as Ref<boolean>
-
-    const playSetting = inject('playSetting') as PlaySetting
-    const searchData = inject('searchData') as SearchData
-    const voiceList = inject('voiceList', ref([]) as Ref<VoicesItem[]>)
-
-    watch(() => {
-      return playSetting.showInfo
-    }, () => {
-      clear()
-    })
-
-    const clear = () => {
-      if (searchData.value.length < 1) {
-        isShowSearch.value = false
-      }
-      searchData.value = ''
-      searchData.list.length = 0
-    }
-
-    const search = () => {
-      searchData.list.length = 0
-      if (searchData.value.length < 1) return
-      for (const i in voiceList.value) {
-        const name: string = voiceList.value[i].translate[locale.value]
-        if (name && name.toUpperCase().includes(searchData.value.toUpperCase())) {
-          searchData.list.push(voiceList.value[i].name)
-        }
-      }
-    }
-
-    const btnClick = () => {
-      mitt.emit(EVENT.autoScroll)
-    }
+    const { searchData, clear, search } = initSearch()
 
     return {
       searchData,

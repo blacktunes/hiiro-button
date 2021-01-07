@@ -32,7 +32,7 @@
 
 <script lang="ts">
 import { useI18n } from 'vue-i18n'
-import { INFO_I18N } from '@/assets/script/option'
+import { INFO_I18N } from '@/assets/script/type'
 import IBtn from '@/components/common/IconBtn.vue'
 import Setting from '@/../setting/setting.json'
 

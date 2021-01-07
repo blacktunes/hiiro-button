@@ -36,12 +36,32 @@
 
 <script lang="ts">
 import { useI18n } from 'vue-i18n'
-import { FriendlyLink, INFO_I18N, PlaySetting } from '@/assets/script/option'
+import { FriendlyLink, INFO_I18N, PlaySetting } from '@/assets/script/type'
 import Search from '@/components/SearchCard.vue'
 import Voice from '@/components/Voice.vue'
 import Card from '@/components/common/Card.vue'
 import Btn from '@/components/common/Btn.vue'
 import { inject, ref, watch, Ref } from 'vue'
+
+/**
+ * 切换分类模式时触发一次渐入动画
+ */
+const watchShowInfo = (voice) => {
+  const playSetting = inject('playSetting') as PlaySetting
+  let isRestart = false
+  watch(() => {
+    return playSetting.showInfo
+  }, () => {
+    if (!voice.value) return
+    if (isRestart) {
+      voice.value.style.animation = 'voice 0.5s'
+      isRestart = !isRestart
+    } else {
+      voice.value.style.animation = 'voice-restart 0.5s'
+      isRestart = !isRestart
+    }
+  })
+}
 
 export default {
   components: {
@@ -64,22 +84,8 @@ export default {
       }
     ]
 
-    // 切换分类模式时触发一次渐入动画
-    const playSetting = inject('playSetting') as PlaySetting
     const voice = ref() as Ref<HTMLElement>
-    let isRestart = false
-    watch(() => {
-      return playSetting.showInfo
-    }, () => {
-      if (!voice.value) return
-      if (isRestart) {
-        voice.value.style.animation = 'voice 0.5s'
-        isRestart = !isRestart
-      } else {
-        voice.value.style.animation = 'voice-restart 0.5s'
-        isRestart = !isRestart
-      }
-    })
+    watchShowInfo(voice)
 
     return {
       t,

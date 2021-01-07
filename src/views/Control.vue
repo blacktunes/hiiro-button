@@ -24,7 +24,7 @@
         <div
           class="icon"
           :title="t(ACTION_I18N.randomplay)"
-          @click="randomPlay"
+          @click="Control.randomPlay"
         >
           <svg
             viewBox="0 0 1024 1024"
@@ -37,7 +37,7 @@
             />
           </svg>
         </div>
-        <div class="icon" :title="t(ACTION_I18N.stopvoice)" @click="stopPlay">
+        <div class="icon" :title="t(ACTION_I18N.stopvoice)" @click="Control.stopPlay">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -52,7 +52,7 @@
         <div
           class="icon"
           :title="t(ACTION_I18N.overlap)"
-          @click="overlapChange"
+          @click="Control.overlapChange"
           :class="{ 'icon-active': playSetting.overlap }"
         >
           <svg
@@ -69,7 +69,7 @@
         <div
           class="icon"
           :title="t(ACTION_I18N.autoRandom)"
-          @click="autoRandomChange"
+          @click="Control.autoRandomChange"
           :class="{ 'icon-active': playSetting.autoRandom }"
         >
           <svg
@@ -88,7 +88,7 @@
         <div
           class="icon"
           :title="t(ACTION_I18N.loop)"
-          @click="loopChange"
+          @click="Control.loopChange"
           :class="{ 'icon-active': playSetting.loop !== 0 }"
         >
           <svg
@@ -170,7 +170,7 @@
         </div>
         <div
           class="icon"
-          @click="changeShowInfo"
+          @click="Control.changeShowInfo"
           :class="{ 'icon-active': playSetting.showInfo }"
         >
           <svg
@@ -194,10 +194,83 @@
 <script lang="ts">
 import { inject, computed, Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { ACTION_I18N, EVENT, PlaySetting, Mark } from '@/assets/script/option'
+import { ACTION_I18N, EVENT, PlaySetting, Mark } from '@/assets/script/type'
 import mitt from '@/assets/script/mitt'
 import Loading from '@/components/common/Loading.vue'
 import Error from '@/components/common/Error.vue'
+
+const initControl = () => {
+  const { t } = useI18n()
+  const playSetting = inject('playSetting') as PlaySetting
+
+  // 控制栏文字显示
+  const title = computed(() => {
+    if (playSetting.overlap) {
+      return t(ACTION_I18N.overlapTip)
+    } else if (playSetting.nowPlay) {
+      return t('voice.' + playSetting.nowPlay.name)
+    } else if (playSetting.autoRandom) {
+      return t(ACTION_I18N.autoRandomTip)
+    } else if (playSetting.loop) {
+      return t(ACTION_I18N.loopTip)
+    } else {
+      return t(ACTION_I18N.noplay)
+    }
+  })
+
+  const isError = computed(() => {
+    return playSetting.error ? 'line-through' : 'none'
+  })
+
+  const randomPlay = () => {
+    mitt.emit(EVENT.randomPlay)
+  }
+
+  const stopPlay = () => {
+    mitt.emit(EVENT.stopPlay)
+  }
+
+  const overlapChange = () => {
+    playSetting.autoRandom = false
+    playSetting.overlap = !playSetting.overlap
+  }
+
+  const autoRandomChange = () => {
+    playSetting.overlap = false
+    playSetting.loop = 0
+    playSetting.autoRandom = !playSetting.autoRandom
+  }
+
+  const loopChange = () => {
+    playSetting.autoRandom = false
+    if (playSetting.loop < 3) {
+      playSetting.loop += 1
+    } else {
+      playSetting.loop = 0
+    }
+  }
+
+  const infoDate = inject('infoDate') as Ref<Mark | null>
+  const changeShowInfo = () => {
+    playSetting.showInfo = !playSetting.showInfo
+    infoDate.value = null
+  }
+
+  return {
+    isError,
+    title,
+    playSetting,
+    infoDate,
+    Control: {
+      randomPlay,
+      stopPlay,
+      overlapChange,
+      autoRandomChange,
+      loopChange,
+      changeShowInfo
+    }
+  }
+}
 
 export default {
   components: {
@@ -206,60 +279,13 @@ export default {
   },
   setup() {
     const { t } = useI18n()
-    const playSetting: PlaySetting = inject('playSetting') as PlaySetting
-
-    // 控制栏文字显示
-    const title = computed(() => {
-      if (playSetting.overlap) {
-        return t(ACTION_I18N.overlapTip)
-      } else if (playSetting.nowPlay) {
-        return t('voice.' + playSetting.nowPlay.name)
-      } else if (playSetting.autoRandom) {
-        return t(ACTION_I18N.autoRandomTip)
-      } else if (playSetting.loop) {
-        return t(ACTION_I18N.loopTip)
-      } else {
-        return t(ACTION_I18N.noplay)
-      }
-    })
-
-    const isError = computed(() => {
-      return playSetting.error ? 'line-through' : 'none'
-    })
-
-    const randomPlay = () => {
-      mitt.emit(EVENT.randomPlay)
-    }
-
-    const stopPlay = () => {
-      mitt.emit(EVENT.stopPlay)
-    }
-
-    const overlapChange = () => {
-      playSetting.autoRandom = false
-      playSetting.overlap = !playSetting.overlap
-    }
-
-    const autoRandomChange = () => {
-      playSetting.overlap = false
-      playSetting.loop = 0
-      playSetting.autoRandom = !playSetting.autoRandom
-    }
-
-    const loopChange = () => {
-      playSetting.autoRandom = false
-      if (playSetting.loop < 3) {
-        playSetting.loop += 1
-      } else {
-        playSetting.loop = 0
-      }
-    }
-
-    const infoDate = inject('infoDate') as Ref<Mark | null>
-    const changeShowInfo = () => {
-      playSetting.showInfo = !playSetting.showInfo
-      infoDate.value = null
-    }
+    const {
+      isError,
+      title,
+      playSetting,
+      infoDate,
+      Control
+    } = initControl()
 
     return {
       ACTION_I18N,
@@ -268,12 +294,7 @@ export default {
       title,
       playSetting,
       infoDate,
-      randomPlay,
-      stopPlay,
-      overlapChange,
-      autoRandomChange,
-      loopChange,
-      changeShowInfo
+      Control
     }
   }
 }

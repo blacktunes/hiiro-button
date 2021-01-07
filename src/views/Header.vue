@@ -47,7 +47,7 @@
 <script lang="ts">
 import { ref, inject, onMounted, Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { INFO_I18N, SearchData } from '@/assets/script/option'
+import { INFO_I18N, SearchData } from '@/assets/script/type'
 import IBtn from '@/components/common/IconBtn.vue'
 import Search from '@/components/Search.vue'
 import Setting from '@/../setting/setting.json'
@@ -58,6 +58,22 @@ const HEADER: {
   twitter?: string;
   bilibili?: string;
 } = Setting['header'] || {}
+
+const onLogoClick = (logo) => {
+  let isRestart = false
+  const logoClick = () => {
+    if (!logo.value) return
+    if (isRestart) {
+      logo.value.style.animation = 'logo 1s'
+      isRestart = !isRestart
+    } else {
+      logo.value.style.animation = 'logo-restart 1s'
+      isRestart = !isRestart
+    }
+  }
+
+  return logoClick
+}
 
 export default {
   components: {
@@ -82,17 +98,7 @@ export default {
 
     // 点击图标时的放大动画
     const logo = ref() as Ref<HTMLElement>
-    let isRestart = false
-    const logoClick = () => {
-      if (!logo.value) return
-      if (isRestart) {
-        logo.value.style.animation = 'logo 1s'
-        isRestart = !isRestart
-      } else {
-        logo.value.style.animation = 'logo-restart 1s'
-        isRestart = !isRestart
-      }
-    }
+    const logoClick = onLogoClick(logo)
 
     const isShowSearch = inject('isShowSearch') as Ref<boolean>
 

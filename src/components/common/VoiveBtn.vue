@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" :class="{ playing, lowlight, highlight, disable }">
+  <div class="wrapper" :class="{ lowlight, highlight, disable }">
     <NewIcon class="new-icon" v-if="newIcon" />
     <img class="pic" v-if="showPic" :src="showPic" />
     <div class="left" />
@@ -15,6 +15,34 @@
 import { Ref, ref, watch } from 'vue'
 import NewIcon from './NewIcon.vue'
 
+const watchProgress = (progressRef) => {
+  const progress = ref(0)
+  const playing = ref(false)
+
+  let timer: any = null
+
+  watch(progress, (val) => {
+    if (val === 0) {
+      playing.value = false
+      timer = setTimeout(() => {
+        progressRef.value.style.transition = 'width 0.2s linear'
+        progressRef.value.style.width = '0'
+      }, 200)
+    } else {
+      playing.value = true
+      clearTimeout(timer)
+      timer = null
+      progressRef.value.style.transition = 'width 0.25s linear'
+      progressRef.value.style.width = val + 1 + '%'
+    }
+  })
+
+  return {
+    progress,
+    playing
+  }
+}
+
 export default {
   components: {
     NewIcon
@@ -28,26 +56,7 @@ export default {
   },
   setup() {
     const progressRef = ref() as Ref<HTMLElement>
-    let timer: any = null
-
-    const progress = ref(0)
-    const playing = ref(false)
-
-    watch(progress, (val) => {
-      if (val === 0) {
-        playing.value = false
-        timer = setTimeout(() => {
-          progressRef.value.style.transition = 'width 0.2s linear'
-          progressRef.value.style.width = '0'
-        }, 200)
-      } else {
-        playing.value = true
-        clearTimeout(timer)
-        timer = null
-        progressRef.value.style.transition = 'width 0.25s linear'
-        progressRef.value.style.width = val + 1 + '%'
-      }
-    })
+    const { progress, playing } = watchProgress(progressRef)
 
     const lowlight = ref(false)
     const highlight = ref(false)
