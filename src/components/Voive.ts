@@ -18,6 +18,7 @@ const useSearch = (btnList) => {
   // 搜索数据改变时重新匹配高亮低亮
   watch(searchData, (data) => {
     for (const i in btnList) {
+      if (!btnList[i]) continue
       if (data.value.length > 0) {
         btnList[i].lowlight = !data.list.includes(i)
       } else {
