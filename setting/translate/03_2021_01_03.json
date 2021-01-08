@@ -1,0 +1,662 @@
+[
+  {
+    "name": "呼气",
+    "path": "呼气.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "呼气",
+      "en-US": "blow air"
+    },
+    "category": "糟糕",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "13:04~13:06",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "nononopls",
+    "path": "nononopls.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "no no no please",
+      "en-US": "no no no please"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "14:11~14:14",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "我的天呐",
+    "path": "我的天呐.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "我的天呐",
+      "en-US": "Oh my God"
+    },
+    "category": "混沌",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "15:51~15:55",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "喵2",
+    "path": "喵2.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "喵2",
+      "en-US": "Meow 2"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "18:54~18:55",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "无路赛八嘎连击",
+    "path": "无路赛八嘎连击.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "无路赛八嘎连击",
+      "en-US": "Urusai baka"
+    },
+    "category": "软猫",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "19:29~19:34",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "八嘎八嘎八嘎",
+    "path": "八嘎八嘎八嘎.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "八嘎八嘎八嘎",
+      "en-US": "baka baka baka"
+    },
+    "category": "软猫",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "20:15~20:16",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "喵喵喵",
+    "path": "喵喵喵.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "喵喵喵",
+      "en-US": "meow meow meow"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "21:41~21:42",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "Astronomia",
+    "path": "Astronomia.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "Astronomia",
+      "en-US": "Astronomia"
+    },
+    "category": "唱歌",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "20:42~20:47",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "我是你的老婆",
+    "path": "我是你的老婆.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "我是你的老婆",
+      "en-US": "I am your wife"
+    },
+    "category": "软猫",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "24:10~24:12",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "kimo2",
+    "path": "kimo2.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "kimo",
+      "en-US": "kimo"
+    },
+    "category": "软猫",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "26:00~26:04",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "kimo不喜欢起飞",
+    "path": "kimo不喜欢起飞.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "kimo不喜欢起飞",
+      "en-US": "kimo"
+    },
+    "category": "说教",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "26:18~26:21",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "可以来抱抱我吗",
+    "path": "可以来抱抱我吗.mp3",
+    "date": "2021-01-05",
+    "translate": {
+      "zh-CN": "可以来抱抱我吗",
+      "en-US": "Can you hug me"
+    },
+    "category": "软猫",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "27:14~27:22",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "来击剑",
+    "path": "来击剑.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "来击剑",
+      "en-US": "jijian"
+    },
+    "category": "混沌",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "28:16~28:17",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "太色了",
+    "path": "太色了.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "太色了",
+      "en-US": "Too sexy"
+    },
+    "category": "混沌",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "31:02~31:03",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "可爱的声音11",
+    "path": "可爱的声音11.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "可爱的声音11",
+      "en-US": "Lovely sound 11"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "29:46~29:51",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "起床啊你这个debu2",
+    "path": "起床啊你这个debu.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "起床啊你这个debu",
+      "en-US": "Get up, debu!"
+    },
+    "category": "清楚",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "32:29~32:32",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "debudebu",
+    "path": "debudebu.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "debudebu",
+      "en-US": "debudebu"
+    },
+    "category": "清楚",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "32:52~32:58",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "可爱的声音12",
+    "path": "可爱的声音12.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "可爱的声音12",
+      "en-US": "Lovely sound 12"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "33:08~33:12",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "吸氧",
+    "path": "吸氧.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "吸氧",
+      "en-US": "Oxygen"
+    },
+    "category": "糟糕",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "34:58~35:23",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "DokiDoki",
+    "path": "DokiDoki.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "DokiDoki",
+      "en-US": "DokiDoki"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "37:09~37:12",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "prprprpr",
+    "path": "prprprpr.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "prprprpr",
+      "en-US": "prprprpr"
+    },
+    "category": "混沌",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "39:24~39:29",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "开玩笑的哦",
+    "path": "开玩笑的哦.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "开玩笑的哦",
+      "en-US": "Joking"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "42:55~42:57",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "可爱くなりたい2",
+    "path": "可爱くなりたい2.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "可爱くなりたい2",
+      "en-US": "可爱くなりたい2"
+    },
+    "category": "唱歌",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "43:38~43:57",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "awsl",
+    "path": "awsl.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "awsl",
+      "en-US": "awsl"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "44:02~44:04",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "kksk",
+    "path": "kksk.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "kksk",
+      "en-US": "kksk"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "44:14~44:15",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "八嘎3",
+    "path": "八嘎3.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "八嘎3",
+      "en-US": "baka 3"
+    },
+    "category": "软猫",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "45:31~45:32",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "我打你",
+    "path": "我打你.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "我打你",
+      "en-US": "I hit you"
+    },
+    "category": "软猫",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "47:26~47:27",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "我打你啊2",
+    "path": "我打你啊2.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "我打你啊2",
+      "en-US": "I hit you"
+    },
+    "category": "说教",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "47:32~47:33",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "你这个debu",
+    "path": "你这个debu.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "你这个debu",
+      "en-US": "debu"
+    },
+    "category": "说教",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "47:34~47:35",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "你可以做我的狗吗2",
+    "path": "你可以做我的狗吗2.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "你可以做我的狗吗2",
+      "en-US": "Can you be my dog"
+    },
+    "category": "软猫",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "47:55~48:04",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "awsl2",
+    "path": "awsl2.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "awsl2",
+      "en-US": "awsl2"
+    },
+    "category": "混沌",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "50:20~50:23",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "你不对啊",
+    "path": "你不对啊.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "你不对啊",
+      "en-US": "You're not right"
+    },
+    "category": "混沌",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "50:26~50:29",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "我打你们的屁股",
+    "path": "我打你们的屁股.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "我打你们的屁股",
+      "en-US": "I'll beat your asses"
+    },
+    "category": "说教",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "51:14~51:16",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "可爱的声音13",
+    "path": "可爱的声音13.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "可爱的声音13",
+      "en-US": "Lovely sound 13"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "52:12~52:17",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "hiiro suki",
+    "path": "hiiro suki.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "hiiro suki",
+      "en-US": "hiiro suki"
+    },
+    "category": "清楚",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "52:21~52:30",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "你想跟我去睡觉吗",
+    "path": "你想跟我去睡觉吗.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "你想跟我去睡觉吗",
+      "en-US": "Do you want to go to bed with me"
+    },
+    "category": "清楚",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "53:54~53:57",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "对不起我不要",
+    "path": "对不起我不要.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "对不起我不要",
+      "en-US": "Sorry, I don't"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "54:04~54:05",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "awsl3",
+    "path": "awsl3.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "awsl3",
+      "en-US": "awsl2"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "57:53~57:54",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "❤",
+    "path": "❤.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "❤",
+      "en-US": "❤"
+    },
+    "category": "糟糕",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "56:25~56:33",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "谁啊",
+    "path": "谁啊.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "谁啊",
+      "en-US": "Who"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "1:06:07~1:06:08",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "我鲨了你",
+    "path": "我鲨了你.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "我鲨了你",
+      "en-US": "我鲨了你"
+    },
+    "category": "说教",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "1:06:08~1:06:09",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "m~u~a~",
+    "path": "m~u~a~.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "m~u~a~",
+      "en-US": "m~u~a~"
+    },
+    "category": "清楚",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "1:17:21~1:17:22",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "阿里噶多3",
+    "path": "阿里噶多3.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "阿里噶多3",
+      "en-US": "a ri ga to 3"
+    },
+    "category": "清楚",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "1:23:01~1:23:03",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  },
+  {
+    "name": "晚安晚安",
+    "path": "晚安晚安.mp3",
+    "date": "2021-01-08",
+    "translate": {
+      "zh-CN": "晚安晚安",
+      "en-US": "Good Night"
+    },
+    "category": "清楚",
+    "mark": {
+      "title": "【Hiiro Record】1.03 Sun. Internet Explosion",
+      "time": "1:23:07~1:23:10",
+      "url": "https://www.bilibili.com/video/BV1br4y1T7Eu"
+    }
+  }
+]
