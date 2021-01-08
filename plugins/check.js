@@ -35,6 +35,8 @@ Check.prototype.apply = (compiler) => {
       const categoryNotExist = []
       const mp3NotExist = []
       const imgNotExist = []
+      const nameList = []
+      const nameRepeat = []
       VoicesList.forEach(item => {
         const isExist = CategoryList.some(category => {
           return category.name === item.category
@@ -52,7 +54,21 @@ Check.prototype.apply = (compiler) => {
             }
           }
         }
+        if (nameList.includes(item.name)) {
+          nameRepeat.push(item.name)
+        }
+        nameList.push(item.name)
       })
+
+      const categoryList = []
+      const categoryRepeat = []
+      CategoryList.forEach(item => {
+        if (categoryList.includes(item.name)) {
+          categoryRepeat.push(item.name)
+        }
+        categoryList.push(item.name)
+      })
+
       if (categoryNotExist.length > 0) {
         console.log('  分类不存在:')
         categoryNotExist.forEach(name => {
@@ -68,6 +84,18 @@ Check.prototype.apply = (compiler) => {
       if (imgNotExist.length > 0) {
         console.log('  图片不存在:')
         imgNotExist.forEach(name => {
+          console.warn('  -', chalk.yellow(name))
+        })
+      }
+      if (categoryRepeat.length > 0) {
+        console.log('  分类name重复:')
+        categoryRepeat.forEach(name => {
+          console.warn('  -', chalk.yellow(name))
+        })
+      }
+      if (nameRepeat.length > 0) {
+        console.log('  语音name重复:')
+        nameRepeat.forEach(name => {
           console.warn('  -', chalk.yellow(name))
         })
       }
