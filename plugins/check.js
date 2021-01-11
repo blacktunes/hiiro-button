@@ -70,31 +70,31 @@ Check.prototype.apply = (compiler) => {
       })
 
       if (categoryNotExist.length > 0) {
-        console.log('  分类不存在:')
+        console.log(`  分类不存在(${categoryNotExist.length}):`)
         categoryNotExist.forEach(name => {
           console.warn('  -', chalk.yellow(name))
         })
       }
       if (mp3NotExist.length > 0) {
-        console.log('  语音不存在:')
+        console.log(`  语音不存在(${mp3NotExist.length}):`)
         mp3NotExist.forEach(name => {
           console.warn('  -', chalk.yellow(name))
         })
       }
       if (imgNotExist.length > 0) {
-        console.log('  图片不存在:')
+        console.log(`  图片不存在(${imgNotExist.length}):`)
         imgNotExist.forEach(name => {
           console.warn('  -', chalk.yellow(name))
         })
       }
       if (categoryRepeat.length > 0) {
-        console.log('  分类name重复:')
+        console.log(`  分类name重复(${categoryRepeat.length}):`)
         categoryRepeat.forEach(name => {
           console.warn('  -', chalk.yellow(name))
         })
       }
       if (nameRepeat.length > 0) {
-        console.log('  语音name重复:')
+        console.log(`  语音name重复(${nameRepeat.length}):`)
         nameRepeat.forEach(name => {
           console.warn('  -', chalk.yellow(name))
         })
@@ -110,7 +110,7 @@ Check.prototype.apply = (compiler) => {
         }
       })
       if (mp3NotUse.length > 0) {
-        console.log('  语音未被使用:')
+        console.log(`  语音未被使用(${mp3NotUse.length}):`)
         mp3NotUse.forEach(name => {
           console.warn('  -', chalk.yellow(name))
         })
@@ -137,7 +137,7 @@ Check.prototype.apply = (compiler) => {
         }
       })
       if (imgNotUse.length > 0) {
-        console.log('  图片未被使用:')
+        console.log(`  图片未被使用(${imgNotUse.length}):`)
         imgNotUse.forEach(name => {
           console.warn('  -', chalk.yellow(name))
         })
