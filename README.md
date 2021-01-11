@@ -49,7 +49,7 @@
     "translate": {
       // 语音中文翻译
       "zh-CN": "米娜我是你爸爸",
-      // 语音中文翻译
+      // 语音英语翻译
       "en-US": "I'm your Baba"
     },
     // 语音所属分类(对应category的name)
