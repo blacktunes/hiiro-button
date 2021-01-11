@@ -215,7 +215,7 @@ const createPlayer = (btnList) => {
   const randomPlay = () => {
     const list: VoicesItem[] = []
     voices.value.forEach((item: VoicesCategory | VoicesOrigin) => {
-      if (isShowCategory(item['name'], item['title'])) {
+      if (isShowCategory(item)) {
         item.voiceList.forEach(voice => {
           if (isShowVoice(voice.name)) {
             list.push(voice)
@@ -323,11 +323,16 @@ const createPlayer = (btnList) => {
   /**
    * 是否需要显示分类
    */
-  const isShowCategory = (name: string, title: string) => {
-    if (playSetting.showInfo) {
-      return Boolean(title)
+  const isShowCategory = (item: VoicesCategory | VoicesOrigin) => {
+    const flag = item.voiceList.every(voice => {
+      return !isShowVoice(voice.name)
+    })
+    if (flag) {
+      return false
+    } else if (playSetting.showInfo) {
+      return Boolean(item['title'])
     } else {
-      return te(`voicecategory.${name}`) && Boolean(t(`voicecategory.${name}`))
+      return te(`voicecategory.${item['name']}`) && Boolean(t(`voicecategory.${item['name']}`))
     }
   }
 

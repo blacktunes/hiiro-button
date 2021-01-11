@@ -1,6 +1,6 @@
 <template>
   <template v-for="item in Player.voices.value" :key="item.name">
-    <Card v-if="Player.isShowCategory(item.name, item.title)">
+    <Card v-if="Player.isShowCategory(item)">
       <template #header>
         <div class="category">
           <template v-if="Player.playSetting.showInfo">
