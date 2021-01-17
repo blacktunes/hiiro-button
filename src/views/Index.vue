@@ -79,7 +79,7 @@ export default {
     const friendlyLinkList: FriendlyLink[] = [
       {
         name: '七奈按钮',
-        url: 'http://kaguranana.moe/',
+        url: 'https://kaguranana.moe/',
         background: '#c4afd0'
       }
     ]

@@ -5,8 +5,8 @@
         <div class="author">
           <div>©2020</div>
           <template v-for="(item, index) in author" :key="index">
-            <a v-if="index > 0">&</a>
-            <a :href="item.url || null" target="_blank">{{ item.name }}</a>
+            <a style="margin-left: 5px" v-if="index > 0">&</a>
+            <a style="margin-left: 5px" :href="item.url || null" target="_blank">{{ item.name }}</a>
           </template>
         </div>
         <div class="info">
