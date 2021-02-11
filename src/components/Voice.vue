@@ -20,7 +20,7 @@
             :title="Player.isShowTime(voice.mark)"
             :text="t(`voice.${voice.name}`)"
             :name="voice.name"
-            :newIcon="voice.date === lastDate"
+            :newIcon="voice.date === t('lastDate')"
             :showPic="Player.getPicUrl(voice.usePicture)"
             :ref="el => setBtnList(voice.name, el)"
             @click="Player.play(voice)"
@@ -32,7 +32,6 @@
 </template>
 
 <script lang="ts">
-import { inject } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Card from './common/Card.vue'
 import VBtn from './common/VoiveBtn.vue'
@@ -48,15 +47,13 @@ export default {
     const { btnList, setBtnList } = getBtnList()
     const { searchData, highlight } = useSearch(btnList)
     const Player = createPlayer(btnList)
-    const lastDate = inject('lastDate', '')
 
     return {
       t,
       setBtnList,
       searchData,
       highlight,
-      Player,
-      lastDate
+      Player
     }
   }
 }

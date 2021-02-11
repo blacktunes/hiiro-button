@@ -8,7 +8,7 @@
       <Card>
         <div style="text-align: center">
           {{ t(INFO_I18N.voiceTotalTip) }}: {{ t(INFO_I18N.voiceTotal)
-          }}{{ lastDate ? `(+${newVoiceNum} · ${lastDate})` : "" }}
+          }}{{ t('lastDate') ? `(+${t('newVoice')} · ${t('lastDate')})` : '' }}
         </div>
       </Card>
       <Card>
@@ -72,7 +72,6 @@ export default {
   },
   setup() {
     const { t } = useI18n()
-    const lastDate = inject('lastDate', '')
     const newVoiceNum = inject('newVoiceNum', 0)
 
     // 友联列表
@@ -89,7 +88,6 @@ export default {
 
     return {
       t,
-      lastDate,
       newVoiceNum,
       friendlyLinkList,
       voice,

@@ -50,8 +50,55 @@ for (const voice of VoicesList) {
   }
 }
 
-CN.voiceTotal = Object.keys(CN.voice).length.toString()
-EN.voiceTotal = Object.keys(EN.voice).length.toString()
+/**
+ * 获取音频总数
+ */
+function getVoiceTotal(obj: { [name: string]: string }) {
+  let num = 0
+  for (const i in obj) {
+    if (obj[i]) num += 1
+  }
+  return num.toString()
+}
+CN.voiceTotal = getVoiceTotal(CN.voice)
+EN.voiceTotal = getVoiceTotal(EN.voice)
+
+/**
+ * 获取音频对应语言的更新日期和更新数量
+ */
+let CNLastDate = ''
+let ENLastDate = ''
+let CNTemp: null | Date = null
+let ENTemp: null | Date = null
+for (const i in VoicesList) {
+  if (VoicesList[i].date) {
+    const voiceDate = new Date(VoicesList[i].date!)
+    if (VoicesList[i].translate['zh-CN'] && CategoryList.find(item => item.name === VoicesList[i].category)!.translate['zh-CN']) {
+      if (!CNTemp) {
+        CNTemp = voiceDate
+        CNLastDate = VoicesList[i].date!
+      }
+      if (voiceDate > CNTemp) {
+        CNTemp = voiceDate
+        CNLastDate = VoicesList[i].date!
+      }
+    }
+    if (VoicesList[i].translate['en-US'] && CategoryList.find(item => item.name === VoicesList[i].category)!.translate['en-US']) {
+      if (!ENTemp) {
+        ENTemp = voiceDate
+        ENLastDate = VoicesList[i].date!
+      }
+      if (voiceDate > ENTemp) {
+        ENTemp = voiceDate
+        ENLastDate = VoicesList[i].date!
+      }
+    }
+  }
+}
+CN.lastDate = CNLastDate || ''
+EN.lastDate = ENLastDate || ''
+CN.newVoice = VoicesList.filter((item) => item.date && item.date === CNLastDate && item.translate['zh-CN'] && CategoryList.find(category => category.name === item.category)!.translate['zh-CN']).length.toString() || ''
+EN.newVoice = VoicesList.filter((item) => item.date && item.date === ENLastDate && item.translate['en-US'] && CategoryList.find(category => category.name === item.category)!.translate['en-US']).length.toString() || ''
 
 const i18n = createI18n({
   locale: /en/i.test(navigator.language) ? 'en-US' : 'zh-CN',

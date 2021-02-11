@@ -37,7 +37,11 @@
             />
           </svg>
         </div>
-        <div class="icon" :title="t(ACTION_I18N.stopvoice)" @click="Control.stopPlay">
+        <div
+          class="icon"
+          :title="t(ACTION_I18N.stopvoice)"
+          @click="Control.stopPlay"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -253,6 +257,8 @@ const initControl = () => {
   const infoDate = inject('infoDate') as Ref<Mark | null>
   const changeShowInfo = () => {
     playSetting.showInfo = !playSetting.showInfo
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
     infoDate.value = null
   }
 
