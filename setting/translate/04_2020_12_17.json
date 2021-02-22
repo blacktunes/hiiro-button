@@ -223,5 +223,290 @@
       "time": "1:32:54~1:32:56",
       "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
     }
+  },
+  {
+    "name": "popcat",
+    "path": "popcat.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "popcat",
+      "en-US": "popcat"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "1:52:50~1:52:51",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "口胡",
+    "path": "口胡.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "口胡",
+      "en-US": "nonsense"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "1:49:05~1:49:11",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "kimo3",
+    "path": "kimo3.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "kimo 3",
+      "en-US": "kimo 3"
+    },
+    "category": "说教",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "1:53:57~1:53:58",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "ohnonononononono",
+    "path": "ohnonononononono.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "ohnonononononono",
+      "en-US": "ohnonononononono"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "1:56:32~1:56:37",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "糟糕的声音3",
+    "path": "糟糕的声音3.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "糟糕的声音3",
+      "en-US": "Strange Sounds 3"
+    },
+    "category": "糟糕",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "1:59:20~1:59:37",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "可爱的声音15",
+    "path": "可爱的声音15.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "可爱的声音15",
+      "en-US": "Lovely sound 15"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "1:59:46~1:59:56",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "摩多摩多摩多",
+    "path": "摩多摩多摩多.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "摩多摩多摩多",
+      "en-US": "more"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "2:08:52~2:08:54",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "我呢我呢我呢2",
+    "path": "我呢我呢我呢2.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "我呢我呢我呢",
+      "en-US": "What about me"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "2:22:18~2:22:20",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "no × 425",
+    "path": "no × 425.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "no × 425",
+      "en-US": "no × 425"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "2:29:46~2:29:56",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "不是啊我不是",
+    "path": "不是啊我不是.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "不是啊我不是",
+      "en-US": "No, I'm not!"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "2:28:25~2:28:28",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "打你啊",
+    "path": "打你啊.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "打你啊",
+      "en-US": "Hit you!"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "2:28:32~2:28:33",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "为什么喵",
+    "path": "为什么喵.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "为什么喵",
+      "en-US": "Why!nya"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "2:34:33~2:34:35",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "好耶喵",
+    "path": "好耶喵.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "好耶喵",
+      "en-US": "Yay!nya"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "2:35:52~2:35:53",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "无路赛喵",
+    "path": "无路赛喵.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "无路赛喵",
+      "en-US": "Urusai!nya"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "2:35:54~2:35:55",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "起飞",
+    "path": "起飞.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "起飞",
+      "en-US": "Take off"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "2:35:56~2:35:57",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "喵~",
+    "path": "喵~.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "喵~",
+      "en-US": "nya~"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "2:36:20~2:36:21",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "喵喵喵喵喵喵喵喵",
+    "path": "喵喵喵喵喵喵喵喵.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "喵喵喵喵喵喵喵喵",
+      "en-US": "nyanyanyanyanyanyanyanya"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "2:40:05~2:40:06",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "学猫叫",
+    "path": "学猫叫.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "学猫叫",
+      "en-US": "学猫叫"
+    },
+    "category": "唱歌",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "2:40:08~2:40:13",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "喵~喵~喵~喵~",
+    "path": "喵~喵~喵~喵~.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "喵~喵~喵~喵~",
+      "en-US": "nya~nya~nya~nya~"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "2:42:11~2:42:14",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
   }
 ]
