@@ -257,7 +257,6 @@ const initControl = () => {
   const infoDate = inject('infoDate') as Ref<Mark | null>
   const changeShowInfo = () => {
     playSetting.showInfo = !playSetting.showInfo
-    console.log(playSetting.showInfo.toString())
     localStorage.setItem('info', playSetting.showInfo.toString())
     document.body.scrollTop = 0
     document.documentElement.scrollTop = 0

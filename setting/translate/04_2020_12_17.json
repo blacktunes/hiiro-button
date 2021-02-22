@@ -508,5 +508,65 @@
       "time": "2:42:11~2:42:14",
       "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
     }
+  },
+  {
+    "name": "nie↗↘",
+    "path": "nie↗↘.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "nie↗↘",
+      "en-US": "nie↗↘"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "1:06:37~1:06:38",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "nie × 9",
+    "path": "nie × 9.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "nie × 9",
+      "en-US": "nie × 9"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "1:06:38~1:06:40",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "猫之呼吸2",
+    "path": "猫之呼吸2.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "猫之呼吸",
+      "en-US": "Cat's Breath"
+    },
+    "category": "糟糕",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "1:07:54~1:07:59",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
+  },
+  {
+    "name": "奇怪的声音3",
+    "path": "奇怪的声音3.mp3",
+    "date": "2021-02-22",
+    "translate": {
+      "zh-CN": "奇怪的声音3",
+      "en-US": "Strange Sounds 3"
+    },
+    "category": "糟糕",
+    "mark": {
+      "title": "【Hiiro Record】12.17 Thu. 惩罚游戏！！",
+      "time": "2:00:53~2:01:01",
+      "url": "https://www.bilibili.com/video/BV17X4y1u7C9"
+    }
   }
 ]
