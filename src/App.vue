@@ -42,6 +42,8 @@ const initPlaySetting = () => {
     loop: 0,
     showInfo: false
   })
+  const info = localStorage.getItem('info')
+  if (info) playSetting.showInfo = JSON.parse(info)
   provide('playSetting', playSetting)
 
   return playSetting
