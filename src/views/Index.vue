@@ -74,7 +74,7 @@ export default {
     const { t } = useI18n()
     const newVoiceNum = inject('newVoiceNum', 0)
 
-    // 友联列表
+    // 友链列表
     const friendlyLinkList: FriendlyLink[] = [
       {
         name: '七奈按钮',

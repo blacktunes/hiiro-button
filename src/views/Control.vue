@@ -172,6 +172,7 @@
             </text>
           </svg>
         </div>
+        <!-- TODO 增加title -->
         <div
           class="icon"
           @click="Control.changeShowInfo"
@@ -235,12 +236,10 @@ const initControl = () => {
   }
 
   const overlapChange = () => {
-    playSetting.autoRandom = false
     playSetting.overlap = !playSetting.overlap
   }
 
   const autoRandomChange = () => {
-    playSetting.overlap = false
     playSetting.loop = 0
     playSetting.autoRandom = !playSetting.autoRandom
   }

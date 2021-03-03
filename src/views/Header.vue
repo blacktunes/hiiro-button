@@ -10,8 +10,6 @@
       </template>
       <div class="search-btn" @click="showSearch">
         <svg
-          t="1599130871274"
-          class="icon"
           viewBox="0 0 1024 1024"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -65,11 +63,10 @@ const onLogoClick = (logo) => {
     if (!logo.value) return
     if (isRestart) {
       logo.value.style.animation = 'logo 1s'
-      isRestart = !isRestart
     } else {
       logo.value.style.animation = 'logo-restart 1s'
-      isRestart = !isRestart
     }
+    isRestart = !isRestart
   }
 
   return logoClick
@@ -181,6 +178,8 @@ export default {
     margin 0 10px
     text-align center
     user-select none
+    animation logo 1s
+    animation-delay 0.5s
 
   .title
     color #eee

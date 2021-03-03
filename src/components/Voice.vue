@@ -1,5 +1,5 @@
 <template>
-  <template v-for="item in Player.voices.value" :key="item.name">
+  <template v-for="item in Player.voices.value" :key="item.name || item.title">
     <Card v-if="Player.isShowCategory(item)">
       <template #header>
         <div class="category">
