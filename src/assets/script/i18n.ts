@@ -1,6 +1,7 @@
 import Setting from '@/../setting/setting.json'
 import { createI18n } from 'vue-i18n'
-import { CategoryList, Locales, VoicesList } from './voices'
+import { VoicesItem } from './type'
+import { CategoryList, Locales, VoicesList, HideList } from './voices'
 
 const CN: any = { ...Locales['zh-CN'], voice: {}, voicecategory: {} }
 const EN: any = { ...Locales['en-US'], voice: {}, voicecategory: {} }
@@ -24,81 +25,100 @@ EN.info = {
 }
 
 for (const category of CategoryList) {
-  if (category.translate !== undefined) {
-    if (category.translate['zh-CN'] !== undefined) {
+  if (category.translate) {
+    if (category.translate['zh-CN']) {
       CN.voicecategory[category.name] = category.translate['zh-CN']
     }
-    if (category.translate['en-US'] !== undefined) {
+    if (category.translate['en-US']) {
       EN.voicecategory[category.name] = category.translate['en-US']
     }
   }
 }
 
-for (const voice of VoicesList) {
-  if (voice.translate !== undefined) {
-    const category = CategoryList.find(item => {
-      if (item.name === voice.category) {
-        return item
+const addVoice = (list: VoicesItem[]) => {
+  let CNNum = 0
+  let ENNum = 0
+  for (const voice of list) {
+    if (voice.translate) {
+      const category = CategoryList.find(item => {
+        if (item.name === voice.category) {
+          return item
+        }
+      })!
+      if (voice.translate['zh-CN'] && category.translate['zh-CN']) {
+        CN.voice[voice.name] = voice.translate['zh-CN']
+        CNNum++
       }
-    })!
-    if (voice.translate['zh-CN'] !== undefined && category.translate['zh-CN'] !== undefined) {
-      CN.voice[voice.name] = voice.translate['zh-CN']
+      if (voice.translate['en-US'] && category.translate['en-US']) {
+        EN.voice[voice.name] = voice.translate['en-US']
+        ENNum++
+      }
     }
-    if (voice.translate['en-US'] !== undefined && category.translate['en-US'] !== undefined) {
-      EN.voice[voice.name] = voice.translate['en-US']
-    }
+  }
+  return {
+    CNNum,
+    ENNum
   }
 }
 
-/**
- * 获取音频总数
- */
-function getVoiceTotal(obj: { [name: string]: string }) {
-  let num = 0
-  for (const i in obj) {
-    if (obj[i]) num += 1
-  }
-  return num.toString()
-}
-CN.voiceTotal = getVoiceTotal(CN.voice)
-EN.voiceTotal = getVoiceTotal(EN.voice)
+const num = addVoice(VoicesList)
+CN.voiceTotal = num.CNNum.toString()
+EN.voiceTotal = num.ENNum.toString()
+
+const hideNum = addVoice(HideList)
+CN.hideVoiceTotal = hideNum.CNNum.toString()
+EN.hideVoiceTotal = hideNum.ENNum.toString()
 
 /**
  * 获取音频对应语言的更新日期和更新数量
  */
-let CNLastDate = ''
-let ENLastDate = ''
-let CNTemp: null | Date = null
-let ENTemp: null | Date = null
-for (const i in VoicesList) {
-  if (VoicesList[i].date) {
-    const voiceDate = new Date(VoicesList[i].date!)
-    if (VoicesList[i].translate['zh-CN'] && CategoryList.find(item => item.name === VoicesList[i].category)!.translate['zh-CN']) {
-      if (!CNTemp) {
-        CNTemp = voiceDate
-        CNLastDate = VoicesList[i].date!
+const getLastDate = (list: VoicesItem[]) => {
+  let CNLastDate = ''
+  let ENLastDate = ''
+  let CNTemp: null | Date = null
+  let ENTemp: null | Date = null
+  for (const i in list) {
+    if (list[i].date) {
+      const voiceDate = new Date(list[i].date!)
+      if (list[i].translate['zh-CN'] && CategoryList.find(item => item.name === list[i].category)!.translate['zh-CN']) {
+        if (!CNTemp) {
+          CNTemp = voiceDate
+          CNLastDate = list[i].date!
+        }
+        if (voiceDate > CNTemp) {
+          CNTemp = voiceDate
+          CNLastDate = list[i].date!
+        }
       }
-      if (voiceDate > CNTemp) {
-        CNTemp = voiceDate
-        CNLastDate = VoicesList[i].date!
-      }
-    }
-    if (VoicesList[i].translate['en-US'] && CategoryList.find(item => item.name === VoicesList[i].category)!.translate['en-US']) {
-      if (!ENTemp) {
-        ENTemp = voiceDate
-        ENLastDate = VoicesList[i].date!
-      }
-      if (voiceDate > ENTemp) {
-        ENTemp = voiceDate
-        ENLastDate = VoicesList[i].date!
+      if (list[i].translate['en-US'] && CategoryList.find(item => item.name === list[i].category)!.translate['en-US']) {
+        if (!ENTemp) {
+          ENTemp = voiceDate
+          ENLastDate = list[i].date!
+        }
+        if (voiceDate > ENTemp) {
+          ENTemp = voiceDate
+          ENLastDate = list[i].date!
+        }
       }
     }
   }
+  return {
+    CNLastDate,
+    ENLastDate
+  }
 }
-CN.lastDate = CNLastDate || ''
-EN.lastDate = ENLastDate || ''
-CN.newVoice = VoicesList.filter((item) => item.date && item.date === CNLastDate && item.translate['zh-CN'] && CategoryList.find(category => category.name === item.category)!.translate['zh-CN']).length.toString() || ''
-EN.newVoice = VoicesList.filter((item) => item.date && item.date === ENLastDate && item.translate['en-US'] && CategoryList.find(category => category.name === item.category)!.translate['en-US']).length.toString() || ''
+
+const lastDate = getLastDate(VoicesList)
+CN.lastDate = lastDate.CNLastDate || ''
+EN.lastDate = lastDate.ENLastDate || ''
+CN.newVoice = VoicesList.filter((item) => item.date && item.date === lastDate.CNLastDate && item.translate['zh-CN'] && CategoryList.find(category => category.name === item.category)!.translate['zh-CN']).length.toString() || ''
+EN.newVoice = VoicesList.filter((item) => item.date && item.date === lastDate.ENLastDate && item.translate['en-US'] && CategoryList.find(category => category.name === item.category)!.translate['en-US']).length.toString() || ''
+
+const hideLastDate = getLastDate(HideList)
+CN.hideLastDate = hideLastDate.CNLastDate || ''
+EN.hideLastDate = hideLastDate.ENLastDate || ''
+CN.hideNewVoice = HideList.filter((item) => item.date && item.date === hideLastDate.CNLastDate && item.translate['zh-CN'] && CategoryList.find(category => category.name === item.category)!.translate['zh-CN']).length.toString() || ''
+EN.hideNewVoice = HideList.filter((item) => item.date && item.date === hideLastDate.ENLastDate && item.translate['en-US'] && CategoryList.find(category => category.name === item.category)!.translate['en-US']).length.toString() || ''
 
 const i18n = createI18n({
   locale: /en/i.test(navigator.language) ? 'en-US' : 'zh-CN',

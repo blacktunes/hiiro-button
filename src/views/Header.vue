@@ -2,9 +2,17 @@
   <transition name="slider-down" appear>
     <div class="header">
       <transition name="logo" appear>
-        <div class="logo" ref="logo" @click="logoClick">{{ icon }}</div>
+        <div class="logo" ref="logo" @click="logoClick">
+          {{ icon }}
+        </div>
       </transition>
-      <div class="title">{{ t(INFO_I18N.title) }}</div>
+      <div
+        class="title"
+        :class="{ pointer: hideVoiceTotal > 0 }"
+        @click="changeHide"
+      >
+        {{ t(INFO_I18N.title) }}
+      </div>
       <template v-for="(btn, index) in btnList" :key="index">
         <IBtn v-if="btn.url" :url="btn.url" :img="btn.img" />
       </template>
@@ -43,12 +51,13 @@
 </template>
 
 <script lang="ts">
-import { ref, inject, onMounted, Ref } from 'vue'
+import { ref, inject, onMounted, Ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { INFO_I18N, SearchData } from '@/assets/script/type'
+import { EVENT, INFO_I18N, PlaySetting, SearchData } from '@/assets/script/type'
 import IBtn from '@/components/common/IconBtn.vue'
 import Search from '@/components/Search.vue'
 import Setting from '@/../setting/setting.json'
+import mitt from '@/assets/script/mitt'
 
 const HEADER: {
   icon?: string;
@@ -57,7 +66,7 @@ const HEADER: {
   bilibili?: string;
 } = Setting['header'] || {}
 
-const onLogoClick = (logo) => {
+const onLogoClick = (logo: Ref<HTMLElement>) => {
   let isRestart = false
   const logoClick = () => {
     if (!logo.value) return
@@ -131,11 +140,21 @@ export default {
       }
     }
 
+    const playSetting = inject('playSetting') as PlaySetting
+    const hideVoiceTotal = computed(() => Number(t(INFO_I18N.hideVoiceTotal)))
+    const changeHide = () => {
+      if (hideVoiceTotal.value > 0) {
+        mitt.emit(EVENT.stopPlay)
+        playSetting.showHide = !playSetting.showHide
+      }
+    }
+
     // 初次加载时获取localStorage的语言设定
     onMounted(() => {
       const lang = localStorage.getItem('lang')
       if (lang) locale.value = lang
       document.title = t(INFO_I18N.title)
+      if (hideVoiceTotal.value < 1) playSetting.showHide = false
     })
 
     return {
@@ -144,8 +163,10 @@ export default {
       logo,
       logoClick,
       t,
-      changeLang,
       showSearch,
+      changeLang,
+      changeHide,
+      hideVoiceTotal,
       INFO_I18N
     }
   }
@@ -156,6 +177,9 @@ export default {
 .logo-enter-active
   animation logo 1s
   animation-delay 0.5s
+
+.pointer
+  cursor pointer
 
 .header
   z-index 5

@@ -14,7 +14,7 @@ import Setting from '@/../setting/setting.json'
 import VHeader from '@/views/Header.vue'
 import Control from '@/views/Control.vue'
 import VFooter from '@/views/Footer.vue'
-import { CategoryList, VoicesList } from './assets/script/voices'
+import { CategoryList, VoicesList, HideList } from './assets/script/voices'
 
 const CONSOLE = Setting['console'] || {}
 if (CONSOLE && (CONSOLE.text || CONSOLE.img)) {
@@ -40,7 +40,8 @@ const initPlaySetting = () => {
     overlap: false,
     autoRandom: false,
     loop: 0,
-    showInfo: false
+    showInfo: false,
+    showHide: false
   })
   const info = localStorage.getItem('info')
   if (info) playSetting.showInfo = JSON.parse(info)
@@ -52,63 +53,77 @@ const initPlaySetting = () => {
 /**
  * 初始化语音列表
  */
-const initVoicesList = (playSetting) => {
+const initVoicesList = (playSetting: PlaySetting) => {
   // 获取分类排序列表
-  const categoryList: VoicesCategory[] = []
-  CategoryList.forEach(category => {
-    const temp: VoicesCategory = { ...category, voiceList: [] }
-    VoicesList.forEach(voice => {
-      if (voice.category === category.name) {
-        temp.voiceList.push(voice)
-      }
+  const getCategoryList = (list: VoicesItem[]) => {
+    const temp1: VoicesCategory[] = []
+    CategoryList.forEach(category => {
+      const temp2: VoicesCategory = { ...category, voiceList: [] }
+      list.forEach(voice => {
+        if (voice.category === category.name) {
+          temp2.voiceList.push(voice)
+        }
+      })
+      temp1.push(temp2)
     })
-    categoryList.push(temp)
-  })
+    return temp1
+  }
+
+  const categoryList = computed(
+    () => playSetting.showHide ? getCategoryList(HideList) : getCategoryList(VoicesList)
+  )
 
   // 获取来源排序列表
-  const temp1: {
-    [name: string]: {
-      url?: string;
-      list: VoicesItem[];
-    };
-  } = {}
-  const temp2: {
-    title: string;
-    voiceList: VoicesItem[];
-  } = {
-    title: 'unknown',
-    voiceList: []
-  }
-  const originList: VoicesOrigin[] = []
-  VoicesList.forEach(voice => {
-    if (voice.mark && voice.mark.title) {
-      if (temp1[voice.mark.title]) {
-        temp1[voice.mark.title].list.push(voice)
-      } else {
-        temp1[voice.mark.title] = {
-          url: voice.mark.url,
-          list: [voice]
-        }
-      }
-    } else {
-      temp2.voiceList.push(voice)
+  const getOriginList = (list: VoicesItem[]) => {
+    const temp1: {
+      [name: string]: {
+        url?: string;
+        list: VoicesItem[];
+      };
+    } = {}
+    const temp2: {
+      title: string;
+      voiceList: VoicesItem[];
+    } = {
+      title: 'unknown',
+      voiceList: []
     }
-  })
-  for (const i in temp1) {
-    originList.unshift({
-      title: i,
-      url: temp1[i].url,
-      voiceList: temp1[i].list
+    const originList: VoicesOrigin[] = []
+    list.forEach(voice => {
+      if (voice.mark && voice.mark.title) {
+        if (temp1[voice.mark.title]) {
+          temp1[voice.mark.title].list.push(voice)
+        } else {
+          temp1[voice.mark.title] = {
+            url: voice.mark.url,
+            list: [voice]
+          }
+        }
+      } else {
+        temp2.voiceList.push(voice)
+      }
     })
+    for (const i in temp1) {
+      originList.unshift({
+        title: i,
+        url: temp1[i].url,
+        voiceList: temp1[i].list
+      })
+    }
+    originList.push(temp2)
+    return originList
   }
-  originList.push(temp2)
+
+  const originList = computed(
+    () => playSetting.showHide ? getOriginList(HideList) : getOriginList(VoicesList)
+  )
 
   const voices = computed(() => playSetting.showInfo ? originList : categoryList)
   provide('voices', voices)
 
   const voiceList: Ref<VoicesItem[]> = computed(() => {
     const temp: VoicesItem[] = []
-    voices.value.forEach((item: VoicesCategory | VoicesOrigin) => {
+    voices.value.value.forEach((item: VoicesCategory | VoicesOrigin) => {
       item.voiceList.forEach(voice => {
         temp.push(voice)
       })

@@ -4,14 +4,21 @@ const jsonList = require.context('@/../setting/translate', false, /.json$/).keys
   return item.substring(2)
 })
 
-let Locales
+let Locales: {
+  'zh-CN': any;
+  'en-US': any;
+}
 let CategoryList: CategoryItem[]
 let VoicesList: VoicesItem[] = []
+let HideList: VoicesItem[] = []
 jsonList.forEach(name => {
   if (name === 'locales.json') {
     Locales = require(`@/../setting/translate/${name}`)
   } else if (name === 'category.json') {
     CategoryList = require(`@/../setting/translate/${name}`)
+  } else if (name.endsWith('_hide.json')) {
+    const temp = require(`@/../setting/translate/${name}`)
+    HideList = [...HideList, ...temp]
   } else {
     const voice = require(`@/../setting/translate/${name}`)
     VoicesList = [...VoicesList, ...voice]
@@ -21,5 +28,6 @@ jsonList.forEach(name => {
 export {
   Locales,
   CategoryList,
-  VoicesList
+  VoicesList,
+  HideList
 }

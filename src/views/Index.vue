@@ -7,8 +7,7 @@
       </div>
       <Card>
         <div style="text-align: center">
-          {{ t(INFO_I18N.voiceTotalTip) }}: {{ t(INFO_I18N.voiceTotal)
-          }}{{ t('lastDate') ? `(+${t('newVoice')} · ${t('lastDate')})` : '' }}
+          {{ total }}
         </div>
       </Card>
       <Card>
@@ -41,17 +40,14 @@ import Search from '@/components/SearchCard.vue'
 import Voice from '@/components/Voice.vue'
 import Card from '@/components/common/Card.vue'
 import Btn from '@/components/common/Btn.vue'
-import { inject, ref, watch, Ref } from 'vue'
+import { inject, ref, watch, Ref, computed } from 'vue'
 
 /**
  * 切换分类模式时触发一次渐入动画
  */
-const watchShowInfo = (voice) => {
-  const playSetting = inject('playSetting') as PlaySetting
+const watchSettingChange = (playSetting: PlaySetting, voice: Ref<HTMLElement>) => {
   let isRestart = false
-  watch(() => {
-    return playSetting.showInfo
-  }, () => {
+  const showFade = () => {
     if (!voice.value) return
     if (isRestart) {
       voice.value.style.animation = 'voice 0.5s'
@@ -60,7 +56,13 @@ const watchShowInfo = (voice) => {
       voice.value.style.animation = 'voice-restart 0.5s'
       isRestart = !isRestart
     }
-  })
+  }
+  watch(() => {
+    return playSetting.showInfo
+  }, showFade)
+  watch(() => {
+    return playSetting.showHide
+  }, showFade)
 }
 
 export default {
@@ -72,7 +74,7 @@ export default {
   },
   setup() {
     const { t } = useI18n()
-    const newVoiceNum = inject('newVoiceNum', 0)
+    const playSetting = inject('playSetting') as PlaySetting
 
     // 友链列表
     const friendlyLinkList: FriendlyLink[] = [
@@ -84,13 +86,22 @@ export default {
     ]
 
     const voice = ref() as Ref<HTMLElement>
-    watchShowInfo(voice)
+    watchSettingChange(playSetting, voice)
+
+    const total = computed(() => {
+      const msg = t(INFO_I18N.voiceTotalTip) + ': '
+      if (playSetting.showHide) {
+        return `${msg}${t(INFO_I18N.hideVoiceTotal)} ${t(INFO_I18N.hideLastDate) ? `(+${t(INFO_I18N.hideNewVoice)} · ${t(INFO_I18N.hideLastDate)})` : ''}`
+      } else {
+        return `${msg}${t(INFO_I18N.voiceTotal)} ${t(INFO_I18N.lastDate) ? `(+${t(INFO_I18N.newVoice)} · ${t(INFO_I18N.lastDate)})` : ''}`
+      }
+    })
 
     return {
       t,
-      newVoiceNum,
       friendlyLinkList,
       voice,
+      total,
       INFO_I18N
     }
   }

@@ -1,5 +1,5 @@
 <template>
-  <template v-for="item in Player.voices.value" :key="item.name || item.title">
+  <template v-for="item in Player.voices.value.value" :key="item.name || item.title">
     <Card v-if="Player.isShowCategory(item)">
       <template #header>
         <div class="category">
@@ -20,7 +20,7 @@
             :title="Player.isShowTime(voice.mark)"
             :text="t(`voice.${voice.name}`)"
             :name="voice.name"
-            :newIcon="voice.date === t('lastDate')"
+            :newIcon="Player.isShowNewIcon(voice.date)"
             :showPic="Player.getPicUrl(voice.usePicture)"
             :ref="el => setBtnList(voice.name, el)"
             @click="Player.play(voice)"

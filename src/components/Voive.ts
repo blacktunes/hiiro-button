@@ -3,7 +3,7 @@ import { gtag } from '@/assets/script/analytics/gtag'
 import mitt from '@/assets/script/mitt'
 import { EVENT, INFO_I18N, Mark, Player, PlayerList, PlaySetting, SearchData, Translate, Voices, VoicesCategory, VoicesItem, VoicesOrigin } from '@/assets/script/type'
 import { getrRandomInt } from '@/assets/script/utils'
-import { inject, reactive, ref, Ref, watch } from 'vue'
+import { computed, ComputedRef, inject, reactive, ref, Ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const MEDIA = Setting['mediaSession']
@@ -69,7 +69,7 @@ const createPlayer = (btnList) => {
 
   const playSetting: PlaySetting = inject('playSetting') as PlaySetting
 
-  const voices = inject('voices', ref([]) as Ref<Voices>)
+  const voices = inject('voices') as ComputedRef<Voices>
   const voiceList = inject('voiceList', ref([]) as Ref<VoicesItem[]>)
   const infoDate = inject('infoDate') as Ref<Mark | null>
 
@@ -214,7 +214,7 @@ const createPlayer = (btnList) => {
    */
   const randomPlay = () => {
     const list: VoicesItem[] = []
-    voices.value.forEach((item: VoicesCategory | VoicesOrigin) => {
+    voices.value.value.forEach((item: VoicesCategory | VoicesOrigin) => {
       if (isShowCategory(item)) {
         item.voiceList.forEach(voice => {
           if (isShowVoice(voice.name)) {
@@ -235,20 +235,20 @@ const createPlayer = (btnList) => {
     } else if (playSetting.loop === 2) {
       let list: VoicesItem[] = []
       if (!playSetting.showInfo) {
-        list = (voices.value as VoicesCategory[]).find(voicesCategory => {
+        list = (voices.value.value as VoicesCategory[]).find(voicesCategory => {
           if (voicesCategory.name === voice.category) {
             return voicesCategory.voiceList
           }
         })!.voiceList
       } else {
         if (voice.mark && voice.mark.title) {
-          list = (voices.value as VoicesOrigin[]).find(mark => {
+          list = (voices.value.value as VoicesOrigin[]).find(mark => {
             if (mark.title === voice.mark!.title) {
               return mark.voiceList
             }
           })!.voiceList
         } else {
-          list = (voices.value as VoicesOrigin[]).find(mark => {
+          list = (voices.value.value as VoicesOrigin[]).find(mark => {
             if (mark.title === 'unknown') {
               return mark.voiceList
             }
@@ -292,7 +292,7 @@ const createPlayer = (btnList) => {
    * 判断该模式或语言下是否可播放
    */
   const isCanPlay = (voice: VoicesItem) => {
-    return (voices.value.some(item => {
+    return (voices.value.value.some(item => {
       if (playSetting.showInfo) {
         if (voice.mark) {
           return item.title === voice.mark.title
@@ -346,8 +346,16 @@ const createPlayer = (btnList) => {
   /**
    * 鼠标停留时是否显示时间
    */
-  const isShowTime = (mark) => {
+  const isShowTime = (mark?: Mark) => {
     return playSetting.showInfo && mark && mark.time ? mark.time : ''
+  }
+
+  /**
+   * 是否显示new图标
+   */
+  const isShowNewIcon = (date?: string) => {
+    if (!date) return false
+    return playSetting.showHide ? date === t(INFO_I18N.hideLastDate) : date === t(INFO_I18N.lastDate)
   }
 
   /**
@@ -364,6 +372,7 @@ const createPlayer = (btnList) => {
     isShowCategory,
     isShowVoice,
     isShowTime,
+    isShowNewIcon,
     getPicUrl
   }
 }

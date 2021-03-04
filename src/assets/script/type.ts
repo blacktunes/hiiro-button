@@ -1,3 +1,5 @@
+import { ComputedRef } from 'vue'
+
 /**
  * mitt事件
  */
@@ -26,6 +28,11 @@ export enum INFO_I18N {
   fullName = 'info.fullName',
   vtbbtn = 'vtbbtn',
   voiceTotal = 'voiceTotal',
+  hideVoiceTotal = 'hideVoiceTotal',
+  newVoice = 'newVoice',
+  hideNewVoice = 'hideNewVoice',
+  lastDate = 'lastDate',
+  hideLastDate = 'hideLastDate',
   voiceTotalTip = 'voiceTotalTip',
   lang = 'lang'
 }
@@ -77,6 +84,10 @@ export interface PlaySetting {
    * 是否开启详情显示
    */
   showInfo: boolean;
+  /**
+   * 是否显示隐藏
+   */
+  showHide: boolean;
 }
 
 /**
@@ -97,7 +108,7 @@ export interface SearchData {
   index: number;
 }
 
-export type Voices = VoicesCategory[] | VoicesOrigin[]
+export type Voices = ComputedRef<VoicesOrigin[]> | ComputedRef<VoicesCategory[]>;
 
 /**
  * 来源分类
