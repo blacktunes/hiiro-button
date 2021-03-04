@@ -75,5 +75,13 @@
       "zh-CN": "混沌猫猫~",
       "en-US": "Nya nya chaos~ "
     }
+  },
+  {
+    "name": "希语言",
+    "hide": true,
+    "translate": {
+      "zh-CN": "希语言~",
+      "en-US": "Hiilang~ "
+    }
   }
 ]

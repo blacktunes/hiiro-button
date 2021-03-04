@@ -1,5 +1,3 @@
-import { ComputedRef } from 'vue'
-
 /**
  * mitt事件
  */
@@ -108,7 +106,7 @@ export interface SearchData {
   index: number;
 }
 
-export type Voices = ComputedRef<VoicesOrigin[]> | ComputedRef<VoicesCategory[]>;
+export type Voices = VoicesOrigin[] | VoicesCategory[];
 
 /**
  * 来源分类
@@ -122,14 +120,16 @@ export interface VoicesOrigin {
 /**
  * 语音分类
  */
-export interface VoicesCategory {
-  name: string;
-  translate: Translate;
+export type VoicesCategory = CategoryItem & {
   voiceList: VoicesItem[];
 }
 
 export interface CategoryItem {
   name: string;
+  /**
+   * 是否为隐藏
+   */
+  hide?: boolean;
   translate: Translate;
 }
 
@@ -154,6 +154,10 @@ export interface VoicesItem {
    * 所属分类
    */
   category: string;
+  /**
+   * 是否为隐藏
+   */
+  hide?: boolean;
   /**
    * 添加日期
    */

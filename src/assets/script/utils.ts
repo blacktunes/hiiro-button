@@ -1,10 +1,19 @@
+import { CategoryList } from './voices'
+
 /**
  * 获取随机数
  */
-const getrRandomInt = (max: number): number => {
+export const getrRandomInt = (max: number): number => {
   return Math.floor(Math.random() * Math.floor(max))
 }
 
-export {
-  getrRandomInt
+/**
+ * 获取指定的分类
+ */
+export const getCategory = (name: string) => {
+  return CategoryList.find(item => {
+    if (item.name === name) {
+      return item
+    }
+  })
 }

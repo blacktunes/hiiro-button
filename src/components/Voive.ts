@@ -2,8 +2,8 @@ import Setting from '@/../setting/setting.json'
 import { gtag } from '@/assets/script/analytics/gtag'
 import mitt from '@/assets/script/mitt'
 import { EVENT, INFO_I18N, Mark, Player, PlayerList, PlaySetting, SearchData, Translate, Voices, VoicesCategory, VoicesItem, VoicesOrigin } from '@/assets/script/type'
-import { getrRandomInt } from '@/assets/script/utils'
-import { computed, ComputedRef, inject, reactive, ref, Ref, watch } from 'vue'
+import { getCategory, getrRandomInt } from '@/assets/script/utils'
+import { ComputedRef, inject, reactive, ref, Ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const MEDIA = Setting['mediaSession']
@@ -64,7 +64,7 @@ const getBtnList = () => {
   return { btnList, setBtnList }
 }
 
-const createPlayer = (btnList) => {
+const createPlayer = (btnList: { [name: string]: any }) => {
   const { t, te, locale } = useI18n()
 
   const playSetting: PlaySetting = inject('playSetting') as PlaySetting
@@ -214,10 +214,10 @@ const createPlayer = (btnList) => {
    */
   const randomPlay = () => {
     const list: VoicesItem[] = []
-    voices.value.value.forEach((item: VoicesCategory | VoicesOrigin) => {
+    voices.value.forEach((item: VoicesCategory | VoicesOrigin) => {
       if (isShowCategory(item)) {
         item.voiceList.forEach(voice => {
-          if (isShowVoice(voice.name)) {
+          if (isShowVoice(voice)) {
             list.push(voice)
           }
         })
@@ -235,20 +235,20 @@ const createPlayer = (btnList) => {
     } else if (playSetting.loop === 2) {
       let list: VoicesItem[] = []
       if (!playSetting.showInfo) {
-        list = (voices.value.value as VoicesCategory[]).find(voicesCategory => {
+        list = (voices.value as VoicesCategory[]).find(voicesCategory => {
           if (voicesCategory.name === voice.category) {
             return voicesCategory.voiceList
           }
         })!.voiceList
       } else {
         if (voice.mark && voice.mark.title) {
-          list = (voices.value.value as VoicesOrigin[]).find(mark => {
+          list = (voices.value as VoicesOrigin[]).find(mark => {
             if (mark.title === voice.mark!.title) {
               return mark.voiceList
             }
           })!.voiceList
         } else {
-          list = (voices.value.value as VoicesOrigin[]).find(mark => {
+          list = (voices.value as VoicesOrigin[]).find(mark => {
             if (mark.title === 'unknown') {
               return mark.voiceList
             }
@@ -292,17 +292,22 @@ const createPlayer = (btnList) => {
    * 判断该模式或语言下是否可播放
    */
   const isCanPlay = (voice: VoicesItem) => {
-    return (voices.value.value.some(item => {
+    const flag = (voices.value.some((item: VoicesOrigin | VoicesCategory) => {
       if (playSetting.showInfo) {
         if (voice.mark) {
-          return item.title === voice.mark.title
+          return (item as VoicesOrigin).title === voice.mark.title
         } else {
-          return item.title === 'unknown'
+          return (item as VoicesOrigin).title === 'unknown'
         }
       } else {
-        return item.name === voice.category && Boolean(item.translate[locale.value])
+        return (item as VoicesCategory).name === voice.category && Boolean((item as VoicesCategory).translate[locale.value])
       }
     })) && Boolean(voice.translate[locale.value])
+    if (playSetting.showHide) {
+      return flag
+    } else {
+      return flag && !voice.hide
+    }
   }
 
   mitt.on(EVENT.stopPlay, () => {
@@ -325,22 +330,31 @@ const createPlayer = (btnList) => {
    */
   const isShowCategory = (item: VoicesCategory | VoicesOrigin) => {
     const flag = item.voiceList.every(voice => {
-      return !isShowVoice(voice.name)
+      return !isShowVoice(voice)
     })
     if (flag) {
       return false
     } else if (playSetting.showInfo) {
       return Boolean(item['title'])
     } else {
-      return te(`voicecategory.${item['name']}`) && Boolean(t(`voicecategory.${item['name']}`))
+      return playSetting.showHide ? te(`voicecategory.${item['name']}`) && Boolean(t(`voicecategory.${item['name']}`)) : te(`voicecategory.${item['name']}`) && Boolean(t(`voicecategory.${item['name']}`)) && !(item as VoicesCategory).hide
     }
   }
 
   /**
    * 是否需要显示语音
    */
-  const isShowVoice = (name: string) => {
-    return te(`voice.${name}`) && Boolean(t(`voice.${name}`))
+  const isShowVoice = (voice: VoicesItem) => {
+    if (playSetting.showHide) {
+      return te(`voice.${voice.name}`) && Boolean(t(`voice.${voice.name}`))
+    } else {
+      let flag = true
+      if (playSetting.showInfo) {
+        const category = getCategory(voice.category)!
+        flag = te(`voicecategory.${category['name']}`) && Boolean(t(`voicecategory.${category['name']}`)) && !category.hide
+      }
+      return te(`voice.${voice.name}`) && Boolean(t(`voice.${voice.name}`)) && !voice.hide && flag
+    }
   }
 
   /**

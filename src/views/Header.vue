@@ -8,7 +8,7 @@
       </transition>
       <div
         class="title"
-        :class="{ pointer: hideVoiceTotal > 0 }"
+        :class="{ pointer: !playSetting.showHide }"
         @click="changeHide"
       >
         {{ t(INFO_I18N.title) }}
@@ -51,13 +51,12 @@
 </template>
 
 <script lang="ts">
-import { ref, inject, onMounted, Ref, computed } from 'vue'
+import { ref, inject, onMounted, Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { EVENT, INFO_I18N, PlaySetting, SearchData } from '@/assets/script/type'
+import { INFO_I18N, PlaySetting, SearchData } from '@/assets/script/type'
 import IBtn from '@/components/common/IconBtn.vue'
 import Search from '@/components/Search.vue'
 import Setting from '@/../setting/setting.json'
-import mitt from '@/assets/script/mitt'
 
 const HEADER: {
   icon?: string;
@@ -141,11 +140,12 @@ export default {
     }
 
     const playSetting = inject('playSetting') as PlaySetting
-    const hideVoiceTotal = computed(() => Number(t(INFO_I18N.hideVoiceTotal)))
     const changeHide = () => {
-      if (hideVoiceTotal.value > 0) {
-        mitt.emit(EVENT.stopPlay)
-        playSetting.showHide = !playSetting.showHide
+      // if (playSetting.showHide) return
+      playSetting.showHide = !playSetting.showHide
+      if (!isShowSearch.value) {
+        searchData.value = ''
+        searchData.list.length = 0
       }
     }
 
@@ -154,7 +154,6 @@ export default {
       const lang = localStorage.getItem('lang')
       if (lang) locale.value = lang
       document.title = t(INFO_I18N.title)
-      if (hideVoiceTotal.value < 1) playSetting.showHide = false
     })
 
     return {
@@ -166,7 +165,7 @@ export default {
       showSearch,
       changeLang,
       changeHide,
-      hideVoiceTotal,
+      playSetting,
       INFO_I18N
     }
   }

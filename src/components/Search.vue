@@ -85,9 +85,10 @@ import { inject, Ref, watch, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { EVENT, SearchData, VoicesItem, PlaySetting } from '@/assets/script/type'
 import mitt from '@/assets/script/mitt'
+import { getCategory } from '@/assets/script/utils'
 
 const initSearch = () => {
-  const { locale } = useI18n()
+  const { t, te, locale } = useI18n()
 
   const isShowSearch = inject('isShowSearch') as Ref<boolean>
 
@@ -112,10 +113,18 @@ const initSearch = () => {
   const search = () => {
     searchData.list.length = 0
     if (searchData.value.length < 1) return
-    for (const i in voiceList.value) {
-      const name: string = voiceList.value[i].translate[locale.value]
-      if (name && name.toUpperCase().includes(searchData.value.toUpperCase())) {
-        searchData.list.push(voiceList.value[i].name)
+    for (const voice of voiceList.value) {
+      const name: string = voice.translate[locale.value]
+      const category = getCategory(voice.category)!
+      const flag = te(`voicecategory.${category['name']}`) && Boolean(t(`voicecategory.${category['name']}`))
+      if (playSetting.showHide) {
+        if (name && name.toUpperCase().includes(searchData.value.toUpperCase()) && flag && !category.hide) {
+          searchData.list.push(voice.name)
+        }
+      } else {
+        if (name && name.toUpperCase().includes(searchData.value.toUpperCase()) && flag && !category.hide && !voice.hide) {
+          searchData.list.push(voice.name)
+        }
       }
     }
   }

@@ -1,33 +1,39 @@
 <template>
-  <template v-for="item in Player.voices.value.value" :key="item.name || item.title">
-    <Card v-if="Player.isShowCategory(item)">
-      <template #header>
-        <div class="category">
-          <template v-if="Player.playSetting.showInfo">
-            <a :href="item.url" target="_blank">{{
-              item.title === "unknown" ? t("unknown") : item.title
-            }}</a>
+  <template v-for="item in Player.voices.value" :key="item.name || item.title">
+    <transition-group name="fade">
+      <div v-if="Player.isShowCategory(item)">
+        <Card>
+          <template #header>
+            <div class="category">
+              <template v-if="Player.playSetting.showInfo">
+                <a :href="item.url" target="_blank">{{
+                  item.title === "unknown" ? t("unknown") : item.title
+                }}</a>
+              </template>
+              <template v-else>
+                {{ t(`voicecategory.${item.name}`) }}
+              </template>
+            </div>
           </template>
-          <template v-else>
-            {{ t(`voicecategory.${item.name}`) }}
-          </template>
-        </div>
-      </template>
-      <div class="content">
-        <template v-for="voice in item.voiceList" :key="voice.name">
-          <VBtn
-            v-if="Player.isShowVoice(voice.name)"
-            :title="Player.isShowTime(voice.mark)"
-            :text="t(`voice.${voice.name}`)"
-            :name="voice.name"
-            :newIcon="Player.isShowNewIcon(voice.date)"
-            :showPic="Player.getPicUrl(voice.usePicture)"
-            :ref="el => setBtnList(voice.name, el)"
-            @click="Player.play(voice)"
-          />
-        </template>
+          <div class="content">
+            <template v-for="voice in item.voiceList" :key="voice.name">
+              <transition-group name="fade">
+                <VBtn
+                  v-if="Player.isShowVoice(voice)"
+                  :title="Player.isShowTime(voice.mark)"
+                  :text="t(`voice.${voice.name}`)"
+                  :name="voice.name"
+                  :newIcon="Player.isShowNewIcon(voice.date)"
+                  :showPic="Player.getPicUrl(voice.usePicture)"
+                  :ref="el => setBtnList(voice.name, el)"
+                  @click="Player.play(voice)"
+                />
+              </transition-group>
+            </template>
+          </div>
+        </Card>
       </div>
-    </Card>
+    </transition-group>
   </template>
 </template>
 
