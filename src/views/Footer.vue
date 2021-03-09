@@ -107,4 +107,8 @@ export default {
 
         .btn
           order 10
+
+@media(prefers-color-scheme : dark)
+  .footer
+    background-color #ddd
 </style>

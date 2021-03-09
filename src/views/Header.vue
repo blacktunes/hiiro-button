@@ -260,4 +260,8 @@ export default {
     width 0px
     margin 0
     opacity 0
+
+@media(prefers-color-scheme : dark)
+  .header
+    background linear-gradient(to right, $main-color-dark, $sub-color-dark), rgba(100, 100, 100, 0.8)
 </style>
