@@ -189,6 +189,9 @@ export default {
   height 48px
   background linear-gradient(to right, $main-color, $sub-color), rgba(255, 255, 255, 0.8)
 
+@media(prefers-color-scheme : dark)
+  .header
+    background linear-gradient(to right, $main-color-dark, $sub-color-dark), rgba(100, 100, 100, 0.8)
   *
     flex-shrink 0
 

@@ -159,6 +159,9 @@ export default {
 body
   margin 0
   -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+@media (prefers-color-scheme: dark)
+  body
+    background-color: #222
 
 a
   color #888
