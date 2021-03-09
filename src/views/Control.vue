@@ -16,7 +16,7 @@
           }}{{
             playSetting.showInfo && infoDate && infoDate.time
               ? `(${infoDate.time})`
-              : ""
+              : ''
           }}
         </div>
       </div>
@@ -285,13 +285,7 @@ export default {
   },
   setup() {
     const { t } = useI18n()
-    const {
-      isError,
-      title,
-      playSetting,
-      infoDate,
-      Control
-    } = initControl()
+    const { isError, title, playSetting, infoDate, Control } = initControl()
 
     return {
       ACTION_I18N,

@@ -45,20 +45,26 @@ import Btn from '@/components/common/Btn.vue'
 /**
  * 切换分类模式时触发一次渐入动画
  */
-const watchSettingChange = (playSetting: PlaySetting, voice: Ref<HTMLElement>) => {
+const watchSettingChange = (
+  playSetting: PlaySetting,
+  voice: Ref<HTMLElement>
+) => {
   let isRestart = false
-  watch(() => {
-    return playSetting.showInfo
-  }, () => {
-    if (!voice.value) return
-    if (isRestart) {
-      voice.value.style.animation = 'voice 0.5s'
-      isRestart = !isRestart
-    } else {
-      voice.value.style.animation = 'voice-restart 0.5s'
-      isRestart = !isRestart
+  watch(
+    () => {
+      return playSetting.showInfo
+    },
+    () => {
+      if (!voice.value) return
+      if (isRestart) {
+        voice.value.style.animation = 'voice 0.5s'
+        isRestart = !isRestart
+      } else {
+        voice.value.style.animation = 'voice-restart 0.5s'
+        isRestart = !isRestart
+      }
     }
-  })
+  )
 }
 
 export default {
@@ -87,9 +93,17 @@ export default {
     const total = computed(() => {
       const msg = t(INFO_I18N.voiceTotalTip) + ': '
       if (playSetting.showHide) {
-        return `${msg}${t(INFO_I18N.hideVoiceTotal)} ${t(INFO_I18N.hideLastDate) ? `(+${t(INFO_I18N.hideNewVoice)} · ${t(INFO_I18N.hideLastDate)})` : ''}`
+        return `${msg}${t(INFO_I18N.hideVoiceTotal)} ${
+          t(INFO_I18N.hideLastDate)
+            ? `(+${t(INFO_I18N.hideNewVoice)} · ${t(INFO_I18N.hideLastDate)})`
+            : ''
+        }`
       } else {
-        return `${msg}${t(INFO_I18N.voiceTotal)} ${t(INFO_I18N.lastDate) ? `(+${t(INFO_I18N.newVoice)} · ${t(INFO_I18N.lastDate)})` : ''}`
+        return `${msg}${t(INFO_I18N.voiceTotal)} ${
+          t(INFO_I18N.lastDate)
+            ? `(+${t(INFO_I18N.newVoice)} · ${t(INFO_I18N.lastDate)})`
+            : ''
+        }`
       }
     })
 

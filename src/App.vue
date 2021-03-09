@@ -9,7 +9,14 @@
 
 <script lang="ts">
 import { provide, reactive, ref, Ref, computed } from 'vue'
-import { PlaySetting, SearchData, VoicesOrigin, VoicesCategory, VoicesItem, Mark } from '@/assets/script/type'
+import {
+  PlaySetting,
+  SearchData,
+  VoicesOrigin,
+  VoicesCategory,
+  VoicesItem,
+  Mark
+} from '@/assets/script/type'
 import { CategoryList, VoicesList } from '@/assets/script/voices'
 import Setting from '@/../setting/setting.json'
 import VHeader from '@/views/Header.vue'
@@ -24,7 +31,9 @@ if (CONSOLE && (CONSOLE.text || CONSOLE.img)) {
 
   const width = CONSOLE.imgWidth || '100%'
   const height = CONSOLE.imgHeight || '100%'
-  const img = CONSOLE.img ? `padding-right:${width};padding-top:${height};background:url('${location.origin}/img/${CONSOLE.img}') no-repeat;background-size:100% 100%` : ''
+  const img = CONSOLE.img
+    ? `padding-right:${width};padding-top:${height};background:url('${location.origin}/img/${CONSOLE.img}') no-repeat;background-size:100% 100%`
+    : ''
 
   console.log(`%c${text}%c `, `font-size:${size};color:${color}`, img)
 }
@@ -69,13 +78,13 @@ const initVoicesList = (playSetting: PlaySetting) => {
   // 获取来源排序列表
   const temp1: {
     [name: string]: {
-      url?: string;
-      list: VoicesItem[];
-    };
+      url?: string
+      list: VoicesItem[]
+    }
   } = {}
   const temp2: {
-    title: string;
-    voiceList: VoicesItem[];
+    title: string
+    voiceList: VoicesItem[]
   } = {
     title: 'unknown',
     voiceList: []
@@ -104,7 +113,9 @@ const initVoicesList = (playSetting: PlaySetting) => {
   }
   originList.push(temp2)
 
-  const voices = computed(() => playSetting.showInfo ? originList : categoryList)
+  const voices = computed(() =>
+    playSetting.showInfo ? originList : categoryList
+  )
   provide('voices', voices)
 
   const voiceList: Ref<VoicesItem[]> = computed(() => {

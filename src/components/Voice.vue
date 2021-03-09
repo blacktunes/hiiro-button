@@ -7,7 +7,7 @@
             <div class="category">
               <template v-if="Player.playSetting.showInfo">
                 <a :href="item.url" target="_blank">{{
-                  item.title === "unknown" ? t("unknown") : item.title
+                  item.title === 'unknown' ? t('unknown') : item.title
                 }}</a>
               </template>
               <template v-else>
@@ -63,7 +63,6 @@ export default {
     }
   }
 }
-
 </script>
 <style lang="stylus" scoped>
 .category

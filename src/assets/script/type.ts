@@ -57,35 +57,35 @@ export interface PlaySetting {
   /**
    * 是否显示加载图标
    */
-  loading: boolean;
+  loading: boolean
   /**
    * 是否显示错误效果
    */
-  error: boolean;
+  error: boolean
   /**
    * 正在播放的语音对象
    */
-  nowPlay: VoicesItem | null;
+  nowPlay: VoicesItem | null
   /**
    * 是否重叠播放
    */
-  overlap: boolean;
+  overlap: boolean
   /**
    * 是否随机播放
    */
-  autoRandom: boolean;
+  autoRandom: boolean
   /**
    * 是否循环播放
    */
-  loop: 0 | 1 | 2 | 3;
+  loop: 0 | 1 | 2 | 3
   /**
    * 是否开启详情显示
    */
-  showInfo: boolean;
+  showInfo: boolean
   /**
    * 是否显示隐藏
    */
-  showHide: boolean;
+  showHide: boolean
 }
 
 /**
@@ -95,42 +95,42 @@ export interface SearchData {
   /**
    * 搜索文字
    */
-  value: string;
+  value: string
   /**
    * 结果列表
    */
-  list: string[];
+  list: string[]
   /**
    * 需要高亮的结果索引
    */
-  index: number;
+  index: number
 }
 
-export type Voices = VoicesOrigin[] | VoicesCategory[];
+export type Voices = VoicesOrigin[] | VoicesCategory[]
 
 /**
  * 来源分类
  */
 export interface VoicesOrigin {
-  title: string;
-  url?: string;
-  voiceList: VoicesItem[];
+  title: string
+  url?: string
+  voiceList: VoicesItem[]
 }
 
 /**
  * 语音分类
  */
 export type VoicesCategory = CategoryItem & {
-  voiceList: VoicesItem[];
+  voiceList: VoicesItem[]
 }
 
 export interface CategoryItem {
-  name: string;
+  name: string
   /**
    * 是否为隐藏
    */
-  hide?: boolean;
-  translate: Translate;
+  hide?: boolean
+  translate: Translate
 }
 
 /**
@@ -140,49 +140,49 @@ export interface VoicesItem {
   /**
    * 语音名称
    */
-  name: string;
+  name: string
   /**
    * 文件名
    */
-  path: string;
-  translate: Translate;
+  path: string
+  translate: Translate
   /**
    * 是否显示表情包
    */
-  usePicture?: Translate;
+  usePicture?: Translate
   /**
    * 所属分类
    */
-  category: string;
+  category: string
   /**
    * 是否为隐藏
    */
-  hide?: boolean;
+  hide?: boolean
   /**
    * 添加日期
    */
-  date?: string;
+  date?: string
   /**
    * 来源信息
    */
-  mark?: Mark;
+  mark?: Mark
 }
 
 export interface Mark {
   /**
    * 标题
    */
-  title: string;
+  title: string
   /**
    * 时间段
    */
-  time?: string;
-  url?: string;
-};
+  time?: string
+  url?: string
+}
 
 export interface Translate {
-  'zh-CN'?: string;
-  'en-US'?: string;
+  'zh-CN'?: string
+  'en-US'?: string
 }
 
 /**
@@ -194,14 +194,14 @@ export type PlayerList = Map<any, Player>
  * 播放器对象
  */
 export interface Player {
-  name: string;
-  audio: HTMLAudioElement;
-  voicesKey?: [string, string];
+  name: string
+  audio: HTMLAudioElement
+  voicesKey?: [string, string]
 }
 
 export interface FriendlyLink {
-  name: string;
-  url: string;
-  background?: string;
-  color?: string;
+  name: string
+  url: string
+  background?: string
+  color?: string
 }

@@ -6,7 +6,12 @@
           <div>©2020</div>
           <template v-for="(item, index) in author" :key="index">
             <a style="margin-left: 5px" v-if="index > 0">&</a>
-            <a style="margin-left: 5px" :href="item.url || null" target="_blank">{{ item.name }}</a>
+            <a
+              style="margin-left: 5px"
+              :href="item.url || null"
+              target="_blank"
+              >{{ item.name }}</a
+            >
           </template>
         </div>
         <div class="info">
@@ -17,11 +22,7 @@
       </div>
       <div class="text-right">
         <div class="git">
-          <IBtn
-            class="btn"
-            :url="githubUrl"
-            :img="require('../assets/image/github-fill.png')"
-          />
+          <IBtn class="btn" :url="githubUrl" type="github" />
           <a :href="githubUrl" target="_blank">{{ t(INFO_I18N.toGithub) }}</a>
         </div>
         <div>{{ t(INFO_I18N.notOfficial) }}</div>
@@ -38,11 +39,11 @@ import Setting from '@/../setting/setting.json'
 
 const FOOTER: {
   author?: {
-    name: string;
-    url?: string;
-  }[];
-  info?: string[];
-  githubUrl?: string;
+    name: string
+    url?: string
+  }[]
+  info?: string[]
+  githubUrl?: string
 } = Setting['footer']
 
 export default {

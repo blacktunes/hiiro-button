@@ -1,28 +1,23 @@
 import { CategoryItem, VoicesItem } from './type'
 
-const jsonList = require.context('@/../setting/translate', false, /.json$/).keys().map(item => {
-  return item.substring(2)
-})
+const jsonList = import.meta.globEager('../../../setting/translate/*.json')
 
 let Locales: {
-  'zh-CN': any;
-  'en-US': any;
+  'zh-CN': any
+  'en-US': any
 }
-let CategoryList: CategoryItem[]
+let CategoryList: CategoryItem[] = []
 let VoicesList: VoicesItem[] = []
-jsonList.forEach(name => {
-  if (name === 'locales.json') {
-    Locales = require(`@/../setting/translate/${name}`)
-  } else if (name === 'category.json') {
-    CategoryList = require(`@/../setting/translate/${name}`)
+
+for (const name in jsonList) {
+  if (name.endsWith('locales.json')) {
+    Locales = jsonList[name].default as any
+  } else if (name.endsWith('category.json')) {
+    CategoryList = jsonList[name].default as any
   } else {
-    const voice = require(`@/../setting/translate/${name}`)
+    const voice = jsonList[name].default as any
     VoicesList = [...VoicesList, ...voice]
   }
-})
-
-export {
-  Locales,
-  CategoryList,
-  VoicesList
 }
+
+export { Locales, CategoryList, VoicesList }

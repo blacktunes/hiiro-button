@@ -14,20 +14,18 @@
     "baseUrl": ".",
     "resolveJsonModule": true,
     "noImplicitAny": false,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "types": [
-      "webpack-env"
+      "vite/client"
     ],
     "paths": {
       "@/*": [
         "src/*"
       ]
     },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
   },
   "include": [
     "src/**/*.ts",

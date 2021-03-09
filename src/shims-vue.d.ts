@@ -10,10 +10,10 @@ declare module '*.gif'
 declare module '*.svg'
 
 interface Window {
-  dataLayer: any;
-  MediaMetadata: any;
+  dataLayer: any
+  MediaMetadata: any
 }
 
 interface Navigator {
-  mediaSession: any;
+  mediaSession: any
 }

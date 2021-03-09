@@ -1,14 +1,31 @@
 <template>
   <a :href="url" class="icon" target="_blank">
-    <img draggable="false" :src="img" />
+    <img draggable="false" :src="Icon[type]" />
   </a>
 </template>
 
 <script>
+import bilibili from '@/assets/image/bilibili-fill.png'
+import github from '@/assets/image/github-fill.png'
+import twitter from '@/assets/image/twitter-fill.png'
+import youtube from '@/assets/image/youtube-fill.png'
+
 export default {
   props: {
     url: String,
-    img: String
+    type: 'bilibili' | 'github' | 'twitter' | 'youtube'
+  },
+  setup() {
+    const Icon = {
+      bilibili,
+      github,
+      twitter,
+      youtube
+    }
+
+    return {
+      Icon
+    }
   }
 }
 </script>

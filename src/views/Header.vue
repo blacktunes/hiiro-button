@@ -14,7 +14,7 @@
         {{ t(INFO_I18N.title) }}
       </div>
       <template v-for="(btn, index) in btnList" :key="index">
-        <IBtn v-if="btn.url" :url="btn.url" :img="btn.img" />
+        <IBtn v-if="btn.url" :url="btn.url" :type="btn.type" />
       </template>
       <div class="search-btn" @click="showSearch">
         <svg
@@ -59,10 +59,10 @@ import Search from '@/components/Search.vue'
 import Setting from '@/../setting/setting.json'
 
 const HEADER: {
-  icon?: string;
-  youtube?: string;
-  twitter?: string;
-  bilibili?: string;
+  icon?: string
+  youtube?: string
+  twitter?: string
+  bilibili?: string
 } = Setting['header'] || {}
 
 const onLogoClick = (logo: Ref<HTMLElement>) => {
@@ -89,15 +89,15 @@ export default {
     const btnList = [
       {
         url: HEADER.youtube,
-        img: require('../assets/image/youtube-fill.png')
+        type: 'youtube'
       },
       {
         url: HEADER.twitter,
-        img: require('../assets/image/twitter-fill.png')
+        type: 'twitter'
       },
       {
         url: HEADER.bilibili,
-        img: require('../assets/image/bilibili-fill.png')
+        type: 'bilibili'
       }
     ]
 

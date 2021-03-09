@@ -1,7 +1,20 @@
 import Setting from '@/../setting/setting.json'
 import { gtag } from '@/assets/script/analytics/gtag'
 import mitt from '@/assets/script/mitt'
-import { EVENT, INFO_I18N, Mark, Player, PlayerList, PlaySetting, SearchData, Translate, Voices, VoicesCategory, VoicesItem, VoicesOrigin } from '@/assets/script/type'
+import {
+  EVENT,
+  INFO_I18N,
+  Mark,
+  Player,
+  PlayerList,
+  PlaySetting,
+  SearchData,
+  Translate,
+  Voices,
+  VoicesCategory,
+  VoicesItem,
+  VoicesOrigin
+} from '@/assets/script/type'
 import { getCategory, getrRandomInt } from '@/assets/script/utils'
 import { ComputedRef, inject, reactive, ref, Ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -10,13 +23,13 @@ const MEDIA = Setting['mediaSession']
 const CDN = Setting['CDN']
 const GA_ID = Setting['GA_ID']
 
-const useSearch = (btnList) => {
+const useSearch = btnList => {
   const searchData: SearchData = inject('searchData') as SearchData
   // 需要高亮显示的name
   const highlight = ref('')
 
   // 搜索数据改变时重新匹配高亮低亮
-  watch(searchData, (data) => {
+  watch(searchData, data => {
     for (const i in btnList) {
       if (!btnList[i]) continue
       if (data.value.length > 0) {
@@ -28,12 +41,15 @@ const useSearch = (btnList) => {
     }
   })
   // 搜索栏文字改变时清除高亮
-  watch(() => searchData.value, (newVal, oldVal) => {
-    if (newVal !== oldVal) {
-      searchData.index = 0
+  watch(
+    () => searchData.value,
+    (newVal, oldVal) => {
+      if (newVal !== oldVal) {
+        searchData.index = 0
+      }
+      highlight.value = ''
     }
-    highlight.value = ''
-  })
+  )
 
   // 滚动到高亮的DOM
   mitt.on(EVENT.autoScroll, () => {
@@ -42,7 +58,10 @@ const useSearch = (btnList) => {
         if (searchData.index + 1 > searchData.list.length) searchData.index = 0
         if (i === searchData.list[searchData.index]) {
           searchData.index++
-          const scrollPos = document.documentElement.scrollTop + btnList[i].$el.getBoundingClientRect().top - 200
+          const scrollPos =
+            document.documentElement.scrollTop +
+            btnList[i].$el.getBoundingClientRect().top -
+            200
           highlight.value = i
           window.scrollTo({ top: scrollPos, behavior: 'smooth' })
           break
@@ -81,7 +100,8 @@ const createPlayer = (btnList: { [name: string]: any }) => {
       randomPlay()
     })
     navigator.mediaSession.setActionHandler('pause', () => {
-      if (playerList.has('once')) (playerList.get('once') as Player).audio.pause()
+      if (playerList.has('once'))
+        (playerList.get('once') as Player).audio.pause()
       navigator.mediaSession.playbackState = 'paused'
     })
   }
@@ -117,7 +137,8 @@ const createPlayer = (btnList: { [name: string]: any }) => {
       /* eslint-enable */
     }
     if (!playSetting.overlap) {
-      if (playerList.has('once')) (playerList.get('once') as Player).audio.pause()
+      if (playerList.has('once'))
+        (playerList.get('once') as Player).audio.pause()
       if (playSetting.nowPlay && playSetting.nowPlay.name === voice.name) {
         clearTimeout(timer)
         timer = setTimeout(() => {
@@ -150,7 +171,10 @@ const createPlayer = (btnList: { [name: string]: any }) => {
     if (key === 'once' && playerList.has(key)) {
       playerList.get(key)!.audio.oncanplay = null
     }
-    const path = process.env.NODE_ENV === 'production' && CDN ? `${CDN}/${voice.path}` : `voices/${voice.path}`
+    const path =
+      process.env.NODE_ENV === 'production' && CDN
+        ? `${CDN}/${voice.path}`
+        : `voices/${voice.path}`
     playerList.set(key, {
       name: voice.name,
       audio: new Audio(path)
@@ -177,7 +201,9 @@ const createPlayer = (btnList: { [name: string]: any }) => {
       const duration = playerList.get(key)!.audio.duration
       let currentTime = 0
       playerList.get(key)!.audio.ontimeupdate = () => {
-        currentTime = Number(((playerList.get(key)!.audio.currentTime / duration) * 100).toFixed(0))
+        currentTime = Number(
+          ((playerList.get(key)!.audio.currentTime / duration) * 100).toFixed(0)
+        )
         let num = 0
         for (const k of playerList.keys()) {
           if (playerList.get(k)!.name === voice.name) {
@@ -292,17 +318,21 @@ const createPlayer = (btnList: { [name: string]: any }) => {
    * 判断该模式或语言下是否可播放
    */
   const isCanPlay = (voice: VoicesItem) => {
-    const flag = (voices.value.some((item: VoicesOrigin | VoicesCategory) => {
-      if (playSetting.showInfo) {
-        if (voice.mark) {
-          return (item as VoicesOrigin).title === voice.mark.title
+    const flag =
+      voices.value.some((item: VoicesOrigin | VoicesCategory) => {
+        if (playSetting.showInfo) {
+          if (voice.mark) {
+            return (item as VoicesOrigin).title === voice.mark.title
+          } else {
+            return (item as VoicesOrigin).title === 'unknown'
+          }
         } else {
-          return (item as VoicesOrigin).title === 'unknown'
+          return (
+            (item as VoicesCategory).name === voice.category &&
+            Boolean((item as VoicesCategory).translate[locale.value])
+          )
         }
-      } else {
-        return (item as VoicesCategory).name === voice.category && Boolean((item as VoicesCategory).translate[locale.value])
-      }
-    })) && Boolean(voice.translate[locale.value])
+      }) && Boolean(voice.translate[locale.value])
     if (playSetting.showHide) {
       return flag
     } else {
@@ -337,7 +367,12 @@ const createPlayer = (btnList: { [name: string]: any }) => {
     } else if (playSetting.showInfo) {
       return Boolean(item['title'])
     } else {
-      return playSetting.showHide ? te(`voicecategory.${item['name']}`) && Boolean(t(`voicecategory.${item['name']}`)) : te(`voicecategory.${item['name']}`) && Boolean(t(`voicecategory.${item['name']}`)) && !(item as VoicesCategory).hide
+      return playSetting.showHide
+        ? te(`voicecategory.${item['name']}`) &&
+            Boolean(t(`voicecategory.${item['name']}`))
+        : te(`voicecategory.${item['name']}`) &&
+            Boolean(t(`voicecategory.${item['name']}`)) &&
+            !(item as VoicesCategory).hide
     }
   }
 
@@ -351,9 +386,17 @@ const createPlayer = (btnList: { [name: string]: any }) => {
       let flag = true
       if (playSetting.showInfo) {
         const category = getCategory(voice.category)!
-        flag = te(`voicecategory.${category['name']}`) && Boolean(t(`voicecategory.${category['name']}`)) && !category.hide
+        flag =
+          te(`voicecategory.${category['name']}`) &&
+          Boolean(t(`voicecategory.${category['name']}`)) &&
+          !category.hide
       }
-      return te(`voice.${voice.name}`) && Boolean(t(`voice.${voice.name}`)) && !voice.hide && flag
+      return (
+        te(`voice.${voice.name}`) &&
+        Boolean(t(`voice.${voice.name}`)) &&
+        !voice.hide &&
+        flag
+      )
     }
   }
 
@@ -369,14 +412,18 @@ const createPlayer = (btnList: { [name: string]: any }) => {
    */
   const isShowNewIcon = (date?: string) => {
     if (!date) return false
-    return playSetting.showHide ? date === t(INFO_I18N.hideLastDate) : date === t(INFO_I18N.lastDate)
+    return playSetting.showHide
+      ? date === t(INFO_I18N.hideLastDate)
+      : date === t(INFO_I18N.lastDate)
   }
 
   /**
    * 返回需要显示的表情包url
    */
   const getPicUrl = (usePicture?: Translate) => {
-    return usePicture && Boolean(usePicture[locale.value]) ? `/voices/img/${usePicture[locale.value]}` : null
+    return usePicture && Boolean(usePicture[locale.value])
+      ? `/voices/img/${usePicture[locale.value]}`
+      : null
   }
 
   return {
@@ -391,8 +438,4 @@ const createPlayer = (btnList: { [name: string]: any }) => {
   }
 }
 
-export {
-  useSearch,
-  getBtnList,
-  createPlayer
-}
+export { useSearch, getBtnList, createPlayer }

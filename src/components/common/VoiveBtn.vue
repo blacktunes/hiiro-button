@@ -15,13 +15,13 @@
 import { Ref, ref, watch } from 'vue'
 import NewIcon from './NewIcon.vue'
 
-const watchProgress = (progressRef) => {
+const watchProgress = progressRef => {
   const progress = ref(0)
   const playing = ref(false)
 
   let timer: any = null
 
-  watch(progress, (val) => {
+  watch(progress, val => {
     if (val === 0) {
       playing.value = false
       timer = setTimeout(() => {
