@@ -8,7 +8,7 @@
       </transition>
       <div
         class="title"
-        :class="{ pointer: !playSetting.showHide }"
+        :class="{ pointer: !playSetting.showHide && isShowPointer }"
         @click="changeHide"
       >
         {{ t(INFO_I18N.title) }}
@@ -51,7 +51,7 @@
 </template>
 
 <script lang="ts">
-import { ref, inject, onMounted, Ref } from 'vue'
+import { ref, inject, onMounted, Ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { INFO_I18N, PlaySetting, SearchData } from '@/assets/script/type'
 import IBtn from '@/components/common/IconBtn.vue'
@@ -141,13 +141,17 @@ export default {
 
     const playSetting = inject('playSetting') as PlaySetting
     const changeHide = () => {
-      // if (playSetting.showHide) return
-      playSetting.showHide = !playSetting.showHide
+      if (!isShowPointer.value || playSetting.showHide) return
+      playSetting.showHide = true
       if (!isShowSearch.value) {
         searchData.value = ''
         searchData.list.length = 0
       }
     }
+
+    const isShowPointer = computed(() => {
+      return Number(t(INFO_I18N.hideVoiceTotal)) > Number(t(INFO_I18N.voiceTotal))
+    })
 
     // 初次加载时获取localStorage的语言设定
     onMounted(() => {
@@ -165,6 +169,7 @@ export default {
       showSearch,
       changeLang,
       changeHide,
+      isShowPointer,
       playSetting,
       INFO_I18N
     }
@@ -261,7 +266,7 @@ export default {
     margin 0
     opacity 0
 
-@media(prefers-color-scheme : dark)
+@media (prefers-color-scheme dark)
   .header
     background linear-gradient(to right, $main-color-dark, $sub-color-dark), rgba(100, 100, 100, 0.8)
 </style>
