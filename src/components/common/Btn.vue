@@ -1,5 +1,17 @@
 <template>
   <div class="btn" :style="{ background: background }">
+    <div
+      class="left"
+      :style="{
+        'border-color': `transparent transparent ${background} transparent`
+      }"
+    />
+    <div
+      class="right"
+      :style="{
+        'border-color': `transparent transparent ${background} transparent`
+      }"
+    />
     <a :href="url" target="_blank" :style="{ color: color }">{{ name }}</a>
   </div>
 </template>
@@ -25,19 +37,41 @@ a
   display flex
   align-items center
   position relative
-  overflow hidden
   min-height 34px
   box-sizing border-box
   border-radius 18px
   background $main-color
-  box-shadow 0px 1px 5px 0px #ddd
   user-select none
   cursor pointer
   transition box-shadow 0.25s
 
+  ears(direction, deg)
+    transform rotate(deg)
+    width 0
+    height 0
+    border-style solid
+    border-width 0 6px 8px 6px
+    border-color transparent transparent $main-color transparent
+    pointer-events none
+    position absolute
+
+    if (direction == 'left')
+      left 0
+
+    if (direction == 'right')
+      right 0
+
+    top -3px
+
+  .left
+    ears('left', -32deg)
+
+  .right
+    ears('right', 32deg)
+
   &:hover
     background $hover-color
-    box-shadow 0px 2px 10px 0px $main-color
+    box-shadow 0px 1px 10px 0px $main-color
 
     a
       animation shake 3s linear infinite
