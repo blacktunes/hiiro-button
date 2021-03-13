@@ -299,9 +299,10 @@ export default {
         transition opacity 0s
         transition-delay 0s
 
-@media(prefers-color-scheme : dark)
+@media (prefers-color-scheme dark)
   .btn
     background $main-color-dark
+
   .wrapper
     .btn
       background $main-color-dark

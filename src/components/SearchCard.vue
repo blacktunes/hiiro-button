@@ -35,7 +35,6 @@ export default {
   margin-top 0
   margin-bottom 0
   transition all 0.3s
-  background #fff
 
   .search
     width 90%

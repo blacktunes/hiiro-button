@@ -10,7 +10,6 @@
 </template>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-
 .card-wrapper
   margin 10px 5px
   border-radius 5px
@@ -29,12 +28,12 @@
   .card-text
     padding 15px 10px
 
-@media (prefers-color-scheme : dark)
+@media (prefers-color-scheme dark)
   .card-wrapper
-    background-color: #333
-    color: $title-color-dark
-    border 1px solid #374151
-    .card-header
-      border-bottom 1px solid #374151
+    background-color #444
+    color $title-color-dark
+    border 1px solid #555
 
+    .card-header
+      border-color #555
 </style>

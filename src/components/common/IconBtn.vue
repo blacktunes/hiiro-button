@@ -38,8 +38,4 @@ export default {
     img
       height 80%
       padding 10%
-@media(prefers-color-scheme : dark)
-  .icon
-    background rgba(150, 150, 150, 0.5)
-    fill #E4E4E7
 </style>

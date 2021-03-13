@@ -362,15 +362,20 @@ a
   &:active
     background $hover-color
 
-@media(prefers-color-scheme : dark)
+.icon-active
+  background #93a3b3
+
+@media (prefers-color-scheme dark)
   .control
     background rgba(100, 100, 100, 0.7)
+
     .playing
-      color $title-color-dark
+      color #ddd
+
   .icon
     svg
       fill $title-color-dark
 
-.icon-active
-  background #93a3b3
+  .icon-active
+    background #ddd
 </style>
