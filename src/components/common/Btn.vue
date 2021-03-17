@@ -21,8 +21,14 @@ export default {
   props: {
     name: String,
     url: String,
-    color: String,
-    background: String
+    color: {
+      type: String,
+      default: null
+    },
+    background: {
+      type: String,
+      default: null
+    }
   }
 }
 </script>

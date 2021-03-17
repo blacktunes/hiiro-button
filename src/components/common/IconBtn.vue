@@ -4,10 +4,13 @@
   </a>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   props: {
-    url: String,
+    url: {
+      type: String,
+      default: null
+    },
     img: String
   }
 }
