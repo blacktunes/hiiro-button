@@ -15,6 +15,24 @@
     "twitter": "",
     "bilibili": "https://live.bilibili.com/21919321"
   },
+  "link": [
+    {
+      "name": "七奈按钮",
+      "url": "https://kaguranana.moe/",
+      "background": "#c4afd0"
+    },
+    {
+      "name": "希亚娜按钮",
+      "url": "https://ciyana.moe/",
+      "background": "#19368f",
+      "color": "#bbb"
+    },
+    {
+      "name": "鹿乃按钮",
+      "url": "https://kano.zone/",
+      "background": "#bf9780"
+    }
+  ],
   "footer": {
     "author": [
       {

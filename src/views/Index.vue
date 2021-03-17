@@ -41,6 +41,10 @@ import Search from '@/components/SearchCard.vue'
 import Voice from '@/components/Voice.vue'
 import Card from '@/components/common/Card.vue'
 import Btn from '@/components/common/Btn.vue'
+import Setting from '@/../setting/setting.json'
+
+// 友链列表
+const LINK: FriendlyLink[] = Setting['link'] || []
 
 /**
  * 切换分类模式时触发一次渐入动画
@@ -72,15 +76,6 @@ export default {
     const { t } = useI18n()
     const playSetting = inject('playSetting') as PlaySetting
 
-    // 友链列表
-    const friendlyLinkList: FriendlyLink[] = [
-      {
-        name: '七奈按钮',
-        url: 'https://kaguranana.moe/',
-        background: '#c4afd0'
-      }
-    ]
-
     const voice = ref() as Ref<HTMLElement>
     watchSettingChange(playSetting, voice)
 
@@ -95,7 +90,7 @@ export default {
 
     return {
       t,
-      friendlyLinkList,
+      friendlyLinkList: LINK,
       voice,
       total,
       INFO_I18N
