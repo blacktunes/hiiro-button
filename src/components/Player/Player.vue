@@ -42,9 +42,9 @@
 
 <script lang="ts">
 import { useI18n } from 'vue-i18n'
-import Card from './common/Card.vue'
-import VBtn from './common/VoiveBtn.vue'
-import { getBtnList, useSearch, createPlayer } from './Voive'
+import Card from '../common/Card.vue'
+import VBtn from '../common/VoiveBtn.vue'
+import { getBtnList, useSearch, createPlayer } from './Player'
 
 export default {
   components: {

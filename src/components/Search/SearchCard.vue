@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { inject, Ref } from 'vue'
-import Search from '@/components/Search.vue'
+import Search from './Search.vue'
 import Card from '@/components/common/Card.vue'
 
 export default {

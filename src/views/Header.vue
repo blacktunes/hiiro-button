@@ -55,7 +55,7 @@ import { ref, inject, onMounted, Ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { INFO_I18N, PlaySetting, SearchData } from '@/assets/script/type'
 import IBtn from '@/components/common/IconBtn.vue'
-import Search from '@/components/Search.vue'
+import Search from '@/components/Search/Search.vue'
 import Setting from '@/../setting/setting.json'
 
 const HEADER: {
