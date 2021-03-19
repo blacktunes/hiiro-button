@@ -39,6 +39,7 @@ import { inject, ref, watch, Ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { FriendlyLink, INFO_I18N, PlaySetting } from '@/assets/script/type'
 import Search from '@/components/Search/SearchCard.vue'
+import Readme from '@/components/Readme.vue'
 import Voice from '@/components/Player/Player.vue'
 import Card from '@/components/common/Card.vue'
 import Btn from '@/components/common/Btn.vue'
@@ -69,6 +70,7 @@ const watchSettingChange = (playSetting: PlaySetting, voice: Ref<HTMLElement>) =
 export default {
   components: {
     Search,
+    Readme,
     Voice,
     Card,
     Btn
