@@ -1,5 +1,5 @@
 <template>
-  <transition name="slider-up" appear>
+  <transition name="slide-up" appear>
     <div class="control">
       <div class="playing">
         <transition name="fade">

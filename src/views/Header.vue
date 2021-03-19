@@ -1,5 +1,5 @@
 <template>
-  <transition name="slider-down" appear>
+  <transition name="slide-down" appear>
     <div class="header">
       <transition name="logo" appear>
         <div class="logo" ref="logo" @click="logoClick">

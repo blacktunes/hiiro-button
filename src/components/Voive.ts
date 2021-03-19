@@ -376,7 +376,7 @@ const createPlayer = (btnList: { [name: string]: any }) => {
    * 返回需要显示的表情包url
    */
   const getPicUrl = (usePicture?: Translate) => {
-    return usePicture && Boolean(usePicture[locale.value]) ? `/voices/img/${usePicture[locale.value]}` : null
+    return usePicture && Boolean(usePicture[locale.value]) ? `/voices/img/${usePicture[locale.value]}` : undefined
   }
 
   return {

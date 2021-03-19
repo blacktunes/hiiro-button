@@ -8,7 +8,7 @@
       @input="search"
     />
     <div class="total">
-      <transition name="slider-left">
+      <transition name="slide-left">
         <p v-if="searchData.list.length > 0">
           {{
             searchData.index > 0

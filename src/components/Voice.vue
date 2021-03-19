@@ -1,7 +1,10 @@
 <template>
   <template v-for="item in Player.voices.value" :key="item.name || item.title">
     <transition-group name="fade">
-      <div v-if="Player.isShowCategory(item)">
+      <div
+        v-if="Player.isShowCategory(item)"
+        :id="t(`voicecategory.${item.name}`)"
+      >
         <Card>
           <template #header>
             <div class="category">

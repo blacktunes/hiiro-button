@@ -50,9 +50,18 @@ export default {
   props: {
     text: String,
     name: String,
-    newIcon: Boolean,
-    showPic: String,
-    disable: Boolean
+    newIcon: {
+      type: Boolean,
+      default: false
+    },
+    showPic: {
+      type: String,
+      default: null
+    },
+    disable: {
+      type: Boolean,
+      default: false
+    }
   },
   setup() {
     const progressRef = ref() as Ref<HTMLElement>
