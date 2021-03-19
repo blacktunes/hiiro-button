@@ -12,6 +12,14 @@
           <Error v-if="playSetting.nowPlay && playSetting.error" class="tip" />
         </transition>
         <div :style="{ 'text-decoration': isError }">
+        <div
+          :style="{
+            'user-select': 'none',
+            'text-decoration': isError,
+            cursor: playSetting.nowPlay ? 'pointer' : ''
+          }"
+          @click="toBtn()"
+        >
           {{ title
           }}{{
             playSetting.showInfo && infoDate && infoDate.time
@@ -199,6 +207,7 @@
 import { inject, computed, Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ACTION_I18N, EVENT, PlaySetting, Mark } from '@/assets/script/type'
+import { ACTION_I18N, PlaySetting, Mark, EVENT } from '@/assets/script/type'
 import mitt from '@/assets/script/mitt'
 import Loading from '@/components/common/Loading.vue'
 import Error from '@/components/common/Error.vue'
@@ -292,6 +301,11 @@ export default {
       Control
     } = initControl()
 
+    const toBtn = () => {
+      if (playSetting.nowPlay) {
+        mitt.emit(EVENT.nameClick, playSetting.nowPlay.name)
+      }
+    }
     return {
       ACTION_I18N,
       t,
@@ -300,6 +314,7 @@ export default {
       playSetting,
       infoDate,
       Control
+      toBtn
     }
   }
 }

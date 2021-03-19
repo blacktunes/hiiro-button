@@ -13,7 +13,11 @@ export enum EVENT {
   /**
    * 滚动到指定位置
    */
-  autoScroll = 'autoScroll'
+  autoScroll = 'autoScroll',
+  /**
+   * 控制栏正在播放点击
+   */
+  nameClick = 'nameClick'
 }
 
 /**

@@ -1,10 +1,7 @@
 <template>
   <template v-for="item in Player.voices.value" :key="item.name || item.title">
     <transition-group name="fade">
-      <div
-        v-if="Player.isShowCategory(item)"
-        :id="t(`voicecategory.${item.name}`)"
-      >
+      <div v-if="Player.isShowCategory(item)">
         <Card>
           <template #header>
             <div class="category">
@@ -44,7 +41,7 @@
 import { useI18n } from 'vue-i18n'
 import Card from '../common/Card.vue'
 import VBtn from '../common/VoiveBtn.vue'
-import { getBtnList, useSearch, createPlayer } from './Player'
+import { getBtnList, useSearch, createPlayer, initListen } from './Player'
 
 export default {
   components: {
@@ -56,6 +53,7 @@ export default {
     const { btnList, setBtnList } = getBtnList()
     const { searchData, highlight } = useSearch(btnList)
     const Player = createPlayer(btnList)
+    initListen(btnList)
 
     return {
       t,

@@ -10,7 +10,7 @@ const MEDIA = Setting['mediaSession']
 const CDN = Setting['CDN']
 const GA_ID = Setting['GA_ID']
 
-const useSearch = (btnList) => {
+const useSearch = (btnList: { [name: string]: any }) => {
   const searchData: SearchData = inject('searchData') as SearchData
   // 需要高亮显示的name
   const highlight = ref('')
@@ -391,8 +391,23 @@ const createPlayer = (btnList: { [name: string]: any }) => {
   }
 }
 
+const initListen = (btnList: { [name: string]: any }) => {
+  mitt.on(EVENT.nameClick, (name?: string) => {
+    console.log(name)
+    if (!name) return
+    for (const i in btnList) {
+      if (i === name) {
+        const scrollPos = document.documentElement.scrollTop + btnList[i].$el.getBoundingClientRect().top - 200
+        window.scrollTo({ top: scrollPos, behavior: 'smooth' })
+        break
+      }
+    }
+  })
+}
+
 export {
   useSearch,
   getBtnList,
-  createPlayer
+  createPlayer,
+  initListen
 }
