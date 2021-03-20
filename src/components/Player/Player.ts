@@ -379,6 +379,22 @@ const createPlayer = (btnList: { [name: string]: any }) => {
     return usePicture && Boolean(usePicture[locale.value]) ? `/voices/img/${usePicture[locale.value]}` : undefined
   }
 
+  /**
+   * 返回带时间点的B站视频URL
+   */
+  const getUrl = (mark?: Mark): string | undefined => {
+    if (mark && mark.url && mark.time) {
+      const timeList = mark.time.split('~')[0].split(':')
+      let time = ''
+      if (timeList.length === 2) {
+        time = `?t=${timeList[0]}m${timeList[1]}s`
+      } else if (timeList.length === 3) {
+        time = `?t=${timeList[0]}h${timeList[1]}m${timeList[2]}s`
+      }
+      return mark.url + time
+    }
+  }
+
   return {
     playSetting,
     voices,
@@ -387,13 +403,13 @@ const createPlayer = (btnList: { [name: string]: any }) => {
     isShowVoice,
     isShowTime,
     isShowNewIcon,
-    getPicUrl
+    getPicUrl,
+    getUrl
   }
 }
 
 const initListen = (btnList: { [name: string]: any }) => {
   mitt.on(EVENT.nameClick, (name?: string) => {
-    console.log(name)
     if (!name) return
     for (const i in btnList) {
       if (i === name) {

@@ -4,10 +4,10 @@
     <img class="pic" v-if="showPic" :src="showPic" />
     <div class="left" />
     <div class="right" />
-    <div class="btn">
+    <a class="btn" :href="url" target="_blank">
       <div class="progress" ref="progressRef"></div>
       <span class="text">{{ text }}</span>
-    </div>
+    </a>
   </div>
 </template>
 
@@ -61,6 +61,10 @@ export default {
     disable: {
       type: Boolean,
       default: false
+    },
+    url: {
+      type: String,
+      default: null
     }
   },
   setup() {

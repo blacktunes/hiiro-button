@@ -20,13 +20,14 @@
               <transition-group name="fade">
                 <VBtn
                   v-if="Player.isShowVoice(voice)"
+                  :url="Player.getUrl(voice.mark)"
                   :title="Player.isShowTime(voice.mark)"
                   :text="t(`voice.${voice.name}`)"
                   :name="voice.name"
                   :newIcon="Player.isShowNewIcon(voice.date)"
                   :showPic="Player.getPicUrl(voice.usePicture)"
                   :ref="el => setBtnList(voice.name, el)"
-                  @click="Player.play(voice)"
+                  @click.prevent="Player.play(voice)"
                 />
               </transition-group>
             </template>
