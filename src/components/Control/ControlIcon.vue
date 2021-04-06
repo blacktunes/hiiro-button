@@ -153,11 +153,11 @@
     </div>
   </template>
   <template v-else-if="type === 'changeShowInfo'">
-    <!-- TODO 增加title -->
     <div
       class="icon"
       @click="changeShowInfo"
       :class="{ 'icon-active': playSetting.showInfo }"
+      :title="t(ACTION_I18N.showInfo)"
     >
       <svg
         viewBox="0 0 1024 1024"

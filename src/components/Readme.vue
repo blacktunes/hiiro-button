@@ -4,11 +4,11 @@
     <div class="readme-icon">
       <div class="line" v-if="!playSetting.nowPlay">
         <ControlIcon type="randomPlay" />
-        <div class="tip">这个按钮可以随机播放</div>
+        <div class="tip">{{ t(README_I18N.randomPlay) }}</div>
       </div>
       <div class="line" v-else>
         <ControlIcon type="stopPlay" />
-        <div class="tip">这个按钮可以停止播放</div>
+        <div class="tip">{{ t(README_I18N.stop) }}</div>
       </div>
       <div class="line">
         <ControlIcon type="overlapChange" />
@@ -35,7 +35,7 @@ import Collapse from './common/Collapse.vue'
 import ControlIcon from './Control/ControlIcon.vue'
 import { inject, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { PlaySetting } from '@/assets/script/type'
+import { PlaySetting, README_I18N } from '@/assets/script/type'
 import Setting from '@/../setting/setting.json'
 
 const README = Setting['readme'] || ''
@@ -50,32 +50,33 @@ export default {
     const playSetting = inject('playSetting') as PlaySetting
 
     const overlap = computed(() => {
-      return playSetting.overlap ? '现在可以同时播放多个按钮了' : '这个按钮可以开启重叠播放'
+      return playSetting.overlap ? t(README_I18N.overlapOn) : t(README_I18N.overlapOff)
     })
 
     const autoRandom = computed(() => {
-      return playSetting.autoRandom ? '现在播放结束会随机播放下一个按钮了' : '这个按钮可以开启随机连播'
+      return playSetting.autoRandom ? t(README_I18N.autoRandomOn) : t(README_I18N.autoRandomOff)
     })
 
     const loop = computed(() => {
       if (playSetting.loop === 0) {
-        return '这个按钮可以切换连续播放模式'
+        return t(README_I18N.loop0)
       } else if (playSetting.loop === 1) {
-        return '现在是单曲循环模式'
+        return t(README_I18N.loop1)
       } else if (playSetting.loop === 2) {
-        return '现在是分类循环模式'
+        return t(README_I18N.loop2)
       } else if (playSetting.loop === 3) {
-        return '现在是全部循环模式'
+        return t(README_I18N.loop3)
       }
     })
 
     const showInfo = computed(() => {
-      return playSetting.showInfo ? '这个按钮可以切换成分类排序' : '这个按钮可以查看按钮的出处'
+      return playSetting.showInfo ? t(README_I18N.showInfoOn) : t(README_I18N.showInfoOff)
     })
 
     return {
       README,
       t,
+      README_I18N,
       playSetting,
       overlap,
       autoRandom,

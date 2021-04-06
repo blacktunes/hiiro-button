@@ -50,8 +50,29 @@ export enum ACTION_I18N {
   autoRandom = 'action.autoRandom',
   autoRandomTip = 'action.autoRandomTip',
   loop = 'action.loop',
-  loopTip = 'action.loopTip',
+  loopTip1 = 'action.loopTip_1',
+  loopTip2 = 'action.loopTip_2',
+  loopTip3 = 'action.loopTip_3',
+  showInfo = 'action.showInfo',
   noplay = 'action.noplay'
+}
+
+/**
+ * readme操作说明的I18N
+ */
+export enum README_I18N {
+  randomPlay = 'readme.randomPlay',
+  stop = 'readme.stop',
+  overlapOn = 'readme.overlapOn',
+  overlapOff = 'readme.overlapOff',
+  autoRandomOn = 'readme.autoRandomOn',
+  autoRandomOff = 'readme.autoRandomOff',
+  loop0 = 'readme.loop_0',
+  loop1 = 'readme.loop_1',
+  loop2 = 'readme.loop_2',
+  loop3 = 'readme.loop_3',
+  showInfoOn = 'readme.showInfoOn',
+  showInfoOff = 'readme.showInfoOff'
 }
 
 /**

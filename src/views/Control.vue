@@ -60,8 +60,12 @@ const initControl = () => {
       return t('voice.' + playSetting.nowPlay.name)
     } else if (playSetting.autoRandom) {
       return t(ACTION_I18N.autoRandomTip)
-    } else if (playSetting.loop) {
-      return t(ACTION_I18N.loopTip)
+    } else if (playSetting.loop === 1) {
+      return t(ACTION_I18N.loopTip1)
+    } else if (playSetting.loop === 2) {
+      return t(ACTION_I18N.loopTip2)
+    } else if (playSetting.loop === 3) {
+      return t(ACTION_I18N.loopTip3)
     } else {
       return t(ACTION_I18N.noplay)
     }
