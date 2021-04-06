@@ -1,6 +1,6 @@
 <template>
   <Collapse title="README">
-    <div class="text" v-if="text.length > 0" v-html="text"></div>
+    <div class="text" v-if="README.length > 0" v-html="README"></div>
     <div class="readme-icon">
       <div class="line" v-if="!playSetting.nowPlay">
         <ControlIcon type="randomPlay" />
@@ -36,6 +36,9 @@ import ControlIcon from './Control/ControlIcon.vue'
 import { inject, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { PlaySetting } from '@/assets/script/type'
+import Setting from '@/../setting/setting.json'
+
+const README = Setting['readme'] || ''
 
 export default {
   components: {
@@ -46,7 +49,6 @@ export default {
     const { t } = useI18n()
     const playSetting = inject('playSetting') as PlaySetting
 
-    const text = ref('')
     const overlap = computed(() => {
       return playSetting.overlap ? '现在可以同时播放多个按钮了' : '这个按钮可以开启重叠播放'
     })
@@ -72,6 +74,7 @@ export default {
     })
 
     return {
+      README,
       t,
       playSetting,
       overlap,
