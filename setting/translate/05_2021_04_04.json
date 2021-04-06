@@ -1,0 +1,77 @@
+[
+  {
+    "name": "我好困啊",
+    "path": "我好困啊.mp3",
+    "date": "2021-04-06",
+    "translate": {
+      "zh-CN": "我好困啊",
+      "en-US": "I am so sleepy"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "3:10~3:14",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "太可爱了",
+    "path": "太可爱了.mp3",
+    "date": "2021-04-06",
+    "translate": {
+      "zh-CN": "太可爱了",
+      "en-US": "It's so cute"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "6:12~6:15",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "呀咩嗲2",
+    "path": "呀咩嗲2.mp3",
+    "date": "2021-04-06",
+    "translate": {
+      "zh-CN": "呀咩嗲",
+      "en-US": "yamiedie"
+    },
+    "category": "软猫",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "15:58~15:59",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "无路赛2",
+    "path": "无路赛2.mp3",
+    "date": "2021-04-06",
+    "translate": {
+      "zh-CN": "无路赛",
+      "en-US": "Urusai"
+    },
+    "category": "软猫",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "15:59~16:00",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "NB啊",
+    "path": "NB啊.mp3",
+    "date": "2021-04-06",
+    "translate": {
+      "zh-CN": "NB啊",
+      "en-US": "Niubility"
+    },
+    "category": "混沌",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "26:29~26:30",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  }
+]
