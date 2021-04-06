@@ -2,7 +2,7 @@ import Setting from '@/../setting/setting.json'
 import { gtag } from '@/assets/script/analytics/gtag'
 import mitt from '@/assets/script/mitt'
 import { EVENT, INFO_I18N, Mark, Player, PlayerList, PlaySetting, SearchData, Translate, Voices, VoicesCategory, VoicesItem, VoicesOrigin } from '@/assets/script/type'
-import { getCategory, getrRandomInt } from '@/assets/script/utils'
+import { getCategory, getRandomInt } from '@/assets/script/utils'
 import { ComputedRef, inject, reactive, ref, Ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
@@ -103,7 +103,6 @@ const createPlayer = (btnList: { [name: string]: any }) => {
   /**
    * 播放语音
    * @param voice 语音对象
-   * @param category 所属分类的name
    */
   const play = (voice: VoicesItem) => {
     // GA的事件上报
@@ -223,7 +222,7 @@ const createPlayer = (btnList: { [name: string]: any }) => {
         })
       }
     })
-    play(list[getrRandomInt(list.length)])
+    play(list[getRandomInt(list.length)])
   }
 
   /**

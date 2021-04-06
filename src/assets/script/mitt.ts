@@ -1,5 +1,5 @@
-import mitt, { Emitter } from 'mitt'
+import mitter, { Emitter } from 'mitt'
 
-const mitter: Emitter = mitt()
+const mitt: Emitter = mitter()
 
-export default mitter
+export default mitt

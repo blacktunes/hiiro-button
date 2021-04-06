@@ -46,7 +46,7 @@ import { ACTION_I18N, PlaySetting, Mark, EVENT } from '@/assets/script/type'
 import mitt from '@/assets/script/mitt'
 import Loading from '@/components/common/Loading.vue'
 import Error from '@/components/common/Error.vue'
-import ControlIcon from '@/components/ControlIcon.vue'
+import ControlIcon from '@/components/Control/ControlIcon.vue'
 
 const initControl = () => {
   const { t } = useI18n()

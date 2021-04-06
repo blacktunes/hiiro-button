@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper" :class="{ lowlight, highlight, disable }">
     <NewIcon class="new-icon" v-if="newIcon" />
-    <img class="pic" v-if="showPic" :src="showPic" />
+    <img class="pic" v-if="showPic" :src="showPic" alt="" />
     <div class="left" />
     <div class="right" />
     <a class="btn" :href="url" target="_blank">
@@ -192,7 +192,6 @@ export default {
       border-width 0 6px 8px 6px
       border-color transparent transparent $main-color transparent
       pointer-events none
-      position absolute
       left -6px
       top -1px
       opacity 0
@@ -213,9 +212,10 @@ export default {
     border-radius 18px
     color $btn-text-color
     background $main-color
-    box-shadow 0px 1px 2px 0px $main-color
+    box-shadow 0 1px 2px 0 $main-color
     user-select none
     cursor pointer
+    transition all 0.2s
 
     .progress
       position absolute
@@ -288,7 +288,7 @@ export default {
     &:hover
       .pic
         opacity 1
-        box-shadow 0px 5px 10px 0px $main-color
+        box-shadow 0 5px 10px 0 $main-color
 
       .left
         border-color transparent transparent $hover-color transparent
@@ -298,7 +298,7 @@ export default {
 
       .btn
         background $hover-color
-        box-shadow 0px 2px 10px 0px $main-color
+        box-shadow 0 2px 10px 0 $main-color
 
 @media only screen and (max-width 600px)
   .wrapper

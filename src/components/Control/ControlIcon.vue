@@ -161,7 +161,6 @@
     >
       <svg
         viewBox="0 0 1024 1024"
-        version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -246,6 +245,7 @@ export default {
   border-radius 50%
   background $main-color
   cursor pointer
+  transition all 0.2s
 
   svg
     user-select none
@@ -255,7 +255,7 @@ export default {
     fill #fff
 
   &:hover
-    box-shadow 0px 0px 10px 0px $hover-color
+    box-shadow 0 0 10px 0 $hover-color
 
   &:active
     background $hover-color

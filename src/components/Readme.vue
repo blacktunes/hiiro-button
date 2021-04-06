@@ -31,9 +31,9 @@
 </template>
 
 <script lang="ts">
-import Collapse from './Collapse.vue'
-import ControlIcon from './ControlIcon.vue'
-import { inject, ref, computed } from 'vue'
+import Collapse from './common/Collapse.vue'
+import ControlIcon from './Control/ControlIcon.vue'
+import { inject, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { PlaySetting } from '@/assets/script/type'
 
@@ -47,7 +47,6 @@ export default {
     const playSetting = inject('playSetting') as PlaySetting
 
     const text = ref('')
-
     const overlap = computed(() => {
       return playSetting.overlap ? '现在可以同时播放多个按钮了' : '这个按钮可以开启重叠播放'
     })
@@ -75,7 +74,6 @@ export default {
     return {
       t,
       playSetting,
-      text,
       overlap,
       autoRandom,
       loop,
@@ -87,7 +85,9 @@ export default {
 
 <style lang="stylus" scoped>
 .text
-  margin 0px 5px 10px 5px
+  margin 0 5px 10px 5px
+  padding-bottom 10px
+  border-bottom 1px solid #eeeeee
 
 .readme-icon
   display flex

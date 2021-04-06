@@ -77,7 +77,7 @@ a
 
   &:hover
     background $hover-color
-    box-shadow 0px 1px 10px 0px $main-color
+    box-shadow 0 1px 10px 0 $main-color
 
     a
       animation shake 3s linear infinite

@@ -182,7 +182,7 @@ export interface Mark {
    */
   time?: string;
   url?: string;
-};
+}
 
 export interface Translate {
   'zh-CN'?: string;
