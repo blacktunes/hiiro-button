@@ -73,5 +73,50 @@
       "time": "26:29~26:30",
       "url": "https://www.bilibili.com/video/BV1BV411n7nr"
     }
+  },
+  {
+    "name": "甩葱歌",
+    "path": "甩葱歌.mp3",
+    "date": "2021-04-14",
+    "translate": {
+      "zh-CN": "甩葱歌",
+      "en-US": "Ievan Polkka"
+    },
+    "category": "唱歌",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "50:37~50:41",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "字母歌",
+    "path": "字母歌.mp3",
+    "date": "2021-04-14",
+    "translate": {
+      "zh-CN": "字母歌",
+      "en-US": "Alphabet song"
+    },
+    "category": "唱歌",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "51:52~52:11",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "奇怪的笑声",
+    "path": "奇怪的笑声.mp3",
+    "date": "2021-04-14",
+    "translate": {
+      "zh-CN": "奇怪的笑声",
+      "en-US": "Strange laugh"
+    },
+    "category": "混沌",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "55:03~55:04",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
   }
 ]
