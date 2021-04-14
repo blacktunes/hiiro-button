@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "title": "语音名"
+      },
+      "path": {
+        "type": "string",
+        "title": "文件名",
+        "pattern": "[^*|\\:\"<>?/]+\\.(mp3|wav)+"
+      },
+      "date": {
+        "type": "string",
+        "title": "更新时间",
+        "format": "date"
+      },
+      "translate": {
+        "type": "object",
+        "title": "翻译",
+        "properties": {
+          "zh-CN": {
+            "type": "string",
+            "title": "中文翻译"
+          },
+          "en-US": {
+            "type": "string",
+            "title": "英文翻译"
+          }
+        }
+      },
+      "category": {
+        "type": "string",
+        "title": "语音分类"
+      },
+      "mark": {
+        "type": "object",
+        "title": "语音来源",
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "来源标题"
+          },
+          "time": {
+            "type": "string",
+            "title": "所在时间",
+            "pattern": "^[0-9]+(\\:[0-6][0-9]){1,2}~[0-9]+(\\:[0-6][0-9]){1,2}$"
+          },
+          "url": {
+            "type": "string",
+            "title": "来源地址"
+          }
+        }
+      }
+    },
+    "required": [
+      "name",
+      "path",
+      "date",
+      "translate",
+      "category",
+      "mark"
+    ]
+  }
+}

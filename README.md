@@ -21,6 +21,7 @@
 
 `locales.json`和`category.json`分别为UI界面翻译和分类信息，请不要修改文件名，语音信息可以使用除此外的任意名称，可使用多个`json`文件方便管理语音
 
+可使用`schema`文件夹中的**json**文件增加`json schema`约束和代码提醒
 
 `category.json`结构示例如下：
 ```
@@ -83,12 +84,7 @@
 若想使用网站模板开发新的语音按钮，可以选择以下两种方式:
 - 修改`public`和`setting`目录下的文件以及`package.json`
   - 若使用该项目为模板进行开发，请务必修改或删除`setting/setting.json`里用于访问统计的**GA_ID**
-- 使用[voices-button-cli](https://github.com/blacktunes/voices-button-cli)命令行工具(开发中)
-
-### 计划中功能
-- ~~表情包搜索~~
-- ~~直播通知~~
-- ~~动态展示~~
+- 使用[voices-button-cli](https://github.com/blacktunes/voices-button-cli)命令行工具(开发中，代码不一定会及时更新)
 
 ### LICENSE
 若使用了本项目为**范本**开发项目或使用了项目代码请在**明显位置**声明**原作者**(https://github.com/blacktunes) 以及**本仓库**(https://github.com/blacktunes/hiiro-button).
