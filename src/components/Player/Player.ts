@@ -96,7 +96,6 @@ const createPlayer = (btnList: { [name: string]: any }) => {
     playSetting.nowPlay = null
     playSetting.error = false
     infoDate.value = null
-    navigator.mediaSession.playbackState = 'none'
   }
 
   const playerList: PlayerList = new Map()
@@ -169,7 +168,6 @@ const createPlayer = (btnList: { [name: string]: any }) => {
       } else {
         playSetting.loading = false
         playSetting.error = true
-        navigator.mediaSession.playbackState = 'none'
       }
     }
     playerList.get(key)!.audio.oncanplay = () => {
@@ -323,6 +321,9 @@ const createPlayer = (btnList: { [name: string]: any }) => {
     }
     playerList.clear()
     reset()
+    if ('mediaSession' in navigator) {
+      navigator.mediaSession.playbackState = 'none'
+    }
   })
 
   /**
