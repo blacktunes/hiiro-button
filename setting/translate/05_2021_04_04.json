@@ -118,5 +118,425 @@
       "time": "55:03~55:04",
       "url": "https://www.bilibili.com/video/BV1BV411n7nr"
     }
+  },
+  {
+    "name": "popopo",
+    "path": "popopo.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "popopo",
+      "en-US": "popopo"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:01:59~1:01:59",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "卡哇伊3",
+    "path": "卡哇伊3.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "卡哇伊",
+      "en-US": "kawaii"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:03:48~1:03:50",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "别哭啊小孩子",
+    "path": "别哭啊小孩子.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "别哭啊小孩子",
+      "en-US": "Don't cry, kid"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:04:04~1:04:07",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "yoshiyoshi",
+    "path": "yoshiyoshi.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "yoshiyoshi",
+      "en-US": "yoshiyoshi"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:04:08~1:04:13",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "诡异的笑声",
+    "path": "诡异的笑声.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "诡异的笑声",
+      "en-US": "Spooky laughter"
+    },
+    "category": "混沌",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:05:13~1:05:19",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "别PS啊",
+    "path": "别PS啊.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "别PS啊",
+      "en-US": "Don't PS"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:06:13~1:06:14",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "Old MacDonald",
+    "path": "Old MacDonald.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "Old MacDonald",
+      "en-US": "Old MacDonald"
+    },
+    "category": "唱歌",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:16:49~1:16:59",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "狗呢狗呢狗呢",
+    "path": "狗呢狗呢狗呢.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "狗呢狗呢狗呢",
+      "en-US": "Where is the dog"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:19:23~1:19:25",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "宝宝巴士",
+    "path": "宝宝巴士.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "宝宝巴士",
+      "en-US": "宝宝巴士"
+    },
+    "category": "唱歌",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:20:43~1:21:14",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "啊~~~",
+    "path": "啊~~~.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "啊~~~",
+      "en-US": "ah~~~"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:28:22~1:28:23",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "明白了明白了",
+    "path": "明白了明白了.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "明白了明白了",
+      "en-US": "I see, I see"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:28:24~1:28:25",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "long time no see",
+    "path": "long time no see.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "long time no see",
+      "en-US": "long time no see"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:29:12~1:29:13",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "明白明白明白",
+    "path": "明白明白明白.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "明白明白明白",
+      "en-US": "Understand × 3"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:37:53~1:37:54",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "笑8",
+    "path": "笑8.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "笑",
+      "en-US": "laugh"
+    },
+    "category": "混沌",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:38:38~1:38:39",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "一起结婚一起击剑",
+    "path": "一起结婚一起击剑.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "一起结婚一起击剑",
+      "en-US": "Married together"
+    },
+    "category": "混沌",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:42:59~1:43:03",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "大的大",
+    "path": "大的大.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "大的大",
+      "en-US": "da de da"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:46:05~1:46:09",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "henshin",
+    "path": "henshin.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "henshin",
+      "en-US": "henshin"
+    },
+    "category": "混沌",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:48:09~1:48:10",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "我没有眼睛了",
+    "path": "我没有眼睛了.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "我没有眼睛了",
+      "en-US": "I can't see"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:56:11~1:56:12",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "土土土土土",
+    "path": "土土土土土.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "土土土土土",
+      "en-US": "tututututu"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "1:58:18~1:58:20",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "没有头发了",
+    "path": "没有头发了.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "没有头发了",
+      "en-US": "No more hair"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "2:04:27~2:04:28",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "我要打你们的屁股啊",
+    "path": "我要打你们的屁股啊.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "我要打你们的屁股啊",
+      "en-US": "I'll spank your asses"
+    },
+    "category": "说教",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "2:05:39~2:05:40",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "我要睡觉",
+    "path": "我要睡觉.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "我要睡觉",
+      "en-US": "I want to sleep"
+    },
+    "category": "糟糕",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "2:06:17~2:06:38",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "我死了",
+    "path": "我死了.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "我死了",
+      "en-US": "I'm dead"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "2:08:31~2:08:32",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "你亲亲我",
+    "path": "你亲亲我.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "你亲亲我",
+      "en-US": "You kiss me"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "2:09:32~2:09:33",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "笑9",
+    "path": "笑9.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "笑",
+      "en-US": "laugh"
+    },
+    "category": "混沌",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "2:09:43~2:09:44",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "快去睡觉",
+    "path": "快去睡觉.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "快去睡觉",
+      "en-US": "Go to sleep"
+    },
+    "category": "说教",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "2:11:11~2:11:12",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "快点",
+    "path": "快点.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "快点",
+      "en-US": "Hurry up"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "2:11:24~2:11:24",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
+  },
+  {
+    "name": "走了走了走了",
+    "path": "走了走了走了.mp3",
+    "date": "2021-04-23",
+    "translate": {
+      "zh-CN": "走了走了走了",
+      "en-US": "I'm off"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】4.04 Sun. 学中文 & 听中文儿歌！",
+      "time": "2:11:26~2:11:27",
+      "url": "https://www.bilibili.com/video/BV1BV411n7nr"
+    }
   }
 ]
