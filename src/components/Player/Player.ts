@@ -5,12 +5,15 @@ import { EVENT, INFO_I18N, Mark, Player, PlayerList, PlaySetting, SearchData, Tr
 import { getCategory, getRandomInt } from '@/assets/script/utils'
 import { ComputedRef, inject, reactive, ref, Ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
 
 const MEDIA = Setting['mediaSession']
 const CDN = Setting['CDN']
 const GA_ID = Setting['GA_ID']
 
 const useSearch = (btnList: { [name: string]: any }) => {
+  const router = useRouter()
+
   const searchData: SearchData = inject('searchData') as SearchData
   // 需要高亮显示的name
   const highlight = ref('')
@@ -29,10 +32,19 @@ const useSearch = (btnList: { [name: string]: any }) => {
   })
   // 搜索栏文字改变时清除高亮
   watch(() => searchData.value, (newVal, oldVal) => {
+    if (oldVal && 'k' in router.currentRoute.value.query) {
+      router.push({
+        query: {}
+      })
+    }
+
     if (newVal !== oldVal) {
       searchData.index = 0
     }
-    highlight.value = ''
+
+    if (highlight.value) {
+      highlight.value = ''
+    }
   })
 
   // 滚动到高亮的DOM
