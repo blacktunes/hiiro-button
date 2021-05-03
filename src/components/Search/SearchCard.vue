@@ -26,7 +26,7 @@ export default {
 
 <style lang="stylus" scoped>
 .search-wrapper
-  z-index 1
+  z-index 10
   overflow hidden
   position sticky
   top 58px
