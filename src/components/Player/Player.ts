@@ -30,18 +30,19 @@ const useSearch = (btnList: { [name: string]: any }) => {
       btnList[i].highlight = i === highlight.value
     }
   })
-  // 搜索栏文字改变时清除高亮
+
   watch(() => searchData.value, (newVal, oldVal) => {
+    // 搜索栏文字改变时清除路由参数
     if (oldVal && 'k' in router.currentRoute.value.query) {
       router.push({
         query: {}
       })
     }
 
+    // 搜索栏文字改变时清除高亮
     if (newVal !== oldVal) {
       searchData.index = 0
     }
-
     if (highlight.value) {
       highlight.value = ''
     }
