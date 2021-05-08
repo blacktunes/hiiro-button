@@ -62,7 +62,7 @@ export default {
       t,
       author: FOOTER && FOOTER.author ? FOOTER.author : [],
       info: FOOTER && FOOTER.info ? FOOTER.info : [],
-      githubUrl: FOOTER && FOOTER.githubUrl ? FOOTER.githubUrl : null
+      githubUrl: FOOTER && FOOTER.githubUrl ? FOOTER.githubUrl : undefined
     }
   }
 }

@@ -58,14 +58,14 @@ export default {
     })
 
     const loop = computed(() => {
-      if (playSetting.loop === 0) {
-        return t(README_I18N.loop0)
-      } else if (playSetting.loop === 1) {
+      if (playSetting.loop === 1) {
         return t(README_I18N.loop1)
       } else if (playSetting.loop === 2) {
         return t(README_I18N.loop2)
       } else if (playSetting.loop === 3) {
         return t(README_I18N.loop3)
+      } else {
+        return t(README_I18N.loop0)
       }
     })
 
