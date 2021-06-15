@@ -1,5 +1,8 @@
 <template>
-  <div class="wrapper" :class="{ lowlight, highlight, disable }">
+  <div
+    class="wrapper"
+    :class="{ lowlight, highlight: highlight || playing, disable, playing }"
+  >
     <NewIcon class="new-icon" v-if="newIcon" />
     <img class="pic" v-if="showPic" :src="showPic" alt="" />
     <div class="left" />
@@ -15,7 +18,7 @@
 import { Ref, ref, watch } from 'vue'
 import NewIcon from './NewIcon.vue'
 
-const watchProgress = (progressRef) => {
+const watchProgress = (progressRef: Ref<HTMLElement>) => {
   const progress = ref(0)
   const playing = ref(false)
 
