@@ -156,6 +156,8 @@ export default {
     position absolute
     top -12px
     right -15px
+    opacity 1
+    transition opacity 0.25s
 
   .pic
     position absolute
@@ -289,6 +291,9 @@ export default {
       transition opacity 0.5s
 
     &:hover
+      .new-icon
+        opacity 0
+
       .pic
         opacity 1
         box-shadow 0 5px 10px 0 $main-color
