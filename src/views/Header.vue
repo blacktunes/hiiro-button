@@ -59,6 +59,9 @@ import Search from '@/components/Search/Search.vue'
 import Setting from '@/../setting/setting.json'
 import { useRouter } from 'vue-router'
 import mitt from '@/assets/script/mitt'
+import youtubePng from '@/assets/image/youtube-fill.png'
+import twitterPng from '@/assets/image/twitter-fill.png'
+import bilibiliPng from '@/assets/image/bilibili-fill.png'
 
 const HEADER: {
   icon?: string;
@@ -91,15 +94,15 @@ export default {
     const btnList = [
       {
         url: HEADER.youtube,
-        img: require('../assets/image/youtube-fill.png')
+        img: youtubePng
       },
       {
         url: HEADER.twitter,
-        img: require('../assets/image/twitter-fill.png')
+        img: twitterPng
       },
       {
         url: HEADER.bilibili,
-        img: require('../assets/image/bilibili-fill.png')
+        img: bilibiliPng
       }
     ]
 

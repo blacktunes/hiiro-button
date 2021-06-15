@@ -131,7 +131,13 @@ export interface SearchData {
   index: number;
 }
 
-export type Voices = VoicesOrigin[] | VoicesCategory[];
+export type Voices<K extends keyof VoicesType = 'a'> = VoicesType[K]
+
+interface VoicesType {
+  a: VoicesOrigin[] & VoicesCategory[];
+  o: VoicesOrigin[];
+  c: VoicesCategory[];
+}
 
 /**
  * 来源分类

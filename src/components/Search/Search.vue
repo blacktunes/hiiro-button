@@ -20,7 +20,7 @@
     </div>
     <div
       class="clear"
-      :style="{ 'border-radius': searchData.value ? '' : '0 10px 10px 0' }"
+      :style="{ borderRadius: searchData.value ? '' : '0 10px 10px 0' }"
     >
       <svg
         @click="clear"

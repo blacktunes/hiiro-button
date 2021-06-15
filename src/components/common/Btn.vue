@@ -48,7 +48,7 @@ a
   cursor no-drop !important
   a
     pointer-events none
-    color #eee !important
+    color #666 !important
 
   &:hover
     box-shadow none !important

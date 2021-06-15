@@ -70,7 +70,7 @@ const useSearch = (btnList: { [name: string]: any }) => {
 const getBtnList = () => {
   // 所有按钮的引用
   const btnList: { [name: string]: any } = reactive({})
-  const setBtnList = (name: string, el) => {
+  const setBtnList = (name: string, el: any) => {
     btnList[name] = el
   }
 

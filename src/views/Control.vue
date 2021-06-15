@@ -13,8 +13,8 @@
         </transition>
         <div
           :style="{
-            'user-select': 'none',
-            'text-decoration': isError,
+            userSelect: 'none',
+            textDecoration: isError,
             cursor: playSetting.nowPlay ? 'pointer' : ''
           }"
           @click="toBtn()"
