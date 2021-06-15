@@ -1,18 +1,18 @@
 <template>
-  <div class="btn" :style="{ background: background }">
+  <div class="btn" :style="{ background }" :class="{ disabled }">
     <div
       class="left"
       :style="{
-        'border-color': `transparent transparent ${background} transparent`
+        borderColor: `transparent transparent ${background} transparent`
       }"
     />
     <div
       class="right"
       :style="{
-        'border-color': `transparent transparent ${background} transparent`
+        borderColor: `transparent transparent ${background} transparent`
       }"
     />
-    <a :href="url" target="_blank" :style="{ color: color }">{{ name }}</a>
+    <a :href="url" target="_blank" :style="{ color }">{{ name }}</a>
   </div>
 </template>
 
@@ -28,6 +28,10 @@ export default {
     background: {
       type: String,
       default: null
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -39,17 +43,35 @@ a
   color $btn-text-color
   padding 5px 15px
 
+.disabled
+  background #ccc !important
+  cursor no-drop !important
+  a
+    pointer-events none
+    color #eee !important
+
+  &:hover
+    box-shadow none !important
+    a
+      animation none !important
+
+  .left
+    border-color transparent transparent #ccc transparent !important
+
+  .right
+    border-color transparent transparent #ccc transparent !important
+
 .btn
   display flex
   align-items center
   position relative
   min-height 34px
+  margin 5px
   box-sizing border-box
   border-radius 18px
   background $main-color
   user-select none
   cursor pointer
-  transition box-shadow 0.25s
 
   ears(direction, deg)
     transform rotate(deg)
@@ -76,22 +98,13 @@ a
     ears('right', 32deg)
 
   &:hover
-    background $hover-color
-    box-shadow 0 1px 10px 0 $main-color
-
     a
       animation shake 3s linear infinite
 
 @media only screen and (max-width 600px)
   .btn:hover
-    background $main-color
-    box-shadow none
-
     a
       animation none
-
-  .btn:active
-    background $active-color
 
 @keyframes shake
   0%

@@ -18,6 +18,7 @@
             :name="t(INFO_I18N.vtbbtn)"
             url="https://vtbbtn.org/"
             background="rgb(100, 181, 246)"
+            disabled
           />
           <template v-for="item in friendlyLinkList" :key="item.name">
             <Btn
@@ -113,10 +114,6 @@ a
   .content
     display flex
     flex-wrap wrap
-
-    .btn
-      margin 5px
-      transition background 0.2s
 
 @media only screen and (max-width 600px)
   .index
