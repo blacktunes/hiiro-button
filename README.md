@@ -10,7 +10,8 @@
 
 - 您可以在[Issues](https://github.com/blacktunes/hiiro-button/issues)提出您的建议。
 
-  - 若是请求添加新语音，请使用指定的**issues 模板**，不熟悉 github 的用法也可以到[B 站](https://space.bilibili.com/1384118)和我联系
+  - 若是请求添加新语音，请使用指定的**issues模板**
+  - 不熟悉**github**的用法也可以到[Bilibili](https://space.bilibili.com/1384118)和我联系
 
 - 如果您可以进行开发，那么请**Fork**本项目进行修改，完成修改后在本项目中发起一个**Pull Request**，详细说明请查看以下条目
   > **Pull Request**请提交至**dev**分支
@@ -23,11 +24,11 @@
 
 `locales.json`和`category.json`分别为 UI 界面翻译和分类信息，请不要修改文件名，语音信息可以使用除此外的任意名称，可使用多个`json`文件方便管理语音
 
-可使用`schema`文件夹中的**json**文件增加`json schema`约束和代码提醒
+可使用`schema`文件夹中的`json`文件增加`json schema`约束和代码提醒
 
 `category.json`结构示例如下：
 
-```json
+```jsonc
 [
   {
     // 分类命名
@@ -46,7 +47,7 @@
 
 语音文件结构示例如下：
 
-```json
+```jsonc
 [
   {
     // 语音命名
@@ -81,16 +82,6 @@
 ]
 ```
 
-### 参与网页开发
-
-本项目使用`Vue3.0`进行开发，使用`yarn`进行包管理
-要部署本地开发环境，请先安装较新版的`Node`
-
-1. **Fork**并**Clone**代码到本地
-2. 进入代码目录，运行`yarn`以安装依赖项目
-3. 开启本地开发服务器，运行`yarn serve`，这将会在`localhost:8080`启动，在代码修改过程中，本地开发服务器可以即时反映修改的结果，并自动检查`json`中相关文件的使用情况
-4. 要编译可供部署的文件，请运行`yarn build`，这将会在`dist`目录下生成可以直接部署到静态网站托管(GitHub Pages 等)或服务器的文件
-
 ### 使用模板
 
 若想使用网站模板开发新的语音按钮，可以选择以下两种方式:
@@ -105,4 +96,5 @@
 
 ### LICENSE
 
-若使用了本项目为**范本**开发项目或使用了项目代码请在**明显位置**声明**原作者**(https://github.com/blacktunes) 以及**本仓库**(https://github.com/blacktunes/hiiro-button).
+- 项目使用**GPL-3.0**为基础开源协议
+- 若使用了本项目为**范本**开发项目或使用了项目代码请在**明显位置**声明**原作者**(https://github.com/blacktunes) 以及**本仓库**(https://github.com/blacktunes/hiiro-button).
