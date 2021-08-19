@@ -1,10 +1,11 @@
+/* eslint-disable */
 import Setting from '@/../setting/setting.json'
 
 const GA_ID = Setting['GA_ID']
 
-export function gtag(...arg: any[]) {
+export function gtag(..._arg: any[]) {
   if (window.dataLayer && window.dataLayer.push) {
-    window.dataLayer.push(arg)
+    window.dataLayer.push(arguments)
   }
 }
 
