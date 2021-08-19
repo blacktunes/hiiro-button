@@ -9,7 +9,6 @@ import { Router, useRouter } from 'vue-router'
 
 const MEDIA = Setting['mediaSession']
 const CDN = Setting['CDN']
-const GA_ID = Setting['GA_ID']
 
 const useSearch = (btnList: { [name: string]: any }) => {
   const router = useRouter()
@@ -151,16 +150,13 @@ const createPlayer = (btnList: { [name: string]: any }) => {
    * @param voice 语音对象
    */
   const play = (voice: VoicesItem) => {
-    // GA的事件上报
-    if (process.env.NODE_ENV === 'production' && GA_ID) {
+    gtag('event', '播放语音', {
       /* eslint-disable @typescript-eslint/camelcase */
-      gtag('event', '播放语音', {
-        event_category: voice.name,
-        event_label: voice.category,
-        value: 1
-      })
+      event_category: voice.name,
+      event_label: voice.category,
       /* eslint-enable */
-    }
+      value: 1
+    })
     if (!playSetting.overlap) {
       if (playerList.has('once')) (playerList.get('once') as Player).audio.pause()
       if (playSetting.nowPlay && playSetting.nowPlay.name === voice.name) {

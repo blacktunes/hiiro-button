@@ -3,13 +3,17 @@ import Setting from '@/../setting/setting.json'
 
 const GA_ID = Setting['GA_ID']
 
+const useAnalytics = process.env.NODE_ENV === 'production' && GA_ID
+
 export function gtag(..._arg: any[]) {
-  if (window.dataLayer && window.dataLayer.push) {
-    window.dataLayer.push(arguments)
+  if (useAnalytics) {
+    try {
+      window.dataLayer.push(arguments)
+    } catch (err) { }
   }
 }
 
-if (process.env.NODE_ENV === 'production' && GA_ID) {
+if (useAnalytics) {
   const script = document.createElement('script')
   script.async = true
   script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`

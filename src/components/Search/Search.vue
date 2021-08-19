@@ -79,6 +79,7 @@ import { useI18n } from 'vue-i18n'
 import { EVENT, SearchData, VoicesItem, PlaySetting } from '@/assets/script/type'
 import mitt from '@/assets/script/mitt'
 import { getCategory } from '@/assets/script/utils'
+import { gtag } from '@/assets/script/analytics'
 
 const initSearch = () => {
   const { t, te, locale } = useI18n()
@@ -106,6 +107,14 @@ const initSearch = () => {
   const search = (voiceName?: string) => {
     searchData.list.length = 0
     if (!voiceName && searchData.value.length < 1) return
+
+    if (searchData.value) {
+      gtag('event', 'page_view', {
+        /* eslint-disable-next-line @typescript-eslint/camelcase */
+        page_path: '/?search=' + searchData.value
+      })
+    }
+
     for (const voice of voiceList.value) {
       const name: string = voice.translate[locale.value]
 
