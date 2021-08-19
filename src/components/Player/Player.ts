@@ -1,11 +1,11 @@
 import Setting from '@/../setting/setting.json'
 import { gtag } from '@/assets/script/analytics/gtag'
 import mitt from '@/assets/script/mitt'
-import { EVENT, INFO_I18N, Mark, Player, PlayerList, PlaySetting, SearchData, Translate, Voices, VoicesCategory, VoicesItem, VoicesOrigin } from '@/assets/script/type'
+import { EVENT, INFO_I18N, Mark, Player, PlayerList, PlaySetting, QUERY, SearchData, Translate, Voices, VoicesCategory, VoicesItem, VoicesOrigin } from '@/assets/script/type'
 import { getCategory, getRandomInt } from '@/assets/script/utils'
-import { ComputedRef, inject, reactive, ref, Ref, watch } from 'vue'
+import { ComputedRef, inject, nextTick, onMounted, reactive, ref, Ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useRouter } from 'vue-router'
+import { Router, useRouter } from 'vue-router'
 
 const MEDIA = Setting['mediaSession']
 const CDN = Setting['CDN']
@@ -33,7 +33,7 @@ const useSearch = (btnList: { [name: string]: any }) => {
 
   watch(() => searchData.value, (newVal, oldVal) => {
     // 搜索栏文字改变时清除路由参数
-    if (oldVal && 'k' in router.currentRoute.value.query) {
+    if (oldVal && (QUERY.search in router.currentRoute.value.query || QUERY.name in router.currentRoute.value.query)) {
       router.push({
         query: {}
       })
@@ -64,7 +64,40 @@ const useSearch = (btnList: { [name: string]: any }) => {
     }
   })
 
+  initRouter(searchData, router)
+
   return { searchData, highlight }
+}
+
+const initRouter = (searchData: SearchData, router: Router) => {
+  onMounted(() => {
+    const scrollToBtn = () => {
+      nextTick(() => {
+        setTimeout(() => {
+          if (searchData.list.length > 0) {
+            mitt.emit(EVENT.autoScroll)
+          }
+        }, 500)
+      })
+    }
+
+    const isShowSearch = inject('isShowSearch') as Ref<boolean>
+
+    router.isReady()
+      .then(() => {
+        if (router.currentRoute.value.query[QUERY.name]) {
+          isShowSearch.value = true
+          searchData.value = router.currentRoute.value.query[QUERY.name] as string
+          mitt.emit(EVENT.search, router.currentRoute.value.query[QUERY.name])
+          scrollToBtn()
+        } else if (router.currentRoute.value.query[QUERY.search]) {
+          isShowSearch.value = true
+          searchData.value = router.currentRoute.value.query[QUERY.search] as string
+          mitt.emit(EVENT.search)
+          scrollToBtn()
+        }
+      })
+  })
 }
 
 const getBtnList = () => {

@@ -1,13 +1,15 @@
 <template>
   <card class="search-wrapper" :class="{ 'show-search': isShowSearch }">
-    <Search class="search" />
+    <Search class="search" ref="search" />
   </card>
 </template>
 
 <script lang="ts">
-import { inject, Ref } from 'vue'
+import { inject, ref, Ref } from 'vue'
 import Search from './Search.vue'
 import Card from '@/components/common/Card.vue'
+import mitt from '@/assets/script/mitt'
+import { EVENT } from '@/assets/script/type'
 
 export default {
   components: {
@@ -17,8 +19,15 @@ export default {
   setup() {
     const isShowSearch = inject('isShowSearch') as Ref<boolean>
 
+    const search = ref()
+
+    mitt.on(EVENT.search, (name?: string) => {
+      search.value.search(name)
+    })
+
     return {
-      isShowSearch
+      isShowSearch,
+      search
     }
   }
 }

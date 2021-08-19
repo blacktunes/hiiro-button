@@ -1,4 +1,12 @@
 /**
+ * 路由参数
+ */
+export enum QUERY {
+  search = 'search',
+  name = 'name'
+}
+
+/**
  * mitt事件
  */
 export enum EVENT {
@@ -17,7 +25,8 @@ export enum EVENT {
   /**
    * 控制栏正在播放点击
    */
-  nameClick = 'nameClick'
+  nameClick = 'nameClick',
+  search = 'search'
 }
 
 /**

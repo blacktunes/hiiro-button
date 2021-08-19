@@ -31,7 +31,7 @@
           />
         </svg>
       </div>
-      <Search class="search" ref="search" />
+      <Search class="search" />
       <div class="btn" :title="t(INFO_I18N.lang)" @click="changeLang">
         <svg
           viewBox="0 0 1024 1024"
@@ -52,14 +52,12 @@
 </template>
 
 <script lang="ts">
-import { ref, inject, onMounted, Ref, computed, nextTick } from 'vue'
+import { ref, inject, onMounted, Ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { INFO_I18N, PlaySetting, SearchData, EVENT } from '@/assets/script/type'
+import { INFO_I18N, PlaySetting, SearchData } from '@/assets/script/type'
 import IBtn from '@/components/common/IconBtn.vue'
 import Search from '@/components/Search/Search.vue'
 import Setting from '@/../setting/setting.json'
-import { useRouter } from 'vue-router'
-import mitt from '@/assets/script/mitt'
 import youtubePng from '@/assets/image/youtube-fill.png'
 import twitterPng from '@/assets/image/twitter-fill.png'
 import bilibiliPng from '@/assets/image/bilibili-fill.png'
@@ -159,28 +157,11 @@ export default {
       return Number(t(INFO_I18N.hideVoiceTotal)) > Number(t(INFO_I18N.voiceTotal))
     })
 
-    const search = ref()
-    const router = useRouter()
-
     // 初次加载时获取localStorage的语言设定
     onMounted(() => {
       const lang = localStorage.getItem('lang')
       if (lang) locale.value = lang
       document.title = t(INFO_I18N.title)
-
-      router.isReady()
-        .then(() => {
-          if (router.currentRoute.value.query['k']) {
-            isShowSearch.value = true
-            searchData.value = router.currentRoute.value.query['k'] as string
-            (search.value as any).search()
-            nextTick(() => {
-              if (searchData.list.length > 0) {
-                mitt.emit(EVENT.autoScroll)
-              }
-            })
-          }
-        })
     })
 
     return {
@@ -194,7 +175,6 @@ export default {
       changeHide,
       isShowPointer,
       playSetting,
-      search,
       INFO_I18N
     }
   }
