@@ -1,11 +1,11 @@
 <template>
-  <template v-for="item in Player.voices.value" :key="item.name || item.title">
+  <template v-for="item in voices" :key="item.name || item.title">
     <transition-group name="fade">
-      <div v-if="Player.isShowCategory(item)">
+      <div v-if="isShowCategory(item)">
         <Card>
           <template #header>
             <div class="category">
-              <template v-if="Player.playSetting.showInfo">
+              <template v-if="playSetting.showInfo">
                 <a :href="item.url" target="_blank">{{
                   item.title === "unknown" ? t("unknown") : item.title
                 }}</a>
@@ -17,19 +17,17 @@
           </template>
           <div class="content">
             <template v-for="voice in item.voiceList" :key="voice.name">
-              <transition-group name="fade">
-                <VBtn
-                  v-if="Player.isShowVoice(voice)"
-                  :url="Player.getUrl(voice.mark)"
-                  :title="Player.isShowTime(voice.mark)"
-                  :text="t(`voice.${voice.name}`)"
-                  :name="voice.name"
-                  :newIcon="Player.isShowNewIcon(voice.date)"
-                  :showPic="Player.getPicUrl(voice.usePicture)"
-                  :ref="el => setBtnList(voice.name, el)"
-                  @click.prevent="Player.play(voice)"
-                />
-              </transition-group>
+              <VBtn
+                v-if="isShowVoice(voice)"
+                :url="getUrl(voice.mark)"
+                :title="isShowTime(voice.mark)"
+                :text="t(`voice.${voice.name}`)"
+                :name="voice.name"
+                :newIcon="isShowNewIcon(voice.date)"
+                :showPic="getPicUrl(voice.usePicture)"
+                :ref="(el) => setBtnList(voice.name, el)"
+                @click.prevent="play(voice)"
+              />
             </template>
           </div>
         </Card>
@@ -61,7 +59,7 @@ export default {
       setBtnList,
       searchData,
       highlight,
-      Player
+      ...Player
     }
   }
 }
