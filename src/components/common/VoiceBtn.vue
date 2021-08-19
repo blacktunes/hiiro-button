@@ -1,7 +1,7 @@
 <template>
   <div
     class="wrapper"
-    :class="{ lowlight, highlight: highlight || playing, disable, playing }"
+    :class="{ lowlight, highlight: highlight || playing, disable }"
   >
     <NewIcon class="new-icon" v-if="newIcon" />
     <img class="pic" v-if="showPic" :src="showPic" alt="" />
@@ -89,6 +89,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '~@/assets/style/function.styl'
+
 .disable
   pointer-events none
 
@@ -96,9 +98,6 @@ export default {
   &:active
     .left, .right
       border-color transparent transparent $active-color transparent !important
-
-    .btn
-      background $active-color !important
 
   .left, .right
     border-color transparent transparent #ccc transparent !important
@@ -130,26 +129,14 @@ export default {
 .wrapper
   margin 5px
   position relative
+  transform translate3d(0, 0, 0)
+
+  &:hover
+    animation shake 1s ease-in
 
   &:active
-    .left, .right
-      transition none
-      border-color transparent transparent $active-color transparent !important
-
-      &:before
-        opacity 1
-        transition opacity 0.6s
-        transition-delay 0.2s
-
-    .btn
-      transition none
-      background $active-color !important
-
-      &:before
-        transform scale(2, 1)
-        opacity 1
-        transition transform 0.6s, opacity 0.2s
-        transition-delay 0.2s
+    animation none
+    transform scale(0.95)
 
   .new-icon
     z-index 2
@@ -169,37 +156,6 @@ export default {
     opacity 0
     transform translateX(-50%)
     pointer-events none
-
-  ears(direction, deg)
-    transform rotate(deg)
-    width 0
-    height 0
-    border-style solid
-    border-width 0 6px 8px 6px
-    border-color transparent transparent $main-color transparent
-    pointer-events none
-    position absolute
-
-    if (direction == 'left')
-      left 0
-
-    if (direction == 'right')
-      right 0
-
-    top -3px
-
-    &:before
-      content ''
-      position absolute
-      width 0
-      height 0
-      border-style solid
-      border-width 0 6px 8px 6px
-      border-color transparent transparent $main-color transparent
-      pointer-events none
-      left -6px
-      top -1px
-      opacity 0
 
   .left
     ears('left', -32deg)
@@ -224,59 +180,18 @@ export default {
 
     .progress
       position absolute
-      bottom 0
+      bottom 50%
       left 0
       width 0
-      min-height 34px
-      height 100%
+      height 60%
       background linear-gradient(to right, $sub-color 98%, transparent 100%)
+      transform translateY(50%)
 
     .text
       position relative
       line-height 20px
       padding 5px 15px
       word-break break-all
-
-    &:before
-      content ''
-      display block
-      position absolute
-      width 100%
-      height 100%
-      top 0
-      left 0
-      pointer-events none
-      background-image radial-gradient(circle, $main-color 99%, transparent 100%)
-      background-repeat no-repeat
-      background-position 50%
-      transform scale(0, 1)
-      opacity 0
-
-.playing
-  .text
-    animation shake 3s linear infinite
-
-@keyframes shake
-  0%
-    transform translateY(0px)
-
-  20%
-    transform translateY(0px)
-
-  25%
-    transform translateY(-4px)
-
-  30%
-    transform translateY(0px)
-
-  35%
-    transform translateY(-4px)
-
-  40%
-    transform translateY(0px)
-
-  100%
-    transform translateY(0px)
 
 @keyframes highlight-fade
   from
@@ -297,16 +212,6 @@ export default {
       .pic
         opacity 1
         box-shadow 0 5px 10px 0 $main-color
-
-      .left
-        border-color transparent transparent $hover-color transparent
-
-      .right
-        border-color transparent transparent $hover-color transparent
-
-      .btn
-        background $hover-color
-        box-shadow 0 2px 10px 0 $main-color
 
 @media only screen and (max-width 600px)
   .wrapper

@@ -1,0 +1,16 @@
+ears(direction, deg)
+  transform rotate(deg)
+  width 0
+  height 0
+  border-style solid
+  border-width 0 6px 8px 6px
+  border-color transparent transparent $main-color transparent
+  pointer-events none
+  position absolute
+  top -3px
+
+  if (direction == 'left')
+    left 0
+
+  if (direction == 'right')
+    right 0

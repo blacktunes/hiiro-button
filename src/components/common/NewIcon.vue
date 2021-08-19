@@ -9,6 +9,7 @@
 <style lang="stylus" scoped>
 .new-icon
   pointer-events none
+  user-select none
   display flex
   height 18px
   align-items center
