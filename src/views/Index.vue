@@ -1,5 +1,5 @@
 <template>
-  <transition name="fade" appear>
+  <transition name="first" appear>
     <div class="index">
       <Search />
       <Readme />
@@ -35,7 +35,7 @@
 </template>
 
 <script lang="ts">
-import { inject, ref, watch, Ref, computed } from 'vue'
+import { inject, ref, watch, Ref, computed, WritableComputedRef } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { FriendlyLink, INFO_I18N, PlaySetting } from '@/assets/script/type'
 import Search from '@/components/Search/SearchCard.vue'
@@ -48,22 +48,28 @@ import Setting from '@/../setting/setting.json'
 // 友链列表
 const LINK: FriendlyLink[] = Setting['link'] || []
 
+const setAnimation = (flag: boolean, voice: Ref<HTMLElement>) => {
+  if (!voice.value) return flag
+  if (flag) {
+    voice.value.style.animation = 'voice 0.3s linear'
+  } else {
+    voice.value.style.animation = 'voice-restart 0.3s linear'
+  }
+  return !flag
+}
+
 /**
  * 切换分类模式时触发一次渐入动画
  */
-const watchSettingChange = (playSetting: PlaySetting, voice: Ref<HTMLElement>) => {
+const watchSettingChange = (playSetting: PlaySetting, locale: WritableComputedRef<string>, voice: Ref<HTMLElement>) => {
   let isRestart = false
   watch(() => {
     return playSetting.showInfo
   }, () => {
-    if (!voice.value) return
-    if (isRestart) {
-      voice.value.style.animation = 'voice 0.5s'
-      isRestart = !isRestart
-    } else {
-      voice.value.style.animation = 'voice-restart 0.5s'
-      isRestart = !isRestart
-    }
+    isRestart = setAnimation(isRestart, voice)
+  })
+  watch(locale, () => {
+    isRestart = setAnimation(isRestart, voice)
   })
 }
 
@@ -76,11 +82,11 @@ export default {
     Btn
   },
   setup() {
-    const { t } = useI18n()
+    const { t, locale } = useI18n()
     const playSetting = inject('playSetting') as PlaySetting
 
     const voice = ref() as Ref<HTMLElement>
-    watchSettingChange(playSetting, voice)
+    watchSettingChange(playSetting, locale, voice)
 
     const total = computed(() => {
       const msg = t(INFO_I18N.voiceTotalTip) + ': '
