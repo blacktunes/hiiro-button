@@ -1,31 +1,67 @@
 <template>
   <transition name="slide-up" appear>
     <div class="control">
-      <div class="playing">
-        <transition name="fade">
-          <Loading
-            v-if="playSetting.nowPlay && playSetting.loading"
-            class="tip"
-          />
+      <div class="wrapper">
+        <transition name="slide-up-text">
+          <div class="playing" v-if="!showNext">
+            <div
+              class="text"
+              :style="{
+                textDecoration: isError,
+                cursor: playSetting.nowPlay ? 'pointer' : '',
+              }"
+              @click="toBtn()"
+            >
+              {{ text
+              }}{{
+                playSetting.showInfo && infoDate && infoDate.time
+                  ? `(${infoDate.time})`
+                  : ""
+              }}
+              <transition name="fade">
+                <Loading
+                  v-if="playSetting.nowPlay && playSetting.loading"
+                  class="tip"
+                />
+              </transition>
+              <transition name="fade-delay">
+                <Error
+                  v-if="playSetting.nowPlay && playSetting.error && !playSetting.overlap"
+                  class="tip"
+                />
+              </transition>
+            </div>
+          </div>
+          <div class="playing" v-else>
+            <div
+              class="text"
+              :style="{
+                textDecoration: isError,
+                cursor: playSetting.nowPlay ? 'pointer' : '',
+              }"
+              @click="toBtn()"
+            >
+              {{ next
+              }}{{
+                playSetting.showInfo && infoDate && infoDate.time
+                  ? `(${infoDate.time})`
+                  : ""
+              }}
+              <transition name="fade">
+                <Loading
+                  v-if="playSetting.nowPlay && playSetting.loading"
+                  class="tip"
+                />
+              </transition>
+              <transition name="fade-delay">
+                <Error
+                  v-if="playSetting.nowPlay && playSetting.error && !playSetting.overlap"
+                  class="tip"
+                />
+              </transition>
+            </div>
+          </div>
         </transition>
-        <transition name="fade-delay">
-          <Error v-if="playSetting.nowPlay && playSetting.error" class="tip" />
-        </transition>
-        <div
-          :style="{
-            userSelect: 'none',
-            textDecoration: isError,
-            cursor: playSetting.nowPlay ? 'pointer' : ''
-          }"
-          @click="toBtn()"
-        >
-          {{ title
-          }}{{
-            playSetting.showInfo && infoDate && infoDate.time
-              ? `(${infoDate.time})`
-              : ""
-          }}
-        </div>
       </div>
       <div class="btn-wrapper">
         <ControlIcon type="randomPlay" />
@@ -40,7 +76,7 @@
 </template>
 
 <script lang="ts">
-import { inject, computed, Ref } from 'vue'
+import { inject, computed, Ref, watch, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ACTION_I18N, PlaySetting, Mark, EVENT } from '@/assets/script/type'
 import mitt from '@/assets/script/mitt'
@@ -71,13 +107,29 @@ const initControl = () => {
     }
   })
 
+  const showNext = ref(false)
+  const text = ref(t(ACTION_I18N.noplay))
+  const next = ref('')
+
+  watch(title, val => {
+    if (showNext.value) {
+      text.value = val
+    } else {
+      next.value = val
+    }
+    showNext.value = !showNext.value
+  })
+
   const isError = computed(() => {
-    return playSetting.error ? 'line-through' : 'none'
+    return playSetting.error && !playSetting.overlap ? 'line-through' : 'none'
   })
 
   const infoDate = inject('infoDate') as Ref<Mark | null>
 
   return {
+    showNext,
+    text,
+    next,
     isError,
     title,
     playSetting,
@@ -93,26 +145,18 @@ export default {
   },
   setup() {
     const { t } = useI18n()
-    const {
-      isError,
-      title,
-      playSetting,
-      infoDate
-    } = initControl()
+    const Control = initControl()
 
     const toBtn = () => {
-      if (playSetting.nowPlay) {
-        mitt.emit(EVENT.nameClick, playSetting.nowPlay.name)
+      if (Control.playSetting.nowPlay) {
+        mitt.emit(EVENT.nameClick, Control.playSetting.nowPlay.name)
       }
     }
 
     return {
       ACTION_I18N,
       t,
-      isError,
-      title,
-      playSetting,
-      infoDate,
+      ...Control,
       toBtn
     }
   }
@@ -130,19 +174,32 @@ export default {
   bottom 0
   background rgba(255, 255, 255, 0.7)
 
-  .playing
+  .wrapper
     position relative
+    height 20px
+    width 80%
     margin 10px 0
-    max-width 80%
     line-height 21px
-    text-align center
-    color $title-color
 
-    .tip
+    .playing
       position absolute
-      left -23px
       top 0
+      margin auto
       height 100%
+      width 100%
+      text-align center
+      color $title-color
+
+      .text
+        display inline-block
+        position relative
+        userSelect none
+
+      .tip
+        position absolute
+        left -23px
+        top 0
+        height 100%
 
   .btn-wrapper
     display flex
