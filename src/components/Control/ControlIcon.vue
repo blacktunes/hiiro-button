@@ -256,7 +256,6 @@ export default {
 
   &:hover
     transform scale(1.1)
-    box-shadow 0 0 10px 0 $hover-color
 
   &:active
     transition none
