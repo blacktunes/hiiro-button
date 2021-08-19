@@ -1,5 +1,5 @@
 import Setting from '@/../setting/setting.json'
-import { gtag } from '@/assets/script/analytics/gtag'
+import { gtag } from '@/assets/script/analytics'
 import mitt from '@/assets/script/mitt'
 import { EVENT, INFO_I18N, Mark, Player, PlayerList, PlaySetting, QUERY, SearchData, Translate, Voices, VoicesCategory, VoicesItem, VoicesOrigin } from '@/assets/script/type'
 import { getCategory, getRandomInt } from '@/assets/script/utils'
