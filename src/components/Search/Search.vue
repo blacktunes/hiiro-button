@@ -1,53 +1,63 @@
 <template>
   <div class="search">
-    <input
-      type="text"
-      v-model="searchData.value"
-      @keyup.enter="btnClick"
-      @keydown.esc="clear"
-      @input="search"
-    />
-    <div class="total">
-      <transition name="slide-left">
-        <p v-if="searchData.list.length > 0">
-          {{
-            searchData.index > 0
-              ? `${searchData.index}/${searchData.list.length}`
-              : `${searchData.list.length}`
-          }}
-        </p>
-      </transition>
+    <div
+      class="search-info"
+      :style="{ width: searchData.value ? '170px' : '200px' }"
+    >
+      <input
+        type="text"
+        v-model="searchData.value"
+        @keyup.enter="btnClick"
+        @keydown.esc="clear"
+        @input="search()"
+      />
+      <div class="total">
+        <transition name="fade">
+          <p v-if="searchData.list.length > 0">
+            {{
+              searchData.index > 0
+                ? `${searchData.index}/${searchData.list.length}`
+                : `${searchData.list.length}`
+            }}
+          </p>
+        </transition>
+      </div>
+      <div
+        class="clear"
+        :style="{ borderRadius: searchData.value ? '' : '0 10px 10px 0' }"
+      >
+        <svg
+          @click="clear"
+          style="cursor: pointer"
+          v-if="searchData.value.length > 0"
+          viewBox="0 0 1024 1024"
+          xmlns="http://www.w3.org/2000/svg"
+          width="15"
+          height="30"
+        >
+          <path
+            d="M510.4 67.2c-246.6 0-446.5 199.9-446.5 446.5s199.9 446.5 446.5 446.5 446.5-199.9 446.5-446.5S757 67.2 510.4 67.2z m223.9 670.5c-24.1 24.1-63.5 24.1-87.6 0L510.4 601.4 374 737.7c-24.1 24.1-63.5 24.1-87.6 0-24.1-24.1-24.1-63.5 0-87.6l136.3-136.3-136.3-136.4c-24.1-24.1-24.1-63.5 0-87.6 24.1-24.1 63.5-24.1 87.6 0l136.3 136.3 136.3-136.3c24.1-24.1 63.5-24.1 87.6 0 24.1 24.1 24.1 63.5 0 87.6L598 513.7 734.3 650c24.1 24.1 24.1 63.6 0 87.7z"
+          />
+        </svg>
+        <svg
+          v-else
+          viewBox="0 0 1024 1024"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+        >
+          <path
+            d="M995.209792 859.621209c17.352203 17.350157 28.086685 41.318034 28.086685 67.807339 0 52.928466-42.916439 95.869465-95.869465 95.869465-26.463722 0-50.429553-10.734482-67.781756-28.086685l0 0L578.68426 714.24726c-57.097416 33.703613-123.432217 53.401234-194.509019 53.401234-211.783451 0-383.472741-171.688267-383.472741-383.472741S172.390767 0.703011 384.176264 0.703011s383.472741 171.687244 383.472741 383.471718c0 71.076802-19.696598 137.41058-53.402257 194.483436L995.209792 859.621209 995.209792 859.621209zM384.176264 96.54587c-158.831448 0-287.605324 128.772852-287.605324 287.62886 0 158.832472 128.772852 287.606347 287.605324 287.606347S671.781588 543.007201 671.781588 384.17473C671.779541 225.318722 543.008736 96.54587 384.176264 96.54587z"
+          />
+        </svg>
+      </div>
     </div>
     <div
-      class="clear"
-      :style="{ borderRadius: searchData.value ? '' : '0 10px 10px 0' }"
+      v-if="searchData.value"
+      class="next"
+      :style="{ width: searchData.value ? '30px' : '0' }"
+      @click="btnClick"
     >
-      <svg
-        @click="clear"
-        style="cursor: pointer"
-        v-if="searchData.value.length > 0"
-        viewBox="0 0 1024 1024"
-        xmlns="http://www.w3.org/2000/svg"
-        width="15"
-        height="30"
-      >
-        <path
-          d="M510.4 67.2c-246.6 0-446.5 199.9-446.5 446.5s199.9 446.5 446.5 446.5 446.5-199.9 446.5-446.5S757 67.2 510.4 67.2z m223.9 670.5c-24.1 24.1-63.5 24.1-87.6 0L510.4 601.4 374 737.7c-24.1 24.1-63.5 24.1-87.6 0-24.1-24.1-24.1-63.5 0-87.6l136.3-136.3-136.3-136.4c-24.1-24.1-24.1-63.5 0-87.6 24.1-24.1 63.5-24.1 87.6 0l136.3 136.3 136.3-136.3c24.1-24.1 63.5-24.1 87.6 0 24.1 24.1 24.1 63.5 0 87.6L598 513.7 734.3 650c24.1 24.1 24.1 63.6 0 87.7z"
-        />
-      </svg>
-      <svg
-        v-else
-        viewBox="0 0 1024 1024"
-        xmlns="http://www.w3.org/2000/svg"
-        width="30"
-        height="30"
-      >
-        <path
-          d="M995.209792 859.621209c17.352203 17.350157 28.086685 41.318034 28.086685 67.807339 0 52.928466-42.916439 95.869465-95.869465 95.869465-26.463722 0-50.429553-10.734482-67.781756-28.086685l0 0L578.68426 714.24726c-57.097416 33.703613-123.432217 53.401234-194.509019 53.401234-211.783451 0-383.472741-171.688267-383.472741-383.472741S172.390767 0.703011 384.176264 0.703011s383.472741 171.687244 383.472741 383.471718c0 71.076802-19.696598 137.41058-53.402257 194.483436L995.209792 859.621209 995.209792 859.621209zM384.176264 96.54587c-158.831448 0-287.605324 128.772852-287.605324 287.62886 0 158.832472 128.772852 287.606347 287.605324 287.606347S671.781588 543.007201 671.781588 384.17473C671.779541 225.318722 543.008736 96.54587 384.176264 96.54587z"
-        />
-      </svg>
-    </div>
-    <div v-if="searchData.value" class="next" @click="btnClick">
       <svg
         viewBox="0 0 1024 1024"
         xmlns="http://www.w3.org/2000/svg"
@@ -93,20 +103,28 @@ const initSearch = () => {
     searchData.list.length = 0
   }
 
-  const search = () => {
+  const search = (voiceName?: string) => {
     searchData.list.length = 0
-    if (searchData.value.length < 1) return
+    if (!voiceName && searchData.value.length < 1) return
     for (const voice of voiceList.value) {
       const name: string = voice.translate[locale.value]
-      const category = getCategory(voice.category)!
-      const flag = te(`voicecategory.${category['name']}`) && Boolean(t(`voicecategory.${category['name']}`))
-      if (playSetting.showHide) {
-        if (name && name.toUpperCase().includes(searchData.value.toUpperCase()) && flag && !category.hide) {
+
+      if (voiceName) {
+        if (voice.name === voiceName) {
           searchData.list.push(voice.name)
+          break
         }
       } else {
-        if (name && name.toUpperCase().includes(searchData.value.toUpperCase()) && flag && !category.hide && !voice.hide) {
-          searchData.list.push(voice.name)
+        const category = getCategory(voice.category)!
+        const flag = te(`voicecategory.${category['name']}`) && Boolean(t(`voicecategory.${category['name']}`))
+        if (playSetting.showHide) {
+          if (name && name.toUpperCase().includes(searchData.value.toUpperCase()) && flag && !category.hide) {
+            searchData.list.push(voice.name)
+          }
+        } else {
+          if (name && name.toUpperCase().includes(searchData.value.toUpperCase()) && flag && !category.hide && !voice.hide) {
+            searchData.list.push(voice.name)
+          }
         }
       }
     }
@@ -141,7 +159,7 @@ export default {
 .search
   display flex
   align-items center
-  justify-content center
+  justify-content space-between
   width 200px
   height 30px
   margin 0 10px
@@ -150,62 +168,69 @@ export default {
   color #888
   background rgba(0, 0, 0, 0) !important
 
-  input
-    flex 1
-    width 100%
+  .search-info
     height 100%
-    box-sizing border-box
-    border-radius 10px 0 0 10px
-    padding 0 2px 0 10px
-    border 1px solid #ddd
-    border-right none
-    color #888
-    opacity 1
-
-    &:focus
-      outline none
-
-  .total
     display flex
     align-items center
     justify-content center
-    box-sizing border-box
-    height 100%
-    font-size 12px
-    background #fff
-    border 1px solid #ddd
-    border-left none
-    border-right none
+    transition width 0.2s
 
-    p
-      margin auto
+    input
+      flex 1
+      width 100%
+      height 100%
+      box-sizing border-box
+      border-radius 10px 0 0 10px
+      padding 0 2px 0 10px
+      border 1px solid #ddd
+      border-right none
+      color #888
+      opacity 1
 
-  .clear
-    overflow hidden
-    display flex
-    align-items center
-    justify-content center
-    box-sizing border-box
-    width 24px
-    height 30px
-    background #fff
-    border 1px solid #ddd
-    border-left none
-    border-right none
+      &:focus
+        outline none
 
-    svg
-      width 15px
-      fill #ddd
+    .total
+      display flex
+      align-items center
+      justify-content center
+      box-sizing border-box
+      height 100%
+      font-size 12px
+      background #fff
+      border 1px solid #ddd
+      border-left none
+      border-right none
+
+      p
+        margin auto
+
+    .clear
+      overflow hidden
+      display flex
+      align-items center
+      justify-content center
+      box-sizing border-box
+      width 24px
+      height 30px
+      background #fff
+      border 1px solid #ddd
+      border-left none
+      border-right none
+
+      svg
+        width 15px
+        fill #ddd
 
   .next
     box-sizing border-box
     width 30px
     height 100%
     border-radius 0 10px 10px 0
-    border 1px solid #bbb
     border-left none
     cursor pointer
     background $hover-color
+    transition width 0.2s
 
     svg
       width 50%

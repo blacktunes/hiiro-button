@@ -1,10 +1,8 @@
 <template>
-  <div id="app">
-    <VHeader />
-    <router-view style="min-height: calc(100vh - 48px - 78px)" />
-    <Control />
-    <VFooter />
-  </div>
+  <VHeader />
+  <router-view style="min-height: calc(100vh - 48px - 78px)" />
+  <Control />
+  <VFooter />
 </template>
 
 <script lang="ts">
@@ -163,6 +161,7 @@ body
 @media (prefers-color-scheme dark)
   body
     background-color #555
+    transform translate3d(0, 0, 0)
 
 a
   color #888
