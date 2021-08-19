@@ -25,6 +25,9 @@ export default {
   background rgba(255, 255, 255, 0.5)
 
   img
+    transition all 0.2s
+
+  img
     height 80%
     padding 10%
 
@@ -39,6 +42,7 @@ export default {
     background rgba(255, 255, 255, 0.6)
 
     img
+      transition none
       height 80%
       padding 10%
 </style>
