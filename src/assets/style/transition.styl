@@ -1,67 +1,67 @@
+.first-enter-active, .first-leave-active
+  transition filter 0.5s linear
+
+.first-enter-from, .first-leave-to
+  filter blur(10px)
+
+.first-enter-to, .first-leave-from
+  filter blur(0)
+
 .fade-enter-active, .fade-leave-active
   transition opacity 0.3s
+
 .fade-enter-from, .fade-leave-to
   opacity 0
+
 .fade-enter-to, .fade-leave-from
   opacity 1
 
 .fade-delay-enter-active
   transition opacity 0.3s
-  transition-delay: 0.3s
+  transition-delay 0.3s
+
 .fade-delay-leave-active
   transition opacity 0.3s
+
 .fade-delay-enter-from, .fade-delay-leave-to
   opacity 0
+
 .fade-delay-enter-to, .fade-delay-leave-from
   opacity 1
 
 .slide-up-enter-active, .slide-up-leave-active
   transition all 0.5s
+
 .slide-up-enter-from, .slide-up-leave-to
   transform translateY(100%)
+
 .slide-up-enter-to, .slide-up-leave-from
   transform translateY(0)
 
 .slide-down-enter-active, .slide-down-leave-active
   transition all 0.5s
+
 .slide-down-enter-from, .slide-down-leave-to
   transform translateY(-100%)
+
 .slide-down-enter-to, .slide-down-leave-from
   transform translateY(0)
 
-.slide-left-enter-active, .slide-left-leave-active
+.slide-up-text-enter-active, .slide-up-text-leave-active
   transition all 0.5s
-.slide-left-enter-from, .slide-left-leave-to
-  transform translateX(100%)
+
+.slide-up-text-enter-from
+  transform translateY(100%)
   opacity 0
-.slide-left-enter-to, .slide-left-leave-from
-  transform translateX(0)
+
+.slide-up-text-enter-to
+  transform translateY(0)
   opacity 1
 
-@keyframes logo
-  0%
-    transform scale(1, 1)
-  40%
-    transform scale(1.2, 1.2)
-  100%
-    transform scale(1, 1)
+.slide-up-text-leave-from
+  transform translateY(0)
+  opacity 1
 
-@keyframes logo-restart
-  0%
-    transform scale(1, 1)
-  40%
-    transform scale(1.2, 1.2)
-  100%
-    transform scale(1, 1)
-
-@keyframes voice
-  0%
-    opacity 0
-  100%
-    opacity 1
-
-@keyframes voice-restart
-  0%
-    opacity 0
-  100%
-    opacity 1
+.slide-up-text-leave-to
+  transform translateY(-100%)
+  opacity 0
