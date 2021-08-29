@@ -58,7 +58,6 @@
 </template>
 
 <script lang="ts" setup>
-import { gtag } from '@/assets/script/analytics'
 import mitt from '@/assets/script/mitt'
 import { EVENT } from '@/assets/script/type'
 import { getCategory } from '@/assets/script/utils'
@@ -86,12 +85,6 @@ const clear = () => {
 const search = (voiceName?: string) => {
   searchData.list.length = 0
   if (!voiceName && searchData.value.length < 1) return
-
-  if (searchData.value) {
-    gtag('event', 'page_view', {
-      page_path: '/?search=' + searchData.value
-    })
-  }
 
   for (const voice of voiceList.value) {
     const name: string = voice.translate[locale.value]
