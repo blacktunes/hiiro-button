@@ -154,7 +154,7 @@ const isShowPointer = computed(() => {
 // 初次加载时获取localStorage的语言设定
 onMounted(() => {
   const lang = localStorage.getItem('lang')
-  if (lang) locale.value = lang
+  if (lang && ['zh-CN', 'en-US'].includes(lang)) locale.value = lang
   document.title = t(INFO_I18N.title)
 })
 </script>

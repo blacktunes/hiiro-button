@@ -13,7 +13,7 @@ const playSetting: PlaySetting = reactive({
   showHide: false
 })
 const info = localStorage.getItem('info')
-if (info) playSetting.showInfo = JSON.parse(info)
+if (info) playSetting.showInfo = info === 'true'
 
 /** 是否宽屏 */
 const isWideScreen = ref(window.innerWidth > 550)
