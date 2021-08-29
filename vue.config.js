@@ -1,6 +1,8 @@
 const path = require('path')
 const Check = require('./plugins/check')
 
+process.env.VUE_APP_LAST_UPDATE = Date.now()
+
 /**
  *  @typedef { import("@vue/cli-service").ProjectOptions } Options
  *  @type { Options }

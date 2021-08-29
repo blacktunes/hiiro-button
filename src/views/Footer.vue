@@ -13,6 +13,7 @@
           <template v-for="(item, index) in info" :key="index">
             <div v-html="item"></div>
           </template>
+          <img style="margin: 5px 5px 0px -2px" alt="GitHub Repo stars" :src="lastUpdate">
         </div>
       </div>
       <div class="text-right">
@@ -47,6 +48,8 @@ const { t } = useI18n()
 const author = FOOTER && FOOTER.author ? FOOTER.author : []
 const info = FOOTER && FOOTER.info ? FOOTER.info : []
 const githubUrl = FOOTER && FOOTER.githubUrl ? FOOTER.githubUrl : undefined
+
+const lastUpdate = `https://img.shields.io/date/${(process.env.VUE_APP_LAST_UPDATE.substring(0, process.env.VUE_APP_LAST_UPDATE.length - 3))}?label=last%20update&style=social`
 </script>
 
 <style lang="stylus" scoped>
