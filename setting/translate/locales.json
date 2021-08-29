@@ -34,6 +34,7 @@
     },
     "vtbbtn": "VTuber按钮集合",
     "voiceTotalTip": "当前语音量",
+    "playTimes": "累计播放次数",
     "lang": "Change to English",
     "unknown": "不太清楚出自哪"
   },
@@ -73,6 +74,7 @@
     },
     "vtbbtn": "VTuber Button Collection",
     "voiceTotalTip": "Current voice quantity",
+    "playTimes": "Play times",
     "lang": "切换至简体中文",
     "unknown": "Unknown"
   }

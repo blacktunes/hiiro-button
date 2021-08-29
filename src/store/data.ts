@@ -81,4 +81,10 @@ const searchData: SearchData = reactive({
   index: 0
 })
 
-export { infoDate, searchData, voices, voiceList }
+const playTimes = ref(0)
+const play = localStorage.getItem('play')
+if (play) playTimes.value = Number(play) || 0
+
+const playTimesNow = ref(0)
+
+export { infoDate, searchData, voices, voiceList, playTimes, playTimesNow }

@@ -3,7 +3,7 @@ import { gtag } from '@/assets/script/analytics'
 import mitt from '@/assets/script/mitt'
 import { EVENT, INFO_I18N, Mark, Player, PlayerList, QUERY, SearchData, Translate, Voices, VoicesCategory, VoicesItem, VoicesOrigin } from '@/assets/script/type'
 import { getCategory, getRandomInt } from '@/assets/script/utils'
-import { infoDate, searchData, voiceList, voices } from '@/store/data'
+import { infoDate, playTimes, playTimesNow, searchData, voiceList, voices } from '@/store/data'
 import { isShowSearch, playSetting } from '@/store/setting'
 import { nextTick, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -94,6 +94,12 @@ const initRouter = (searchData: SearchData, router: Router) => {
         }
       })
   })
+}
+
+const setPlayCount = () => {
+  ++playTimes.value
+  ++playTimesNow.value
+  localStorage.setItem('play', playTimes.value.toString())
 }
 
 const createPlayer = (btnList: { [name: string]: any }) => {
@@ -192,6 +198,8 @@ const createPlayer = (btnList: { [name: string]: any }) => {
       }
     }
     playerList.get(key)!.audio.oncanplay = () => {
+      setPlayCount()
+
       playSetting.loading = false
       const duration = playerList.get(key)!.audio.duration
       let currentTime = 0

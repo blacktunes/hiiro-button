@@ -10,6 +10,9 @@
         <div style="text-align: center">{{ total }}</div>
       </Card>
       <Card>
+        <div style="text-align: center">{{ playTimesText }}</div>
+      </Card>
+      <Card>
         <div class="content">
           <Btn
             class="btn"
@@ -40,6 +43,7 @@ import Card from '@/components/common/Card.vue'
 import Voice from '@/components/Player/Player.vue'
 import Readme from '@/components/Readme.vue'
 import Search from '@/components/Search/SearchCard.vue'
+import { playTimes, playTimesNow } from '@/store/data'
 import { playSetting } from '@/store/setting'
 import { computed, ref, Ref, watch, WritableComputedRef } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -85,6 +89,8 @@ const total = computed(() => {
     return `${msg}${t(INFO_I18N.voiceTotal)} ${t(INFO_I18N.lastDate) ? `(+${t(INFO_I18N.newVoice)} · ${t(INFO_I18N.lastDate)})` : ''}`
   }
 })
+
+const playTimesText = computed(() => `${t(INFO_I18N.playTimes)}: ${playTimes.value}${playTimesNow.value > 0 ? `(+${playTimesNow.value})` : ''}`)
 </script>
 
 <style lang="stylus" scoped>
