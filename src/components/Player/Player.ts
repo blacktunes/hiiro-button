@@ -1,9 +1,11 @@
 import Setting from '@/../setting/setting.json'
 import { gtag } from '@/assets/script/analytics'
 import mitt from '@/assets/script/mitt'
-import { EVENT, INFO_I18N, Mark, Player, PlayerList, PlaySetting, QUERY, SearchData, Translate, Voices, VoicesCategory, VoicesItem, VoicesOrigin } from '@/assets/script/type'
+import { EVENT, INFO_I18N, Mark, Player, PlayerList, QUERY, SearchData, Translate, Voices, VoicesCategory, VoicesItem, VoicesOrigin } from '@/assets/script/type'
 import { getCategory, getRandomInt } from '@/assets/script/utils'
-import { ComputedRef, inject, nextTick, onMounted, reactive, ref, Ref, watch } from 'vue'
+import { infoDate, searchData, voiceList, voices } from '@/store/data'
+import { isShowSearch, playSetting } from '@/store/setting'
+import { nextTick, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { Router, useRouter } from 'vue-router'
 
@@ -13,7 +15,6 @@ const CDN = Setting['CDN']
 const useSearch = (btnList: { [name: string]: any }) => {
   const router = useRouter()
 
-  const searchData: SearchData = inject('searchData') as SearchData
   // 需要高亮显示的name
   const highlight = ref('')
 
@@ -64,8 +65,6 @@ const useSearch = (btnList: { [name: string]: any }) => {
   })
 
   initRouter(searchData, router)
-
-  return { searchData, highlight }
 }
 
 const initRouter = (searchData: SearchData, router: Router) => {
@@ -79,8 +78,6 @@ const initRouter = (searchData: SearchData, router: Router) => {
         }, 500)
       })
     }
-
-    const isShowSearch = inject('isShowSearch') as Ref<boolean>
 
     router.isReady()
       .then(() => {
@@ -99,24 +96,8 @@ const initRouter = (searchData: SearchData, router: Router) => {
   })
 }
 
-const getBtnList = () => {
-  // 所有按钮的引用
-  const btnList: { [name: string]: any } = reactive({})
-  const setBtnList = (name: string, el: any) => {
-    btnList[name] = el
-  }
-
-  return { btnList, setBtnList }
-}
-
 const createPlayer = (btnList: { [name: string]: any }) => {
   const { t, te, locale } = useI18n()
-
-  const playSetting: PlaySetting = inject('playSetting') as PlaySetting
-
-  const voices = inject('voices') as ComputedRef<Voices>
-  const voiceList = inject('voiceList', ref([]) as Ref<VoicesItem[]>)
-  const infoDate = inject('infoDate') as Ref<Mark | null>
 
   if ('mediaSession' in navigator) {
     navigator.mediaSession.setActionHandler('nexttrack', () => {
@@ -151,10 +132,8 @@ const createPlayer = (btnList: { [name: string]: any }) => {
    */
   const play = (voice: VoicesItem) => {
     gtag('event', '播放语音', {
-      /* eslint-disable @typescript-eslint/camelcase */
       event_category: voice.name,
       event_label: voice.category,
-      /* eslint-enable */
       value: 1
     })
     if (!playSetting.overlap) {
@@ -275,24 +254,15 @@ const createPlayer = (btnList: { [name: string]: any }) => {
     } else if (playSetting.loop === 2) {
       let list: VoicesItem[] = []
       if (!playSetting.showInfo) {
-        list = (voices.value as VoicesCategory[]).find(voicesCategory => {
-          if (voicesCategory.name === voice.category) {
-            return voicesCategory.voiceList
-          }
-        })!.voiceList
+        const category = (voices.value as Voices<'c'>).find(voicesCategory => voicesCategory.name === voice.category && voicesCategory.voiceList)
+        list = category ? category.voiceList : []
       } else {
         if (voice.mark && voice.mark.title) {
-          list = (voices.value as VoicesOrigin[]).find(mark => {
-            if (mark.title === voice.mark!.title) {
-              return mark.voiceList
-            }
-          })!.voiceList
+          const origin = (voices.value as Voices<'o'>).find(mark => voice.mark && mark.title === voice.mark.title && mark.voiceList)
+          list = origin ? origin.voiceList : []
         } else {
-          list = (voices.value as VoicesOrigin[]).find(mark => {
-            if (mark.title === 'unknown') {
-              return mark.voiceList
-            }
-          })!.voiceList
+          const origin = (voices.value as Voices<'o'>).find(mark => mark.title === 'unknown' && mark.voiceList)
+          list = origin ? origin.voiceList : []
         }
       }
       const nextVoice = list[getLoopIndex(voice, list)]
@@ -466,7 +436,6 @@ const initListen = (btnList: { [name: string]: any }) => {
 
 export {
   useSearch,
-  getBtnList,
   createPlayer,
   initListen
 }

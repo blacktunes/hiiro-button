@@ -1,3 +1,4 @@
+import { CategoryItem } from './type'
 import { CategoryList } from './voices'
 
 /**
@@ -10,10 +11,4 @@ export const getRandomInt = (max: number): number => {
 /**
  * 获取指定的分类
  */
-export const getCategory = (name: string) => {
-  return CategoryList.find(item => {
-    if (item.name === name) {
-      return item
-    }
-  })
-}
+export const getCategory = (name: string) => CategoryList.find(item => item.name === name)

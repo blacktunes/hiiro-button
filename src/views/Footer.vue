@@ -6,12 +6,7 @@
           <div>©2020</div>
           <template v-for="(item, index) in author" :key="index">
             <a style="margin-left: 5px" v-if="index > 0">&</a>
-            <a
-              style="margin-left: 5px"
-              :href="item.url"
-              target="_blank"
-              >{{ item.name }}</a
-            >
+            <a style="margin-left: 5px" :href="item.url" target="_blank">{{ item.name }}</a>
           </template>
         </div>
         <div class="info">
@@ -22,11 +17,7 @@
       </div>
       <div class="text-right">
         <div class="git">
-          <IBtn
-            class="btn"
-            :url="githubUrl"
-            :img="githubPng"
-          />
+          <IBtn class="btn" :url="githubUrl" :img="githubPng" />
           <a :href="githubUrl" target="_blank">{{ t(INFO_I18N.toGithub) }}</a>
         </div>
         <div>{{ t(INFO_I18N.notOfficial) }}</div>
@@ -35,12 +26,12 @@
   </transition>
 </template>
 
-<script lang="ts">
-import { useI18n } from 'vue-i18n'
-import { INFO_I18N } from '@/assets/script/type'
-import IBtn from '@/components/common/IconBtn.vue'
+<script lang="ts" setup>
 import Setting from '@/../setting/setting.json'
 import githubPng from '@/assets/image/github-fill.png'
+import { INFO_I18N } from '@/assets/script/type'
+import IBtn from '@/components/common/IconBtn.vue'
+import { useI18n } from 'vue-i18n'
 
 const FOOTER: {
   author?: {
@@ -51,23 +42,11 @@ const FOOTER: {
   githubUrl?: string;
 } = Setting['footer']
 
-export default {
-  components: {
-    IBtn
-  },
-  setup() {
-    const { t } = useI18n()
+const { t } = useI18n()
 
-    return {
-      INFO_I18N,
-      t,
-      author: FOOTER && FOOTER.author ? FOOTER.author : [],
-      info: FOOTER && FOOTER.info ? FOOTER.info : [],
-      githubUrl: FOOTER && FOOTER.githubUrl ? FOOTER.githubUrl : undefined,
-      githubPng
-    }
-  }
-}
+const author = FOOTER && FOOTER.author ? FOOTER.author : []
+const info = FOOTER && FOOTER.info ? FOOTER.info : []
+const githubUrl = FOOTER && FOOTER.githubUrl ? FOOTER.githubUrl : undefined
 </script>
 
 <style lang="stylus" scoped>

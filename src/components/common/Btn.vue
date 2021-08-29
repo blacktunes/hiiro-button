@@ -5,36 +5,36 @@
       :style="{
         borderColor: `transparent transparent ${background} transparent`,
       }"
-    />
+    ></div>
     <div
       class="right"
       :style="{
         borderColor: `transparent transparent ${background} transparent`,
       }"
-    />
+    ></div>
     <a :href="url" target="_blank" :style="{ color }">{{ name }}</a>
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  props: {
-    name: String,
-    url: String,
-    color: {
-      type: String,
-      default: null
-    },
-    background: {
-      type: String,
-      default: null
-    },
-    disabled: {
-      type: Boolean,
-      default: false
-    }
+<script lang="ts" setup>
+import { defineProps } from 'vue'
+
+defineProps({
+  name: String,
+  url: String,
+  color: {
+    type: String,
+    default: null
+  },
+  background: {
+    type: String,
+    default: null
+  },
+  disabled: {
+    type: Boolean,
+    default: false
   }
-}
+})
 </script>
 
 <style lang="stylus" scoped>

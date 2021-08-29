@@ -1,12 +1,9 @@
 <template>
-  <div
-    class="wrapper"
-    :class="{ lowlight, highlight: highlight || playing, disable }"
-  >
+  <div class="wrapper" :class="{ lowlight, highlight: highlight || playing, disable }">
     <NewIcon class="new-icon" v-if="newIcon" />
-    <img class="pic" v-if="showPic" :src="showPic" alt="" />
-    <div class="left" />
-    <div class="right" />
+    <img class="pic" v-if="showPic" :src="showPic" alt />
+    <div class="left"></div>
+    <div class="right"></div>
     <a class="btn" :href="url" target="_blank">
       <div class="progress" ref="progressRef"></div>
       <span class="text">{{ text }}</span>
@@ -14,78 +11,58 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Ref, ref, watch } from 'vue'
+<script lang="ts" setup>
+import { defineProps, defineExpose, Ref, ref, watch } from 'vue'
 import NewIcon from './NewIcon.vue'
 
-const watchProgress = (progressRef: Ref<HTMLElement>) => {
-  const progress = ref(0)
-  const playing = ref(false)
-
-  let timer: any = null
-
-  watch(progress, (val) => {
-    if (val === 0) {
-      playing.value = false
-      timer = setTimeout(() => {
-        progressRef.value.style.transition = 'width 0.2s linear'
-        progressRef.value.style.width = '0'
-      }, 200)
-    } else {
-      playing.value = true
-      clearTimeout(timer)
-      timer = null
-      progressRef.value.style.transition = 'width 0.25s linear'
-      progressRef.value.style.width = val + 1 + '%'
-    }
-  })
-
-  return {
-    progress,
-    playing
-  }
-}
-
-export default {
-  components: {
-    NewIcon
+defineProps({
+  text: String,
+  name: String,
+  newIcon: {
+    type: Boolean,
+    default: false
   },
-  props: {
-    text: String,
-    name: String,
-    newIcon: {
-      type: Boolean,
-      default: false
-    },
-    showPic: {
-      type: String,
-      default: null
-    },
-    disable: {
-      type: Boolean,
-      default: false
-    },
-    url: {
-      type: String,
-      default: null
-    }
+  showPic: {
+    type: String,
+    default: null
   },
-  setup() {
-    const progressRef = ref() as Ref<HTMLElement>
-    const { progress, playing } = watchProgress(progressRef)
-
-    const lowlight = ref(false)
-    const highlight = ref(false)
-
-    return {
-      progressRef,
-      progress,
-      playing,
-      lowlight,
-      highlight
-    }
+  disable: {
+    type: Boolean,
+    default: false
+  },
+  url: {
+    type: String,
+    default: null
   }
-}
+})
+
+const progressRef = ref() as Ref<HTMLElement>
+
+const progress = ref(0)
+const lowlight = ref(false)
+const highlight = ref(false)
+
+const playing = ref(false)
+
+let timer: any = null
+
+watch(progress, (val) => {
+  if (val === 0) {
+    playing.value = false
+    timer = setTimeout(() => {
+      progressRef.value.style.transition = 'width 0.2s linear'
+      progressRef.value.style.width = '0'
+    }, 200)
+  } else {
+    playing.value = true
+    clearTimeout(timer)
+    timer = null
+    progressRef.value.style.transition = 'width 0.25s linear'
+    progressRef.value.style.width = val + 1 + '%'
+  }
+})
+
+defineExpose({ progress, lowlight, highlight })
 </script>
 
 <style lang="stylus" scoped>

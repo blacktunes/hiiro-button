@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" scoped>
 .card-wrapper
   margin 10px 5px
   border-radius 5px

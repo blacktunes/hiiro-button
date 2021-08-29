@@ -30,61 +30,42 @@
   </Collapse>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
+import Setting from '@/../setting/setting.json'
+import { README_I18N } from '@/assets/script/type'
+import { playSetting } from '@/store/setting'
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import Collapse from './common/Collapse.vue'
 import ControlIcon from './Control/ControlIcon.vue'
-import { inject, computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { PlaySetting, README_I18N } from '@/assets/script/type'
-import Setting from '@/../setting/setting.json'
 
 const README = Setting['readme'] || ''
 
-export default {
-  components: {
-    Collapse,
-    ControlIcon
-  },
-  setup() {
-    const { t } = useI18n()
-    const playSetting = inject('playSetting') as PlaySetting
+const { t } = useI18n()
 
-    const overlap = computed(() => {
-      return playSetting.overlap ? t(README_I18N.overlapOn) : t(README_I18N.overlapOff)
-    })
+const overlap = computed(() => {
+  return playSetting.overlap ? t(README_I18N.overlapOn) : t(README_I18N.overlapOff)
+})
 
-    const autoRandom = computed(() => {
-      return playSetting.autoRandom ? t(README_I18N.autoRandomOn) : t(README_I18N.autoRandomOff)
-    })
+const autoRandom = computed(() => {
+  return playSetting.autoRandom ? t(README_I18N.autoRandomOn) : t(README_I18N.autoRandomOff)
+})
 
-    const loop = computed(() => {
-      if (playSetting.loop === 1) {
-        return t(README_I18N.loop1)
-      } else if (playSetting.loop === 2) {
-        return t(README_I18N.loop2)
-      } else if (playSetting.loop === 3) {
-        return t(README_I18N.loop3)
-      } else {
-        return t(README_I18N.loop0)
-      }
-    })
-
-    const showInfo = computed(() => {
-      return playSetting.showInfo ? t(README_I18N.showInfoOn) : t(README_I18N.showInfoOff)
-    })
-
-    return {
-      README,
-      t,
-      README_I18N,
-      playSetting,
-      overlap,
-      autoRandom,
-      loop,
-      showInfo
-    }
+const loop = computed(() => {
+  if (playSetting.loop === 1) {
+    return t(README_I18N.loop1)
+  } else if (playSetting.loop === 2) {
+    return t(README_I18N.loop2)
+  } else if (playSetting.loop === 3) {
+    return t(README_I18N.loop3)
+  } else {
+    return t(README_I18N.loop0)
   }
-}
+})
+
+const showInfo = computed(() => {
+  return playSetting.showInfo ? t(README_I18N.showInfoOn) : t(README_I18N.showInfoOff)
+})
 </script>
 
 <style lang="stylus" scoped>

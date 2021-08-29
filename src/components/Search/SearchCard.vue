@@ -1,36 +1,24 @@
 <template>
-  <card class="search-wrapper" :class="{ 'show-search': isShowSearch }">
-    <Search class="search" ref="search" />
-  </card>
+  <transition name="search-card">
+    <card class="search-wrapper" :class="{ 'show-search': isShowSearch }" v-if="!isWideScreen">
+      <Search class="search" ref="search" />
+    </card>
+  </transition>
 </template>
 
-<script lang="ts">
-import { inject, ref, Ref } from 'vue'
-import Search from './Search.vue'
-import Card from '@/components/common/Card.vue'
+<script lang="ts" setup>
 import mitt from '@/assets/script/mitt'
 import { EVENT } from '@/assets/script/type'
+import Card from '@/components/common/Card.vue'
+import { isShowSearch, isWideScreen } from '@/store/setting'
+import { ref } from 'vue'
+import Search from './Search.vue'
 
-export default {
-  components: {
-    Search,
-    Card
-  },
-  setup() {
-    const isShowSearch = inject('isShowSearch') as Ref<boolean>
+const search = ref()
 
-    const search = ref()
-
-    mitt.on(EVENT.search, (name?: string) => {
-      search.value.search(name)
-    })
-
-    return {
-      isShowSearch,
-      search
-    }
-  }
-}
+mitt.on(EVENT.search, (name?: string) => {
+  search.value.search(name)
+})
 </script>
 
 <style lang="stylus" scoped>
@@ -44,21 +32,14 @@ export default {
   margin-top 0
   margin-bottom 0
   transition all 0.3s
+  background rgba(0,0,0,0.05)
 
   .search
     width 90%
     margin auto
 
-@media only screen and (min-width 550px)
-  .search-wrapper
-    height 0
-    opacity 0
-    margin-top 0
-    margin-bottom 0
-
-@media only screen and (max-width 550px)
-  .show-search
-    height 60px
-    opacity 1
-    margin-top 10px
+.show-search
+  height 60px
+  opacity 1
+  margin-top 10px
 </style>

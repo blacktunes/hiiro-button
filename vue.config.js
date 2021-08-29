@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/camelcase */
 const path = require('path')
 const Check = require('./plugins/check')
 
@@ -11,7 +10,9 @@ module.exports = {
   css: {
     loaderOptions: {
       stylus: {
-        import: [path.join(__dirname, './setting/color.styl')]
+        stylusOptions: {
+          import: [path.join(__dirname, './setting/color.styl')]
+        }
       }
     }
   },

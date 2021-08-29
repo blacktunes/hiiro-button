@@ -1,9 +1,6 @@
 <template>
   <div class="search">
-    <div
-      class="search-info"
-      :style="{ width: searchData.value ? '170px' : '200px' }"
-    >
+    <div class="search-info">
       <input
         type="text"
         v-model="searchData.value"
@@ -22,10 +19,7 @@
           </p>
         </transition>
       </div>
-      <div
-        class="clear"
-        :style="{ borderRadius: searchData.value ? '' : '0 10px 10px 0' }"
-      >
+      <div class="clear">
         <svg
           @click="clear"
           style="cursor: pointer"
@@ -52,18 +46,8 @@
         </svg>
       </div>
     </div>
-    <div
-      v-if="searchData.value"
-      class="next"
-      :style="{ width: searchData.value ? '30px' : '0' }"
-      @click="btnClick"
-    >
-      <svg
-        viewBox="0 0 1024 1024"
-        xmlns="http://www.w3.org/2000/svg"
-        width="30"
-        height="30"
-      >
+    <div v-if="searchData.value" class="next" @click="btnClick">
+      <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
         <path
           d="M268.8 876.8c-32 32-32 86.4 0 121.6 32 32 86.4 32 118.4 0l419.2-425.6c32-32 32-86.4 0-121.6L387.2 25.6c-16-16-38.4-25.6-60.8-25.6S284.8 9.6 265.6 25.6c-32 32-32 86.4 0 121.6l275.2 281.6c22.4 25.6 41.6 51.2 41.6 86.4s-22.4 64-41.6 86.4l-272 275.2z"
           fill="#ddd"
@@ -73,76 +57,63 @@
   </div>
 </template>
 
-<script lang="ts">
-import { inject, Ref, watch, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { EVENT, SearchData, VoicesItem, PlaySetting } from '@/assets/script/type'
-import mitt from '@/assets/script/mitt'
-import { getCategory } from '@/assets/script/utils'
+<script lang="ts" setup>
 import { gtag } from '@/assets/script/analytics'
+import mitt from '@/assets/script/mitt'
+import { EVENT } from '@/assets/script/type'
+import { getCategory } from '@/assets/script/utils'
+import { searchData, voiceList } from '@/store/data'
+import { isShowSearch, playSetting } from '@/store/setting'
+import { computed, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-const initSearch = () => {
-  const { t, te, locale } = useI18n()
+const { t, te, locale } = useI18n()
 
-  const isShowSearch = inject('isShowSearch') as Ref<boolean>
+watch(() => {
+  return playSetting.showInfo
+}, () => {
+  clear()
+})
 
-  const playSetting = inject('playSetting') as PlaySetting
-  const searchData = inject('searchData') as SearchData
-  const voiceList = inject('voiceList', ref([]) as Ref<VoicesItem[]>)
+const clear = () => {
+  if (searchData.value.length < 1) {
+    isShowSearch.value = false
+  }
+  searchData.value = ''
+  searchData.list.length = 0
+}
 
-  watch(() => {
-    return playSetting.showInfo
-  }, () => {
-    clear()
-  })
+const search = (voiceName?: string) => {
+  searchData.list.length = 0
+  if (!voiceName && searchData.value.length < 1) return
 
-  const clear = () => {
-    if (searchData.value.length < 1) {
-      isShowSearch.value = false
-    }
-    searchData.value = ''
-    searchData.list.length = 0
+  if (searchData.value) {
+    gtag('event', 'page_view', {
+      page_path: '/?search=' + searchData.value
+    })
   }
 
-  const search = (voiceName?: string) => {
-    searchData.list.length = 0
-    if (!voiceName && searchData.value.length < 1) return
+  for (const voice of voiceList.value) {
+    const name: string = voice.translate[locale.value]
 
-    if (searchData.value) {
-      gtag('event', 'page_view', {
-        /* eslint-disable-next-line @typescript-eslint/camelcase */
-        page_path: '/?search=' + searchData.value
-      })
-    }
-
-    for (const voice of voiceList.value) {
-      const name: string = voice.translate[locale.value]
-
-      if (voiceName) {
-        if (voice.name === voiceName) {
+    if (voiceName) {
+      if (voice.name === voiceName) {
+        searchData.list.push(voice.name)
+        break
+      }
+    } else {
+      const category = getCategory(voice.category)!
+      const flag = te(`voicecategory.${category['name']}`) && Boolean(t(`voicecategory.${category['name']}`))
+      if (playSetting.showHide) {
+        if (name && name.toUpperCase().includes(searchData.value.toUpperCase()) && flag && !category.hide) {
           searchData.list.push(voice.name)
-          break
         }
       } else {
-        const category = getCategory(voice.category)!
-        const flag = te(`voicecategory.${category['name']}`) && Boolean(t(`voicecategory.${category['name']}`))
-        if (playSetting.showHide) {
-          if (name && name.toUpperCase().includes(searchData.value.toUpperCase()) && flag && !category.hide) {
-            searchData.list.push(voice.name)
-          }
-        } else {
-          if (name && name.toUpperCase().includes(searchData.value.toUpperCase()) && flag && !category.hide && !voice.hide) {
-            searchData.list.push(voice.name)
-          }
+        if (name && name.toUpperCase().includes(searchData.value.toUpperCase()) && flag && !category.hide && !voice.hide) {
+          searchData.list.push(voice.name)
         }
       }
     }
-  }
-
-  return {
-    searchData,
-    clear,
-    search
   }
 }
 
@@ -150,18 +121,10 @@ const btnClick = () => {
   mitt.emit(EVENT.autoScroll)
 }
 
-export default {
-  setup() {
-    const { searchData, clear, search } = initSearch()
-
-    return {
-      searchData,
-      clear,
-      search,
-      btnClick
-    }
-  }
-}
+// css
+const width = computed(() => searchData.value ? 'calc(100% - 30px)' : '100%')
+const nextBtnWidth = computed(() => searchData.value ? '30px' : '0')
+const borderRadius = computed(() => searchData.value ? '' : '0 10px 10px 0')
 </script>
 
 <style lang="stylus" scoped>
@@ -179,6 +142,7 @@ export default {
 
   .search-info
     height 100%
+    width v-bind(width)
     display flex
     align-items center
     justify-content center
@@ -226,6 +190,7 @@ export default {
       border 1px solid #ddd
       border-left none
       border-right none
+      border-radius v-bind(borderRadius)
 
       svg
         width 15px
@@ -233,7 +198,7 @@ export default {
 
   .next
     box-sizing border-box
-    width 30px
+    width v-bind(nextBtnWidth)
     height 100%
     border-radius 0 10px 10px 0
     border-left none

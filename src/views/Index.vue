@@ -7,9 +7,7 @@
         <Voice />
       </div>
       <Card>
-        <div style="text-align: center">
-          {{ total }}
-        </div>
+        <div style="text-align: center">{{ total }}</div>
       </Card>
       <Card>
         <div class="content">
@@ -19,7 +17,7 @@
             url="https://vbup-osc.github.io/vtuber-voice-button-collection/"
             background="rgb(100, 181, 246)"
           />
-          <template v-for="item in friendlyLinkList" :key="item.name">
+          <template v-for="item in LINK" :key="item.name">
             <Btn
               class="btn"
               :name="item.name"
@@ -34,16 +32,17 @@
   </transition>
 </template>
 
-<script lang="ts">
-import { inject, ref, watch, Ref, computed, WritableComputedRef } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { FriendlyLink, INFO_I18N, PlaySetting } from '@/assets/script/type'
-import Search from '@/components/Search/SearchCard.vue'
-import Readme from '@/components/Readme.vue'
-import Voice from '@/components/Player/Player.vue'
-import Card from '@/components/common/Card.vue'
-import Btn from '@/components/common/Btn.vue'
+<script lang="ts" setup>
 import Setting from '@/../setting/setting.json'
+import { FriendlyLink, INFO_I18N, PlaySetting } from '@/assets/script/type'
+import Btn from '@/components/common/Btn.vue'
+import Card from '@/components/common/Card.vue'
+import Voice from '@/components/Player/Player.vue'
+import Readme from '@/components/Readme.vue'
+import Search from '@/components/Search/SearchCard.vue'
+import { playSetting } from '@/store/setting'
+import { computed, ref, Ref, watch, WritableComputedRef } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 // 友链列表
 const LINK: FriendlyLink[] = Setting['link'] || []
@@ -73,39 +72,19 @@ const watchSettingChange = (playSetting: PlaySetting, locale: WritableComputedRe
   })
 }
 
-export default {
-  components: {
-    Search,
-    Readme,
-    Voice,
-    Card,
-    Btn
-  },
-  setup() {
-    const { t, locale } = useI18n()
-    const playSetting = inject('playSetting') as PlaySetting
+const { t, locale } = useI18n()
 
-    const voice = ref() as Ref<HTMLElement>
-    watchSettingChange(playSetting, locale, voice)
+const voice = ref() as Ref<HTMLElement>
+watchSettingChange(playSetting, locale, voice)
 
-    const total = computed(() => {
-      const msg = t(INFO_I18N.voiceTotalTip) + ': '
-      if (playSetting.showHide) {
-        return `${msg}${t(INFO_I18N.hideVoiceTotal)} ${t(INFO_I18N.hideLastDate) ? `(+${t(INFO_I18N.hideNewVoice)} · ${t(INFO_I18N.hideLastDate)})` : ''}`
-      } else {
-        return `${msg}${t(INFO_I18N.voiceTotal)} ${t(INFO_I18N.lastDate) ? `(+${t(INFO_I18N.newVoice)} · ${t(INFO_I18N.lastDate)})` : ''}`
-      }
-    })
-
-    return {
-      t,
-      friendlyLinkList: LINK,
-      voice,
-      total,
-      INFO_I18N
-    }
+const total = computed(() => {
+  const msg = t(INFO_I18N.voiceTotalTip) + ': '
+  if (playSetting.showHide) {
+    return `${msg}${t(INFO_I18N.hideVoiceTotal)} ${t(INFO_I18N.hideLastDate) ? `(+${t(INFO_I18N.hideNewVoice)} · ${t(INFO_I18N.hideLastDate)})` : ''}`
+  } else {
+    return `${msg}${t(INFO_I18N.voiceTotal)} ${t(INFO_I18N.lastDate) ? `(+${t(INFO_I18N.newVoice)} · ${t(INFO_I18N.lastDate)})` : ''}`
   }
-}
+})
 </script>
 
 <style lang="stylus" scoped>

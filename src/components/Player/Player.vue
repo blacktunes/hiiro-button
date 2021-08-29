@@ -6,13 +6,13 @@
           <template #header>
             <div class="category">
               <template v-if="playSetting.showInfo">
-                <a :href="item.url" target="_blank">{{
-                  item.title === "unknown" ? t("unknown") : item.title
-                }}</a>
+                <a :href="item['url']" target="_blank">
+                  {{
+                    item['title'] === "unknown" ? t("unknown") : item['title']
+                  }}
+                </a>
               </template>
-              <template v-else>
-                {{ t(`voicecategory.${item.name}`) }}
-              </template>
+              <template v-else>{{ t(`voicecategory.${item['name']}`) }}</template>
             </div>
           </template>
           <div class="content">
@@ -25,7 +25,7 @@
                 :name="voice.name"
                 :newIcon="isShowNewIcon(voice.date)"
                 :showPic="getPicUrl(voice.usePicture)"
-                :ref="(el) => setBtnList(voice.name, el)"
+                :ref="(el) => { btnList[voice.name] = el }"
                 @click.prevent="play(voice)"
               />
             </template>
@@ -36,35 +36,31 @@
   </template>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
+import { reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Card from '../common/Card.vue'
 import VBtn from '../common/VoiceBtn.vue'
-import { getBtnList, useSearch, createPlayer, initListen } from './Player'
+import { createPlayer, initListen, useSearch } from './Player'
 
-export default {
-  components: {
-    Card,
-    VBtn
-  },
-  setup() {
-    const { t } = useI18n()
-    const { btnList, setBtnList } = getBtnList()
-    const { searchData, highlight } = useSearch(btnList)
-    const Player = createPlayer(btnList)
-    initListen(btnList)
+const { t } = useI18n()
+const btnList = reactive({})
+const {
+  playSetting,
+  voices,
+  play,
+  isShowCategory,
+  isShowVoice,
+  isShowTime,
+  isShowNewIcon,
+  getPicUrl,
+  getUrl
+} = createPlayer(btnList)
 
-    return {
-      t,
-      setBtnList,
-      searchData,
-      highlight,
-      ...Player
-    }
-  }
-}
-
+useSearch(btnList)
+initListen(btnList)
 </script>
+
 <style lang="stylus" scoped>
 .category
   font-size 24px

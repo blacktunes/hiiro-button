@@ -84,6 +84,58 @@ export enum README_I18N {
   showInfoOff = 'readme.showInfoOff'
 }
 
+export interface Mark {
+  /**
+   * 标题
+   */
+  title: string;
+  /**
+   * 时间段
+   */
+  time?: string;
+  url?: string;
+}
+
+export interface Translate {
+  'zh-CN'?: string;
+  'en-US'?: string;
+}
+
+/**
+ * 语音对象
+ */
+export interface VoicesItem {
+  /**
+   * 语音名称
+   */
+  name: string;
+  /**
+   * 文件名
+   */
+  path: string;
+  translate: Translate;
+  /**
+   * 是否显示表情包
+   */
+  usePicture?: Translate;
+  /**
+   * 所属分类
+   */
+  category: string;
+  /**
+   * 是否为隐藏
+   */
+  hide?: boolean;
+  /**
+   * 添加日期
+   */
+  date?: string;
+  /**
+   * 来源信息
+   */
+  mark?: Mark;
+}
+
 /**
  * 播放设置
  */
@@ -140,14 +192,6 @@ export interface SearchData {
   index: number;
 }
 
-export type Voices<K extends keyof VoicesType = 'a'> = VoicesType[K]
-
-interface VoicesType {
-  a: VoicesOrigin[] & VoicesCategory[];
-  o: VoicesOrigin[];
-  c: VoicesCategory[];
-}
-
 /**
  * 来源分类
  */
@@ -156,14 +200,6 @@ export interface VoicesOrigin {
   url?: string;
   voiceList: VoicesItem[];
 }
-
-/**
- * 语音分类
- */
-export type VoicesCategory = CategoryItem & {
-  voiceList: VoicesItem[];
-}
-
 export interface CategoryItem {
   name: string;
   /**
@@ -174,61 +210,19 @@ export interface CategoryItem {
 }
 
 /**
- * 语音对象
+ * 语音分类
  */
-export interface VoicesItem {
-  /**
-   * 语音名称
-   */
-  name: string;
-  /**
-   * 文件名
-   */
-  path: string;
-  translate: Translate;
-  /**
-   * 是否显示表情包
-   */
-  usePicture?: Translate;
-  /**
-   * 所属分类
-   */
-  category: string;
-  /**
-   * 是否为隐藏
-   */
-  hide?: boolean;
-  /**
-   * 添加日期
-   */
-  date?: string;
-  /**
-   * 来源信息
-   */
-  mark?: Mark;
+export type VoicesCategory = CategoryItem & {
+  voiceList: VoicesItem[];
 }
 
-export interface Mark {
-  /**
-   * 标题
-   */
-  title: string;
-  /**
-   * 时间段
-   */
-  time?: string;
-  url?: string;
+interface VoicesType {
+  a: VoicesOrigin[] & VoicesCategory[];
+  o: VoicesOrigin[];
+  c: VoicesCategory[];
 }
 
-export interface Translate {
-  'zh-CN'?: string;
-  'en-US'?: string;
-}
-
-/**
- * 播放器列表
- */
-export type PlayerList = Map<any, Player>
+export type Voices<K extends keyof VoicesType = 'a'> = VoicesType[K]
 
 /**
  * 播放器对象
@@ -238,6 +232,11 @@ export interface Player {
   audio: HTMLAudioElement;
   voicesKey?: [string, string];
 }
+
+/**
+ * 播放器列表
+ */
+export type PlayerList = Map<any, Player>
 
 export interface FriendlyLink {
   name: string;

@@ -5,14 +5,11 @@
   <VFooter />
 </template>
 
-<script lang="ts">
-import { provide, reactive, ref, Ref, computed } from 'vue'
-import { PlaySetting, SearchData, VoicesOrigin, VoicesCategory, VoicesItem, Mark } from '@/assets/script/type'
-import { CategoryList, VoicesList } from '@/assets/script/voices'
+<script lang="ts" setup>
 import Setting from '@/../setting/setting.json'
-import VHeader from '@/views/Header.vue'
 import Control from '@/views/Control.vue'
 import VFooter from '@/views/Footer.vue'
+import VHeader from '@/views/Header.vue'
 
 const CONSOLE = Setting['console'] || {}
 if (CONSOLE && (CONSOLE.text || CONSOLE.img)) {
@@ -25,131 +22,6 @@ if (CONSOLE && (CONSOLE.text || CONSOLE.img)) {
   const img = CONSOLE.img ? `padding-right:${width};padding-top:${height};background:url('${location.origin}/img/${CONSOLE.img}') no-repeat;background-size:100% 100%` : ''
 
   console.log(`%c${text}%c `, `font-size:${size};color:${color}`, img)
-}
-
-/**
- * 初始化播放设置
- */
-const initPlaySetting = () => {
-  const playSetting: PlaySetting = reactive({
-    loading: true,
-    error: false,
-    nowPlay: null,
-    overlap: false,
-    autoRandom: false,
-    loop: 0,
-    showInfo: false,
-    showHide: false
-  })
-  const info = localStorage.getItem('info')
-  if (info) playSetting.showInfo = JSON.parse(info)
-  provide('playSetting', playSetting)
-
-  return playSetting
-}
-
-/**
- * 初始化语音列表
- */
-const initVoicesList = (playSetting: PlaySetting) => {
-  // 获取分类排序列表
-  const categoryList: VoicesCategory[] = []
-  CategoryList.forEach(category => {
-    const temp: VoicesCategory = { ...category, voiceList: [] }
-    VoicesList.forEach(voice => {
-      if (voice.category === category.name) {
-        temp.voiceList.push(voice)
-      }
-    })
-    categoryList.push(temp)
-  })
-
-  // 获取来源排序列表
-  const temp1: {
-    [name: string]: {
-      url?: string;
-      list: VoicesItem[];
-    };
-  } = {}
-  const temp2: {
-    title: string;
-    voiceList: VoicesItem[];
-  } = {
-    title: 'unknown',
-    voiceList: []
-  }
-  const originList: VoicesOrigin[] = []
-  VoicesList.forEach(voice => {
-    if (voice.mark && voice.mark.title) {
-      if (temp1[voice.mark.title]) {
-        temp1[voice.mark.title].list.push(voice)
-      } else {
-        temp1[voice.mark.title] = {
-          url: voice.mark.url,
-          list: [voice]
-        }
-      }
-    } else {
-      temp2.voiceList.push(voice)
-    }
-  })
-  for (const i in temp1) {
-    originList.unshift({
-      title: i,
-      url: temp1[i].url,
-      voiceList: temp1[i].list
-    })
-  }
-  originList.push(temp2)
-
-  const voices = computed(() => playSetting.showInfo ? originList : categoryList)
-  provide('voices', voices)
-
-  const voiceList: Ref<VoicesItem[]> = computed(() => {
-    const temp: VoicesItem[] = []
-    voices.value.forEach((item: VoicesCategory | VoicesOrigin) => {
-      item.voiceList.forEach(voice => {
-        temp.push(voice)
-      })
-    })
-    return temp
-  })
-  provide('voiceList', voiceList)
-}
-
-const initData = () => {
-  // 需要显示的来源信息
-  const infoDate: Ref<Mark | null> = ref({
-    title: '',
-    time: '',
-    url: ''
-  })
-  provide('infoDate', infoDate)
-
-  // 搜索结果
-  const searchData: SearchData = reactive({
-    value: '',
-    list: [],
-    index: 0
-  })
-  provide('searchData', searchData)
-
-  // 窄屏状态下是否显示搜索栏
-  const isShowSearch = ref(false)
-  provide('isShowSearch', isShowSearch)
-}
-
-export default {
-  components: {
-    VHeader,
-    Control,
-    VFooter
-  },
-  setup() {
-    const playSetting = initPlaySetting()
-    initVoicesList(playSetting)
-    initData()
-  }
 }
 </script>
 

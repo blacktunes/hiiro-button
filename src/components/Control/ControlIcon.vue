@@ -1,12 +1,7 @@
 <template>
   <template v-if="type === 'randomPlay'">
     <div class="icon" :title="t(ACTION_I18N.randomplay)" @click="randomPlay">
-      <svg
-        viewBox="0 0 1024 1024"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-      >
+      <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
         <path
           d="M689.066667 170.666667c-40.533333 0-132.266667 19.2-177.066667 119.466666C467.2 189.866667 377.6 170.666667 334.933333 170.666667 211.2 170.666667 128 266.666667 128 373.333333 128 631.466667 512 853.333333 512 853.333333s384-221.866667 384-480c0-106.666667-83.2-202.666667-206.933333-202.666666z"
         />
@@ -74,22 +69,12 @@
       @click="loopChange"
       :class="{ 'icon-active': playSetting.loop !== 0 }"
     >
-      <svg
-        width="24"
-        height="24"
-        xmlns="http://www.w3.org/2000/svg"
-        v-if="playSetting.loop === 0"
-      >
+      <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" v-if="playSetting.loop === 0">
         <path
           d="m17,17l-10,0l0,-3l-4,4l4,4l0,-3l12,0l0,-6l-2,0m-10,-6l10,0l0,3l4,-4l-4,-4l0,3l-12,0l0,6l2,0l0,-4z"
         />
       </svg>
-      <svg
-        width="24"
-        height="24"
-        xmlns="http://www.w3.org/2000/svg"
-        v-if="playSetting.loop === 1"
-      >
+      <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" v-if="playSetting.loop === 1">
         <path
           d="m17,17l-10,0l0,-3l-4,4l4,4l0,-3l12,0l0,-6l-2,0m-10,-6l10,0l0,3l4,-4l-4,-4l0,3l-12,0l0,6l2,0l0,-4z"
         />
@@ -102,9 +87,7 @@
           font-size="24"
           y="21.67922"
           x="-1.13436"
-        >
-          1
-        </text>
+        >1</text>
       </svg>
       <svg
         width="24"
@@ -124,9 +107,7 @@
           font-size="24"
           y="21.67922"
           x="-1.13436"
-        >
-          C
-        </text>
+        >C</text>
       </svg>
       <svg
         width="24"
@@ -146,9 +127,7 @@
           font-size="24"
           y="21.67922"
           x="-1.13436"
-        >
-          A
-        </text>
+        >A</text>
       </svg>
     </div>
   </template>
@@ -159,81 +138,61 @@
       :class="{ 'icon-active': playSetting.showInfo }"
       :title="t(ACTION_I18N.showInfo)"
     >
-      <svg
-        viewBox="0 0 1024 1024"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-      >
+      <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
         <path
           d="M694.857143 768v73.142857q0 14.857143-10.857143 25.714286t-25.714286 10.857143H365.714286q-14.857143 0-25.714286-10.857143t-10.857143-25.714286v-73.142857q0-14.857143 10.857143-25.714286t25.714286-10.857143h36.571428V512h-36.571428q-14.857143 0-25.714286-10.857143t-10.857143-25.714286V402.285714q0-14.857143 10.857143-25.714285t25.714286-10.857143h219.428571q14.857143 0 25.714286 10.857143t10.857143 25.714285v329.142857h36.571428q14.857143 0 25.714286 10.857143t10.857143 25.714286zM621.714286 109.714286v109.714285q0 14.857143-10.857143 25.714286t-25.714286 10.857143H438.857143q-14.857143 0-25.714286-10.857143t-10.857143-25.714286V109.714286q0-14.857143 10.857143-25.714286t25.714286-10.857143h146.285714q14.857143 0 25.714286 10.857143t10.857143 25.714286z"
-        ></path>
+        />
       </svg>
     </div>
   </template>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import mitt from '@/assets/script/mitt'
-import { ACTION_I18N, EVENT, PlaySetting, Mark } from '@/assets/script/type'
-import { inject, PropType, Ref } from 'vue'
+import { ACTION_I18N, EVENT } from '@/assets/script/type'
+import { infoDate } from '@/store/data'
+import { playSetting } from '@/store/setting'
+import { defineProps, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-export default {
-  props: {
-    type: String as PropType<'randomPlay' | 'stopPlay' | 'overlapChange' | 'autoRandomChange' | 'loopChange' | 'changeShowInfo'>
-  },
-  setup() {
-    const { t } = useI18n()
-    const playSetting = inject('playSetting') as PlaySetting
+defineProps({
+  type: String as PropType<'randomPlay' | 'stopPlay' | 'overlapChange' | 'autoRandomChange' | 'loopChange' | 'changeShowInfo'>
+})
 
-    const randomPlay = () => {
-      mitt.emit(EVENT.randomPlay)
-    }
+const { t } = useI18n()
 
-    const stopPlay = () => {
-      mitt.emit(EVENT.stopPlay)
-    }
+const randomPlay = () => {
+  mitt.emit(EVENT.randomPlay)
+}
 
-    const overlapChange = () => {
-      playSetting.overlap = !playSetting.overlap
-    }
+const stopPlay = () => {
+  mitt.emit(EVENT.stopPlay)
+}
 
-    const autoRandomChange = () => {
-      playSetting.loop = 0
-      playSetting.autoRandom = !playSetting.autoRandom
-    }
+const overlapChange = () => {
+  playSetting.overlap = !playSetting.overlap
+}
 
-    const loopChange = () => {
-      playSetting.autoRandom = false
-      if (playSetting.loop < 3) {
-        playSetting.loop += 1
-      } else {
-        playSetting.loop = 0
-      }
-    }
+const autoRandomChange = () => {
+  playSetting.loop = 0
+  playSetting.autoRandom = !playSetting.autoRandom
+}
 
-    const infoDate = inject('infoDate') as Ref<Mark | null>
-    const changeShowInfo = () => {
-      playSetting.showInfo = !playSetting.showInfo
-      localStorage.setItem('info', playSetting.showInfo.toString())
-      document.body.scrollTop = 0
-      document.documentElement.scrollTop = 0
-      infoDate.value = null
-    }
-
-    return {
-      ACTION_I18N,
-      t,
-      playSetting,
-      randomPlay,
-      stopPlay,
-      overlapChange,
-      autoRandomChange,
-      loopChange,
-      changeShowInfo
-    }
+const loopChange = () => {
+  playSetting.autoRandom = false
+  if (playSetting.loop < 3) {
+    playSetting.loop += 1
+  } else {
+    playSetting.loop = 0
   }
+}
+
+const changeShowInfo = () => {
+  playSetting.showInfo = !playSetting.showInfo
+  localStorage.setItem('info', playSetting.showInfo.toString())
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
+  infoDate.value = null
 }
 </script>
 

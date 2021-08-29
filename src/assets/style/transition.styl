@@ -65,3 +65,25 @@
 .slide-up-text-leave-to
   transform translateY(-100%)
   opacity 0
+
+.search-enter-active, .search-leave-active
+  transition all 0.3s
+
+.search-enter-from, .search-leave-to
+  opacity 0
+  width 0
+
+.search-enter-to, .search-leave-from
+  opacity 1
+  width 200px
+
+.search-card-enter-active, .search-card-leave-active
+  transition all 0.3s
+
+.search-card-enter-from, .search-card-leave-to
+  opacity 0
+  max-height 0
+
+.search-card-enter-to, .search-card-leave-from
+  opacity 1
+  max-height 60px
