@@ -143,7 +143,7 @@ const createPlayer = (btnList: { [name: string]: any }) => {
       value: 1
     })
     if (!playSetting.overlap) {
-      if (playerList.has('once')) (playerList.get('once') as Player).audio.pause()
+      stopPlay()
       if (playSetting.nowPlay && playSetting.nowPlay.name === voice.name) {
         clearTimeout(timer)
         timer = setTimeout(() => {
@@ -329,6 +329,10 @@ const createPlayer = (btnList: { [name: string]: any }) => {
   }
 
   mitt.on(EVENT.stopPlay, () => {
+    stopPlay()
+  })
+
+  const stopPlay = () => {
     clearTimeout(timer)
     for (const key of playerList.keys()) {
       playerList.get(key)!.audio.pause()
@@ -344,7 +348,7 @@ const createPlayer = (btnList: { [name: string]: any }) => {
     if ('mediaSession' in navigator) {
       navigator.mediaSession.playbackState = 'none'
     }
-  })
+  }
 
   /**
    * 是否需要显示分类
