@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, defineExpose, Ref, ref, watch } from 'vue'
+import { Ref, ref, watch } from 'vue'
 import NewIcon from './NewIcon.vue'
 
 defineProps({

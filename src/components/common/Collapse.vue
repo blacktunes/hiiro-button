@@ -31,7 +31,7 @@
 
 <script lang="ts" setup>
 import Card from '@/components/common/Card.vue'
-import { defineProps, ref } from 'vue'
+import { ref } from 'vue'
 
 defineProps({
   title: {

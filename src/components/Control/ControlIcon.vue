@@ -152,7 +152,7 @@ import mitt from '@/assets/script/mitt'
 import { ACTION_I18N, EVENT } from '@/assets/script/type'
 import { infoDate } from '@/store/data'
 import { playSetting } from '@/store/setting'
-import { defineProps, PropType } from 'vue'
+import { PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 defineProps({
