@@ -114,6 +114,10 @@ const btnClick = () => {
   mitt.emit(EVENT.autoScroll)
 }
 
+mitt.on(EVENT.search, (name?: string) => {
+  search(name)
+})
+
 // css
 const width = computed(() => searchData.value ? 'calc(100% - 30px)' : '100%')
 const nextBtnWidth = computed(() => searchData.value ? '30px' : '0')
