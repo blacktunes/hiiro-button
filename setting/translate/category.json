@@ -84,6 +84,13 @@
     }
   },
   {
+    "name": "mua",
+    "translate": {
+      "zh-CN": "MuaMua猫猫~",
+      "en-US": "Mua Mua nya~ "
+    }
+  },
+  {
     "name": "希语言",
     "hide": true,
     "translate": {
