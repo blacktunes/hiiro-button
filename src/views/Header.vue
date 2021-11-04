@@ -1,9 +1,8 @@
 <template>
   <transition name="slide-down" appear>
     <div class="header">
-      <transition name="logo" appear>
-        <div class="logo" ref="logo" @click="logoClick">{{ HEADER.icon || '' }}</div>
-      </transition>
+      <img class="logo" v-if="showLogo" ref="logo" @click="logoClick" :src="HEADER.icon || ''" @error="logoError">
+      <div class="logo" v-else></div>
       <div
         class="title"
         :class="{ pointer: !playSetting.showHide && isShowPointer }"
@@ -108,6 +107,11 @@ const btnList = [
 const logo = ref() as Ref<HTMLElement>
 const logoClick = onLogoClick(logo)
 
+const showLogo = ref(!!HEADER.icon)
+const logoError = () => {
+  showLogo.value = false
+}
+
 /**
  * 显示/隐藏搜索并重置搜索
  */
@@ -160,10 +164,6 @@ onMounted(() => {
 </script>
 
 <style lang="stylus" scoped>
-.logo-enter-active
-  animation logo 1s
-  animation-delay 0.5s
-
 .pointer
   cursor pointer
 
