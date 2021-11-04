@@ -26,12 +26,19 @@
       "name": "希亚娜按钮",
       "url": "https://ciyana.moe/",
       "background": "#19368f",
-      "color": "#bbb"
+      "color": "#eee"
     },
     {
       "name": "鹿乃按钮",
       "url": "https://kano.zone/",
-      "background": "#bf9780"
+      "background": "#bf9780",
+      "color": "#000"
+    },
+    {
+      "name": "虚研社按钮",
+      "url": "https://xysbtn.xiaoblogs.cn/",
+      "background": "#cd3951",
+      "color": "#eee"
     }
   ],
   "footer": {

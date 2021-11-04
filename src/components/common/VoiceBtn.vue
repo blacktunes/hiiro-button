@@ -74,7 +74,7 @@ defineExpose({ progress, lowlight, highlight })
 .lowlight
   &:active
     .left, .right
-      border-color transparent transparent $active-color transparent !important
+      border-color transparent transparent #ccc transparent !important
 
   .left, .right
     border-color transparent transparent #ccc transparent !important
