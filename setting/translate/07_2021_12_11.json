@@ -1,0 +1,302 @@
+[
+  {
+    "name": "对不起哦",
+    "path": "对不起哦.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "对不起哦",
+      "en-US": "Sorry~"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "2:00~2:03",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "不要啊~",
+    "path": "不要啊~.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "不要啊~",
+      "en-US": "No~"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "42:37~42:39",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "王牛奶不要啊~",
+    "path": "王牛奶不要啊~.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "王牛奶不要啊~",
+      "en-US": "Wang Milk, No~"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "42:41~42:43",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "大姐姐suki",
+    "path": "大姐姐suki.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "大姐姐suki",
+      "en-US": "Big sister suki"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "46:25~46:26",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "生日歌2",
+    "path": "生日歌2.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "生日歌2",
+      "en-US": "Birthday 2"
+    },
+    "category": "唱歌",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "47:16~47:31",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "老公我好喜欢你啊~",
+    "path": "老公我好喜欢你啊~.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "老公我好喜欢你啊~",
+      "en-US": "Husband, I love you so much~"
+    },
+    "category": "mua",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "49:25~49:29",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "我是baka",
+    "path": "我是baka.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "我是baka",
+      "en-US": "I am baka"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "52:05~52:06",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "我是baka2",
+    "path": "我是baka2.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "我是baka",
+      "en-US": "I am baka"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "52:07~52:08",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "我也喜欢我自己的耳朵",
+    "path": "我也喜欢我自己的耳朵.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "我也喜欢我自己的耳朵",
+      "en-US": "I like my ears, too"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "54:48~54:50",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "可以让你的狗给我一个mua吗",
+    "path": "可以让你的狗给我一个mua吗.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "可以让你的狗给我一个mua吗",
+      "en-US": "Can your dog give me a mua"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "55:28~55:31",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "阿古巴",
+    "path": "阿古巴.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "阿古巴",
+      "en-US": "akuba"
+    },
+    "category": "可爱",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "55:41~55:42",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "awsl4",
+    "path": "awsl4.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "awsl",
+      "en-US": "awsl"
+    },
+    "category": "日常",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "55:45~55:46",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "我的狗",
+    "path": "我的狗.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "我的狗",
+      "en-US": "My dog"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "55:33~55:40",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "你不看我吗",
+    "path": "你不看我吗.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "你不看我吗",
+      "en-US": "Won't you come to see me"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "57:50~57:57",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "喜欢我的耳朵吗",
+    "path": "喜欢我的耳朵吗.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "喜欢我的耳朵吗",
+      "en-US": "Do you like my ears"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "59:22~59:27",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "你为什么看别的女人",
+    "path": "你为什么看别的女人.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "你为什么看别的女人",
+      "en-US": "Why are you looking at other women"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "1:02:49~1:02:59",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "我难道不可爱吗(日)",
+    "path": "我难道不可爱吗(日).mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "我难道不可爱吗(日)",
+      "en-US": "Aren't I cute?(JP)"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "1:03:27~1:03:35",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "你为什么看别的女人(英)",
+    "path": "你为什么看别的女人(英).mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "你为什么看别的女人(英)",
+      "en-US": "Why are you looking at other women"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "1:04:54~1:05:06",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "我是一个很强的女人",
+    "path": "我是一个很强的女人.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "我是一个很强的女人",
+      "en-US": "I am a strong woman"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "1:28:31~1:28:35",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  },
+  {
+    "name": "晚安~拜拜~",
+    "path": "晚安~拜拜~.mp3",
+    "date": "2021-12-12",
+    "translate": {
+      "zh-CN": "晚安~拜拜~",
+      "en-US": "Good night~ byebye~"
+    },
+    "category": "软猫",
+    "mark": {
+      "title": "【Hiiro Record】12.11 Sat. 这几天没聊太多 手机直播",
+      "time": "1:28:31~1:28:35",
+      "url": "https://www.bilibili.com/video/BV1a34y1974E"
+    }
+  }
+]
