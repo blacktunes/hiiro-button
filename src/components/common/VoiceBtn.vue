@@ -4,7 +4,7 @@
     <img class="pic" v-if="showPic" :src="showPic" alt />
     <div class="left"></div>
     <div class="right"></div>
-    <a class="btn" :href="url" target="_blank">
+    <a class="btn" :href="url" :filename="url" target="_blank" >
       <div class="progress" ref="progressRef"></div>
       <span class="text">{{ text }}</span>
     </a>

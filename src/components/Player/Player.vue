@@ -19,7 +19,7 @@
             <template v-for="voice in item.voiceList" :key="voice.name">
               <VBtn
                 v-if="isShowVoice(voice)"
-                :url="getUrl(voice.mark)"
+                :url="getDownloadUrl(voice.path)"
                 :title="isShowTime(voice.mark)"
                 :text="t(`voice.${voice.name}`)"
                 :name="voice.name"
@@ -54,7 +54,7 @@ const {
   isShowTime,
   isShowNewIcon,
   getPicUrl,
-  getUrl
+  getDownloadUrl
 } = createPlayer(btnList)
 
 useSearch(btnList)

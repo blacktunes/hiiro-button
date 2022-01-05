@@ -176,7 +176,7 @@ const createPlayer = (btnList: { [name: string]: any }) => {
     if (key === 'once' && playerList.has(key)) {
       playerList.get(key)!.audio.oncanplay = null
     }
-    const path = process.env.NODE_ENV === 'production' && CDN ? `${CDN}/${voice.path}` : `voices/${voice.path}`
+    const path = getDownloadUrl(voice.path)
     playerList.set(key, {
       name: voice.name,
       audio: new Audio(path)
@@ -404,8 +404,13 @@ const createPlayer = (btnList: { [name: string]: any }) => {
     return usePicture && Boolean(usePicture[locale.value]) ? `/voices/img/${usePicture[locale.value]}` : undefined
   }
 
+  const getDownloadUrl = (url: string) => {
+    return process.env.NODE_ENV === 'production' && CDN ? `${CDN}/${url}` : `voices/${url}`
+  }
+
   /**
    * 返回带时间点的B站视频URL
+   * @deprecated
    */
   const getUrl = (mark?: Mark): string | undefined => {
     if (mark && mark.url && mark.time) {
@@ -429,7 +434,7 @@ const createPlayer = (btnList: { [name: string]: any }) => {
     isShowTime,
     isShowNewIcon,
     getPicUrl,
-    getUrl
+    getDownloadUrl
   }
 }
 
