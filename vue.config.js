@@ -1,5 +1,6 @@
 const path = require('path')
 const Check = require('./plugins/check')
+const Voives = require('./plugins/voices')
 
 process.env.VUE_APP_LAST_UPDATE = Date.now()
 
@@ -24,7 +25,8 @@ module.exports = {
     }
     return {
       plugins: [
-        new Check()
+        new Check(),
+        new Voives()
       ],
       performance: {
         hints: false
