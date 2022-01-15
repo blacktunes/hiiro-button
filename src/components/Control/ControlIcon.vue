@@ -222,7 +222,7 @@ const changeShowInfo = () => {
     background $hover-color
 
 .icon-active
-  background #93a3b3
+  background $icon-active-color
 
 @media (prefers-color-scheme dark)
   .icon
