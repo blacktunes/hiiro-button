@@ -16,19 +16,27 @@
     "twitter": "",
     "bilibili": "https://live.bilibili.com/21919321"
   },
-  "link": [
+  "related": [
     {
       "name": "猫猫Hii图",
-      "url": "https://hii.hiiro.club/",
-      "background": "#F5C1BB"
+      "url": "https://hii.hiiro.club/"
     },
     {
-      "name": "七奈按钮",
+      "name": "HiiroNya",
+      "url": "https://nya.hiiro.club/"
+    },{
+      "name": "二创游戏",
+      "url": "https://store.steampowered.com/app/1907180"
+    }
+  ],
+  "link": [
+    {
+      "name": "七奈按钮(神楽七奈)",
       "url": "https://kaguranana.moe/",
       "background": "#c4afd0"
     },
     {
-      "name": "希亚娜按钮",
+      "name": "梦魇按钮(希亚娜Ciyana)",
       "url": "https://ciyana.moe/",
       "background": "#19368f",
       "color": "#eee"
@@ -46,9 +54,14 @@
       "color": "#eee"
     },
     {
-      "name": "Eliro按钮",
+      "name": "Eliro按钮(彼岸霜滢)",
       "url": "https://eliro.top/",
       "background": "#BFB8FF"
+    },
+    {
+      "name": "希侑按钮",
+      "url": "https://kiyuu.club/",
+      "background": "#FF91AE"
     }
   ],
   "footer": {

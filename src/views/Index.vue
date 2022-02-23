@@ -12,7 +12,20 @@
       <Card>
         <div style="text-align: center">{{ playTimesText }}</div>
       </Card>
-      <Card>
+      <Card v-if="RELATED.length > 0">
+        <div class="content">
+          <template v-for="item in RELATED" :key="item.name">
+            <Btn
+              class="btn"
+              :name="item.name"
+              :url="item.url"
+              :color="item.color"
+              :background="item.background"
+            />
+          </template>
+        </div>
+      </Card>
+      <Card v-if="LINK.length > 0">
         <div class="content">
           <Btn
             class="btn"
@@ -48,6 +61,8 @@ import { playSetting } from '@/store/setting'
 import { computed, ref, Ref, watch, WritableComputedRef } from 'vue'
 import { useI18n } from 'vue-i18n'
 
+// 相关链接
+const RELATED: FriendlyLink[] = Setting['related'] || []
 // 友链列表
 const LINK: FriendlyLink[] = Setting['link'] || []
 
