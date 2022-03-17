@@ -16,6 +16,9 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'space-before-function-paren': 'off',
     'dot-notation': 'off',
+    'vue/multi-word-component-names': ['error', {
+      ignores: ['Card', 'Error', 'Loading']
+    }],
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
