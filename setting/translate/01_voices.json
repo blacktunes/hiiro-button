@@ -2198,16 +2198,6 @@
     "category": "糟糕"
   },
   {
-    "name": "打哈欠",
-    "path": "打哈欠.mp3",
-    "date": "2020-11-23",
-    "translate": {
-      "zh-CN": "打哈欠",
-      "en-US": "yaw"
-    },
-    "category": "糟糕"
-  },
-  {
     "name": "我的王牛奶",
     "path": "我的王牛奶.mp3",
     "date": "2020-11-25",
@@ -3589,58 +3579,6 @@
       "title": "Hiiro2020/11/25直播录播",
       "time": "3:24:57~3:24:59",
       "url": "https://www.bilibili.com/video/BV1sK411V7zw"
-    }
-  },
-  {
-    "name": "goodbye~",
-    "path": "goodbye~.mp3",
-    "date": "2020-11-30",
-    "translate": {
-      "zh-CN": "goodbye~",
-      "en-US": "goodbye~"
-    },
-    "category": "日常",
-    "mark": {
-      "title": "Hiiro11.27日泰坦陨落2直播"
-    }
-  },
-  {
-    "name": "啊呜",
-    "path": "啊呜.mp3",
-    "date": "2020-11-30",
-    "translate": {
-      "zh-CN": "啊呜",
-      "en-US": "Awww"
-    },
-    "category": "可爱",
-    "mark": {
-      "title": "Hiiro11.27日泰坦陨落2直播"
-    }
-  },
-  {
-    "name": "啊呜2",
-    "path": "啊呜2.mp3",
-    "date": "2020-11-30",
-    "translate": {
-      "zh-CN": "啊呜2",
-      "en-US": "Awww2"
-    },
-    "category": "可爱",
-    "mark": {
-      "title": "Hiiro11.27日泰坦陨落2直播"
-    }
-  },
-  {
-    "name": "喵呜~",
-    "path": "喵呜~.mp3",
-    "date": "2020-11-30",
-    "translate": {
-      "zh-CN": "喵呜~",
-      "en-US": "Meow~"
-    },
-    "category": "可爱",
-    "mark": {
-      "title": "Hiiro11.27日泰坦陨落2直播"
     }
   },
   {
