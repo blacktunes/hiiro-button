@@ -16,9 +16,12 @@ module.exports = class Check {
         const mp3List = fs.readdirSync(path.join(__dirname, '../public/voices'))
           .filter(name => !((fs.statSync(path.join(__dirname, `../public/voices/${name}`))).isDirectory()))
 
-        const imgList = fs.readdirSync(path.join(__dirname, '../public/voices/img'))
-
-          .filter(name => !((fs.statSync(path.join(__dirname, `../public/voices/img/${name}`))).isDirectory()))
+        let imgList = []
+        const imgPath = path.join(__dirname, '../public/voices/img')
+        if (fs.existsSync(imgPath)) {
+          imgList = fs.readdirSync(imgPath)
+            .filter(name => !((fs.statSync(path.join(__dirname, `../public/voices/img/${name}`))).isDirectory()))
+        }
 
         let CategoryList
         let VoicesList = []
