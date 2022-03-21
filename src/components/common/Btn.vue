@@ -5,18 +5,22 @@
       :style="{
         borderColor: `transparent transparent ${background} transparent`,
       }"
+      v-if="nekoMimi"
     ></div>
     <div
       class="right"
       :style="{
         borderColor: `transparent transparent ${background} transparent`,
       }"
+      v-if="nekoMimi"
     ></div>
     <a :href="url" target="_blank" :style="{ color }">{{ name }}</a>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { nekoMimi } from '@/store/setting'
+
 defineProps({
   name: String,
   url: String,

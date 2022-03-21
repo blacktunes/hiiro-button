@@ -1,5 +1,9 @@
 import { PlaySetting } from '@/assets/script/type'
 import { reactive, ref } from 'vue'
+import Setting from '@/../setting/setting.json'
+
+const i18n = ref(Setting['i18n'] ?? true)
+const nekoMimi = ref(Setting['neko_mimi'] ?? true)
 
 /** 播放设置 */
 const playSetting: PlaySetting = reactive({
@@ -28,4 +32,4 @@ window.onresize = () => {
 /** 是否显示搜索栏 */
 const isShowSearch = ref(false)
 
-export { playSetting, isWideScreen, isShowSearch }
+export { i18n, nekoMimi, playSetting, isWideScreen, isShowSearch }

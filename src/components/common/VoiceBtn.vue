@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper" :class="{ lowlight, highlight: highlight || playing, disable }">
     <NewIcon class="new-icon" v-if="newIcon" />
-    <img class="pic" v-if="showPic" :src="showPic" alt />
-    <div class="left"></div>
-    <div class="right"></div>
+    <img class="pic" v-if="showPic" :src="showPic" />
+    <div class="left" v-if="nekoMimi"></div>
+    <div class="right" v-if="nekoMimi"></div>
     <a class="btn" :href="url" :filename="url" target="_blank" >
       <div class="progress" ref="progressRef"></div>
       <span class="text">{{ text }}</span>
@@ -13,6 +13,7 @@
 
 <script lang="ts" setup>
 import { Ref, ref, watch } from 'vue'
+import { nekoMimi } from '@/store/setting'
 import NewIcon from './NewIcon.vue'
 
 defineProps({

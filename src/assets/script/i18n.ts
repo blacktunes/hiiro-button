@@ -1,4 +1,5 @@
 import Setting from '@/../setting/setting.json'
+import { i18n } from '@/store/setting'
 import { createI18n } from 'vue-i18n'
 import { getCategory } from './utils'
 import { CategoryList, Locales, VoicesList } from './voices'
@@ -137,12 +138,12 @@ EN.newVoice = VoicesList.filter((item) => item.date && item.date === ENLastDate 
 CN.hideNewVoice = VoicesList.filter((item) => item.date && item.date === hideCNLastDate && item.translate['zh-CN'] && CategoryList.find(category => category.name === item.category)!.translate['zh-CN']).length.toString() || ''
 EN.hideNewVoice = VoicesList.filter((item) => item.date && item.date === hideENLastDate && item.translate['en-US'] && CategoryList.find(category => category.name === item.category)!.translate['en-US']).length.toString() || ''
 
-const i18n = createI18n({
-  locale: /en/i.test(navigator.language) ? 'en-US' : 'zh-CN',
+const I18N = createI18n({
+  locale: (/en/i.test(navigator.language) && i18n.value) ? 'en-US' : 'zh-CN',
   messages: {
     'zh-CN': CN,
     'en-US': EN
   }
 })
 
-export default i18n
+export default I18N

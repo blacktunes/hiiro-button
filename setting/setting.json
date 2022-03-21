@@ -1,4 +1,6 @@
 {
+  "i18n": true,
+  "neko_mimi": true,
   "name": {
     "CN": {
       "title": "猫猫按钮",
@@ -24,7 +26,8 @@
     {
       "name": "HiiroNya",
       "url": "https://nya.hiiro.club/"
-    },{
+    },
+    {
       "name": "二创游戏",
       "url": "https://store.steampowered.com/app/1907180"
     }

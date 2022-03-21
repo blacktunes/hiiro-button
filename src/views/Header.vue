@@ -34,7 +34,7 @@
           <Search />
         </div>
       </transition>
-      <div class="btn" :title="t(INFO_I18N.lang)" @click="changeLang">
+      <div class="btn" :title="t(INFO_I18N.lang)" @click="changeLang" v-if="i18n">
         <svg
           viewBox="0 0 1024 1024"
           version="1.1"
@@ -62,7 +62,7 @@ import { INFO_I18N } from '@/assets/script/type'
 import IBtn from '@/components/common/IconBtn.vue'
 import Search from '@/components/Search/Search.vue'
 import { searchData } from '@/store/data'
-import { isShowSearch, isWideScreen, playSetting } from '@/store/setting'
+import { i18n, isShowSearch, isWideScreen, playSetting } from '@/store/setting'
 import { computed, onMounted, ref, Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
@@ -157,9 +157,11 @@ const isShowPointer = computed(() => {
 
 // 初次加载时获取localStorage的语言设定
 onMounted(() => {
-  const lang = localStorage.getItem('lang')
-  if (lang && ['zh-CN', 'en-US'].includes(lang)) locale.value = lang
-  document.title = t(INFO_I18N.title)
+  if (i18n.value) {
+    const lang = localStorage.getItem('lang')
+    if (lang && ['zh-CN', 'en-US'].includes(lang)) locale.value = lang
+    document.title = t(INFO_I18N.title)
+  }
 })
 </script>
 
