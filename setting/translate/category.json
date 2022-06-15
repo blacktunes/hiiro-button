@@ -91,6 +91,13 @@
     }
   },
   {
+    "name": "被窝",
+    "translate": {
+      "zh-CN": "被窝猫猫~",
+      "en-US": "Hiiro in bed~ "
+    }
+  },
+  {
     "name": "希语言",
     "hide": true,
     "translate": {
