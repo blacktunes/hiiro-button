@@ -6,14 +6,20 @@
           <div>©2020</div>
           <template v-for="(item, index) in author" :key="index">
             <a style="margin-left: 5px" v-if="index > 0">&</a>
-            <a style="margin-left: 5px" :href="item.url" target="_blank">{{ item.name }}</a>
+            <a style="margin-left: 5px" :href="item.url" target="_blank">
+              {{ item.name }}
+            </a>
           </template>
         </div>
         <div class="info">
           <template v-for="(item, index) in info" :key="index">
             <div v-html="item"></div>
           </template>
-          <img style="margin: 5px 5px 0px -2px" alt="GitHub Repo stars" :src="lastUpdate">
+          <img
+            style="margin: 5px 5px 0px -2px"
+            alt="GitHub Repo stars"
+            :src="lastUpdate"
+          />
         </div>
       </div>
       <div class="text-right">

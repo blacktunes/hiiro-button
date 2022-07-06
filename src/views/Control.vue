@@ -5,15 +5,20 @@
         <transition name="slide-up-text">
           <div class="playing" v-if="!showNext">
             <div class="text" @click="toBtn()">
-              {{
-                text + time
-              }}
+              {{ text + time }}
               <transition name="fade">
-                <Loading v-if="playSetting.nowPlay && playSetting.loading" class="tip" />
+                <Loading
+                  v-if="playSetting.nowPlay && playSetting.loading"
+                  class="tip"
+                />
               </transition>
               <transition name="fade-delay">
                 <Error
-                  v-if="playSetting.nowPlay && playSetting.error && !playSetting.overlap"
+                  v-if="
+                    playSetting.nowPlay &&
+                    playSetting.error &&
+                    !playSetting.overlap
+                  "
                   class="tip"
                 />
               </transition>
@@ -21,15 +26,20 @@
           </div>
           <div class="playing" v-else>
             <div class="text" @click="toBtn()">
-              {{
-                next + time
-              }}
+              {{ next + time }}
               <transition name="fade">
-                <Loading v-if="playSetting.nowPlay && playSetting.loading" class="tip" />
+                <Loading
+                  v-if="playSetting.nowPlay && playSetting.loading"
+                  class="tip"
+                />
               </transition>
               <transition name="fade-delay">
                 <Error
-                  v-if="playSetting.nowPlay && playSetting.error && !playSetting.overlap"
+                  v-if="
+                    playSetting.nowPlay &&
+                    playSetting.error &&
+                    !playSetting.overlap
+                  "
                   class="tip"
                 />
               </transition>
@@ -94,7 +104,11 @@ watch(title, val => {
   showNext.value = !showNext.value
 })
 
-const time = computed(() => playSetting.showInfo && infoDate.value && infoDate.value.time ? `(${infoDate.value.time})` : '')
+const time = computed(() =>
+  playSetting.showInfo && infoDate.value && infoDate.value.time
+    ? `(${infoDate.value.time})`
+    : ''
+)
 
 const toBtn = () => {
   if (playSetting.nowPlay) {
@@ -103,8 +117,10 @@ const toBtn = () => {
 }
 
 // css
-const isError = computed(() => playSetting.error && !playSetting.overlap ? 'line-through' : 'none')
-const isPlaying = computed(() => playSetting.nowPlay ? 'pointer' : '')
+const isError = computed(() =>
+  playSetting.error && !playSetting.overlap ? 'line-through' : 'none'
+)
+const isPlaying = computed(() => (playSetting.nowPlay ? 'pointer' : ''))
 </script>
 
 <style lang="stylus" scoped>

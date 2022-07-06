@@ -4,20 +4,7 @@
       <div class="title" @click="changeShow">
         <div class="text">{{ title }}</div>
         <div class="icon" :class="{ show: isShow }">
-          <svg
-            t="1616130580549"
-            viewBox="0 0 1024 1024"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            p-id="2219"
-            width="16"
-            height="16"
-          >
-            <path
-              d="M325.048 93.511l-60.030 59.435 357.181 359.631-360.184 356.603 59.522 59.93 420.207-416.043z"
-              p-id="2220"
-            />
-          </svg>
+          <NextIcon />
         </div>
       </div>
     </template>
@@ -31,6 +18,7 @@
 
 <script lang="ts" setup>
 import Card from '@/components/common/Card.vue'
+import { NextIcon } from '@/components/common/Icon'
 import { ref } from 'vue'
 
 defineProps({
