@@ -43,7 +43,7 @@
   "link": [
     {
       "name": "七奈按钮(神楽七奈)",
-      "url": "https://kaguranana.moe/",
+      "url": "https://kaguranana-button-blacktunes.vercel.app/",
       "background": "#c4afd0"
     },
     {
@@ -83,7 +83,7 @@
       }
     ],
     "info": [
-      "<div>偶尔可能会发点更新信息的B站→<a href=\"https://space.bilibili.com/1384118\" target=\"_blank\">我想改个带咸鱼的名字</a></div>",
+      "<div>偶尔可能会发点更新信息的B站→<a href=\"https://space.bilibili.com/1384118\" target=\"_blank\">单推黑猫白雪的咸鱼</a></div>",
       "<img style=\"margin: 5px 5px 0px -2px\" alt=\"GitHub Repo stars\" src=\"https://img.shields.io/github/stars/blacktunes/hiiro-button?style=social\"><img style=\"margin-top: 5px\" alt=\"GitHub Repo license\" src=\"https://img.shields.io/github/license/blacktunes/hiiro-button?style=social\">"
     ],
     "githubUrl": "https://github.com/blacktunes/hiiro-button"
@@ -99,5 +99,5 @@
   "mediaSession": "albums.jpg",
   "GA_ID_comment": "GA_ID用于统计访问，请使用模板开发务必修改或删除",
   "GA_ID": "UA-176441751-2",
-  "CDN": "https://fastly.jsdelivr.net/gh/blacktunes/hiiro-button@master/public/voices"
+  "CDN": "https://cdn.jsdelivr.net/gh/blacktunes/hiiro-button@master/public/voices"
 }

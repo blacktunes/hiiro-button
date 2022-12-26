@@ -73,7 +73,7 @@
       "showInfoOff": "This button allows you to see where the button came from"
     },
     "vtbbtn": "VTuber Button Collection",
-    "voiceTotalTip": "Current voice quantity",
+    "voiceTotalTip": "Number of voice buttons",
     "playTimes": "Play times",
     "lang": "切换至简体中文",
     "unknown": "Unknown"
