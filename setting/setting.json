@@ -24,10 +24,6 @@
       "url": "https://hii.hiiro.club/"
     },
     {
-      "name": "HiiroNya",
-      "url": "https://nya.hiiro.club/"
-    },
-    {
       "name": "Hiiropara",
       "url": "https://hiiropara.hiiro.club/"
     },
@@ -99,5 +95,5 @@
   "mediaSession": "albums.jpg",
   "GA_ID_comment": "GA_ID用于统计访问，请使用模板开发务必修改或删除",
   "GA_ID": "UA-176441751-2",
-  "CDN": "https://cdn.jsdelivr.net/gh/blacktunes/hiiro-button@master/public/voices"
+  "CDN": ""
 }
